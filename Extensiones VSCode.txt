@@ -1,0 +1,50 @@
+Auto Close Tag
+Bootstrap 5 Quick Snippets
+Debugger for Java
+ES7+ React/Redux/React-Native Snippets
+Extension Pack for Java *
+IntelliCode *
+IntelliCode API Usage Examples
+Language Support for Java(TM) by Red Hat
+Live Server
+Material Icon Theme
+Maven for Java
+MongoDB for VS Code
+Path Intellisense
+Prettier - Code formatter
+Project Manager for Java
+Pylance
+Python *
+React Native Tools
+Spring Boot Dashboard
+Spring Boot Extension Pack *
+Spring Boot Tools
+Spring Initializr Java Support
+Test Runner for Java
+Error Lens
+Console Ninja
+Image Preview
+Version Lens
+Fluent Icons
+Git Lens
+Polacode
+Eslint
+SVG
+ES7+ React/Redux/GraphQL/React-Native Snippets
+React
+C/C++ Extension Pack *
+PHP Extension Pack *
+Spanish Languaje Pack For Us
+XML Pack*
+Thunder Client
+Blackbox AI Code Generation
+AWS Toolkit
+Vetur
+Dart
+Flutter
+Flutter Widget Snippets
+Laravel Blade Snippets
+Laravel Snippets
+Angular Snippets (Version 18)
+Angular Language Service
+Alexa Skills Kit (ASK) Toolkit
