@@ -1,0 +1,82 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9B8F32C4-07B0-AC7C-9B0B-022875187D5A" name="categorias_personal">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:22:55 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_categoria" id="76541201-7155-A20C-217C-18363EE5CF63">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:22:55 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="7DDDBB25-74BF-318A-19B1-7B0991C72CF8">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:22:55 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ultima_modificacion" id="B000823F-7046-FEC7-57A0-FAB74539A726">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:55:45 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="DF1D39AF-8BF0-B8D6-383A-9E7626569D54">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:22:55 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F61E432B-A927-C6F4-467D-B13AE7F5D62B" name="categorias PK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:22:55 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>76541201-7155-A20C-217C-18363EE5CF63</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

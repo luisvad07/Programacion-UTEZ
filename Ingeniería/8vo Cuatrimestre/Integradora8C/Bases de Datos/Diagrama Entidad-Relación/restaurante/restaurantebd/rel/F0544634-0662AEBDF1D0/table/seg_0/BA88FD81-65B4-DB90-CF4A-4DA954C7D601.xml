@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA88FD81-65B4-DB90-CF4A-4DA954C7D601" name="direcciones_usuario">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>FA1A74A1-D6A8-4304-3C0D-22F025F6BCED</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_direccion_usuario" id="B3B74C67-4EDA-250A-119A-05CC81547573">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>0CEBA185-B7E4-1A49-D8F1-55992A760383</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ultima_modificacion" id="96C4DB8B-2EA7-8EF0-5187-1A4B183577A2">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>B099CF47-2B96-9A01-B72A-DA540DAB88E5</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="0FC9CD96-C396-33EF-7B56-766921F3813F">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>98378CAA-46D3-7815-43E8-7D185F750BDE</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direcciones_id_direccion" id="6D7710F5-1058-EF09-87BA-1EF14E0FFB30">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>50025073-5E6E-C51B-2A1A-4E1CBA129FBE</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1E7967CB-E819-4878-D82B-76AAF724F00C" referredColumn="EB3EB8BD-BAF6-7159-F207-FD319A737862"/>
+</associations>
+</Column>
+<Column name="usuarios_id_usuario" id="D4C7DECE-FB87-08AC-9C84-0FBB3BD0E298">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>41DD4015-46F7-E12B-54D5-13CDCCDC1AFD</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D026AE7A-6F80-58D4-CFAD-9AEAE6797C9A" referredColumn="B5E8DBE9-1D91-7520-924B-9434A43C1C47"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E64ED41-85FB-E1B9-09E6-727AEFA00F1D" name="direcciones_usuario_PK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>25CC57BA-E11F-19B2-C228-E9F092C26E8B</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3B74C67-4EDA-250A-119A-05CC81547573"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4AB0B110-60CD-143F-C854-CEDD7857BA0D" name="direcciones_usuario_direcciones_FK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>89BBECCD-893C-50F1-AD32-D7CB543D2F4F</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6D7710F5-1058-EF09-87BA-1EF14E0FFB30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="88265538-F68D-DC1C-6B01-51EEB5511AA1" name="direcciones_usuario_usuarios_FK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>497A87BF-BB33-5793-407D-D100D39609E6</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4C7DECE-FB87-08AC-9C84-0FBB3BD0E298"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

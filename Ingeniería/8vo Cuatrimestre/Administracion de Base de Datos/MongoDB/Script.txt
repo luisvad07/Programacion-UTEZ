@@ -1,0 +1,62 @@
+show databases
+
+use Biblioteca
+
+//Realiza Consulta
+db.Autores.find()
+
+//Insertar en una collecion
+db.Autores.insertOne({
+    "nombre": "Wiliam",
+    "apellidos": "Shakspeare",
+    "f_nacimiento": "1990-06-01"
+})
+
+db.Autores.insertOne({
+    "nombre": "Wiliam",
+    "apellidos": "Shakspeare",
+    "f_nacimiento": 1990-06-01,
+    "Edad": 24
+})
+
+db.Autores.insertOne({
+    "nombre": "Wiliam",
+    "apellidos": "Shakspeare",
+    "f_nacimiento": new Date("1990-06-01"),
+    "Edad": 24
+})
+
+db.Autores.deleteMany({})
+
+db.Autores.insertMany([
+    {
+        "nombre": "Wiliam",
+        "apellido": "Shakspeare",
+        "nacionalidad": "England",
+        "f_nacimiento": new Date("1990-06-01")
+    },
+    {
+        "nombre": "Daniel",
+        "apellido": "Maldonado",
+        "nacionalidad": "Honduras",
+        "f_nacimiento": new Date("1991-06-01")
+    },
+    {
+        "nombre": "Iñaki",
+        "apellido": "Salinas",
+        "nacionalidad": "Spain",
+        "f_nacimiento": new Date("1992-06-01")
+    },
+    {
+        "nombre": "Ayase",
+        "apellido": "Ueda",
+        "nacionalidad": "Japan",
+        "f_nacimiento": new Date("1993-06-01")
+    },
+    {
+        "nombre": "Oleg",
+        "apellido": "Sasvachenko",
+        "nacionalidad": "Russia",
+        "f_nacimiento": new Date("1994-06-01")
+    },
+])

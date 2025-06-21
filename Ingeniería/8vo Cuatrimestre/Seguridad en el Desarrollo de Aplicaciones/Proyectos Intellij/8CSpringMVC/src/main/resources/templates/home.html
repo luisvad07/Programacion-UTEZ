@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" >
+    <title>Home</title>
+</head>
+<body>
+    <h1>Home</h1>
+    <ul>
+        <li><a href="/">Index</a></li>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/form">Form</a></li>
+        <li><a href="/peliculas/index">Menu Peliculas</a></li>
+    </ul>
+    <form th:action="@{/logout}" method="post">
+        <button type="submit">Cerrar</button>
+    </form>
+</body>
+</html>

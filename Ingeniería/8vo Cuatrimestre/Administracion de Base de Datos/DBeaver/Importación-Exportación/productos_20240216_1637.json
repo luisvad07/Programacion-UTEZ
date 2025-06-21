@@ -1,0 +1,303 @@
+{
+"productos": [
+	{
+		"id_producto" : 1,
+		"nombre" : "Individual",
+		"categoria" : "Juguetes",
+		"precio" : 754.75
+	},
+	{
+		"id_producto" : 2,
+		"nombre" : "Evidence",
+		"categoria" : "Libros",
+		"precio" : 767.29
+	},
+	{
+		"id_producto" : 3,
+		"nombre" : "Along",
+		"categoria" : "Hogar",
+		"precio" : 97.34
+	},
+	{
+		"id_producto" : 4,
+		"nombre" : "Keep",
+		"categoria" : "Juguetes",
+		"precio" : 336.51
+	},
+	{
+		"id_producto" : 5,
+		"nombre" : "Agency",
+		"categoria" : "Ropa",
+		"precio" : 314.73
+	},
+	{
+		"id_producto" : 6,
+		"nombre" : "Gas",
+		"categoria" : "Libros",
+		"precio" : 609.10
+	},
+	{
+		"id_producto" : 7,
+		"nombre" : "Perform",
+		"categoria" : "Libros",
+		"precio" : 515.61
+	},
+	{
+		"id_producto" : 8,
+		"nombre" : "Base",
+		"categoria" : "Ropa",
+		"precio" : 500.80
+	},
+	{
+		"id_producto" : 9,
+		"nombre" : "Capital",
+		"categoria" : "Libros",
+		"precio" : 49.01
+	},
+	{
+		"id_producto" : 10,
+		"nombre" : "View",
+		"categoria" : "Ropa",
+		"precio" : 997.86
+	},
+	{
+		"id_producto" : 11,
+		"nombre" : "Choose",
+		"categoria" : "Juguetes",
+		"precio" : 601.04
+	},
+	{
+		"id_producto" : 12,
+		"nombre" : "Coach",
+		"categoria" : "Hogar",
+		"precio" : 232.22
+	},
+	{
+		"id_producto" : 13,
+		"nombre" : "Represent",
+		"categoria" : "Ropa",
+		"precio" : 501.15
+	},
+	{
+		"id_producto" : 14,
+		"nombre" : "More",
+		"categoria" : "Juguetes",
+		"precio" : 636.89
+	},
+	{
+		"id_producto" : 15,
+		"nombre" : "That",
+		"categoria" : "Juguetes",
+		"precio" : 688.47
+	},
+	{
+		"id_producto" : 16,
+		"nombre" : "Trip",
+		"categoria" : "Electrónica",
+		"precio" : 753.29
+	},
+	{
+		"id_producto" : 17,
+		"nombre" : "Very",
+		"categoria" : "Juguetes",
+		"precio" : 770.13
+	},
+	{
+		"id_producto" : 18,
+		"nombre" : "Special",
+		"categoria" : "Juguetes",
+		"precio" : 454.91
+	},
+	{
+		"id_producto" : 19,
+		"nombre" : "Section",
+		"categoria" : "Ropa",
+		"precio" : 78.25
+	},
+	{
+		"id_producto" : 20,
+		"nombre" : "Live",
+		"categoria" : "Ropa",
+		"precio" : 270.60
+	},
+	{
+		"id_producto" : 21,
+		"nombre" : "Power",
+		"categoria" : "Ropa",
+		"precio" : 427.30
+	},
+	{
+		"id_producto" : 22,
+		"nombre" : "Century",
+		"categoria" : "Juguetes",
+		"precio" : 650.88
+	},
+	{
+		"id_producto" : 23,
+		"nombre" : "Relate",
+		"categoria" : "Electrónica",
+		"precio" : 532.78
+	},
+	{
+		"id_producto" : 24,
+		"nombre" : "Maintain",
+		"categoria" : "Electrónica",
+		"precio" : 831.22
+	},
+	{
+		"id_producto" : 25,
+		"nombre" : "Someone",
+		"categoria" : "Ropa",
+		"precio" : 88.06
+	},
+	{
+		"id_producto" : 26,
+		"nombre" : "Evening",
+		"categoria" : "Hogar",
+		"precio" : 550.21
+	},
+	{
+		"id_producto" : 27,
+		"nombre" : "Method",
+		"categoria" : "Hogar",
+		"precio" : 982.55
+	},
+	{
+		"id_producto" : 28,
+		"nombre" : "Low",
+		"categoria" : "Libros",
+		"precio" : 456.46
+	},
+	{
+		"id_producto" : 29,
+		"nombre" : "Produce",
+		"categoria" : "Juguetes",
+		"precio" : 357.12
+	},
+	{
+		"id_producto" : 30,
+		"nombre" : "Ago",
+		"categoria" : "Hogar",
+		"precio" : 653.66
+	},
+	{
+		"id_producto" : 31,
+		"nombre" : "Require",
+		"categoria" : "Ropa",
+		"precio" : 997.41
+	},
+	{
+		"id_producto" : 32,
+		"nombre" : "Bring",
+		"categoria" : "Hogar",
+		"precio" : 778.42
+	},
+	{
+		"id_producto" : 33,
+		"nombre" : "Since",
+		"categoria" : "Libros",
+		"precio" : 327.04
+	},
+	{
+		"id_producto" : 34,
+		"nombre" : "Work",
+		"categoria" : "Ropa",
+		"precio" : 416.93
+	},
+	{
+		"id_producto" : 35,
+		"nombre" : "Whatever",
+		"categoria" : "Ropa",
+		"precio" : 567.10
+	},
+	{
+		"id_producto" : 36,
+		"nombre" : "Dark",
+		"categoria" : "Juguetes",
+		"precio" : 411.44
+	},
+	{
+		"id_producto" : 37,
+		"nombre" : "Every",
+		"categoria" : "Hogar",
+		"precio" : 920.70
+	},
+	{
+		"id_producto" : 38,
+		"nombre" : "Near",
+		"categoria" : "Electrónica",
+		"precio" : 964.07
+	},
+	{
+		"id_producto" : 39,
+		"nombre" : "Truth",
+		"categoria" : "Juguetes",
+		"precio" : 962.75
+	},
+	{
+		"id_producto" : 40,
+		"nombre" : "Forward",
+		"categoria" : "Ropa",
+		"precio" : 861.65
+	},
+	{
+		"id_producto" : 41,
+		"nombre" : "Item",
+		"categoria" : "Juguetes",
+		"precio" : 587.82
+	},
+	{
+		"id_producto" : 42,
+		"nombre" : "Blue",
+		"categoria" : "Hogar",
+		"precio" : 907.59
+	},
+	{
+		"id_producto" : 43,
+		"nombre" : "Professor",
+		"categoria" : "Libros",
+		"precio" : 35.70
+	},
+	{
+		"id_producto" : 44,
+		"nombre" : "Show",
+		"categoria" : "Ropa",
+		"precio" : 263.63
+	},
+	{
+		"id_producto" : 45,
+		"nombre" : "Budget",
+		"categoria" : "Libros",
+		"precio" : 609.99
+	},
+	{
+		"id_producto" : 46,
+		"nombre" : "Bring",
+		"categoria" : "Libros",
+		"precio" : 361.92
+	},
+	{
+		"id_producto" : 47,
+		"nombre" : "Reflect",
+		"categoria" : "Libros",
+		"precio" : 48.97
+	},
+	{
+		"id_producto" : 48,
+		"nombre" : "Site",
+		"categoria" : "Ropa",
+		"precio" : 67.25
+	},
+	{
+		"id_producto" : 49,
+		"nombre" : "Perhaps",
+		"categoria" : "Juguetes",
+		"precio" : 843.43
+	},
+	{
+		"id_producto" : 50,
+		"nombre" : "Approach",
+		"categoria" : "Hogar",
+		"precio" : 940.54
+	}
+]}

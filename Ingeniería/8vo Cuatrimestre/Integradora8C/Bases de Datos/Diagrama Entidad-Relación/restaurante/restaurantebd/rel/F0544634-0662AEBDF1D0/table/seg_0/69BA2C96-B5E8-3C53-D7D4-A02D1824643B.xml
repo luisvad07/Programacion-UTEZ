@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="69BA2C96-B5E8-3C53-D7D4-A02D1824643B" name="roles">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>1FB209B0-0938-B539-093F-F643ABD7127E</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_rol" id="781BD734-BB49-C28D-3DDA-A4A12DDD73B5">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>6BC0DCFA-9D6C-50F8-3DCE-07545C5EB0F3</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="D2D97AC2-1F89-48D6-A350-99707A9EB55D">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>77C8C97F-3770-5F17-DA9A-57BC6C970FC4</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ultima_modificacion" id="76693A57-23D9-0739-2AAA-E5254527D618">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>193FF369-1704-B1B9-0D13-8D7FB2ECB357</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="9C8EED5E-2BB4-760E-1AE5-D09081731B6F">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>0F09D886-7D6D-0800-B9C4-91A963BA16EA</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E059E04-3F3E-4B3E-03A2-9C73EC6F42B9" name="roles_PK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>898B520D-9157-2565-F4B8-4DE6DEA32359</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="781BD734-BB49-C28D-3DDA-A4A12DDD73B5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

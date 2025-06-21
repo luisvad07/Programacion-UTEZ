@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0FDC633C-8A4E-7528-A446-9EA91D9DDAB4" name="personal">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:21:37 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_personal" id="21C7DBB0-888C-BC15-4F0C-025BEF70EB10">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:21:42 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_categoria" id="D50F29ED-FFDD-7B9B-B58A-8CA6B736B965">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:23:31 UTC</createdTime>
+<generatorID>123FC85A-61C4-D171-8FB7-93B0D04318EB</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<referedAttribute>76541201-7155-A20C-217C-18363EE5CF63</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="25E521AC-14B0-2C48-DA1A-2B00BDC9D950">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:23:39 UTC</createdTime>
+<generatorID>112BCBD0-77A9-D256-487E-7DB2EED7BCD9</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<referedAttribute>94A5E96D-8CE8-6E01-8D3F-7F7D2F99EAC5</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ultima_modificacion" id="9A0B5792-EF84-FEC3-5B2F-6676725ED74D">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:55:54 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="6E09BA79-4774-C555-43B3-BF9DEAE7A9A8">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:24:00 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="AEBF8F39-2113-098C-9F80-CD19B71392F4" name="personal PK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:21:54 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>21C7DBB0-888C-BC15-4F0C-025BEF70EB10</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

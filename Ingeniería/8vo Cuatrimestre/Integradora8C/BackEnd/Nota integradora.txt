@@ -1,0 +1,17 @@
+un mesero por cada 20 invitados
+
+un chef cada 150
+
+#111827
+
+/*SELECT * FROM personal WHERE active=true AND personal.id_categoria='812538ce-820e-4a72-a2e8-d8df220a1017' AND id_personal NOT IN (SELECT DISTINCT personal.id_personal
+            FROM personal
+            INNER JOIN personal_evento ON personal.id_personal = personal_evento.id_personal
+            INNER JOIN eventos ON personal_evento.id_evento = eventos.id_evento
+            INNER JOIN categorias_personal ON personal.id_categoria = categorias_personal.id_categoria
+            WHERE eventos.active=true
+            AND personal.active=true
+            AND personal_evento.active=true
+            AND personal.id_categoria='812538ce-820e-4a72-a2e8-d8df220a1017'
+            AND eventos.fecha_hora_inicio between '2024-04-03 16:45:56' AND '2024-04-04 16:45:56'
+            AND eventos.fecha_hora_fin between '2024-04-03 16:45:56' AND '2024-04-04 16:45:56') order by rand() LIMIT 1;*/

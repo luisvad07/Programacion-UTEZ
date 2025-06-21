@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="platillo_categoria" directorySegmentName="seg_0" id="2E570DFA-D0B9-C69D-A5BB-A9716C4C8999">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:03:03 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<sourcePk>15C93C9A-1DCD-502A-5321-BF83DC7B42A2</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>56A448A0-C62E-899A-9F00-893B5865E86D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>4775EA29-8E66-C5FA-B5F3-D0B2B683A75C</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

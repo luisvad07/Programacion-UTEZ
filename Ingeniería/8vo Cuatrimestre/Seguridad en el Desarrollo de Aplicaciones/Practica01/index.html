@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!---<link rel="shortcut icon" href="hombre.png" type="image/x-icon">-->
+    <title>Formulario</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Matriz Cuadrícula</h1>
+    <div class="row">
+      <div class="col-md-3">
+        <label for="filas">Filas (Coordenada X):</label>
+        <input type="number" id="filas" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="columnas">Columnas (Coordenada Y):</label>
+        <input type="number" id="columnas" class="form-control" required>
+      </div>
+      <div class="col-md-3">
+        <label for="cronometro">Cronómetro (s):</label>
+        <input type="text" id="cronometro" class="form-control" readonly disabled>
+      </div>
+      <div class="col-md-3">
+        <label for="celdasPintadas">Celdas Pintadas:</label>
+        <input type="text" id="celdasPintadas" class="form-control" readonly disabled>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6">
+        <button class="btn btn-success" onclick="validar()" id="iniciar">Iniciar</button>
+        <button class="btn btn-danger" onclick="detener()" id="detener">Detener</button>
+        <button class="btn btn-info" onclick="continuar()" id="continuar">Continuar</button>
+        <button class="btn btn-warning" onclick="reiniciar()" id="reiniciar">Reiniciar</button>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-3">
+      <div class="col-md-12">
+        <table class="table table-bordered" id="matriz"></table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal para advertencia -->
+  <div class="modal fade" id="advertenciaModal" tabindex="-1" role="dialog" aria-labelledby="advertenciaModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-warning" id="advertenciaModalLabel">
+            <i class="fas fa-exclamation-triangle mr-2"></i>Advertencia
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Por favor, complete los campos de filas y columnas antes de iniciar.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+<script>
+    let intervalo, filas, columnas;
+    var cronometroSegundos = 0, celdasPintadas = 0;
+    // Deshabilitar botones antes de iniciar
+    document.getElementById('detener').disabled = true;
+    document.getElementById('continuar').disabled = true;
+    document.getElementById('reiniciar').disabled = true;
+
+    //Validar
+    function validar() {
+      filas = document.getElementById('filas').value;
+      columnas = document.getElementById('columnas').value;
+
+      if (filas === '' || columnas === '') {
+        // Mostrar modal de advertencia si los campos están vacíos
+        $('#advertenciaModal').modal('show');
+      } else {
+        // Iniciar solo si los campos están completos
+        iniciar();
+      }
+    }
+
+    function iniciar() {
+      // Habilitar botones e iniciar el cronómetro
+      document.getElementById('iniciar').disabled = true;
+      document.getElementById('detener').disabled = false;
+      document.getElementById('reiniciar').disabled = false;
+
+      filas = document.getElementById('filas').value;
+      columnas = document.getElementById('columnas').value;
+      cronometroSegundos = 0;
+      celdasPintadas = 0;
+      document.getElementById('cronometro').value = cronometroSegundos;
+      document.getElementById('celdasPintadas').value = celdasPintadas;
+      generarMatriz();
+      intervalo = setInterval(actualizarCronometro, 1000);
+      document.getElementById('detener').disa;
+    }
+
+    function detener() {
+      // Habilitar botones y detener el cronómetro
+      document.getElementById('iniciar').disabled = true;
+      document.getElementById('detener').disabled = true;
+      document.getElementById('continuar').disabled = false;
+      document.getElementById('reiniciar').disabled = false;
+
+      clearInterval(intervalo);
+    }
+
+    function continuar() {
+      // Habilitar botones y continuar el cronómetro
+      document.getElementById('iniciar').disabled = true;
+      document.getElementById('detener').disabled = false;
+      document.getElementById('continuar').disabled = true;
+      document.getElementById('reiniciar').disabled = false;
+
+      intervalo = setInterval(actualizarCronometro, 1000);
+    }
+
+    function reiniciar() {
+
+      cronometroSegundos = 0;
+      celdasPintadas = 0;
+
+      // Habilitar botones y reiniciar el cronómetro
+      document.getElementById('iniciar').disabled = false;
+      document.getElementById('detener').disabled = true;
+      document.getElementById('continuar').disabled = true;
+      document.getElementById('reiniciar').disabled = true;
+
+      // Restablece valores de filas y columnas
+      document.getElementById('filas').value = '';
+      document.getElementById('columnas').value = '';
+      document.getElementById('cronometro').value = cronometroSegundos;
+      document.getElementById('celdasPintadas').value = celdasPintadas;
+
+      // Limpiar la tabla
+      document.getElementById('matriz').innerHTML = '';
+
+    }
+
+    function actualizarCronometro() {
+      cronometroSegundos++;
+      document.getElementById('cronometro').value = cronometroSegundos;
+      pintarCeldaAleatoria();
+    }
+
+    function generarMatriz() {
+      let tabla = document.getElementById('matriz');
+      tabla.innerHTML = '';
+
+      for (let i = 0; i < filas; i++) {
+        let fila = tabla.insertRow(i);
+        for (let j = 0; j < columnas; j++) {
+          let celda = fila.insertCell(j);
+          celda.innerHTML = '';
+        }
+      }
+    }
+
+    function pintarCeldaAleatoria() {
+        let filaAleatoria = Math.floor(Math.random() * filas);
+        let columnaAleatoria = Math.floor(Math.random() * columnas);
+
+        let celda = document.getElementById('matriz').rows[filaAleatoria].cells[columnaAleatoria];
+
+        if (!celda.classList.contains('pintada')) {
+            celda.classList.add('pintada');
+            celda.style.backgroundColor = getRandomColor(); // Agrega un color aleatorio
+            celdasPintadas++;
+            document.getElementById('celdasPintadas').value = celdasPintadas;
+        }
+    }
+
+    function getRandomColor() {
+        // Genera aleatoriamente entre azul y negro
+        let colors = ["#0000FF", "#000000"]; // Azul y Negro
+        return colors[Math.floor(Math.random() * colors.length)];
+    }
+
+    window.onload = function () {
+      generarMatriz();
+    };
+
+</script>
+</html>

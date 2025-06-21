@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C5984F40-7E54-13CE-84C0-CF29DDA76237" name="personal_evento">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:29:53 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_personal_evento" id="8D2EC3D6-3CA9-AE7A-4C39-EF17156B5CCF">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:30:01 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_personal" id="F23FA219-7299-84A4-09CF-7E274CC8654D">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:31:05 UTC</createdTime>
+<generatorID>1BC13959-892B-C656-DD2E-410D53B7CEBA</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<referedAttribute>21C7DBB0-888C-BC15-4F0C-025BEF70EB10</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_evento" id="73DDE613-8F8C-9D25-A657-845608C95D18">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:32:12 UTC</createdTime>
+<generatorID>E1D36EFC-F69A-2430-0DF7-53C9BAE3D911</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<referedAttribute>4ADF7D17-C60F-40BB-07EB-6FAB0C0F5ECD</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT057</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ultima_modificacion" id="72989C7A-8B1E-62CD-7FA0-0C3480DCEB8D">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:56:00 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="active" id="86EEE8EE-E0AC-8BF3-41EF-C384F823A55F">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:30:10 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6991BDE0-E208-CAA6-4FB3-CA546B5CE839" name="personal_evento PK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 15:30:25 UTC</createdTime>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<engineerTo>
+<item key="F0544634-3934-80AF-9E36-0662AEBDF1D0" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>8D2EC3D6-3CA9-AE7A-4C39-EF17156B5CCF</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

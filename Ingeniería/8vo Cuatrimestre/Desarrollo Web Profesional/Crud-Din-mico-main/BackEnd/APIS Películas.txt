@@ -1,0 +1,52 @@
+PELICULAS
+
+GET: http://localhost:8080/api/peliculas/getAll
+GET ID: http://localhost:8080/api/peliculas/{id}
+POST: http://localhost:8080/api/peliculas/registrar
+{
+    "nombre": "Sin Control",
+    "directorMovie": "Quentin Tarantino",
+    "fechaPublicacion": "2024-02-19",
+    "duration": 135,
+    "genero": {
+        "id_gen": 1,
+        "name": "Comedia"
+    }
+}
+PUT: http://localhost:8080/api/peliculas/actualizar
+DELETE: http://localhost:8080/api/peliculas/{id}
+
+---------------------------------
+
+GÉNERO
+
+GET: http://localhost:8080/api/generos/getAll
+GET ID: http://localhost:8080/api/generos/{id}
+POST: http://localhost:8080/api/generos/registrar
+{
+    "name": "Aventura"
+}
+
+---------------------------------
+
+QUERIES (Todos estan con Request Param)
+
+//Consultar películas por nombre
+--- Los buscas por "nombre"
+http://localhost:8080/api/peliculas/buscarPorNombre?nombre=Sin Control
+
+//Consultar películas por nombre del director
+--- Los buscas por "director"
+http://localhost:8080/api/peliculas/buscarPorDirector?director=Frankie Rivers
+
+//Filtrar películas por rango de fechas de publicación
+--- Poner parametros fechaInicio & fechaFin (con formato yyyy-MM-dd)
+http://localhost:8080/api/peliculas/buscarPorFechaPublicacion?fechaInicio=2024-02-01&fechaFin=2024-02-29
+
+
+//Consultar películas por género o categoría
+--- Los buscas por "genero"
+http://localhost:8080/api/peliculas/buscarPorGenero?genero=Terror
+
+//Consultar películas por fecha de publicación de manera descendente
+http://localhost:8080/api/peliculas/buscarPorFechaPublicacionDesc

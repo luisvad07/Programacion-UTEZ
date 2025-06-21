@@ -1,0 +1,22 @@
+#mainPeliculas{
+    display: flex;
+    flex-wrap: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    border: red solid 1px;
+    height: 80vh;
+    overflow-y: auto;
+    width: 90vw;
+}
+
+#pelicula{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    border: black solid 1px;
+    width: 200px;
+    height: 300px;
+}

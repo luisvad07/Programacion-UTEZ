@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="3283F586-4164-A1D8-A879-5A20E407A66A" containerWithKeyObject="48EE10A1-F448-563A-F914-37C42E1B83B2" localFKIndex="322DD20A-2F3D-0A31-03F4-0F1868499214" name="bitacora_datos_usuarios_FK">
+<createdBy>prac.des5</createdBy>
+<createdTime>2024-02-14 16:42:07 UTC</createdTime>
+<generatorID>D541D66C-A9F0-9F9C-FCFE-64C37919C8B0</generatorID>
+<ownerDesignName>restaurantebd</ownerDesignName>
+<referredTableLongName>usuarios</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1A4041D0-B3E7-E568-FCA9-0443A9AEB2E2</referredTableID>
+<keyObject>DB73DB7D-D175-A2AE-5245-DF04B4D6CE58</keyObject>
+<referredKeyID>DB73DB7D-D175-A2AE-5245-DF04B4D6CE58</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id_usuario</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

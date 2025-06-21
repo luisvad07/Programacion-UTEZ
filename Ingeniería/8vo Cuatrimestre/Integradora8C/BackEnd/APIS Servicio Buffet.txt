@@ -1,0 +1,162 @@
+EndPoints 
+
+# auth - login ***/foodster-api/auth/ method POST 
+{
+    "correo":"c@example.com",
+    "contrasenia":"12345"
+}
+
+# save usuarios ***/foodster-api/usuarios/ method POST 
+
+{
+            "nombres": "usuario",
+            "primerApellido": "usuario",
+            "segundoApellido": "usuario",
+            "telefono": "1234567890",
+            "correo": "usuario2@example.com",
+            "contrasena": "usuario123",
+            "active": true,
+            "roles": [
+               {
+                    "idRol": "47760ab5-2d74-45ac-af43-250208acd14e"
+                }
+            ]
+}
+# save personal ***/foodster-api/personal/   method POST 
+# JSON 
+{
+    "categoria": {
+            "idCategoria": "261e457a-9753-4357-98a7-0b2ae92dbf6a"
+        },
+    "active": true,
+    "usuarios": {
+        "nombres": "Juan",
+        "primerApellido": "Pérez",
+        "segundoApellido": "Gómez",
+        "telefono": "1234567890",
+        "correo": "juan2@example.com",
+        "contrasena": "contraseña123",
+        "active": true,
+        "roles": [
+        {
+            "idRol": "3ab228ec-a90d-496c-811b-d404347f1d24",
+            "nombre": "PERSONAL",
+            "ultimaModificacion": "2024-03-24T02:13:37.000+00:00",
+            "active": true
+        }
+    ]
+    }
+}
+
+# update personal ***/foodster-api/personal/   method PUT 
+# JSON 
+{
+    "categoria": {
+            "idCategoria": "261e457a-9753-4357-98a7-0b2ae92dbf6a"
+        },
+                    "idPersonal": "abc4fc84-4aaf-48b3-8aef-3818cdd57661",
+
+    "active": true,
+    "usuarios": {
+        "idPersonal": "abc4fc84-4aaf-48b3-8aef-3818cdd57661",
+        "nombres": "Juan 2",
+        "primerApellido": "Pérez 2",
+        "segundoApellido": "Gómez 2",
+        "telefono": "1234567890  2",
+        "correo": "juan2@example.com",
+        "contrasena": "contraseña123",
+        "active": true,
+        "roles": [
+        {
+            "idRol": "3ab228ec-a90d-496c-811b-d404347f1d24",
+            "nombre": "PERSONAL",
+            "ultimaModificacion": "2024-03-24T02:13:37.000+00:00",
+            "active": true
+        }
+    ]
+    }
+}
+
+# insert servicios ***/foodster-api/servicios/ method POST
+
+{
+  "nombre": "Nombre del Servicio 2",
+  "descripcion": "Descripción del Servicio 2",
+  "precio": 40.0,
+  "precio_descuento": 50.0,
+  "imagen": "ruta2/a/la/imagen.jpg",
+  "existencias": 1001,
+  "categoria": {
+    "idCategoria": "d7f2a0eb-98c0-4da7-83a7-233fcb26f6bb"
+  },
+  "active": true
+}
+
+# insert categoriasPersonal **/foodster-api/categorias-personal/   method POST
+{
+   "nombre": "prueba",
+   "active":true
+}
+
+# insert categoriasServicios **/foodster-api/categorias-servicios/   methos POST
+{
+   "nombre": "prueba",
+   "active":true
+}
+
+# insert direcciones **/foodster-api/direcciones/  methos POST
+{
+  "calle": "Calle Ejemplo",
+  "colonia": "Colonia Ejemplo",
+  "numero": "123",
+  "codigoPostal": "12345",
+  "municipio": "Municipio Ejemplo",
+  "estado": "Estado Ejemplo",
+  "referencias": "Referencias Ejemplo",
+  "active": true
+}
+
+# insert direccionesUsuario **/foodster-api/direcciones-usuario/ method POST
+{
+  "direcciones": {
+    "calle": "Calle Ejemplo",
+    "colonia": "Colonia Ejemplo",
+    "numero": "123",
+    "codigoPostal": "12345",
+    "municipio": "Municipio Ejemplo",
+    "estado": "Estado Ejemplo",
+    "referencias": "Referencias Ejemplo",
+    "active": true
+  },
+  "usuarios": {
+    "idUsuario": "dc254013-9f4d-4ad5-a128-e9b16b9402ec"
+  },
+  "active": true
+}
+
+### select direcciones por usuario /direcciones-usuario/usuario/{uid} method GET 
+
+
+## insert eventos /eventos/ method post 
+{
+  "fechaHoraInicio": "2024-03-28T12:00:00Z",
+  "fechaHoraFin": "2024-03-28T15:00:00Z",
+  "numeroPersonas": 10,
+  "costoTotal": 250.5,
+  "personalizado": true,
+  "active": true
+}
+
+## insert paquetes /paquetes/ method post 
+{
+  "nombre": "Nombre del paquete",
+  "descripcion": "Descripción del paquete",
+  "recomendadoPara": "Recomendado para quién",
+  "imagen": "url_de_la_imagen.jpg",
+  "numeroPedidos": 100,
+  "active": true
+}
+
+
+
+

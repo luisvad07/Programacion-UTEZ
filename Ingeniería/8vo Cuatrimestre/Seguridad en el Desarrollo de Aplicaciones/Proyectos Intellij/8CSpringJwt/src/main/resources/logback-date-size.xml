@@ -1,0 +1,29 @@
+<configuration>
+
+    <!-- Roll reposable de escribir en archivos -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/logfile.log</file>
+        <encoder>
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+
+
+        <!-- Estrategia de rotación de archivos -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <!-- Ruta base de los archivos de log -->
+            <fileNamePattern>logs/logfile-%d{yyyy-MM-dd}.%i.log.gz</fileNamePattern>
+
+            <!-- Máximo tamaño de cada archivo de log -->
+            <maxFileSize>5MB</maxFileSize>
+
+            <!-- Número máximo de archivos de log -->
+            <maxHistory>7</maxHistory> <!--conservar los logs de los últimos 7 días -->
+        </rollingPolicy>
+    </appender>
+
+    <!-- Configuración del nivel de log -->
+    <root level="DEBUG">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

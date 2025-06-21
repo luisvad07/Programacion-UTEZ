@@ -1,0 +1,4 @@
+Aquí van las copias de seguridad completas e incrementales y la estructura de la base de datos del proyecto integradora por medio de E-R 
+
+Carpeta 1: Copias de Seguridad (Completas e Incrementales) de la base de datos *foodster*
+Carpeta 2: Diagrama de Entidad-Relación de la base de datos *foodster*

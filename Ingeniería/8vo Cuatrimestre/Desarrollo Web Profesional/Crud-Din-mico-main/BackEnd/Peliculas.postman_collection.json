@@ -1,0 +1,213 @@
+{
+	"info": {
+		"_postman_id": "f96a75f8-6ff0-49ff-be1a-865ee80b8b45",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET GENEROS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/generos/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"generos",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET GENEROS ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/generos/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"generos",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST GENEROS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aventura\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/generos/registrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"generos",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PELICULAS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET PELICULAS ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST PELICULAS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Sin Control\",\r\n    \"director_movie\": \"Quentin Tarantino\",\r\n    \"duration\": 135,\r\n    \"genero\": {\r\n        \"id_gen\": 4,\r\n        \"name\": \"Comedia\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/registrar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"registrar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT PELICULAS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_movie\": 3,\r\n    \"name\": \"Sin Control 2\",\r\n    \"director_movie\": \"Quentin Tarantino\",\r\n    \"duration\": 145,\r\n    \"genero\": {\r\n        \"id_gen\": 4,\r\n        \"name\": \"Comedia\"\r\n    }\r\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"actualizar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE PELICULAS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
