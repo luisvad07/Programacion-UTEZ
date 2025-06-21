@@ -1,0 +1,33 @@
+name: mac_morelos_movil_flutter
+description: "Sistema de Módulo de Antención Ciudadana del Estado de Morelos (SIMAC)"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^5.7.0
+  cupertino_icons: ^1.0.8
+  flutter_svg: ^2.0.17
+  shared_preferences: ^2.5.1
+  intl: ^0.18.0
+  flutter_launcher_icons: ^0.14.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/simac.png"

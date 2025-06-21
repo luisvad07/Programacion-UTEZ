@@ -1,0 +1,642 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+    --color-base: #21362C;
+    --color-dark: #373B2C;
+    --color-light: #B1B8A0;
+    --color-accent: #323924;
+    --color-bland: #645B79;
+
+    --fondo-login: url("https://i0.wp.com/lopezdoriga.com/wp-content/uploads/2018/04/cuernavaca-morelos.jpg");
+    --logo-url: url("/assets/simac.png");
+    --logo-estado: url("https://cdn.prod.website-files.com/66d75f3897a0c14fc42017af/66fb53bb333d4f968c3acaf8_GM_ESCUDO_MORELOS.svg");
+   
+}
+
+.icon-shake {
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%, 80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%, 60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.loading-bar {
+    width: 0%;
+    height: 5px;
+    background-color: var(--color-accent);
+    animation: load 5s linear forwards;
+}
+
+@keyframes load {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+body.body-error {
+    background-color: var(--color-base) !important;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilos personalizados para el modal */
+.login-modal {
+    background-color: rgba(var(--color-dark-rgb), 0.9); /* Fondo oscuro casi sólido */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Sombra sutil */
+}
+
+.login-input {
+    background-color: rgba(var(--color-light-rgb), 0.2); /* Fondo claro semitransparente para los inputs */
+    border: 1px solid rgba(var(--color-base-rgb), 0.2); /* Borde sutil */
+    color: var(--color-light);
+}
+
+.login-input::placeholder {
+    color: rgba(var(--color-light-rgb), 0.7); /* Placeholder más claro */
+}
+
+/* Eliminar el borde azul al enfocar */
+.login-input:focus {
+    outline: none; /* Elimina el outline */
+    box-shadow: 0 0 5px rgba(var(--color-accent-rgb), 0.5); /* Agrega una sombra sutil al enfocar (opcional) */
+}
+
+.login-button {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+}
+
+.login-button:hover {
+    background-color: var(--color-dark);
+}
+
+/* Estilos personalizados para el modal */
+.register-modal {
+    background-color: rgba(var(--color-dark-rgb), 0.9); /* Fondo oscuro casi sólido */
+    box-shadow: none; /* Sombra sutil */
+}
+
+.register-input {
+    background-color: transparent; /* Elimina el fondo blanco */
+    color: var(--color-light);
+    font-weight: normal; /* Asegura que el texto no esté en negrita */
+}
+
+.register-input::placeholder {
+    color: rgba(var(--color-light-rgb), 0.7); /* Placeholder más claro */
+    font-weight: normal; /* Asegura que el placeholder no esté en negrita */
+}
+
+/* Eliminar el borde azul al enfocar */
+.register-input:focus {
+    outline: none; /* Elimina el outline */
+    box-shadow: 0 0 5px rgba(var(--color-accent-rgb), 0.5); /* Agrega una sombra sutil al enfocar (opcional) */
+}
+
+.register-button {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+}
+
+.register-button:hover {
+    background-color: var(--color-dark);
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff; /* Ajusta el color según tu diseño */
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco translúcido */
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    font-family: sans-serif; /* Fuente genérica */
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al círculo */
+    border: 5px solid var(--color-base);
+}
+
+.profile-heading {
+    color: var(--color-accent);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Espacio entre los elementos */
+}
+
+.profile-info i {
+    margin-right: 0.75rem; /* Espacio entre el icono y el texto */
+    color: #6B7280; /* Color grisáceo para los iconos */
+}
+
+.profile-info strong {
+    margin-right: 0.25rem;
+    font-weight: 600; /* Semi-bold */
+}
+
+.profile-info span {
+    font-weight: 400; /* Regular */
+}
+
+/* Declaración de variables RGB */
+:root {
+    --color-base-rgb: 112, 121, 91; /* RGB value for #70795B */
+    --color-dark-rgb: 55, 59, 44; /* RGB value for #373B2C */
+    --color-light-rgb: 177, 184, 160; /* RGB value for #B1B8A0 */
+    --color-accent-rgb: 50, 57, 36; /* RGB value for #323924 */
+    --color-bland-rgb: 100, 91, 121; /* RGB value for #645B79 */
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: #f4f4f4 !important;
+    margin: 0;
+}
+
+.submenu {
+    padding-left: 1.5rem;
+}
+
+.submenu a {
+    padding-left: 1rem;
+}
+
+.submenu a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: transparent; /* Cambia el color de fondo para resaltar el enlace activo */
+    font-weight: normal;
+}
+
+.rotate-180 {
+    transform: rotate(180deg);
+}
+
+aside {
+    -ms-overflow-style: none; /* Oculta el scrollbar en Internet Explorer y Edge */
+    scrollbar-width: none; /* Oculta el scrollbar en Firefox */
+}
+
+.logo {
+  max-height: 50px; /* Ajusta este valor según sea necesario */
+  width: auto;
+  vertical-align: middle; /* Alinea el logo verticalmente */
+  margin-right: 1rem; /* Espacio a la derecha del logo */
+}
+
+#map { height: 400px; z-index: 1; }
+
+#mapContainer {
+    height: 200px; /* Asegura un tamaño adecuado */
+    width: 100%; 
+}
+
+/* Estilos para los iconos personalizados */
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+    font-size: 24px; /* Ajusta el tamaño del icono */
+}
+.marker-icon { /* Iconos de Font Awesome (o similar) */
+    color: #007bff; /* Color primario */
+    /* Animación sutil al cargar */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+/* Estilos para los indicadores de paso */
+.step-indicators {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.step-indicator {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    color: #645B79;
+    position: relative; /* Para el posicionamiento del icono */
+    padding-left: 2rem; /* Espacio para el icono */
+}
+
+.step-indicator i {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 0.5rem;
+}
+
+.step-indicator.active {
+    color: #D6D8D0;
+    font-weight: bold;
+}
+
+.step-indicator:not(:last-child)::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1; /* Para que la línea quede detrás del texto */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none; /* Initially hidden */
+}
+
+.register-input.error {
+    border: 1px solid red;
+}
+
+/* Custom styles to match the image */
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    margin-left: 5px;
+}
+
+.dataTables_wrapper .dataTables_length select {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #f9f9f9;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 5px 10px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background-color: #eee;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background-color: #007bff;
+    color: white !important;
+    border-color: #007bff;
+}
+
+table.dataTable tbody td {
+    padding: 10px;
+}
+
+/* Status Styling */
+.status-active {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-suspended {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-inactive {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Estilos básicos para el loader */
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 0.8s linear infinite;
+    margin: auto; /* Centrar */
+    display: none; /* Oculto por defecto */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Animación para el modal */
+.modal-enter-active, .modal-leave-active {
+    transition: opacity 0.3s ease;
+}
+.modal-enter-from, .modal-leave-to {
+    opacity: 0;
+}
+.modal-enter-active .modal-content, .modal-leave-active .modal-content {
+    transition: transform 0.3s ease;
+}
+.modal-enter-from .modal-content {
+    transform: scale(0.8);
+}
+.modal-leave-to .modal-content {
+    transform: scale(0.8);
+}
+
+/* Style para el icono con texto */
+.icon-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem; /* Espacio entre filas */
+}
+
+.icon-label i {
+    margin-right: 0.5rem;
+}
+
+#mapMorelos {
+    height: 500px;
+    width: 100%; /* This makes the map fit its container */
+    z-index: 1;
+}
+
+.leaflet-div-icon {
+    background: transparent;
+    border: none;
+}
+
+.marker-icon {
+    font-size: 24px; /* Ajusta el tamaño del icono */
+    color: #007bff; /* Color del icono (azul por defecto) */
+}
+
+/* Styling for the loading overlay */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Style for Municipality Info */
+.municipality-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.municipality-info i {
+    margin-right: 0.5rem;
+    color: #3490dc;
+}
+
+.municipality-color {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+/* Style for two-column Municipality List */
+.municipality-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+
+.modal-content {
+    padding: 1rem;
+    /* Adding some padding */
+    max-width: 500px;
+    /* Set a maximum width to limit content overflow */
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #4CAF50;
+    transition: width 0.3s ease;
+}
+
+.status-activeEvent {
+    background-color: #d4edda; /* Verde claro para ACTIVO */
+    color: #155724; /* Texto verde oscuro */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-finished {
+    background-color: #e2e3e5; /* Gris claro para FINALIZADO */
+    color: #6c757d; /* Texto gris oscuro */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-canceled {
+    background-color: #f8d7da; /* Rojo claro para CANCELADO */
+    color: #721c24; /* Texto rojo oscuro */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.status-pending {
+    background-color: #fff3cd; /* Amarillo claro para PENDIENTE */
+    color: #856404; /* Texto amarillo oscuro */
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/* Estilos específicos */
+#mapContainer { height: 350px; width: 100%; z-index: 1; } /* Mapa del modal de ubicación */
+
+/* Clases de estado */
+.status {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.status-pending {
+    background-color: #FFFBEB;
+    color: #D97706;
+}
+
+.status-in-progress {
+    background-color: #BFDBFE;
+    color: #1D4ED8;
+}
+
+.status-resolved {
+    background-color: #D1FAE5;
+    color: #10B981;
+}
+
+.status-closed {
+    background-color: #F3F4F6;
+    color: #4B5563;
+}
+
+/* Z-index */
+.swal2-container { z-index: 9999 !important; }
+.modal { z-index: 1050; }
+.modal-backdrop { z-index: 1040; }
+
+/* Estilo para descripción en modal */
+#showModalDescriptionContainer {
+    max-height: 150px; overflow-y: auto; background-color: #f9fafb;
+    padding: 0.5rem; border: 1px solid #e5e7eb; border-radius: 0.375rem;
+    white-space: pre-wrap;
+}
+
+/* Estilo para placeholder de imagen */
+#showModalEvidencePlaceholder {
+    display: flex; align-items: center; justify-content: center;
+    height: 150px; background-color: #f3f4f6; /* bg-gray-100 */
+    border: 1px dashed #d1d5db; /* border-gray-300 */ border-radius: 0.375rem;
+    color: #6b7280; /* text-gray-500 */
+}
+
+#showModalEvidenceImage {
+    max-height: 200px; /* Altura máxima de la imagen */
+    max-width: 100%;   /* Ancho máximo */
+    display: block;     /* Para centrar si es necesario */
+    margin: 0 auto;     /* Centrar horizontalmente */
+    border-radius: 0.25rem;
+}
+
+
+/* Estilo para los contenedores del mapa */
+#mapCreate, #mapEdit {
+    height: 300px; /* Altura del mapa */
+    width: 100%;
+    border-radius: 0.375rem; /* Redondeado como los inputs */
+    border: 1px solid #e5e7eb; /* Borde sutil */
+    z-index: 0; /* Para asegurar que controles/popups sean visibles */
+}
+/* Ajustes Leaflet para Modales (evita problemas de z-index) */
+.leaflet-pane, .leaflet-tile, .leaflet-marker-icon, .leaflet-marker-shadow,
+.leaflet-tile-pane, .leaflet-tile-container, .leaflet-overlay-pane,
+.leaflet-shadow-pane, .leaflet-marker-pane, .leaflet-tooltip-pane,
+.leaflet-popup-pane, .leaflet-zoom-box, .leaflet-image-layer,
+.leaflet-grid-layer {
+    z-index: 1; /* Base */
+}
+.leaflet-marker-pane { z-index: 2; }
+.leaflet-popup-pane { z-index: 4; }
+.leaflet-control { z-index: 5 !important; } /* Controles encima */
+
+
+/* Evita el scroll del body cuando el modal está abierto */
+body.modal-open { overflow: hidden; }
+
+/* Transiciones para el modal */
+.modal { transition: opacity 0.3s ease-in-out; }
+.modal-content { transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; }
