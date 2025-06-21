@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="104F1B39-9875-99BA-FC80-665E136C474F" name="PEDIDO">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:08:52 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="N° Articulo" id="675F77E4-22E9-8A2F-85EF-0F8DF0051BD4">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:02 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Cantidad" id="9466072E-9EF5-8C33-6091-DA1BF767FF7A">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:03 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="N° Cliente" id="2A918FF9-0D9A-148D-ACC6-428C243B6C6B">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:04 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Direccion Envio" id="BC60CCC1-DF52-CD04-0E72-823FAAB567B6">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:04 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Fecha Pedido" id="82EFD883-D4FE-CE33-4CE7-6CA922CCB24A">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:05 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="N° Cliente1" id="3CBF8B25-D70A-3F09-9631-C5BC5796435F">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:21:43 UTC</createdTime>
+<generatorID>BF243B26-814F-1265-7B1D-C883C3420CDC</generatorID>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<referedAttribute>314B3C20-96FC-7BB5-37F5-BD69F33D7F7A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="184DF13D-4E60-ED38-DBA3-A8ECF3BFB8AB" name="PEDIDO PK">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:09:47 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>675F77E4-22E9-8A2F-85EF-0F8DF0051BD4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

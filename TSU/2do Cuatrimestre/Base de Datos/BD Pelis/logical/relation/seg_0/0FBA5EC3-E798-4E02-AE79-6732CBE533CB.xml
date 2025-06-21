@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cass_alq" directorySegmentName="seg_0" id="0FBA5EC3-E798-4E02-AE79-6732CBE533CB">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:46:54 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<sourcePk>54A33E68-4191-5F1F-2336-E56D390A439F</sourcePk>
+<targetPk>65EB6A8A-F2F4-FA56-CCBD-98A2650536E5</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>0C08D889-9853-13AD-BF57-115D6D37F874</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>FAD3EE7F-BA06-6DAE-3ECA-93723C184765</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

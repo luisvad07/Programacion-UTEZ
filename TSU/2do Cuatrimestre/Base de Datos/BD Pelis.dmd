@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BD Pelis" id="DACA2C4A-A9BC-B853-5F78-0FCC61FA5C33" version="3.5">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:11:48 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>DACA2C4A-A9BC-B853-5F78-0FCC61FA5C33</designId>
+</OSDM_Design>

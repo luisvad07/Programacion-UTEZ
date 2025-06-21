@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="prestamo_libro" directorySegmentName="seg_0" id="2F984C65-7220-088A-8BCF-AEE4C6A3943E">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:17:29 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<sourcePk>A78BCAFD-58FD-610A-0D26-B3CDDA77E1E8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>95343A4D-CED4-FC39-5E4F-84F14D5D22EB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>D74176ED-3129-3CA0-E38C-780CB65E3302</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

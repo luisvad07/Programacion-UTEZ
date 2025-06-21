@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D74176ED-3129-3CA0-E38C-780CB65E3302" name="LIBRO">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:56:45 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_libro" id="1F433554-7E7D-DE2C-7472-DE52EB1DD509">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:57:00 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_libro" id="4CB25741-1866-62DE-64FA-F527DF1BBA49">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:57:00 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_editorial" id="6AA20915-4A3B-533D-A962-D310A0765D4E">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:57:00 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_prestamo" id="B7E3B4C1-0B5A-642D-BE93-D7385AFC45F3">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:57:01 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_prestamo1" id="5B931FAA-A300-9CF5-22AE-6EC68F02CCEA">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:19:25 UTC</createdTime>
+<generatorID>2F984C65-7220-088A-8BCF-AEE4C6A3943E</generatorID>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>0D45EBB7-0995-1A40-EEFC-D0BC181F3AB8</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C4A1A128-2E18-B166-6784-211CD333295B" name="LIBRO PK">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:57:25 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F433554-7E7D-DE2C-7472-DE52EB1DD509</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

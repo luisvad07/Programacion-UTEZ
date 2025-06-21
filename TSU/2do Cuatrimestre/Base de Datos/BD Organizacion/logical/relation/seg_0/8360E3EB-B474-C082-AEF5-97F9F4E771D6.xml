@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Sedes_Voluntariado" directorySegmentName="seg_0" id="8360E3EB-B474-C082-AEF5-97F9F4E771D6">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 00:19:02 UTC</createdTime>
+<ownerDesignName>BD Organizacion</ownerDesignName>
+<engineerTo>
+<item key="E7BEBF23-DA30-9F54-2310-37451EAFA7AA" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>577B2248-4FC5-4310-1BBA-6C1EDD6F60A4</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>1552B6CA-E658-A168-199B-E0DAA3152603</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Articulo_Distribuidor" directorySegmentName="seg_0" id="FD126330-B7F7-A259-0184-9184FF21324D">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:22:55 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<engineerTo>
+<item key="CCC49711-9AE4-FE29-807B-1BBBE56CB511" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>C1AAB5E8-AD2B-497A-259D-2D3641873B57</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>AD0D2B7E-C167-F948-EA21-D1301962EC4B</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

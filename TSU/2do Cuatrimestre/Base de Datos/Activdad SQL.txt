@@ -1,0 +1,107 @@
+CREATE TABLE customers (
+ctr_number varchar2 (6) not null PRIMARY KEY,
+email varchar2 (50) constraint ctr_email_uk unique,
+first_name varchar2 (25),
+last_name varchar2 (25),
+phone_number varchar2 (25),
+current_balance number (6,2),
+loyalty_card_number varchar2 (6),
+tem_id varchar2 (4) CONSTRAINT ctr_tem_id_fk REFERENCES teams (id),
+sre_id varchar2 (4) CONSTRAINT ctr_sre_id_fk REFERENCES sales_representatives (id)
+);
+
+
+CREATE TABLE customers_addresses (
+id varchar2 (8) not null PRIMARY KEY,
+address_line_1 varchar2 (30),
+address_line_2 varchar2 (25),
+city varchar2 (15),
+postal_code varchar2 (7),
+ctr_number varchar2 (6) CONSTRAINT cas_ctr_number_fk REFERENCES customers (ctr_number)
+);
+
+
+CREATE TABLE teams (
+id varchar2 (4) not null,
+name varchar2 (40),
+number_of_players number (2),
+discount number (2),
+constraint tem_id_pk PRIMARY KEY (id)
+);
+
+
+CREATE TABLE sales_representatives (
+id varchar2 (4) not null PRIMARY KEY,
+email varchar2 (50) constraint sre_email_uk unique,
+first_name varchar2 (20),
+last_name varchar2 (30),
+phone_number varchar2 (11),
+commission_rate number (2),
+supervisor_id varchar2 (4) CONSTRAINT sre_supervisor_id_fk REFERENCES sales_representatives (id)
+);
+
+
+CREATE TABLE sales_representatives_address (
+id varchar2 (4) not null,
+address_line_1 varchar2 (30),
+address_line_2 varchar2 (30),
+city varchar2 (15),
+postal_code varchar2 (7),
+constraint sas_id_pk PRIMARY KEY (id)
+);
+
+
+CREATE TABLE orders (
+id varchar2 (9) not null PRIMARY KEY ,
+odr_date date,
+odr_time TIMESTAMP (0),
+number_of_units number (2),
+ctr_number varchar2 (6) CONSTRAINT odr_ctr_number_fk REFERENCES customers (ctr_number)
+);
+
+
+CREATE TABLE ordered_items (
+quantity_ordered number (3),
+quantity_shipped number (3),
+odr_id varchar2 (9),
+itm_number varchar2 (10),
+constraint oim_id_pk PRIMARY KEY (odr_id),
+constraint oim_number_pk PRIMARY KEY (itm_number)
+);
+
+
+CREATE TABLE items (
+itm_number varchar2 (10) not null primary KEY,
+name1 varchar2 (20),
+description1 varchar2 (50),
+category varchar2 (25),
+color varchar2 (15),
+size1 char (1),
+ilt_id varchar2 (11) CONSTRAINT itm_id_fk REFERENCES inventory_list (id)
+);
+
+
+CREATE TABLE inventory_list (
+id varchar2 (10) not null,
+cost number (7,2),
+units number (4),
+constraint ilt_id_pk PRIMARY KEY (id)
+);
+
+
+CREATE TABLE price_history (
+start_date date,
+start_time TIMESTAMP (0),
+price number (7,2),
+end_date date,
+end_time TIMESTAMP (0),
+itm_number varchar2 (10) CONSTRAINT phy_itm_number_fk REFERENCES items (itm_number),
+constraint phy_number_pk PRIMARY KEY (itm_number)
+);
+
+
+select * from libros;
+
+
+CONSTRAINT oim_odr_id_fk REFERENCES orders (id)
+CONSTRAINT oim_itm_number_fk REFERENCES items (itm_number)

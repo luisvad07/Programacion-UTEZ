@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="363CA2EE-653F-CD8C-31C3-79924DCC57DE" name="MATERIAL">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-09 14:39:09 UTC</createdTime>
+<ownerDesignName>BD Organizacion</ownerDesignName>
+<engineerTo>
+<item key="E7BEBF23-DA30-9F54-2310-37451EAFA7AA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>0DE184F0-EB96-C942-226A-89E5B1B3687C</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Tipo" id="1204E7F9-0D91-86C5-6B8E-EA7D6E6EFB5B">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-09 14:39:27 UTC</createdTime>
+<ownerDesignName>BD Organizacion</ownerDesignName>
+<engineerTo>
+<item key="E7BEBF23-DA30-9F54-2310-37451EAFA7AA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Tonelada" id="26090E32-DE01-C3AE-061E-7D57913C28F3">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-09 14:39:28 UTC</createdTime>
+<ownerDesignName>BD Organizacion</ownerDesignName>
+<engineerTo>
+<item key="E7BEBF23-DA30-9F54-2310-37451EAFA7AA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Unidad" id="3FD13012-410C-E34D-0CE9-853F6F58CF43">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-09 14:41:19 UTC</createdTime>
+<ownerDesignName>BD Organizacion</ownerDesignName>
+<engineerTo>
+<item key="E7BEBF23-DA30-9F54-2310-37451EAFA7AA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>23</dataTypePrecision>
+<ownDataTypeParameters>,23,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Examen_Nombre" id="3A78E633-3CAB-E783-A4B9-A3718029A182" version="3.5">
+<createdBy>CC6</createdBy>
+<createdTime>2022-02-08 17:28:36 UTC</createdTime>
+<ownerDesignName>Examen_Morgan</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>3A78E633-3CAB-E783-A4B9-A3718029A182</designId>
+</OSDM_Design>

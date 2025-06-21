@@ -1,0 +1,163 @@
+COMANDOS PARA SQL EN CONSOLA XAMPP
+
+
+//Consola
+C:\xampp\mysql\bin> mysql.exe -h localhost -u root -p
+
+USE mydb; // mysql> use mibasedatos;
+CREATE TABLE mitabla ( id INT PRIMARY KEY, nombre VARCHAR(20) );
+INSERT INTO mitabla VALUES ( 1, 'Will' );
+INSERT INTO mitabla VALUES ( 2, 'Marry' );
+INSERT INTO mitabla VALUES ( 3, 'Dean' );
+SELECT id, nombre FROM mitabla WHERE id = 1;
+UPDATE mitabla SET nombre = 'Willy' WHERE id = 1;
+SELECT id, nombre FROM mitabla;
+DELETE FROM mitabla WHERE id = 1;
+SELECT id, nombre FROM mitabla;
+DROP DATABASE mydb;
+SELECT count(1) from mitabla; da el número de registros en la tabla
+
+
+
+
+COMANDOS PARA SQL EN ORACLE
+
+/*Crear tabla*/ //Documentar
+
+CREATE TABLE nom_tabla (
+	//Fields
+);
+
+insert into (field_a, field_b) nom_tabla VALUES ('valor1', 'valor2'); // Insertar registros
+ 
+Select * from nom_tabla; // Mostrar todos los registros
+
+delete nom_tabla where field_a = 'valor1'; //Eliminar un registro
+
+drop table nom_tabla; //Elimina todos los registros de la tabla
+
+
+/*Opcion UNIQUE KEY*/
+
+CREATE TABLE empleados ( //Primera Forma
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25) constraint epo_email_uk unique,
+salario number (8,2)
+);
+
+CREATE TABLE empleados ( //Segunda Forma
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25),
+salario number (8,2),
+unique (email)
+);
+
+CREATE TABLE empleados ( //Tercera Forma
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25) unique,
+salario number (8,2)
+);
+
+CREATE TABLE empleados ( //Cuarta Forma
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25),
+salario number (8,2),
+constraint epo_email_uk unique
+);
+
+
+/*Opcion UNIQUE KEY 2*/
+
+CREATE TABLE empleados (
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25) constraint epo_email_uk unique,
+salario number (8,2),
+constraint epo_id_pk PRIMARY KEY (id)
+);
+
+
+/*Relaciones de tablas*/
+CREATE TABLE libros1 (
+codigo number (3) not null PRIMARY KEY,
+titulo varchar2 (50),
+codigo_editorial number(3) CONSTRAINT lbo_edl_codigo_fk REFERENCES editoriales (codigo)
+);
+
+CREATE TABLE editorial (
+codigo number (3) not null PRIMARY KEY,
+titulo varchar2 (30) not NULL
+);
+
+
+-- SENTENCIA CHECK
+
+CREATE TABLE empleados (
+id number (4) not null primary KEY,
+nombre varchar2 (30),
+Apellido_Paterno varchar2 (30),
+Apellido_Materno varchar2 (30),
+salario number (8,2) constraint epo_slo_mayor0 check (salario>0)
+);
+
+drop table empleados;
+insert into EMPLEADOS values (3284,'Luis E.','Bahena','Castillo',100);
+
+SELECT * FROM EMPLEADOS
+
+
+--ALTER TABLE
+
+alter table empleados add fecha_de_nacimiento date not null;
+
+describe empleados;
+
+
+--MODIFICAR 
+
+alter table empleados modify salario number (6,2) not null;
+
+
+
+--ELIMINACION Y AGREGAR RESTRICCIONES
+
+alter table empleados drop CONSTRAINT fecha_de_nacimiento;
+alter table clientes add CONSTRAINT cee_id_pk primary key (id);
+
+
+CREATE TABLE clientes (
+id number (6),
+nombre varchar2 (25),
+email varchar2 (25)
+);
+
+describe clientes;
+
+
+-- INSERT INTO
+
+insert into libros values ('Ingles', 'Juan Perez', 'Trillas',0);
+
+
+-- SENTENCIA UPDATE
+
+update nom_tabla set nom_columna = new_valor;
+update libros set editorial = 'Howarts' where titulo='Base de Datos';
+
+-- SENTENCIA DELETE
+
+delete from nom_tabla;
+delete from nom_tabla where condicion;
+
+--- SENTENCIA TRUNCATE
+
+truncate table nom_table;
+
+--- SENTENCIA SELECT
+
+select * (Si se quieren ver todas las columnas de la tabla) from nom_table;
+select nom_columna1, nom_columna2

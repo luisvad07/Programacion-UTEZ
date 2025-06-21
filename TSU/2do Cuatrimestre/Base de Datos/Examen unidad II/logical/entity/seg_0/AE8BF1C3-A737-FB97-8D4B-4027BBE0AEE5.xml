@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="AE8BF1C3-A737-FB97-8D4B-4027BBE0AEE5" name="CURSO">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:54:29 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_curso" id="EA8A3E1F-7D47-54E6-730D-E1A831A17A09">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:54:42 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nom_curso" id="CC827CC8-0491-01E5-8229-5FAC8999DF72">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:54:43 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_profesor" id="A6809596-86C9-9417-23DE-4D6F5DC8009E">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:07:49 UTC</createdTime>
+<generatorID>E1922C91-E9FF-6304-2E77-B31A00DDCF8E</generatorID>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>1D59988F-9C0C-9514-C16E-473E35790628</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_asignatura" id="0187CC7F-F99F-191C-E36B-51AD9227638B">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:10:38 UTC</createdTime>
+<generatorID>15B6F868-7801-D23C-DD98-03F732662AE0</generatorID>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>7E461714-7CE5-4FBF-5FFE-CDF911B2E812</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9996C45A-F7F9-35FB-8D8D-DB597B58B952" name="CURSO PK">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:55:02 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>EA8A3E1F-7D47-54E6-730D-E1A831A17A09</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

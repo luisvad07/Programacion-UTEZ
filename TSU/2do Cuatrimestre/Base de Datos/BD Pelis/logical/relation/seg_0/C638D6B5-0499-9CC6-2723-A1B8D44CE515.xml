@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="cate_peli" directorySegmentName="seg_0" id="C638D6B5-0499-9CC6-2723-A1B8D44CE515">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:44:00 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<targetPk>8F23068D-BC1F-3B4E-B422-C71F137591CE</targetPk>
+<identifying>false</identifying>
+<nameOnSource>puede</nameOnSource>
+<nameOnTarget>debe</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>48B24529-FF58-1F8D-C212-D464F94C9FD7</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2B993459-6873-383D-5545-EDF48C4D0302</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

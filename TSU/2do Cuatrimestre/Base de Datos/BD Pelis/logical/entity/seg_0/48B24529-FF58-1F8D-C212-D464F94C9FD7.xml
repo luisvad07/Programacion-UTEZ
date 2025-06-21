@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="48B24529-FF58-1F8D-C212-D464F94C9FD7" name="CATEGORIA">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:37:22 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="cod_pelicula " id="52530312-D798-FB27-1949-1BC9A11DC71D">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:40:06 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pelicula" id="AF8374D3-B22F-8799-B486-EEEEDD03E923">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:44:44 UTC</createdTime>
+<generatorID>C638D6B5-0499-9CC6-2723-A1B8D44CE515</generatorID>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>0A6B64E7-F9F3-C9E9-9A41-3E435E42FE86</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

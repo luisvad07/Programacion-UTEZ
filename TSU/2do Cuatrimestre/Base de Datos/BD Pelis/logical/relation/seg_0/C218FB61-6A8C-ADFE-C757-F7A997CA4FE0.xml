@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="peli_actor" directorySegmentName="seg_0" id="C218FB61-6A8C-ADFE-C757-F7A997CA4FE0">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:45:10 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<sourcePk>84212B8F-E154-1A0E-5214-91D2388D05C4</sourcePk>
+<targetPk>8F23068D-BC1F-3B4E-B422-C71F137591CE</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>D88C5B30-CC4A-1B48-C103-FC1DE008BD10</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>2B993459-6873-383D-5545-EDF48C4D0302</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

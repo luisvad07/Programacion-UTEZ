@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="9EAD55CE-6273-4D72-715D-E59788DF78BE" mainViewID="B87CA773-65FE-6BF1-48B7-1A90A00A6527">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:08:20 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

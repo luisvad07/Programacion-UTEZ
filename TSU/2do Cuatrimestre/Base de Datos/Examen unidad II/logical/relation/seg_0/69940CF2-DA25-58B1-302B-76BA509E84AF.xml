@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="profe_asigna" directorySegmentName="seg_0" id="69940CF2-DA25-58B1-302B-76BA509E84AF">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:09:01 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<sourcePk>858120AA-8EBA-9219-BE37-66E9D008DA3D</sourcePk>
+<targetPk>42B60387-EADA-694C-1745-CDD5BAD997AB</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9EF63A54-79C2-1F82-790D-9433F2C39391</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>C33C8E06-F863-C782-072E-4B960117149F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

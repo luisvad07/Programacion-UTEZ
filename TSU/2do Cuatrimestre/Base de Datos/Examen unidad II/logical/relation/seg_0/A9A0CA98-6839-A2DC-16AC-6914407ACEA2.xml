@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="profe_aula" directorySegmentName="seg_0" id="A9A0CA98-6839-A2DC-16AC-6914407ACEA2">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:06:16 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<sourcePk>858120AA-8EBA-9219-BE37-66E9D008DA3D</sourcePk>
+<targetPk>87C5EB06-E442-F7A4-6490-52C06800542B</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>9EF63A54-79C2-1F82-790D-9433F2C39391</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>C11CC485-1568-E194-3545-7A81948DB4E8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

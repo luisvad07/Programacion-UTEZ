@@ -1,0 +1,61 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2B993459-6873-383D-5545-EDF48C4D0302" name="PELICULA">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:18:56 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pelicula" id="0A6B64E7-F9F3-C9E9-9A41-3E435E42FE86">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:19:23 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,50,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cod_cassette" id="10776E22-55E1-6B06-6A0B-49B105DC4AEB">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:43:41 UTC</createdTime>
+<generatorID>DECBA82B-3AE8-97E3-6716-B0172652E437</generatorID>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<referedAttribute>C63C438B-1BB6-1C78-F5AD-66E473DE166D</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>50</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8F23068D-BC1F-3B4E-B422-C71F137591CE" name="PELICULA PK">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-03-04 02:22:31 UTC</createdTime>
+<ownerDesignName>BD Pelis</ownerDesignName>
+<engineerTo>
+<item key="A11BE529-8F32-9F37-3CB9-6A2787C1A4F7" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0A6B64E7-F9F3-C9E9-9A41-3E435E42FE86</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

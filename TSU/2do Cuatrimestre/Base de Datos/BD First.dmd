@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BD First" id="09472119-F2D8-1CAF-C50C-38221545139D" version="3.5">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 01:01:54 UTC</createdTime>
+<ownerDesignName>BD First</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>09472119-F2D8-1CAF-C50C-38221545139D</designId>
+</OSDM_Design>

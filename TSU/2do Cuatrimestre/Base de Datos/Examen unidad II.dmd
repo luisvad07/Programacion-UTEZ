@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="Examen unidad II" id="2D092A68-1995-C8DA-9763-D7690CC5077A" version="3.5">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 13:08:20 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>2D092A68-1995-C8DA-9763-D7690CC5077A</designId>
+</OSDM_Design>

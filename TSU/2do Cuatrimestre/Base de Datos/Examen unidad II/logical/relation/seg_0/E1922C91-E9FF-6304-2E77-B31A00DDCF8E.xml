@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="profe_curso" directorySegmentName="seg_0" id="E1922C91-E9FF-6304-2E77-B31A00DDCF8E">
+<createdBy>CC6</createdBy>
+<createdTime>2022-03-04 14:07:49 UTC</createdTime>
+<ownerDesignName>Examen unidad II</ownerDesignName>
+<engineerTo>
+<item key="587D3F4B-FC8D-C873-AB72-5A6B74C40828" value="true"/>
+</engineerTo>
+<sourcePk>858120AA-8EBA-9219-BE37-66E9D008DA3D</sourcePk>
+<targetPk>9996C45A-F7F9-35FB-8D8D-DB597B58B952</targetPk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>9EF63A54-79C2-1F82-790D-9433F2C39391</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>AE8BF1C3-A737-FB97-8D4B-4027BBE0AEE5</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

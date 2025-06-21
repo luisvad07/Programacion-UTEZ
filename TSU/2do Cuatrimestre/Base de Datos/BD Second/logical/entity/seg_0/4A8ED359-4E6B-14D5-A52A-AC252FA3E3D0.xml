@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4A8ED359-4E6B-14D5-A52A-AC252FA3E3D0" name="CLIENTE">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:29:45 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="CEAB101B-0121-0905-6BB6-987E19F21792">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:29:59 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="3994B55F-99C1-3980-98C2-72CFBC353203">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:00 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Ciudad" id="3F43591D-391C-6F6A-B961-4C7767A89969">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:00 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Estado" id="D8A8F462-2266-AB1D-F001-254DD9EAED2B">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:01 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Codigo Postal" id="74E6F03C-0BB1-D99C-523B-70C88E93D463">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:01 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Pais" id="258DFD81-E2A1-7F71-5156-AD06C84E64B4">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:02 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Telefono" id="F7EE35BE-CE12-DCF0-7644-70059311037D">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:30:02 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4402BBA4-8107-EAC1-77EF-DFFFD1B804CB" name="CLIENTE PK">
+<createdBy>clientepreferido</createdBy>
+<createdTime>2022-02-11 02:52:18 UTC</createdTime>
+<ownerDesignName>BD Second</ownerDesignName>
+<engineerTo>
+<item key="F6A4992C-EF14-F5DC-BE24-E55E9CB7951A" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CEAB101B-0121-0905-6BB6-987E19F21792</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
