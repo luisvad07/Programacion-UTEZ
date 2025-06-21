@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>GESTION ADMINISTRADORES</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style type="text/css">
+      .form-group-incorrecto .form-label{
+          color: #bb2929 !important;
+        }
+
+      .form-group-incorrecto .form-control {
+          border: 2px solid #bb2929 !important;
+        }
+
+      .invalid-feedback-active{
+          display: block;
+      }
+
+      .form-group-correcto .form-label{
+          color: #1ed12d !important;
+      }
+
+      .form-group-correcto .form-control {
+          border: 2px solid #1ed12d !important;
+      }
+
+      .valid-feedback-active{
+          display: none;
+      }
+    </style>
+
+</head>
+<body>
+<!-- *********************************************************AQUI EMPIEZA LA VISTA******************************************************  -->
+
+<!-- /*
+////////////////////////////////////////////////////
+                     Empieza pagina
+////////////////////////////////////////////////////
+*/ -->
+<!-- w=tamaño que abarca el texto   mx=posicion del texto -->
+
+<div id="fondo-blanco" class="rounded p-4 shadow">
+    <!-- El fondo blanco -->
+        <!-- Contenedor principal-->
+        <section>
+            <form class=" row g-3 needs-validation" method="post" id="form" novalidate> 
+                <div class="row ">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12  p-2">
+                        <h1 id="titulo">Crear Administrador</h1>
+                    </div>
+                </div>
+               
+                <div class="row">
+                    <div class="col col-lg-6 col-md-6 col-sm-12 col-12 mt-2" id="group_username">
+                        <label for="username" class="form-label fs-3">Nombre de usuario</label>
+                        <input type="text" name="username" class="form-control" id="username"  placeholder="Halconcín"aria-describedby="inputGroupPrepend2" required>
+                        <div class="invalid-feedback">
+                            El usuario debe de ser de 4 a 8 caracteres
+                        </div>
+                    </div>
+                    <!-- aqui preguntar y recordar porque este ya no me pide a fuerza el arroba -->
+                    <div class="col col-lg-6 col-md-6 col-sm-12 col-12 mt-2" id="group_email">
+                        <label for="email" class="form-label fs-3">Correo</label>
+                        <input type="email" name="email" class="form-control" id="email" 
+                               placeholder="halcon@utez.edu.mx" required>
+                        <div class="invalid-feedback">
+                            El Correo tiene que ser de la cuenta institucional de la UTEZ
+                        </div>
+                    </div>
+
+                    <!-- aqui preguntar y recordar como funciona esto de la confirmacion para saber o ver cual mando -->
+                    <div class="col col-lg-6 col-md-6 col-sm-12 col-12 mt-2" id="group_password">
+                        <label for="password" class="form-label fs-3">Contraseña</label>
+                        <input type="password" name="password" class="form-control" id="password"  required>
+                        <div class="invalid-feedback">
+                            La Contraseña debe de ser de 4 caracteres
+                        </div>
+                    </div>
+                    <!-- aqui preguntar y recordar como hacer que funcione la confirmacion si pongo la otra validacion -->
+                    <div class="col col-lg-6 col-md-6 col-sm-12 col-12 mt-2" id="group_confirmpass">
+                        <label for="confirmpass" class="form-label fs-3">Confirmar contraseña</label>
+                        <input type="password" name="confirmpass" class="form-control " id="confirmpass" required>
+                    <!-- Mensajes de Verificación -->
+                    <div class="invalid-feedback">
+                        Las Contraseñas no coinciden!
+                    </div>
+                    <div class="valid-feedback">
+                        Las Contraseñas coinciden!</div>
+                    </div>            
+
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12 mt-2" id="group_tipos">
+                        <label for="roles_id_roles" class="form-label fs-3">Tipo de usuario</label>
+                        <select class="form-select" name="roles_id_roles" aria-label="Default select example" id="roles_id_roles" required>
+                            <option selected disabled value=""> Selecciona un tipo de rol</option>
+                            <option value="1">Root</option>
+                            <option value="2">Admin</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Campo obligatorio
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row m-3 justify-content-md-center  text-center">
+                    <div class="col col-lg-4 col-12">
+                        <button class="btn  m-2" id="boton-azul" type="submit">Guardar</button>
+                        <button class="btn m-2 text-light" style="background-color: #20c997"
+                                type="button">Cancelar</button>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+</div>
+
+<!-- **************************************************************AQUI TERMINA LA VISTA***********************************************************  -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+    </script>
+    <script src="validacionTienda.js"></script>
+
+<script>
+    // Evento para corroborar que a la hora de mandar el formulario este este lleno
+ (function () {
+      'use strict'
+      window.addEventListener('load', function() {
+      // Obtener todos los formularios a los que queremos aplicar estilos de validación de Bootstrap personalizados
+      var forms = document.querySelectorAll('.needs-validation');
+      //Recorremos los forms y evitamos en envío sin validacion
+      var validation = Array.prototype.filter.call(forms,
+      function (form) {
+          form.addEventListener('submit', function (event) {            
+            if (form.checkValidity()==false) {
+              event.preventDefault();
+              event.stopPropagation();
+              //alert('Error al Registrar')
+            }else{
+                  alert('FORM VALIDADO');
+                  form.reset();  
+            }
+            form.classList.add('was-validated');
+          }, false)
+      });
+        }, false);
+    })();
+
+</script>
+
+</body>
+</html>

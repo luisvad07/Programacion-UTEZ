@@ -1,0 +1,24 @@
+*{
+	margin: 0%;
+}
+
+div .div-encabeza {
+	color: black;
+	font-family: 'Tahoma';
+}
+
+div #titulo {
+	color: purple;
+	font-family: 'Tahoma';
+	height: 50px;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 0.5em;
+} 
+
+ul.menu a:hover{
+    background-color: aqua;
+    padding: 10px;
+}

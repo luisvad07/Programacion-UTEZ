@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<link rel="shortcut icon" type="image/png" href="/media/images/favicon.png">
+	<link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://www.datatables.net/rss.xml">
+	<link rel="stylesheet" type="text/css" href="/media/css/site-examples.css?_=11229a4cc52ab488c3d6ed72e1ec231e1">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
+	<style type="text/css" class="init">
+	
+	</style>
+	<script type="text/javascript" src="/media/js/site.js?_=d279d6aa7c08459eca950dd4a9ff4b23"></script>
+	<script src="https://media.ethicalads.io/media/client/ethicalads.min.js"></script>
+	<script type="text/javascript" src="/media/js/dynamic.php?comments-page=examples%2Fajax%2Fobjects.html" async></script>
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="../resources/demo.js"></script>
+	<script type="text/javascript" class="init">
+	
+$(document).ready(function () {
+	$('#example').DataTable({
+		ajax: 'data/objets.txt',
+		columns: [
+			{ data: 'name' },
+			{ data: 'position' },
+			{ data: 'office' },
+			{ data: 'extn' },
+			{ data: 'start_date' },
+			{ data: 'salary' },
+		],
+	});
+});
+
+	</script>
+</body>
+
+<div class="demo-html">
+					<table id="example" class="display" style="width:100%">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Extn.</th>
+								<th>Start date</th>
+								<th>Salary</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icon@1.4.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="richtext.min.css">
+    <script type="text/javascript" src="jquery.richtext.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Inventario</title>
+</head>
+
+<body>
+    <!-- ENCABEZADO
+    ALineado al centro con texto blanco -->
+    <header class="">
+        <!-- mb = margin botton p=padding = fs=font size -->
+
+        <!-- //////////////////NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light " id="menu">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#" id="nav-imagen">
+                    <img src="Logo-utez.webp" alt="">
+                </a>
+                <!-- Botón desplegable -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-1 mb-lg-0">
+
+                        <li class="nav-item">
+                            <!-- Empieza lista -->
+                            <a class="nav-link " aria-current="page" href="/HTML/ofertas.html">Ofertas</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/HTML/inventario.html">Inventario</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML/administradores.html">Administradores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML/changePass.html">Cambiar contraseña</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="p-3 rounded rounded-3" id="fondo">
+
+
+
+        <!-- /* 
+////////////////////////////////////////////////////
+                      Empieza pagina
+////////////////////////////////////////////////////
+*/ -->
+        <!-- w=tamaño que abarca el texto   mx=posicion del texto -->
+
+        <div id="fondo-blanco" class="rounded p-4 shadow">
+            <!-- El fondo blanco -->
+            <main class="container-fluid">
+                <!-- Contenedor principal-->
+                <div>
+                   
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <div class="page-wrapper box-content ">
+
+                                <textarea class="content " name="example"></textarea>
+
+                            </div>
+
+                            <script>
+                                $(document).ready(function () {
+                                    $('.content').richText();
+                                });
+                            </script>
+
+
+                        </div>
+
+                    </div>
+                   
+
+
+
+
+
+                </div>
+
+
+
+            </main>
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+
+
+
+</body>
+
+</html>

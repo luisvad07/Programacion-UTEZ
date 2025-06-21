@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D883BE7F-5D33-F2A6-AE09-F32B0DE6E1C2" name="USUARIO ADMINISTRADOR">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:38:26 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Correo" id="1E4A3B97-611D-AEA2-4FDB-310FA65D95AE">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:38:36 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Contraseña" id="19134C59-3158-2D21-2227-9F5587A681D4">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:38:51 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="3F46583C-0B65-B5BF-A527-29ACE9B14BB0" name="USUARIO ADMINISTRADOR PK">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:38:51 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E4A3B97-611D-AEA2-4FDB-310FA65D95AE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

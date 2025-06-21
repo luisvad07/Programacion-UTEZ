@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+</head>
+<body>
+    <div>
+        <div align="center" style="margin-top: 160px;">
+            <img id="imagen" src="images/imagenUn.jpg" width="400" height="250">
+            <br> <br> <br>
+            <button onclick="anterior()" style="margin-right: 135px; background-color: black; border-color:yellow; color:white;">Anterior</button>
+            <button onclick="siguiente()" style="margin-left: 135px;  background-color: black; border-color:yellow; color:white;">Siguiente</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    function siguiente() {
+        var elemento = document.getElementById("imagen");
+        console.log(elemento);
+        if (elemento.src.match("images/imagenUn.jpg")) {
+            elemento.src = "images/imagenDeux.jpg";
+        } else if (elemento.src.match("images/imagenDeux.jpg")) {
+            elemento.src = "images/imagenTrois.jpg";
+
+        } else if (elemento.src.match("images/imagenTrois.jpg")) {
+            elemento.src = "images/imagenQuatre.jpg";
+
+        } else if (elemento.src.match("images/imagenQuatre.jpg")) {
+            elemento.src = "images/imagenCinc.jpg";
+
+        } else if (elemento.src.match("images/imagenCinc.jpg")) {
+            elemento.src = "images/imagenUn.jpg";
+
+        }
+    }
+
+    function anterior() {
+        var elemento = document.getElementById("imagen");
+        console.log(elemento);
+        if (elemento.src.match("images/imagenCinc.jpg")) {
+            elemento.src = "images/imagenQuatre.jpg";
+        } else if (elemento.src.match("images/imagenQuatre.jpg")) {
+            elemento.src = "images/imagenTrois.jpg";
+
+        } else if (elemento.src.match("images/imagenTrois.jpg")) {
+            elemento.src = "images/imagenDeux.jpg";
+
+        } else if (elemento.src.match("images/imagenDeux.jpg")) {
+            elemento.src = "images/imagenUn.jpg";
+
+        } else if (elemento.src.match("images/imagenUn.jpg")) {
+            elemento.src = "images/imagenCinc.jpg";
+
+        }
+    }
+
+</script>
+</html>

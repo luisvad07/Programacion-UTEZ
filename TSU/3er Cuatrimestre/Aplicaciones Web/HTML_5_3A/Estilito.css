@@ -1,0 +1,37 @@
+h1 {
+	font-family: 'Georgia';
+	color: green;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p span {
+	color: orangered;
+}
+
+.estilito-class {
+	color: blueviolet;
+	font-family: 'Tahoma';
+}
+
+#estilito-id {
+	color: darkred;
+	font-family: 'cursive';
+}
+
+p#aviso{
+	color: aquamarine;
+	font-family: 'Gills Sans';
+}
+
+div #aviso {
+	color: chocolate;
+	font-family: 'Segoe UI';
+}
+
+div, #aviso {
+	background-color: black;
+}

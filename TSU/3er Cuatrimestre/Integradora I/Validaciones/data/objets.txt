@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": "1",
+      "nombre": "Playera",
+      "talla": "M",
+      "precio": "$320",
+      "color": "Blanco",
+      "piezas": "5",
+      "gestion": "<a class="btn btn-primary" href="/HTML/crearOferta.html"
+                                            role="button">Editar</a>
+                                        <a class="btn btn-danger" href="/HTML/crearOferta.html"
+                                            role="button">Eliminar</a>",
+      "estado": "Activo"
+    },
+    {
+      "id": "2",
+      "nombre": "Pants",
+      "talla": "CH",
+      "precio": "$150",
+      "color": "Azul",
+      "piezas": "10",
+      "gestion": "<a class="btn btn-primary" href="/HTML/crearOferta.html"
+                                            role="button">Editar</a>
+                                        <a class="btn btn-danger" href="/HTML/crearOferta.html"
+                                            role="button">Eliminar</a>",
+      "estado": "Activo"
+    },
+    {
+      "id": "3",
+      "nombre": "Tazas",
+      "talla": "N/D",
+      "precio": "$50",
+      "color": "Azul",
+      "piezas": "0",
+      "gestion": "<a class="btn btn-primary" href="/HTML/crearOferta.html"
+                                            role="button">Editar</a>
+                                        <a class="btn btn-danger" href="/HTML/crearOferta.html"
+                                            role="button">Eliminar</a>",
+      "estado": "Agotado"
+    }
+  ]
+}

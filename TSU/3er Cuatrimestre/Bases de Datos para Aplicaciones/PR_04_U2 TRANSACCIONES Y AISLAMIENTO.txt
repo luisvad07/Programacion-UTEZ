@@ -1,0 +1,136 @@
+﻿-- PR_04_U2: TRANSACCIONES Y AISLAMIENTO
+create table taviones(
+tipo varchar(15) primary key, 
+capacidad int
+);
+
+create table tvuelos(
+id varchar(10) primary key, 
+tipoavion references taviones, 
+pasajeros int, destino varchar(20) 
+);
+
+create table tpasajeros(
+nombre varchar(20), 
+vuelo references tvuelos, primary key(nombre,vuelo)
+);
+
+
+insert into taviones values ('Airbus A300',120);
+insert into taviones values ('Boeing 707',210);
+insert into taviones values ('Douglas DC-9',190);
+insert into tvuelos values ('LHE 100','Airbus A300',110,'Roma-Fiumicino');
+insert into tvuelos values ('IBE 398','Boeing 707',209,'Barcelona-El Prat');
+
+commit;
+
+Ahora vamos a abrir una segunda hoja de trabajo, usando nuestro mismo usuario. 
+Cada consola representa un terminal de una agencia de viajes, que podemos imaginar situados en sitios diferentes.
+Para simplificar llamaremos a las dos agencias A1 y A2: la A1 es en la que hemos creado las tablas e insertado las filas, 
+la A2 la que hemos creado a continuación
+
+----Modos de consistencia: Read Write/Read Only----
+
+El modo read/write es que se tiene por defecto en Oracle. Vamos a ver cómo funciona.
+Suponemos que en el terminal A1 se quiere saber en primer lugar el número total de vuelos que hay y luego desglosar este total por clases. 
+(Al comienzo de cada secuencia de comandos se indica el terminal en el que se debe introducir).
+
+
+A1: select tipoavion,count(*) from tvuelos group by tipoavion;
+A2: insert into tvuelos values ('TWA','Airbus A300',89,'Madrid-Barajas'); 
+A1: select tipoavion,count(*) from tvuelos group by tipoavion;
+A2: commit;
+A1: select tipoavion,count(*) from tvuelos group by tipoavion;
+
+
+----Pregunta ¿Qué diferencias observas entre los resultados en 3 y 5? ¿Por qué?----
+R= La ejecucion y los resultados son iguales, solo guarda el registro del resultado 3
+como una transaccion a la tabla de tvuelos
+
+Probamos ahora con Read Only:
+
+A1:  
+commit;
+set transaction read only;
+select tipoavion,count(*) from tvuelos group by tipoavion;
+
+A2:  insert into tvuelos values ('KLM','Douglas DC-9',21,'Las Palmas');
+     commit; 
+
+A1: select tipoavion,count(*) from tvuelos group by tipoavion;
+
+
+----Pregunta ¿Qué cambios se producen con respecto al caso anterior?----
+R= Que se agrega un nuevo registro y despues lo guarda como una insercion a la tabla de tvuelos
+antes se mostraban dos dipos de aviones, ahora tres
+
+
+----Probamos ahora en A1 (que está en modo Read Only):----
+
+insert into tvuelos values ('KLM','Douglas DC-9',21,'Las Palmas');
+
+---Pregunta ¿Qué resultado se obtiene?---
+R= Aparece un mensaje de error de que el registro ya existe en la tabla de tvuelos 
+y no se puede realizar la inserción
+
+Acabamos dejando la opción por defecto:
+
+A1:  commit;
+set transaction read write;
+select tipoavion,count(*) from tvuelos group by tipoavion;
+
+
+
+----Niveles de aislamiento: Serializable/Read Committed---
+
+SERIALIZABLE: El más restrictivo. Cada sesión (terminal) verá sólo sus propios cambios. 
+Los cambios realizados en otros terminales no afectan, 
+aunque las otras sesiones hayan hecho commit y por tanto hayan grabado físicamente los cambios. 
+Si se intenta modificar una fila ya modificada 
+por otra sesión se obtiene un error "No se puede serializar el acceso para esa transacción".
+
+READ COMMITTED: Menos restrictivo. 
+Cada sesión ve los cambios de las otras cuando éstas han hecho commit. Es el valor por defecto. 
+Para ver el efecto del nivel de aislamiento vamos a realizar los siguientes pasos:
+
+ A2: commit;
+     alter session set isolation_level = SERIALIZABLE; 
+
+Nota: la instrucción commit finaliza una transacción escribiendo su resultado en disco y comienza automáticamente una transacción nueva. 
+Aquí se utiliza para quealter session sea la primera instrucción de una transacción, condición requerida por Oracle para poder cambiar el valor de isolation_level.
+
+Escribir en el terminal A1:
+
+2.- A1: update tvuelos set pasajeros=50 where id='LHE 100';
+        select * from tvuelos
+
+3.- A2: update tvuelos set pasajeros=0 where id='LHE 100';
+        select * from tvuelos
+
+----Pregunta: ¿qué ocurre? ¿se debe al modo serializable?---
+R= En el vuelo A1 Roma-Fiumicino se actualizan 50 pasajeros, mientras que en el vuelo A2 se actualizan a 0, 
+y no es seriable porque aunque los registra, no guarda el estado de un objeto para poder volver a crearlo
+
+Grabamos los cambios en A1:
+
+4.- A1: commit;
+
+---Pregunta: ¿qué ocurre en A2? ¿se debe al modo serializable?---
+R= En el vuelo a2 los pasajeros son de 0 mientras que en el a1 son 50, 
+y si se debe al modo serializable, ya que cada terminal ve sus propios cambios, se guards sin alterar ningun
+registro y la terminal no influye en la otra, lo que evita las lecturas fantasma
+
+
+Escribir:
+
+5.- A2: commit;
+    alter session set isolation_level = READ COMMITTED; 
+    update tvuelos set pasajeros=0 where id='LHE 100';
+    commit;
+
+    Repetir los pasos 2,3,4 y 5
+ 
+----Pregunta: ¿qué cambios ocurren y por qué?---
+Es lo mismo porque al ejecutar el ead commited, solo especifica 
+que los registros compartidos se mantienen mientras los datos se leen
+para evitar lecturas sucias

@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="636DA877-87CC-9231-BDCF-C7486A19B13B" name="COLOR">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:41:47 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Id_Color" id="918C8A42-66F0-5716-43AB-F00D4706F083">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:42:00 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Color" id="34C480CE-7D39-1732-B6D9-24630BEBC185">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:42:09 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="014BE2D3-DF04-0CA5-0F7E-2668848AA4A2" name="COLOR PK">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:42:08 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>918C8A42-66F0-5716-43AB-F00D4706F083</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

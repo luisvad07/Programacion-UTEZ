@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="esw">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>TABLA DE USUARIOS :0</h1>
+	<table border="1">
+		<tr>
+			<th>Nombre</th>
+			<th>Apellido</th>
+			<th>Correo Electronico</th>
+			<th>Foto</th>
+		</tr>
+		<tbody id="cuerpecito">
+
+		</tbody>
+	</table>
+</body>
+<!--<script src="js/EcmaScript.js"></script>-->
+<script>
+	const obtenerUsuarios = async () => {
+		const servicio = "https://reqres.in/api/users?page=2";
+		try {
+			const response = await fetch(servicio,{
+				method:"GET",
+				headers: {"Content-Type":"application/json"},
+			});
+			const json = await response.json();
+			//console.log(json.data);
+			mostrarUsuarios(json);
+		} catch (error) {
+			console.log(error);
+		}
+	}
+	obtenerUsuarios();
+
+	function mostrarUsuarios(json) {
+		let informacion = "";
+		for (let flor of json.data) {
+			informacion += 
+			`<tr>
+				<td>${flor.first_name}</td>
+				<td>${flor.last_name}</td>
+				<td>${flor.email}</td>
+				<td><image src="${flor.avatar}" height=100px width=100px/></td>
+				</tr>`;
+		}
+		document.getElementById("cuerpecito").innerHTML = informacion;
+
+	}
+	//obtenerUsuarios().then((response)=>{console.log(response)})
+	
+	/* const mostrarUsuarios = async() => {
+		const listaUsuarios = await obtenerUsuarios();
+		console.log(listaUsuarios);
+	}
+	mostrarUsuarios();*/
+
+</script>
+</html>

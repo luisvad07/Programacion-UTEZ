@@ -1,0 +1,133 @@
+--1. Realizar un pa que permita insertar un nuevo departamento.
+--2. Realizar un pa que permita actualizar el director de un departamento.
+  --Para ello será necesario proveer el número de departamento y el DNI del nuevo director.
+--3 Realizar un pa que permita eliminar un empleado de forma definitiva. 
+ -- Para ello tendrá que verificar que dicho empleado no esta siendo referenciado en las tablas
+ --DEPARTAMENTO y TRAABAJA_EN. En el caso de que si exista una referencia enivar un mensaje 
+ -- de error indicando que el empleado con el DNI XXXXXXXXX esta siendo referenciado en la tabla YYYYYYYYY.
+--4. Tomando el ejercicio anterior, realice el siguiente cambio, si el empleado esta siendo referenciado en la tabla 
+ --TRABAJA_EN, proceda con la eliminación de las dependencias. Y en caso de la tabla DEPARTAMENTO, 
+  --si el empleado a eliminar es director de algún departamento, entonces establezca como NULL
+  --la referencia a dicho empleado esto con el objetivo de asignar posteriormente un director a dicho departamento.
+
+
+--******************************PROCESOS ALMACENADOS*****************************************
+
+--EJERCICIO 1
+
+CREATE PROCEDURE EJERCICIO_INSERTAR_NUEVO_DEPARTAMENTO
+(
+Nombre IN VARCHAR,
+Numero IN INT,
+FechaIngreso IN DATE,
+DniDirector IN CHAR
+)
+AS
+BEGIN
+INSERT INTO DEPARTAMENTO (NombreDpto, NumeroDpto, FechaIngresoDirector, DniDirector)
+VALUES(Nombre, Numero, FechaIngreso, DniDirector);
+END;
+
+DROP PROCEDURE EJERCICIO_INSERTAR_NUEVO_DEPARTAMENTO;
+describe departamento;
+EXECUTE EJERCICIO_INSERTAR_NUEVO_DEPARTAMENTO ('RecursosHumanos',5,TO_DATE('03-07-1996','DD-MM-YYYY'),'37949787392');
+
+--PREGUNTA 2
+
+CREATE PROCEDURE EJERCICIO_ACTUALIZAR_DIRECTOR 
+(
+NoDpto IN INT,
+DniNuevo IN CHAR
+)
+AS
+BEGIN
+UPDATE DEPARTAMENTO SET DniDirector=DniNuevo WHERE NumeroDpto=NoDpto;
+END;
+DESCRIBE DEPARTAMENTO;
+DROP PROCEDURE EJERCICIO_ACTUALIZAR_DIRECTOR;
+EXECUTE EJERCICIO_ACTUALIZAR_DIRECTOR (6, '842024922');
+SELECT * FROM DEPARTAMENTO;
+
+--PREGUNTA 3
+
+CREATE PROCEDURE EJERCICIO_ELIMINAR_EMPLEADO
+(
+   DniEmpleado IN CHAR
+)
+AS
+    coincidenciaDepartamento INT;
+    coincidenciaTrabaja_En INT;
+BEGIN
+	SELECT coincidenciaDepartamento=COUNT(E.Dni) FROM EMPLEADO E 
+	INNER JOIN DEPARTAMENTO D ON E.Dni IN(D.DniDirector)
+	AND e.Dni=DniEmpleado;
+	
+	SELECT coincidenciaTrabajaEn=COUNT(E.Dni) FROM EMPLEADO E 
+	INNER JOIN TRABAJA_EN T ON E.Dni IN(T.DniEmpleado)
+	AND e.Dni=DniEmpleado;
+
+	IF coincidenciaDepartamento=0 AND coincidenciaTrabajaEn=0
+		THEN
+		DELETE FROM EMPLEADO WHERE EMPLEADO.Dni=DniEmpleado;
+		END
+	ELSE
+		BEGIN
+            then raise_application_error
+            (-20600,:new.DniEmpleado || 'Error al eliminar a nuestro empleado');    
+		END IF;
+END;
+
+DROP PROCEDURE EJERCICIO_ELIMINAR_EMPLEADO;
+EXECUTE EJERCICIO_ELIMINAR_EMPLEADO ('987654321');
+
+--PREGUNTA 4
+
+CREATE PROCEDURE EJERCICIO_CUATRO (
+    DniEmpleado CHAR(9)
+)
+AS
+BEGIN
+	DECLARE @coincidenciaEliminarDirector INT, coincidenciaEliminarDependencias INT
+	
+	SELECT @coincidenciaEliminarDirector=COUNT(E.Dni) FROM EMPLEADO E 
+	INNER JOIN DEPARTAMENTO D ON E.Dni IN(D.DniDirector)
+	AND e.Dni=@DniEmpleado;
+	
+	SELECT @coincidenciaEliminarDependencias=COUNT(E.Dni) FROM EMPLEADO E 
+	INNER JOIN TRABAJA_EN T ON E.Dni IN(T.DniEmpleado)
+	AND e.Dni=@DniEmpleado;
+
+	IF @coincidenciaEliminarDirector>0
+		BEGIN
+		UPDATE DEPARTAMENTO SET DniDirector=NULL WHERE DEPARTAMENTO.DniDirector = @DniEmpleado
+		PRINT 'SE ELIMINO EL DIRECTOR'
+		END
+	
+	IF @coincidenciaEliminarDependencias>0
+		BEGIN
+		DELETE TRABAJA_EN WHERE TRABAJA_EN.DniEmpleado = @DniEmpleado;
+		PRINT 'SE ELIMINARON DEPENDENCIAS'
+		END
+		
+END
+
+DROP PROCEDURE EJERCICIO_CUATRO;
+EXECUTE EJERCICIO_CUATRO ('987654321');
+
+SELECT *FROM TRABAJA_EN 
+
+
+CREATE PROCEDURE pa_amenta_sueldo_director
+@Anios INT,
+@Cantidad MONEY,
+@Beneficiados INT OUTPUT
+AS
+BEGIN
+	UPDATE EMPLEADO SET Sueldo = Sueldo + @Cantidad
+	WHERE Dni IN( SELECT Dni
+		         FROM EMPLEADO e INNER JOIN DEPARTAMENTO d ON e.Dni = d.DniDirector
+		          WHERE DATEDIFF(SECOND, d.FechaIngresoDirector, GETDATE()) > @Anios)
+	SET @Beneficiados = @@ROWCOUNT
+END
+
+DROP PROCEDURE pa_amenta_sueldo_director;

@@ -1,0 +1,15 @@
+* {
+	margin: 1%;
+}
+
+div #principal {
+	float: right;
+}
+	
+div #cuadro {
+	height: 300px;
+	width: 300px;
+	border-style: solid;
+}
+
+	

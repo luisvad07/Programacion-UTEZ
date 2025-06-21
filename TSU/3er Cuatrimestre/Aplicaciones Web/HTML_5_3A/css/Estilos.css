@@ -1,0 +1,10 @@
+*{
+	margin: 5%;
+}
+
+div #divcabeza {
+	color: white;
+	font-family: 'Gills Sans';
+	background-color: blue;
+	height: 45px;
+}

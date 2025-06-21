@@ -1,0 +1,246 @@
+/*  /////////////////////// GLOBALES    ////////////// */
+
+@import url('https://fonts.googleapis.com/css2?family=Monserrat&display=swap');
+
+body {
+    font-family: 'Monserrat', sans-serif;
+    overflow-x: hidden;
+}
+#fondo {
+    background: #f4f4f4;
+}
+#fondo-blanco {
+    background: #ffffff;
+    /* margin-top: 100px; */
+}
+#boton-azul{
+    background: #002f61;
+    color: #ffffff;
+}
+#titulo{
+    color: #002f61;
+    font-weight: 700;
+    font-size:x-large;
+}
+a.richText-btn{
+    color: #002f61;
+}
+.warnings{
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #ffb618;
+    padding-top: 20px;
+}
+#sin-borde{
+    border: none !important;
+    border-bottom: 5px !important; 
+} 
+
+/* //////////////////// MENU    //////////// */
+
+#menu a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+
+}
+
+#button button {
+
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+/* 
+////////////////////////////////////////////////////
+                        tabla
+////////////////////////////////////////////////////
+*/
+#tabla thead{
+    background-color: #002f61;
+    
+    margin:auto ;
+    text-align: center;
+    
+}
+#tabla tr, #tabla td, #tabla th {
+    border-collapse:collapse;
+    border: #002f61 1px;
+    border-style: solid;
+    
+    text-align: center;
+}
+#tabla-botones{
+    border-style: hidden;
+
+}
+
+
+
+/* 
+////////////////////////////////////////////////////
+                        Paginacion
+////////////////////////////////////////////////////
+*/
+#centrado {
+    text-align: center;
+    margin: auto;
+}
+
+/* 
+////////////////////////////////////////////////////
+                        navbar
+////////////////////////////////////////////////////
+*/
+#nav-imagen {
+    background-color: #f4f4f4;
+    border-radius:0.5em;
+    width: 10%;
+}
+#nav-imagen img{
+    width: 100%;
+}
+
+.nav-item {
+    margin:1em;
+    padding-left: 2rem;
+}
+nav, .nav{
+    background-color: #049474;
+}   
+/* .navbar {
+    overflow: hidden;
+    position:fixed; 
+    top:0;
+  } */
+
+
+.nav-item:not(:first-child){
+    
+    border-left: 1px solid rgb(255, 255, 255);
+    margin:1em;
+}
+
+
+/* 
+////////////////////////////////////////////////////
+                        CARRUSEL
+////////////////////////////////////////////////////
+*/
+.carousel-inner {
+    max-height: 39rem;
+
+}
+
+/* 
+////////////////////////////////////////////////////
+    MEDIA QUERIES PANTALLA ANCHA
+////////////////////////////////////////////////////
+*/
+
+
+/* 
+////////////////////////////////////////////////////
+    MEDIA QUERIES PANTALLA ancha
+////////////////////////////////////////////////////
+*/
+@media(max-width:1200px){
+    #local{
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    .wrapper{
+        width: 90%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    #nav-imagen {
+        background: #ffffff;
+        border-radius:0.5em;
+        width: 10%;
+    }
+    .nav-item{
+    
+        border-left: 1px solid rgb(255, 255, 255);
+        margin:1em;
+    }
+    
+
+}
+
+
+
+/* 
+////////////////////////////////////////////////////
+    MEDIA QUERIES PANTALLA SM
+////////////////////////////////////////////////////
+*/
+@media (max-width:768px) {
+
+    #intro,
+    #equipo {
+        width: 90% !important;
+    }
+
+    #equipo p {
+        display: none;
+    }
+
+    .servicio-fila {
+        width: 100% !important;
+        text-align: center;
+    }
+    #bg-contacto {
+        top: -110px;
+    }
+    #nav-imagen {
+        background: #ffffff;
+        border-radius:0.5em;
+        width: 15%;
+    }
+    .nav-item{
+    
+        border-left: 1px solid rgb(255, 255, 255);
+        margin:1em;
+    }
+
+    #menu a {
+        font-size: 14px;
+        font-weight: bold;
+        color: #ffffff;
+        padding: 0 0 0 0;
+    
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+      }
+      footer img {
+        width: 90%;
+      }
+}
+
+/* 
+////////////////////////////////////////////////////
+    MEDIA QUERIES PANTALLA EXTRA small
+////////////////////////////////////////////////////
+*/
+
+
+@media(max-width: 576px) {
+    #nav-imagen {
+        background: #ffffff;
+        border-radius:0.5em;
+        width: 20%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+      }
+      footer img {
+        width: 90%;
+      }
+}

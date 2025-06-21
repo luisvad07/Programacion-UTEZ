@@ -1,0 +1,14 @@
+mx\edu\utez\MiProyectoServlet\HelloServlet.class
+mx\edu\utez\MiProyectoServlet\utils\MySQLConnection.class
+mx\edu\utez\MiProyectoServlet\service\person\ServicePerson.class
+mx\edu\utez\MiProyectoServlet\utils\ResultAction.class
+mx\edu\utez\MiProyectoServlet\controller\auth\ServletAuth.class
+mx\edu\utez\MiProyectoServlet\model\auth\DaoAuth.class
+mx\edu\utez\MiProyectoServlet\model\person\BeanPerson.class
+mx\edu\utez\MiProyectoServlet\utils\RequestFilter.class
+mx\edu\utez\MiProyectoServlet\utils\EmailUtility$1.class
+mx\edu\utez\MiProyectoServlet\service\auth\ServiceAuth.class
+mx\edu\utez\MiProyectoServlet\model\person\DaoPerson.class
+mx\edu\utez\MiProyectoServlet\controller\person\ServletPerson.class
+mx\edu\utez\MiProyectoServlet\model\auth\BeanAuth.class
+mx\edu\utez\MiProyectoServlet\utils\EmailUtility.class

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Dialogo</title>
+</head>
+<body>
+	<!--<button onmouseover="cuadrosDialogo()">¡Presiona para ver cuadros de Dialogo!</button>-->
+	<button onmouseout="cuadrosDialogo()">¡Presiona para ver cuadros de Dialogo!</button>
+	<script>
+		function cuadrosDialogo(){
+			//alert("Este es mi primer alert, estoy feliz.")
+			//var edad = prompt("Ingresa tu edad:")
+			//alert("Hola, tu edad es: "+edad)
+			var confirmacion = confirm("Tas bien?")
+			if (confirmacion) {
+				alert("Todo bien, todo correcto")
+			} else {
+				alert("Unas chelas... ;3")
+			}
+		}
+	</script>
+</body>
+</html>

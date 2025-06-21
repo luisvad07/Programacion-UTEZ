@@ -1,0 +1,29 @@
+*{
+	margin: 0%;
+}
+
+div .div-encabeza {
+	color: white;
+	font-family: 'Gills Sans';
+	background-color: gray;
+    height: 50px;
+}
+
+div #titulo {
+	color: white;
+	font-family: 'Tahoma';
+	background-color: black;
+	height: 50px;
+}
+
+div .div-link {
+	color: white;
+	font-family: 'Times New Roman';
+	background-color: orange;
+	height: 25px;
+}
+
+div #logo {
+	color: black;
+	float: right;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Curriculum Vitae</title>
+	<style>
+		.contenedor {			      	      /*contenedor */
+  			display: flex;
+  			align-items: flex-end;
+		}
+
+		.experiencia { 	/*experiencia*/
+			width: 100%;
+  			height: 550px;
+  			background-color: green;
+		}
+
+		.pie-pagina {
+			background-color: yellow;
+			color: red;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="contenedor"> <!--CONTENEDOR PRINCIPAL -->
+		<div class="encabezado" style="background-color: blue; padding-right: 10px; height: 550px"> <!-- ENCABEZADO -->  
+        		<img src="Perfil.jpg" width="220" height="220" style="margin-top: 10px; padding-left: 40px; border-radius: 5%" class="img" onmouseover="imagen()">
+                <h2 id="nombre-apellido" style="color: black" align="center"></h2>
+            	<h5 style="color: white" align="center">DATOS PERSONALES</h5>
+				<p id="telefono" style="color: white" align="center"></p>
+				<p id="correo" style="color: white" align="center"></p>
+				<p id="sitio-web" style="color: white" align="center"></p>   
+        </div>
+
+        <div class="experiencia">
+        	<center>
+        		<h1 style="color: orange;">Curriculum Vitae</h1>
+        		<label>Formacion:</label>
+        		<button onclick="estudios()" style="margin-top: 50px; background-color: yellow; border-color: yellow">Presiona Aqui</button>
+        		<br>
+        		<div style="background-color: black; color: white">
+        			<h4>Habilidades y/o Capacidades</h4>
+        			<ul>
+        				<li id="uno"></li>
+        				<li id="dos"></li>
+        				<li id="tres"></li>
+        				<li id="cuatro"></li>
+        			</ul>
+        		</div>
+        		<br>
+        		<div style="background-color: black; color: white">
+        			<h4>Trabajos</h4>
+        			<ul>
+        				<li id="unot"></li>
+        				<li id="dost"></li>
+        				<li id="trest"></li>
+        				<li id="cuatrot"></li>
+        			</ul>
+        		</div>
+        	</center> 
+        </div>
+
+	</div>
+	<div class="pie-pagina">
+		<center>
+		<label>Hecho por Luis Eduardo Bahena Castillo 3ADSM</label>
+		<button onclick="consola()" style="background-color: brown">Presione aqui</button>
+		</center>
+	</div>
+	<script src="Func.js"></script>
+</body>
+</html>

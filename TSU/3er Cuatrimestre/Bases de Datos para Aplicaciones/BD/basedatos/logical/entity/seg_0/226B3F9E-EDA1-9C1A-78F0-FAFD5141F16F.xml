@@ -1,0 +1,126 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="226B3F9E-EDA1-9C1A-78F0-FAFD5141F16F" name="ARTICULO">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:39:06 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="Numero" id="36337D9D-1929-B13F-C889-7EFF103522C2">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:39:12 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Nombre" id="DD51E49E-E319-BF9D-331B-88577B41E21F">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:39:27 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Descripcion" id="727B1A3B-4B63-6A9C-33E1-012813A385B4">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:39:47 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Categoria" id="46C96987-1CA9-674E-8654-FC1A0471AFD6">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:40:21 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Color" id="6C5FBF9C-185E-8D75-7203-546B0D64D819">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:40:42 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Talla" id="8122A212-8256-CB87-8988-B8048F6F6E0C">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:41:09 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="Id" id="3672C384-7832-A15B-01A2-E159B3C07C39">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:57:07 UTC</createdTime>
+<generatorID>0CD44F44-41BB-9294-E7FD-89CF04BFD535</generatorID>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<referedAttribute>E403563D-79B5-C811-1BDC-CEC985AAC33F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D9D014D8-BE85-2757-3743-3422FF7D76C3" name="ARTICULO PK">
+<createdBy>CC6</createdBy>
+<createdTime>2022-06-06 18:39:45 UTC</createdTime>
+<ownerDesignName>basedatos</ownerDesignName>
+<engineerTo>
+<item key="CCACBEC6-59D4-E968-9379-CD856DCFE754" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>36337D9D-1929-B13F-C889-7EFF103522C2</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

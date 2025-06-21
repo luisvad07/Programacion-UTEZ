@@ -1,0 +1,925 @@
+11/05
+
+
+sql (lenguaje estructurado de consulta)
+ddl (lenguaje)
+dml ()
+dql ()
+
+
+
+
+
+
+CREATE TABLE DEPARTAMENTO(
+NombreDpto VARCHAR(15) NOT NULL,
+NumeroDpto INT NOT NULL,
+DniDirector CHAR(9),
+FechaIngresoDirector DATE,
+CONSTRAINT pk_departamento
+  PRIMARY KEY (NumeroDpto)
+);
+
+
+CREATE TABLE EMPLEADO(
+Nombre VARCHAR(15) NOT NULL,
+Apellido1 VARCHAR(15) NOT NULL,
+Apellido2 VARCHAR(15) NOT NULL,
+Dni CHAR(9) NOT NULL,
+FechaNac DATE,
+Direccion VARCHAR(30),
+Sexo CHAR(1),
+Sueldo int, 
+SuperDni CHAR(9),
+Dno INT NOT NULL,
+CONSTRAINT pk_empleado
+  PRIMARY KEY(Dni),
+CONSTRAINT fk_empleado_departamento
+  FOREIGN KEY (Dno)
+     REFERENCES DEPARTAMENTO(NumeroDpto),
+CONSTRAINT empleado_empleado
+    FOREIGN KEY(SuperDni) REFERENCES EMPLEADO(Dni)   
+);
+GO
+
+ALTER TABLE DEPARTAMENTO ADD CONSTRAINT fk_departamento_empleado
+    FOREIGN KEY (DniDirector)
+        REFERENCES EMPLEADO(Dni);
+    
+
+CREATE TABLE LOCALIZACIONES_DPTO
+(
+NumeroDpto INT NOT NULL,
+UbicacionDpto VARCHAR(15) NOT NULL,
+CONSTRAINT pk_localizaciones_dpto
+  PRIMARY KEY(NumeroDpto, UbicacionDpto),
+CONSTRAINT fk_localizaciones_dpto_departamento
+  FOREIGN KEY (NumeroDpto)
+    REFERENCES DEPARTAMENTO (NumeroDpto)
+);
+
+
+CREATE TABLE PROYECTO(
+NombreProyecto VARCHAR(15) NOT NULL,
+NumProyecto INT NOT NULL,
+UbicacionProyecto VARCHAR(20),
+NumDptoProyecto INT NOT NULL,
+CONSTRAINT pk_proyecto
+    PRIMARY KEY (NumProyecto),
+CONSTRAINT fk_proyecto_departamento
+    FOREIGN KEY (NumDptoProyecto)
+        REFERENCES DEPARTAMENTO(NumeroDpto)
+
+);
+
+
+
+CREATE TABLE TRABAJA_EN(
+DniEmpleado CHAR(9) NOT NULL,
+NumProy INT NOT NULL,
+Horas DECIMAL(3,1),
+CONSTRAINT pk_trabaja_en
+    PRIMARY KEY (DniEmpleado,NumProy),
+CONSTRAINT fk_trabaja_en_empleado
+    FOREIGN KEY (DniEmpleado)
+        REFERENCES EMPLEADO(Dni),
+CONSTRAINT fk_trabaja_en_proyecto
+    FOREIGN KEY (NumProy) 
+        REFERENCES PROYECTO(NumProyecto)
+);
+
+CREATE TABLE DEPENDIENTE(
+DniEmpleado  CHAR(9) NOT NULL,
+NombDependiente VARCHAR (15) NOT NULL,
+Sexo CHAR(1),
+FechaNac DATE,
+Relacion VARCHAR(15),
+CONSTRAINT pk_dependiente
+    PRIMARY KEY (DniEmpleado,NombDependiente),
+CONSTRAINT fk_dependente_empleado
+    FOREIGN KEY (DniEmpleado)
+        REFERENCES EMPLEADO(Dni)
+);
+
+
+
+
+
+
+
+
+
+--13/05
+--renombrar el nombre de una columnda,
+--no es necesario indicar tipo de dato, ni tamaño
+
+--sintaxis
+--alter table NombreTabla rename column odl_Column_name
+--to new_Column_name
+
+--ejemplo:
+alter table dependiente rename column NomDependiente
+to nombreDependiente;
+
+--sintaxis
+--alter table odl_Table_name to new_tabla_name, sintaxis para renombrar una tabla
+
+
+alter table localizaciones_dpto rename to Localizacion_dpto
+
+--modificar el nombre de una columna, tipo de dato, tamaño
+
+alter table dependiente  modify NombreDependiente varchar (30)
+
+--borrar columna en una tabla/tablas
+alter table dependiente drop column Relacion
+
+--agregar columna 
+alter table dependiente add Relacion varchar (15)
+
+--sentencia set unused marca una o más columnas como no utilziadas/utilizan menos
+--recursos del sistema
+--eliminación lógica, no es posible restablecer, pero siogue utilizando espacio
+
+alter table dependiente set unused (relacion, sexo)
+
+alter table dependiente drop unused (relacion, sexo)
+
+--tablas de solo lectura
+--para evitar cambios de ddl o dml--/modo lectura/escritura
+--tabla está en modo de solo lectura, no se puede emitir sentencias dml que afecten
+--puden emitir sentencia ddl siempre y cuando no modifique los datos de la tabla
+
+alter TABLE dependiente read only 
+
+alter TABLE dependiente read write  
+
+alter table dependiente rename to dependientes
+alter table dependientes drop column fechanac
+
+
+
+
+
+alter table empleado drop constraint fk_empleado_empleado
+
+
+
+
+
+alter table departamento drop constraint fk_departamento_empleado
+
+
+
+
+
+
+
+
+
+
+
+
+--insertar tuplas en tabla departamento
+insert into departamento (NombreDpto, NumeroDpto, DniDirector, FechaIngresoDirector)
+values ('Investigación',5, null, to_date ('30-05-1998','DD-MM-YYYY'))
+
+insert into departamento (NombreDpto, NumeroDpto, DniDirector, FechaIngresoDirector)
+values ('Administración',4, null, to_date ('01-01-1995','DD-MM-YYYY'))
+
+insert into departamento (NombreDpto, NumeroDpto, DniDirector, FechaIngresoDirector)
+values ('Sede Central',1, null, to_date ('19-06-1981','DD-MM-YYYY'))
+
+
+
+--elimina todo lo de la tabla
+truncate table departamento
+
+select from DEPARTAMENTO
+
+
+------------------------------------------------------------------me quedé aquí
+
+--insertar tuplas en tabla empleado
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Eduardo','Ochoa', 'Paredes', '888665555', 
+to_date  ('11-11-1937','DD-MM-YYYY'), 'Las peñas, 1', 'H', 55000, null, 1)
+
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Alberto','Campos', 'Sastre', '333445555', 
+to_date  ('08-12-1955','DD-MM-YYYY'), 'Avda. Ríos, 9', 'H', 40000, '888665555', 5)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Juana','Sainz', 'Oreja', '987654321', 
+to_date  ('06-20-1941','DD-MM-YYYY'), 'Cerquillas, 67', 'M', 43000, '888665555', 4)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('José','Pérez', 'Pérez', '123456789', 
+to date  ('09-01-1965','DD-MM-YYYY'), 'Eloy l,98', 'H', 30000, '333445555', 5)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Fernando','Ojeda', 'Ordóñez', '666884444', 
+to date  ('09-15-1962','DD-MM-YYYY'), 'Portillo, s/n', 'H', 38000, '333445555', 5)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Aurora','Oliva', 'Avezuela', '453453453', 
+to date  ('07-31-1972','DD-MM-YYYY'), 'Antón, 6', 'M', 25000, '333445555', 5)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Alicia','Jiménez', 'Celaya', '999887777', 
+to date  ('05-12-1968','DD-MM-YYYY'), 'Gran Vía, 38', 'M', 25000, '987654321', 4)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Luis','Pajares', 'Morera', '987987987', 
+to date  ('03-29-1969','DD-MM-YYYY'), 'Enebros, 90', 'M', 25000, '987654321', 4)
+
+insert into departamento (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+values ('Juan','Álvarez', 'Torres', '246802468', 
+to date  ('04-35-1979','DD-MM-YYYY'), 'Linares, 35', 'H', 45000, '888665555', 1)
+
+
+
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Eduardo', 'Ochoa', 'Paredes', '888665555', TO_DATE('11-11-1937', 'DD-MM-YYYY'), 'Las Peñas, 1', 'H', 55000, NULL, 1);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Alberto', 'Campos', 'Sastre', '333445555', TO_DATE('12-08-1955', 'DD-MM-YYYY'), 'Avda. Ríos, 9', 'H', 40000, '888665555', 5);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Juana', 'Sainz', 'Oreja', '987654321', TO_DATE('20-06-1941', 'DD-MM-YYYY'), 'Cerquillas, 67', 'M', 43000, '888665555', 4);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Jose', 'Perez', 'Perez', '123456789', TO_DATE('01-09-1965', 'DD-MM-YYYY'), 'Eloy l,98', 'H', 30000, '333445555', 5);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Fernando', 'Ojeda', 'Ordoñez', '666884444', TO_DATE('15-09-1962', 'DD-MM-YYYY'), 'Portillo, s/n', 'H', 38000, '333445555', 5);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Aurora', 'Oliva', 'Avezuela', '453453453', TO_DATE('31-07-1972', 'DD-MM-YYYY'), 'Antón, 6', 'M', 25000, '333445555', 5);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Alicia', 'Jimenez', 'Celaya', '999887777', TO_DATE('12-05-1968', 'DD-MM-YYYY'), 'Gran Vía, 38', 'M', 25000, '987654321', 4);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Luis', 'Pajares', 'Morera', '987987987', TO_DATE('29-03-1969', 'DD-MM-YYYY'), 'Enebros, 90', 'H', 25000, '987654321', 4);
+INSERT INTO EMPLEADO (Nombre, Apellido1, Apellido2, Dni, FechaNac, Direccion, Sexo, Sueldo, SuperDni, Dno)
+VALUES ('Juan', 'Alvarez', 'Torres', '246802468', TO_DATE('30-04-1979', 'DD-MM-YYYY'), 'Linares, 35', 'H', 45000, '888665555', 1);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--modificar dato dni director
+UPDATE DEPARTAMENTO SET DniDirector = '333445555' WHERE NumeroDpto = 5;
+UPDATE DEPARTAMENTO SET DniDirector = '987654321' WHERE NumeroDpto = 4;
+UPDATE DEPARTAMENTO SET DniDirector = '888665555' WHERE NumeroDpto = 1;
+
+describe TRABAJA_EN
+
+
+--insertar tuplas en tabla localizaciones_dpto
+
+insert into localizaciones_dpto (NumeroDpto, UbicacionDpto)
+values (1, 'Madrid')
+
+insert into localizaciones_dpto (NumeroDpto, UbicacionDpto)
+values (4, 'Gijón')
+
+insert into localizaciones_dpto (NumeroDpto, UbicacionDpto)
+values (5, 'Valencia')
+
+insert into localizaciones_dpto (NumeroDpto, UbicacionDpto)
+values (5, 'Sevilla')
+
+insert into localizaciones_dpto (NumeroDpto, UbicacionDpto)
+values (5, 'Madrid')
+
+
+--proyecto
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('ProductoX', 1, 'Valencia', 5)
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('ProductoY', 2, 'Sevilla', 5)
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('ProductoZ', 3, 'Madrid', 5)
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('Computación', 10, 'Gijón', 4)
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('Reorganización', 20, 'Madrid', 1)
+
+insert into proyecto (NombreProyecto, NumProyecto, UbicacionProyecto, NumDptoProyecto)
+values ('Comunciaciones', 30, 'Gijón', 4)
+
+
+
+--trabaja_en
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('123456789', 1, 32.5)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('666884444', 3, 40)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('453453453', 1, 20)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('453453453', 2, 20)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('333445555', 2, 10)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('333445555', 3, 10)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('333445555', 10, 10)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('333445555', 20, 10)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('999887777', 30, 30)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('999887777', 10, 10)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('987987987', 10, 35)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('987987987', 30, 5)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('987654321', 30, 20)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('987654321', 20, 15)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('888665555', 20, null)
+
+insert into trabaja_en (DniEmpleado, NumProy, Horas)
+values ('246802468', 20, null)
+
+
+--dependiente
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('333445555', 'Alicia', 'M', to_date  ('04-05-1986','DD-MM-YYYY'), 'Hija')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('333445555', 'Teodoro', 'H', to_date  ('25-10-1983','DD-MM-YYYY'), 'Hijo')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('333445555', 'Luisa', 'M', to_date  ('04-03-1958','DD-MM-YYYY'), 'Esposa')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('987654321', 'Alfonso', 'H', to_date  ('28-02-1942','DD-MM-YYYY'), 'Esposo')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('123456789', 'Miguel', 'H', to_date  ('28-02-1942','DD-MM-YYYY'), 'Hija')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('123456789', 'Alicia', 'M', to_date  ('30-12-1988','DD-MM-YYYY'), 'Hijo')
+
+insert into dependiente (DniEmpleado, NombDependiente, Sexo, FechaNac, Relacion)
+values ('123456789', 'Elisa', 'M', to_date  ('05-05-1967','DD-MM-YYYY'), 'Esposa')
+
+
+
+
+
+
+
+
+
+
+16/05
+índice
+
+tiene un funcionamiento similar al índice de un libro puesto que, se guardan en parejas de elementos: el elemento que se desea indexar y su posición en la bd
+estructura de datos que mejora la velocidad de las operaciones, permitiendo un rápido acceso a los registros de una tabla. los índices se suelen usar sobre aquellos campos sobre los cuales se vayan a realizar búsquedas frecuentes
+mejora el rendimiento de los SELECT
+empeoran (mínimamente) el rendimiento de los INSERT y DELETE
+
+
+un índice solo es efectivo cuando es utilizado
+
+sintaxis
+create /unique/index NOMBREINDIC on
+          NOMBRETABLA(CAMPOS);
+
+
+
+
+
+
+--act
+
+
+--mostrar todos los empleados
+--obtener los empelados que su sueldo sea mayor a 43000
+--mostrar los nombres de los empleados y sus sueldo
+--listar los empleados que ganan más de 40000
+--obtener las combinaciones diferentes de tuplas entre las tablas proyecto y departamento
+--obtener los nombres de los proyectos
+--listar qué empleados ganan más de 40000 y sean hombres
+--cambiar el nomnbre del departamento cede central por gerencia
+
+--listar el nombre y sueldo de los empleados que laboran en la empresa
+--obtener el nombre de los empleados y el nombre de sus asegurados
+--obtener el nombre de los empleados y el nombre de sus asegurados pero únicamente para aquellos empleados que ganen
+    --entre 35000 y 45000 *usar where*
+--obtener el nombre de los empleados y el nombre de su departamento --¿quién es el papá de teodoro?    
+--mostrar el nombre del proyecto, las horas, ubicación del departamento de Juan     *4 tablas*
+--obetener los nombres de los proyectos en los que participa alberto campos sastre------------------------------------
+
+--*usar inner join* obtener el nombre de los empleados y proyectos en los que trabaja y cuantas horas dedica por semana
+    --a cada proyecto
+
+
+
+
+
+
+--consultar user_constraints
+--3 columnas que contienen nombre, tipo indice creado, se observa si pk, o uk
+
+
+
+
+
+--------------------------------------------------
+--es pa constraints
+select constraint_name, constraint_type, index_name
+from user_constraints where table_name ='EMPLEADO'
+-----------------------------------------------------
+
+
+
+
+
+--ver los índices de la tabla 'EMPLEADO'
+--------------------------------------------------
+--es pa índice
+select index_name, index_type, uniqueness
+from user_indexes
+where table_name='EMPLEADO'
+------------------------------------------------------
+
+
+--aparece una fila, mostrando el nombre del índice, indicando que es normal y único
+
+--*18/05*
+
+--creamos un índice único sobre el campo "apellido1":
+create unique index I_empleado_apellido1 on empleado(apellido1)
+
+
+
+--agregamos a la tabla una restricción única sobre el campo "apellido1"
+alter table EMPLEADO
+add constraint UQ_empleado_Apellido1
+unique(Apellido1)
+
+--creamos un índice no úniqco, compuesto (para los campos alleido1 y nombre)
+create index I_empleado_apellido1nombre
+on empleado(apellido1, nombre)
+
+--veamos todos los índices de la bd actica consultando "user_objects"
+select * from user_objects
+where object_type='INDEX'
+
+
+
+
+--obtenemos info de "user_ind_columns"
+select index_name, column_name, column_position
+from user_ind_columns
+where table_name='EMPLEADO'
+--la tabla tiene 3 índices, 2 filas correponden al índice cimpuesto
+--I_empleado_apellidonombre: la columna "position" indica el orden de los campos indexados
+
+
+
+--si intentamis crear un índice único para el campo apellido1
+--que contiene valores duplicados, oracle no lo permite
+create unique index I_empleados_apellido1
+on empleado(apellido1)
+--error dicha lista de columnas ya está indexada
+--igualmente, si hay un índice único sobre un campo y luego
+--intentamos ingresar un registro con un valor repetido para el campo indexado
+--oracle no lo permite
+
+
+create unique index I_empleado_nombre
+on empleado(nombre)
+--oracle lo permite porque no hay valores duplicados
+
+--intentamos agregamos un registro que repita un nombre
+--lo permite
+insert into empleado
+values('Jicamo', 'Arroyo', 'Palafox', 01, to_date('12-16-2022', 'mm-dd-yyyy'), 'Zapata', 'M', 3000, 453453453, 1)
+
+insert into empleado
+--oracle sí inserta, pero después ya no
+values('Jicamo', 'Arroyo', 'Palafox', 02, to_date('12-16-2022', 'mm-dd-yyyy'), 'Zapata', 'M', 3000, 453453453, 1)
+--oracle no lo permite
+
+
+--cómo saber si un indice se está utlizando, monitorización del uso de índices en oracle
+alter index I_empleado_apellido1nombre monitoring usage
+
+select * from V$OBJECT_USAGE
+select empleado.nombre,empleado.apellido1 from empleado
+select empleado.nombre from empleado
+
+
+--para desactivar la monitorización ejecutaremos el siguiente comando sql
+alter index I_empleado_apellido1nombre nomonitoring usage
+alter index I_empleado_nombre nomonitoring usage
+
+
+
+
+
+
+
+
+
+*****--no me jaló
+
+--obtener el tamaño icupado por un índice de una tabla de oracle
+select segment_name, sum(bytes)/1024/1024
+mb from dba_extents where segment_name = 'I_EMPLEADO_APELLIDONOMBRE'
+group by segment_name
+
+
+
+
+
+
+
+
+
+--borrar indices
+DROP index I_EMPLEADO_NOMBRE
+drop index I_EMPLEADO_APELLIDO1 --no deja, pq hay uq, quitarlo sobre apellido1
+
+select index_name, index_type, uniqueness
+from user_indexes
+where table_name='EMPLEADO'
+
+
+
+--19/05
+alter table empleado
+drop constraint uq_empleado_apellido1
+
+
+
+alter table empleado
+add constraint uq_empleado_apellido1--------------------------
+
+--?????????????
+
+
+
+--vistas
+
+
+create view nombrevista as select columna1, columna2...
+from nombre tabla
+where condición
+
+--para mostrar el contenido de una vista se utiñiza la siguiente sintaxis:
+
+select * from nombrevista
+
+
+
+
+--ejercicios
+--crea una vista del nombre del proyecto siempre y cuando el número del proyecto sea igual a 1
+
+create view vistaProyecto 
+as select NombreProyecto, NumProyecto
+from proyecto
+where NumProyecto=1
+
+select * from vistaproyecto
+
+
+
+
+--sintaxis para cambiar una vista ya creada
+create or replace view nombrevista
+as select columna1, columna2...
+from nombretabla
+where condición
+
+create or replace view vistaproyecto
+as select NombreProyecto, NumProyecto
+from proyecto
+where NumProyecto = 10
+
+
+--sintaxis para visualizar las vistas 
+select * from user_objects 
+where object_type='VIEW'        
+
+
+
+
+
+--20/05
+
+
+--sintaxis para eliminar vstas
+drop view nombredelavista;
+drop view vistaproyecto
+
+
+
+--ejercicios
+--obetener los nombres de los proyectos en los que participa alberto campos sastre*****
+   --crear una vista en los que participa alberto...
+--empleado, trabaja_en, proyecto
+
+create view DatoProyecto AS
+
+select nombreproyecto
+from empleado inner join trabaja_en on empleado.dni=trabaja_en.DniEmpleado 
+inner join proyecto on trabaja_en.NumProy=proyecto.NumProyecto
+where empleado.Nombre='Alberto' and
+empleado.Apellido1='Campos' and
+empleado.Apellido2='Sastre'
+
+select * from DatoProyecto
+
+
+--ejercicios
+--ordena de manera ascedente/ descendentre la vista creada
+select * from DatoProyecto order by nombreproyecto 
+
+--crear una vista que muestre el nombre, apellido1 y sueldo de todos los empleados
+
+create view datosempleado
+as select nombre, apellido1, sueldo
+from empleado
+
+select * from datosempleado
+
+--muestra los datos de los empleado siempre y cuando su saldo sea igual a 25000
+
+select * from datosempleado where sueldo=25000
+
+
+--**count: cuenta el num de filas**
+
+--muestra el total de tuplas que tiene la tabla trabaja_en
+
+select count(*) as totalfila from TRABAJA_EN
+select count(trabaja_en.horas) as totalfila from TRABAJA_EN
+
+select count(*) from empleado where sueldo=25000
+
+--sum
+--suma el sueldo de todos los empleados
+select sum (sueldo) from  empleado
+select sueldo from empleado
+
+--suma el sueldo de todos los empleados que tengan 25000
+select sum (sueldo) from  empleado where sueldo=25000
+
+--max/min   muestra el sueldo max y min 
+select min (sueldo) from empleado
+select max (sueldo) from empleado
+
+--muestra el min de horas que trabaj el empleado 123456789
+select min (horas) from trabaja_en where trabaja_en.DniEmpleado=123456789
+
+--avg =prom
+
+select avg (sueldo) from empleado 
+select avg (sueldo) from empleado where empleado.sueldo>40000
+
+--group by
+--muestra cuantos empleado son hombres
+select e.sexo, count (*) as total
+from empleado e 
+where e.sexo='H'
+group by e.sexo
+
+--de los 6 cuantos son los que ganan mas de 40000
+select e.sexo, count (*) as total
+from empleado e 
+where e.sexo='H' and e.sueldo>40000
+group by e.sexo
+
+--muestra el nombre y sexo que ganan más de 4000
+select e.nombre, e.sexo, count (*) as total
+from empleado e 
+where e.sexo='H' and e.sueldo>40000
+group by e.sexo, e.nombre
+--???????????????????
+
+--having
+--permite seleccionar o rechazar un grupo de registros
+--muestra el sexo y promedio del sueldo de los empleados que sean hombres siempre y cuando sean >4000
+
+select sexo, avg(sueldo)
+from empleado
+where sexo='H'
+group by sexo,sueldo
+having sueldo>40000
+
+
+
+
+
+
+
+
+--tarea: investigar la sintaxis de la creación, modificación y eliminación de disparadores o triggers
+
+
+
+
+
+
+--26/05
+
+--*indice*
+--lista el nombre de los empleados nombre de su dependiente y relación de los empleados que trabajan en investigación
+
+
+
+
+
+create materialized view vistaEmpDep
+as
+select nombre as nombre_empleado, nombdependiente as nombre_dependiente, relacion
+from empleado e
+inner join dependiente d on d.dniempleado=e.dni
+inner join departamento de on e.dno=de.numerodpto
+where nombredpto='Investigación'
+
+
+create index i on vistaEmpDep(nombre_empleado)
+
+select * from vistaEmpDep 
+
+select * from USER_OBJECTS where object_type='INDEX'
+
+
+
+--en una sola columna muestra el nombre ap y am de los empleados y la ubicacion del depertamento en la que elabora
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--*vistas*
+--muestra el nombre del empleado y ap1 en una sola columna, titulo de encabezado debe de decir nombre y ap quienes trabajan
+    --mas de 20h
+
+
+
+create view vistaEmpleado 
+as select empleado.nombre as "nombre", empleado.apellido1 as "apellido paterno", trabaja_en.horas
+from empleado inner join trabaja_en on dni=DniEmpleado where horas>=20
+
+select * from empleado
+select * from vistaEmpleado
+drop view vistaEmpleado
+
+
+
+--muestra el total de hrs que se trabajan en el dpto de gerencias
+
+create view vistaHoras
+as select  sum (t.horas) as "total" from trabaja_en t
+join proyecto p on p.numproyecto=t.numproy
+join departamento d on d.numerodpto=p.numdptoproyecto
+where d.nombredpto='Sede Central'
+
+
+drop view vistaHoras
+
+
+
+
+--de manera alfabetica muestra el nombre del proyecto y su localizacion
+
+create view vistaAlfabetica
+as select nombreproyecto, ubicacionproyecto
+from proyecto order by nombreproyecto asc
+
+
+
+
+--obtener el promedio de las horas trabajadas de los proyectos
+create view vistaPromedio
+as select avg(t.horas) as "Promedio de horas" from trabaja_en t
+join proyecto p on t.numproy=p.numproyecto
+
+
+
+--mostrar el nombre y dni de los empleados que tiene dependientes y ganen mas de 38000
+
+
+
+create view vistaDni
+as select nombre, dni
+from empleado e inner join dependiente d on e.dni=d.dniempleado
+where sueldo>38000
+
+
+--lista a las empleadas de manera ordenada de la z a a siempre y cuando ganen 25000
+
+
+create view vistaEmpleadas
+as select nombre, sueldo, sexo
+from empleado
+where sexo='M' and sueldo=25000
+order by nombre asc
+
+
+
+
+
+create or replace trigger nombretrigger                                     begin
+momento (before, after o instead of), evento (insert, update o delete)      sentencias a ejecutar
+on nombretabla                                                              end
+nivel (statement o for each row) -nvl de sentencia o de fila                /
+when condicion-opcional
+
+
+
+
+
+
+30/05
+--deshabilitar un trigger
+alter trigger nombretrigger disable
+
+--habilitar un trigger
+alter trigger nombretrigger enable
+
+--borrar
+drop trigger nombretrigger
+
+
+--ejercicios
+--define un trigger para forzar que los datos de la tabla empleado verifiquen lo siguiente;
+  --un jefe no puede supervisar a más de 5 empleados
+
+create or replace trigger t1_jefe
+before
+insert on empleado 
+for each row
+declare 
+supervisa integer;           --declaración de variable 
+begin
+select count (*) into supervisa
+from empleado
+where superdni = :new.superdni;
+if supervisa > 5
+then raise_application_error
+(-20600,:new.superdni || 'no se puede supervisar más de 5 empleados');
+end if;
+end;
+
+
+select * from empleado;

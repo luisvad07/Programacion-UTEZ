@@ -1,0 +1,120 @@
+-- TEMA INDICES
+
+select *from EMPLEADO;
+DELETE FROM EMPLEADO WHERE DNI=1;
+ -- 3 COLUMNAS QUE CONTIENEN NOMBRE, TIPO INDICE CREADO, SE OBSERVA SI PK, UQ,FK
+ select constraint_name, constraint_type, index_name
+from user_constraints  
+where table_name='EMPLEADO';
+ 
+ select index_name, index_type, uniqueness
+  from user_indexes
+  where table_name='EMPLEADO';
+--Aparece 1 fila, mostrando el nombre del índice, indicando que es normal y único
+  
+--Creamos un índice único sobre el campo "apellido1":
+
+create unique index I_empleado_apellido1 on empleado(apellido1);
+
+--Ver los índices de la tabla "empleado":
+select index_name, index_type, uniqueness
+  from user_indexes
+  where table_name='EMPLEADO';
+
+--Agregamos a la tabla una restricción única sobre el campo "Apellido1":
+
+ alter table empleado
+  add constraint UQ_empleado_Apellido1
+  unique(Apellido1);
+
+  
+
+--Analicemos la información que nos muestra "user_constraints":
+
+ select constraint_name, constraint_type, index_name
+  from user_constraints
+  where table_name='EMPLEADO';
+
+--Creamos un índice no único, compuesto (para los campos "apellido1" y "nombre"):
+
+ create index I_empleado_apellido1nombre
+ on empleado(apellido1,nombre);
+
+--Consultamos el diccionario "user_indexes":
+
+ select index_name, index_type, uniqueness
+  from user_indexes
+  where table_name='EMPLEADO';
+
+--Veamos todos los índices de la base de datos activa consultando "user_objects":
+
+ select *from user_objects
+  where object_type='INDEX';
+
+--Obtenemos información de "user_ind_columns":
+
+ select index_name,column_name,column_position
+  from user_ind_columns
+  where table_name='EMPLEADO';
+  --La tabla tiene 3 índices, 2 filas corresponden al índice compuesto 
+  --"I_empleados_apelli1donombre"; la columna "position" indica el orden de los campos indexados.
+------------------------------
+  --Si intentamos crear un índice único para el campo "apellido1" 
+  --(que contiene valores duplicados") Oracle no lo permite:
+
+ create unique index I_empleados_apellido1
+ on empleado(apellido1);
+ 
+--error:dicha lista de columnas ya está indexada
+--Igualmente, si hay un índice único sobre un campo y luego 
+--intentamos ingresar un registro con un valor repetido para el campo indexado, 
+--Oracle no lo permite.
+
+--Creamos un índice único sobre el campo "nombre":
+
+ create unique index I_empleado_nombre
+ on empleado(nombre);
+
+ --Oracle lo permite porque no hay valores duplicados.
+
+--Intentamos agregamos un registro que repita un nombre:
+
+ insert into empleado 
+ values('Daniel','J','Martínez',01,to_date('12-16-2022','mm-dd-yyyy'),'zapata','M',3000,888665555,3);
+ insert into empleado 
+ --Oracle si inserta, pero despues ya no
+ values('Araceli','Jacobo','Martínez',02,to_date('12-16-2022','mm-dd-yyyy'),'zapata','M',3000,888665555,4);
+--Oracle no lo permite.
+
+select*from empleado;
+
+-----------------
+---Cómo saber si un índice se está utilizando, monitorización del uso de índices en Oracle
+alter index I_EMPLEADO_APELLIDO1NOMBRE monitoring usage;
+
+SELECT * FROM V$OBJECT_USAGE;
+select empleado.nombre,empleado.APELLIDO1 from empleado;
+select empleado.nombre from empleado;
+
+
+--Para desactivar la monitorización ejecutaremos el siguiente comando SQL:
+alter index I_EMPLEADO_APELLIDO1NOMBRE nomonitoring usage;
+alter index I_EMPLEADO_NOMBRE nomonitoring usage;
+
+--Obtener el tamaño ocupado por un índice de una tabla de Oracle
+
+select segment_name, sum(bytes)/1024/1024 
+MB from dba_extents where segment_name = 'I_EMPLEADO_APELLIDO1NOMBRE' 
+group by segment_name;
+
+--borrar indices
+drop index I_EMPLEADO_NOMBRE;
+drop index I_EMPLEADO_APELLIDO1;
+
+select index_name, index_type, uniqueness
+  from user_indexes
+  where table_name='EMPLEADO';
+
+  alter table empleado
+  DROP constraint UQ_Apellido1
+  unique(Apellido1);
