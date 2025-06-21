@@ -1,0 +1,52 @@
+GETS
+ADMINISTRADOR: http://localhost:8080/api/administrador/
+CITA: http://localhost:8080/api/citas/
+HORARIO VENTANILLA: http://localhost:8080/api/horarios-ventanilla/
+SERVICIO: http://localhost:8080/api/servicios/
+SOLICITANTE: http://localhost:8080/api/solicitantes/
+VENTANILLA: http://localhost:8080/api/ventanillas/
+
+GETS por id
+ADMINISTRADOR: http://localhost:8080/api/administrador/{id}
+CITA: 
+HORARIO VENTANILLA: http://localhost:8080/api/horarios-ventanilla/{id}
+SERVICIO: http://localhost:8080/api/servicios/{id}
+SOLICITANTE: http://localhost:8080/api/solicitantes/{id}
+VENTANILLA: http://localhost:8080/api/ventanillas/{id}
+
+POST
+ADMINISTRADOR: http://localhost:8080/api/administrador/
+CITA: http://localhost:8080/api/citas/
+HORARIO VENTANILLA: http://localhost:8080/api/horarios-ventanilla/
+SERVICIO: http://localhost:8080/api/servicios/
+SOLICITANTE: http://localhost:8080/api/solicitantes/
+VENTANILLA: http://localhost:8080/api/ventanillas/
+
+
+PUT por id
+ADMINISTRADOR: http://localhost:8080/api/administrador/{id}
+CITA: http://localhost:8080/api/citas/{id}
+HORARIO VENTANILLA: http://localhost:8080/api/horarios-ventanilla/{id}
+SERVICIO: http://localhost:8080/api/servicios/{id}
+SOLICITANTE: http://localhost:8080/api/solicitantes/{id}
+VENTANILLA: http://localhost:8080/api/ventanillas/{id}
+
+
+PATCH status
+ADMINISTRADOR: http://localhost:8080/api/administrador/{id}
+CITA: 
+HORARIO VENTANILLA: No hay
+SERVICIO: No hay
+SOLICITANTE: No hay
+VENTANILLA: No hay
+
+
+PATCH contraseña
+ADMINISTRADOR: http://localhost:8080/api/administrador/changePassword
+CITA: 
+HORARIO VENTANILLA: No hay
+SERVICIO: No hay
+SOLICITANTE: No hay
+VENTANILLA: No hay
+
+

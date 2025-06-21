@@ -1,0 +1,58 @@
+//GET
+{
+    "data": [
+        {
+            "id": 1,
+            "nombreAdmin": "Luis Eduardo",
+            "apePaternoAdmin": "Bahena",
+            "apeMaternoAdmin": "Zulia",
+            "correoAdmin": "20213tn002@utez.edu.mx",
+            "passwordAdmin": "20213tn002sa9",
+            "status": true,
+            "ventanillas": [],
+            "solicitantes": [],
+            "servicios": []
+        }
+    ],
+    "error": false,
+    "message": "Ok",
+    "statusCode": 200
+}
+
+//POST
+{
+    "nombreAdmin": "Luis Eduardo",
+    "apePaternoAdmin": "Bahena",
+    "apeMaternoAdmin": "Castillo",
+    "correoAdmin": "20213tn002@utez.edu.mx",
+    "passwordAdmin": "20213tn002sa9",
+    "status": true
+}
+
+//PUT
+{
+    "id": 1,
+    "nombreAdmin": "Luis Eduardo",
+    "apePaternoAdmin": "Bahena",
+    "apeMaternoAdmin": "Zulia",
+    "correoAdmin": "20213tn002@utez.edu.mx",
+    "passwordAdmin": "20213tn002sa9",
+    "status": true
+}
+
+//PATCH Status
+{
+    "id": 1,
+    "status": true
+}
+
+//PATCH cambio contraseña
+{
+    "id": 1,
+    "nombreAdmin": "Luis Eduardo",
+    "apePaternoAdmin": "Bahena",
+    "apeMaternoAdmin": "Zulia",
+    "correoAdmin": "20213tn002@utez.edu.mx",
+    "passwordAdmin": "luis1234",
+    "status": true
+}

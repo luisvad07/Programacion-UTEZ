@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background-color: #f8fbfe;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+        .tools {
+            display: flex;
+            align-items: center;
+            padding: 9px;
+        }
+        .circle {
+            padding: 0 4px;
+        }
+        .box {
+            display: inline-block;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            padding: 1px;
+            border-radius: 50%;
+        }
+        .red {
+            background-color: #ff605c;
+        }
+        .yellow {
+            background-color: #ffbd44;
+        }
+        .green {
+            background-color: #00ca4e;
+        }
+        .card__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100% - 36px);
+        }
+        .card__content > div {
+            padding-left: 10px;
+        }
+        h1 {
+            font-size: 24px;
+            color: #ff605c;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 8px;
+        }
+        h4 {
+            font-size: 18px;
+            color: #264b99;
+            font-family: 'Courier New', monospace;
+            margin-bottom: 4px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 12px;
+        }
+        </style>
+</head>
+<body>
+    <body>
+        <div class="card">
+            <div class="tools">
+                <div class="circle">
+                    <span class="red box"></span>
+                </div>
+                <div class="circle">
+                    <span class="yellow box"></span>
+                </div>
+                <div class="circle">
+                    <span class="green box"></span>
+                </div>
+            </div>
+            <br>
+            <div class="card__content">
+                <div>
+                    <h1 style="color: #ff605c;">¡Hola! admin.getNombreAdmin() admin.getApePaternoAdmin() </h1>
+                    <h4 style="color: #264B99;">Bienvenido al Sistema CITAT</h4>
+                    <h4 style="color: #58BEC4;">Usuario Administrador</h4>
+                    <h4 style="color: #BAB9BC;">
+                        Este es tu correo para ingresar sesión admin.getCorreoAdmin(), con tu contraseña admin.getPass()
+                    </h4>
+                    <br>
+                    <div>
+                        <center><img src="citat.jpeg" alt="Logo" width="150px" height="150px"></center>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* CSS */
+.main-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.circle-wrapper {
+    margin: 80px;
+    /* Ajusta el margen verticalmente */
+    display: flex;
+    /* Agrega display flex para alinear los círculos en una columna */
+}
+
+.circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.circle-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    /* Utiliza 25% del ancho de la ventana */
+    height: 25vw;
+    /* Utiliza la misma altura que el ancho */
+    max-width: 350px;
+    /* Establece un máximo de 350px */
+    max-height: 350px;
+    /* Establece un máximo de 350px */
+    border-radius: 50%;
+    background-color: #2A4172;
+    /* Cambia el color de fondo a verde */
+    box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.381);
+    /* Agrega un sombreado */
+}
+
+.inner-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    background-color: #264B99;
+}
+
+.circle-icon {
+    font-size: 15vw;
+    /* Utiliza el 15% del ancho de la ventana para el ícono */
+    height: auto;
+    color: white;
+}
+
+.btn {
+    background-color: #264B99;
+    padding: 14px 50px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: 2px dashed #264B99;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.btn span:last-child {
+    display: none;
+}
+
+.btn:hover {
+    transition: .4s;
+    border: 2px dashed #264B99;
+    background-color: #fff;
+    color: #2A4172;
+}
+
+.btn:active {
+    background-color: #2A4172;
+}
+
+/*Error*/
+.error-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.error-title {
+    font-size: 3rem;
+    color: #264B99;
+}
+
+.error-message {
+    font-size: 1.5rem;
+    color: #555555;
+    margin-top: 20px;
+}
+
+/*loading error*/
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    color: #58BEC4;
+    background: radial-gradient(farthest-side, currentColor calc(100% - 6px), #0000 calc(100% - 5px) 0);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 13px), #000 calc(100% - 12px));
+    border-radius: 50%;
+    animation: s9 4s infinite linear;
+}
+
+.custom-loader::before,
+.custom-loader::after {
+    content: "";
+    grid-area: 1/1;
+    background:
+        linear-gradient(currentColor 0 0) center,
+        linear-gradient(currentColor 0 0) center;
+    background-size: 100% 10px, 10px 100%;
+    background-repeat: no-repeat;
+}
+
+.custom-loader::after {
+    transform: rotate(45deg);
+}
+
+@keyframes s9 {
+    100% {
+        transform: rotate(1turn)
+    }
+}
+
+/*loading carga*/
+.custom-loading {
+    width: 40px;
+    height: 40px;
+    color: #766DF4;
+    position: relative;
+    background: radial-gradient(10px, currentColor 94%, #0000);
+}
+
+.custom-loading:before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background:
+        radial-gradient(9px at bottom right, #0000 94%, currentColor) top left,
+        radial-gradient(9px at bottom left, #0000 94%, currentColor) top right,
+        radial-gradient(9px at top right, #0000 94%, currentColor) bottom left,
+        radial-gradient(9px at top left, #0000 94%, currentColor) bottom right;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    animation: sp8 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sp8 {
+    33% {
+        inset: -10px;
+        transform: rotate(0deg)
+    }
+
+    66% {
+        inset: -10px;
+        transform: rotate(90deg)
+    }
+
+    100% {
+        inset: 0;
+        transform: rotate(90deg)
+    }
+}
