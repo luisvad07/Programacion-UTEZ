@@ -1,0 +1,37 @@
+<div class="container">
+  <p>AGREGAR PRODUCTO</p>
+  <div class="row">
+      <div class="col-sm-6">
+          <form>
+              <div class="mb-3">
+                  <label class="form-label" for="name_product">Producto</label>
+                  <input [(ngModel)]="producto.name_product" type="text" class="form-control" name="name_product" id="name_product">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="codigo_product">Codigo</label>
+                <input [(ngModel)]="producto.codigo_product" type="text" class="form-control" name="codigo_product" id="codigo_product">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="precio">Precio</label>
+                <input [(ngModel)]="producto.precio" type="text" class="form-control" name="precio" id="precio">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="cantidad">Cantidad</label>
+                <input [(ngModel)]="producto.cantidad" type="text" class="form-control" name="cantidad" id="cantidad">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="id_tipo_product">TIPO DE PRODUCTO</label>
+                <input [(ngModel)]="producto.id_tipo_product" type="text" class="form-control" name="id_tipo_product" id="id_tipo_product">
+              </div>
+
+              <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+          </form>
+      </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+<div class="container">
+  <p>MODIFICAR VENTA</p>
+  <div class="row">
+      <div class="col-sm-6">
+          <form>
+              <div class="mb-3">
+                  <label class="form-label" for="codigoVenta">Codigo de Venta</label>
+                  <input [(ngModel)]="ventas.codigoVenta" type="text" class="form-control" name="codigoVenta" id="codigoVenta">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="id_producto">Producto</label>
+                <input [(ngModel)]="ventas.id_producto" type="text" class="form-control" name="id_producto" id="id_producto">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="productosVendidos">Cantidad Vendida</label>
+                <input [(ngModel)]="ventas.productosVendidos" type="text" class="form-control" name="productosVendidos" id="productosVendidos">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="nomCajero">Nombre del Cajero</label>
+                <input [(ngModel)]="ventas.nomCajero" type="text" class="form-control" name="nomCajero" id="nomCajero">
+              </div>
+
+              <button (click)="modificar()" class="btn btn-primary">Agregar</button>
+          </form>
+      </div>
+
+  </div>
+
+</div>

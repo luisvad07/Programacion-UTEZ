@@ -1,0 +1,126 @@
+<form #personalForm="ngForm" novalidate (submit)="savePersonal()">
+    <h2 mat-dialog-title>Register Personal</h2>
+    <mat-dialog-content class="mat-typography">
+        <div class="row form-group mb-3">
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Name</mat-label>
+                    <input matInput
+                           placeholder="Mike"
+                           #name="ngModel"
+                           name="name"
+                           [(ngModel)]="personal.name"
+                           required>
+                    <mat-error *ngIf="name.invalid">
+                        <span *ngIf="name.errors?.['required']">
+                            Campo obligatorio
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Surname</mat-label>
+                    <input matInput
+                           placeholder="Moreno"
+                           #surname="ngModel"
+                           name="surname"
+                           [(ngModel)]="personal.surname"
+                           required>
+                    <mat-error *ngIf="surname.invalid">
+                        <span *ngIf="surname.errors?.['required']">
+                            Campo obligatorio
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row form-group mb-3">
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Lastname</mat-label>
+                    <input matInput
+                           placeholder="Mike"
+                           #lastname="ngModel"
+                           name="lastname"
+                           [(ngModel)]="personal.lastname"
+                    >
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Birthday</mat-label>
+                    <input matInput
+                           type="date"
+                           placeholder="Moreno"
+                           #birthday="ngModel"
+                           name="birthday"
+                           [(ngModel)]="personal.birthday"
+                           required>
+                    <mat-error *ngIf="birthday.invalid">
+                        <span *ngIf="birthday.errors?.['required']">
+                            Campo obligatorio
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row form-group mb-3">
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Salary</mat-label>
+                    <input matInput
+                           type="number"
+                           placeholder="Mike"
+                           #salary="ngModel"
+                           name="salary"
+                           min="1"
+                           [(ngModel)]="personal.salary"
+                           required>
+                    <mat-error *ngIf="salary.invalid">
+                        <span *ngIf="salary.errors?.['required']">
+                            Campo obligatorio
+                        </span>
+                        <span *ngIf="salary.errors?.['min']">
+                            Mínimo ingrese "1"
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="col">
+                <mat-form-field appearance="fill" class="w-100">
+                    <mat-label>Position</mat-label>
+                    <mat-select [required]="true"
+                                [(ngModel)]="personal.position!.id"
+                                #position="ngModel"
+                                name="position">
+                        <mat-option *ngFor="let position of positions"
+                                    [value]="position.id">
+                            {{ position.position }} - {{ position.description }}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="position.invalid">
+                        <span *ngIf="position.errors?.['required']">
+                            Campo obligatorio
+                        </span>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </div>
+        <div class="row">
+            <input type="file" class="w-100 form-control" accept="application/pdf,image/*"
+                   (change)="previewFile($event)"/>
+            <img [src]="loadedFile" />
+        </div>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end">
+        <button type="button" mat-button mat-dialog-close>
+            <mat-icon>close</mat-icon>
+            Cancel
+        </button>
+        <button mat-button type="submit" [disabled]="personalForm.invalid">
+            <mat-icon>check</mat-icon>
+            Save
+        </button>
+    </mat-dialog-actions>
+</form>

@@ -1,0 +1,78 @@
+<h5>Add heroe</h5>
+<form #heroeForm="ngForm" (submit)="saveHeroe()"
+    class="was-validated" novalidate>
+    <!--Nombre-->
+    <div class="form-group form-row mb-3">
+        <label for="name">Name:</label>
+        <input 
+        name="name"
+        type="text" 
+        placeholder="Nombre"
+        class="form-control" 
+        id="name" 
+        #name="ngModel" 
+        [(ngModel)]="heroe.name"
+        [required]="true"
+        minlength="4"
+        pattern="[A-Za-záéíóúÁÉÍÓÚñÑ.üÜ0-9 ]{4,45}"/>
+        <div  class="text-danger">
+            <span *ngIf="name.errors?.['required']">
+                Campo obligatorio
+            </span>
+            <span *ngIf="name.errors?.['minlength']">
+                Mínimo 4 carácteres
+            </span>
+            <span *ngIf="name.errors?.['pattern']">
+                Solo puede contener letras, números y (.). Máximo 45 carácteres.
+            </span>
+        </div>
+    </div>
+    <!--Power-->
+    <div class="form-group form-row mb-3">
+        <label for="power">Power:</label>
+        <input 
+        name="power"
+        type="number" 
+        placeholder="Power"
+        class="form-control" 
+        id="power" 
+        #power="ngModel" 
+        [(ngModel)]="heroe.power"
+        [required]="true"
+        minlength="1"
+        pattern="[0-9]{1,5}"/>
+        <div  class="text-danger">
+            <span *ngIf="power.errors?.['required']">
+                Campo obligatorio
+            </span>
+            <span *ngIf="power.errors?.['minlength']">
+                Mínimo 1 carácteres.
+            </span>
+            <span *ngIf="power.errors?.['pattern']">
+                Solo puede contener números y (.). Máximo 5 carácteres.
+            </span>
+        </div>
+    </div>
+    <!--Abilities-->
+    <div class="form-group form-row mb-3">
+        <label for="abilities">Abilities:</label>
+        <input 
+        name="abilities"
+        type="text" 
+        placeholder="Volar, Lanzar fuego, Super Fuerza, etc"
+        class="form-control" 
+        id="abilities" 
+        #abilities="ngModel" 
+        [(ngModel)]="heroe.abilities[0]"/>
+    </div>
+    <div class="col text-end">
+        <div class="form-row">
+            <button
+            type="submit"
+            [disabled]="heroeForm.invalid"
+            class="btn btn-outline-success btn-sm">
+            Add
+        </button>
+        </div>
+    </div>
+</form>

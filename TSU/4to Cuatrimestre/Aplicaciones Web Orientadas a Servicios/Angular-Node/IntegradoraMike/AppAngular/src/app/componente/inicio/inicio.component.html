@@ -1,0 +1,51 @@
+<div class="container">
+  <p>LISTA DE EMPLEADOS</p>
+<button routerLink="/add" type="button" class="btn btn-dark">Agregar Empleado</button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Surname</th>
+        <th scope="col">Lastname</th>
+        <th scope="col">CURP</th>
+        <th scope="col">Cargo del Empleado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of ListarUsuario">
+        <th>{{usuario.id}}</th>
+        <td>{{usuario.name}}</td>
+        <th>{{usuario.surname}}</th>
+        <td>{{usuario.lastname}}</td>
+        <td>{{usuario.curp}}</td>
+        <td>{{usuario.rol}}</td>
+        <td>
+          <button (click)="modificar(usuario.id!)" type="button" class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="open(mymodal)">Eliminar</button>
+          <ng-template #mymodal let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Confirmacion para Eliminar</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">X</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {{letrero}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" (click)="modal.close('Save click')" (click)="eliminar(usuario.id!)">Eliminar</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal" (click)="modal.close('Save click')">Cerrar</button>
+            </div>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+

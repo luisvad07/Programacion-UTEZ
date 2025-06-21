@@ -1,0 +1,23 @@
+<div class="row">
+  <div *ngFor="let heroe of heroes" class="col-4 col-md-6 col-sm-6 col-xs-6">
+    <div class="card">
+      <div class="card-header">
+        {{ heroe.name }}
+      </div>
+      <div class="card-body">
+        <div class="rom">
+          <div class="col text-dark">
+            Abilities: {{ heroe.abilities }}
+          </div>
+        </div>
+        <div class="rom">
+          <div class="col text-end text-dark">
+              <small style="font-size: 10px;">
+                Power: {{ heroe.power }}
+              </small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

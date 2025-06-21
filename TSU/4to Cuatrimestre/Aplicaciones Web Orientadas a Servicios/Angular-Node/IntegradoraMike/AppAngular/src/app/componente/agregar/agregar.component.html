@@ -1,0 +1,42 @@
+<div class="container">
+  <p>AGREGAR EMPLEADO</p>
+  <div class="row">
+      <div class="col-sm-6">
+          <form>
+              <div class="mb-3">
+                  <label class="form-label" for="name">Name</label>
+                  <input [(ngModel)]="usuario.name" type="text" class="form-control" name="name" id="name">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="surname">Surname</label>
+                <input [(ngModel)]="usuario.surname" type="text" class="form-control" name="surname" id="surname">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="lastname">Lastname</label>
+                <input [(ngModel)]="usuario.lastname" type="text" class="form-control" name="lastname" id="lastname">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input [(ngModel)]="usuario.password" type="text" class="form-control" name="password" id="password">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="curp">CURP</label>
+                <input [(ngModel)]="usuario.curp" type="text" class="form-control" name="curp" id="curp">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="id_usuario">CARGO DEL EMPLEADO</label>
+                <input [(ngModel)]="usuario.id_usuario" type="text" class="form-control" name="id_usuario" id="id_usuario">
+              </div>
+
+              <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+          </form>
+      </div>
+
+  </div>
+
+</div>

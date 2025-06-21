@@ -1,0 +1,104 @@
+POST
+http://localhost:1200
+Header: Content-Type text/xml
+
+Ejercicio 1:
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>Methods.calImc</methodName>
+    <params>
+        <param>
+            <value><string>Pablo Samuel</string></value>
+            <value><double>1</double></value>
+            <value><double>2</double></value>
+        </param>
+    </params>
+</methodCall>
+
+Response:
+<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse>
+    <params>
+        <param>
+            <value>Hola Pablo Samuel tu imc es de 0.25</value>
+        </param>
+    </params>
+</methodResponse>
+
+
+
+Ejercicio 2:
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>Methods.response</methodName>
+    <params>
+        <param>            
+            <value><double>5</double></value>
+            <value><double>3</double></value>
+            <value><double>2</double></value>
+            <value><double>8</double></value>
+        </param>
+    </params>
+</methodCall>
+
+Response:
+<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse>
+    <params>
+        <param>
+            <value>Hola, el producto es 240.0,la suma es: 18.0, el promedio es: 4.5</value>
+        </param>
+    </params>
+</methodResponse>
+
+
+
+Ejercicio 3:
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>Methods.response</methodName>
+    <params>
+        <param>            
+            <value><double>10</double></value>
+            <value><double>20</double></value>
+        </param>
+    </params>
+</methodCall>
+
+Response:
+<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse>
+    <params>
+        <param>
+            <value>La suma de los valores dentro del limite es: 135.0</value>
+        </param>
+    </params>
+</methodResponse>
+
+
+
+Ejercicio 4:
+<?xml version="1.0"?>
+<methodCall>
+    <methodName>Methods.response</methodName>
+    <params>
+        <param>
+            <value><int>56</int></value>
+            <value><int>58</int></value>
+            <value><int>23</int></value>
+            <value><int>20</int></value>
+            <value><int>0</int></value>
+        </param>
+    </params>
+</methodCall>
+
+Response:
+<?xml version="1.0" encoding="UTF-8"?>
+<methodResponse>
+    <params>
+        <param>
+            <value>El arreglo ordenado es: [0, 20, 23, 56, 58]</value>
+        </param>
+    </params>
+</methodResponse>
+

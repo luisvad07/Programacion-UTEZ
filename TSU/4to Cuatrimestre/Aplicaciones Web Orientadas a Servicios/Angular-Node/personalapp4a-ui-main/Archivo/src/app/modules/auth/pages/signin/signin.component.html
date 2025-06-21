@@ -1,0 +1,83 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12 text-center">
+      <mat-card
+        class="position-absolute top-50 start-50 translate-middle justify-content-center"
+        style="width: 35%"
+      >
+        <mat-card-header class="row mt-1">
+          <div class="col text-center">
+            <img
+              [src]="logoPath"
+              alt="Logo"
+              mat-card-image
+              style="width: 40%; height: auto; display: inline"
+            />
+            <mat-card-title>Log in</mat-card-title>
+          </div>
+        </mat-card-header>
+        <form #loginForm="ngForm" novalidate (submit)="signin()">
+          <mat-card-content class="row">
+            <div class="col-12 mb-3">
+              <mat-form-field appearance="fill" class="w-50">
+                <mat-label>Email</mat-label>
+                <input
+                  type="text"
+                  matInput
+                  required
+                  name="email"
+                  #email="ngModel"
+                  [(ngModel)]="user.email"
+                  placeholder="miguelmoreno@utez.edu.mx"
+                />
+                <mat-error *ngIf="email.invalid">
+                  <span *ngIf="email.errors?.['required']">
+                    Campo obligatorio
+                  </span>
+                  <span *ngIf="email.errors?.['email']">
+                    Ingresar un correo válido
+                  </span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-12 mb-3">
+              <mat-form-field appearance="fill" class="w-50">
+                <mat-label>Password</mat-label>
+                <input
+                  type="password"
+                  matInput
+                  required
+                  name="password"
+                  #password="ngModel"
+                  [(ngModel)]="user.password"
+                  placeholder="***********"
+                />
+                <mat-error *ngIf="password.invalid">
+                  <span *ngIf="password.errors?.['required']">
+                    Campo obligatorio
+                  </span>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </mat-card-content>
+          <mat-card-actions class="row">
+            <div class="col text-center">
+              <button
+                type="submit"
+                mat-flat-button
+                class="w-50"
+                color="primary"
+                [disabled]="loginForm.invalid || isLoading"
+              >
+                Log in
+              </button>
+            </div>
+          </mat-card-actions>
+          <mat-card-footer *ngIf="isLoading">
+            <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+          </mat-card-footer>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

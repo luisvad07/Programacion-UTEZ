@@ -1,0 +1,37 @@
+<div class="container">
+  <p>AGREGAR CLIENTES</p>
+  <div class="row">
+      <div class="col-sm-6">
+          <form>
+            <div class="mb-3">
+              <label class="form-label" for="nombre">Nombre</label>
+              <input [(ngModel)]="cliente.nombre" type="text" class="form-control" name="nombre" id="nombre">
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="apellidos">Apellidos</label>
+              <input [(ngModel)]="cliente.apellidos" type="text" class="form-control" name="apellidos" id="apellidos">
+            </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input [(ngModel)]="cliente.email" type="text" class="form-control" name="email" id="email">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="password">Password</label>
+                <input [(ngModel)]="cliente.password" type="text" class="form-control" name="password" id="password">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label" for="id_cliente">TIPO DE CLIENTE</label>
+                <input [(ngModel)]="cliente.id_cliente" type="text" class="form-control" name="id_cliente" id="id_cliente">
+              </div>
+
+              <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+          </form>
+      </div>
+
+  </div>
+
+</div>

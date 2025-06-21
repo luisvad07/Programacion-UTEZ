@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+    crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" 
+    crossorigin="anonymous"></script>
+
+    <title>PHP service</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <div class="card mt-5">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col">Personal</div>
+                            <div class="col text-end">
+                                <button class="btn btn-outline-success btn-sm"
+                                data-bs-toggle="modal"
+                                data-bs-target="#registerPerson"
+                                onclick="getPositions()"><h4><strong>+</strong></h4></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-stipped table-hover">
+                            <thead>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Fecha de Nacimiento</th>
+                                <th>Sueldo</th>
+                                <th>Puesto</th>
+                                <th>Acciones</th>
+                            </thead>
+                            <tbody id="content"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+<div class="modal fade" id="registerPerson" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Registrar persona</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="needs-validation row g-3" novalidate onsubmit="registerPerson(event,this)">
+            <div class="col-md-4">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="col-md-4">
+                <label for="surname" class="form-label">Primer apellido</label>
+                <input type="text" id="surname" class="form-control" required>
+            </div>
+            <div class="col-md-4">
+                <label for="lastname" class="form-label">Segundo apellido</label>
+                <input type="text" id="lastname" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label for="birthday" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" id="birthday" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+                <label for="salary" class="form-label">Sueldo</label>
+                <input type="number" id="salary" class="form-control" required>
+            </div>
+            <div class="col-md-3">
+                <label for="position" class="form-label">Puesto</label>
+                <select class="form-select" id="position" required></select>
+            </div>
+            <div class="col-12 mt-3 text-end">
+                <button type="button" data-bs-dismiss="modal" class="btn btn-outline-danger btn-sm">
+                    Cerrar
+                </button>
+                <button type="submit" data-bs-dismiss="modal" class="btn btn-outline-success btn-sm ms-2">
+                    Subir
+                </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script>
+        const URL = 'http://localhost/rest/'
+        const getPersonal = () => {
+            document.getElementById("registerPerson").classList.remove("was-validated");
+            return fetch(URL+'personal')
+            .then((response) => response.json())
+            .then((data)=>{
+                const tbody = document.getElementById('content');
+                let content = ``;
+                data.map((person, index)=>{
+                    content += `
+                        <tr>
+                            <td>${index + 1}</td>
+                            <td>${person.name+' '+person.surname+' '+
+                               ( person.lastname ?person.lastname:'')}</td>
+                            <td>${person.birthday}</td>
+                            <td>${person.salary}</td>
+                            <td>${person.position}</td>
+                            <td></td>
+                        </tr>
+                    `;
+                });
+                tbody.innerHTML = content;
+            })  
+            .catch((err)=>{
+                console.log(err);
+            });
+        }
+        window.addEventListener('DOMContentLoaded',() => {
+            getPersonal();
+        })
+
+        const getPositions = async ()  => {
+            try {
+                const response = await fetch(`${URL}position`);
+                const data = await response.json();
+                const select = document.getElementById("position");
+                let content = `<option value="" selected>Seleccionar..</option>`;
+                data.map((position) => {
+                    content += `
+                    <option value="${position.id}">
+                        ${position.position}
+                    </option>`;
+                })
+                select.innerHTML = content;
+            } catch (error) {
+                cosnole.log(error)                
+            }
+        }
+
+        const registerPerson = async (event,form) => {
+            event.preventDefault();
+            event.stopPropagation();
+            form.classList.add('was-validated');
+            if(!form.checkValidity()){
+                alert("Llena todos los campos obligatorios.")
+                return;
+            }
+            try {
+                const name = document.getElementById("name").value;
+                const surname = document.getElementById("surname").value;
+                const lastname = document.getElementById("lastname").value;
+                const salary = document.getElementById("salary").value;
+                const position = document.getElementById("position").value;
+                const birthday = document.getElementById("birthday").value;
+                const person = {
+                    name,
+                    surname,
+                    lastname,
+                    birthday,
+                    salary,
+                    position,
+                };
+                const response = await fetch(`${URL}personal`,{
+                    method: 'POST',
+                    body: JSON.stringify(person)});
+                const data = await response.json();
+                alert(data.message);
+                const modal = bootstrap.Modal.getInstance(
+                    document.getElementById('registerPerson')
+                );
+                modal.hide();
+                form.reset();
+                getPersonal();
+            } catch (error) {
+                console.log(error);
+            }
+        };
+    </script>
+</body>
+</html>

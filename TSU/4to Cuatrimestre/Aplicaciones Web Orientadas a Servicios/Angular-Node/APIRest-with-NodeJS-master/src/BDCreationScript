@@ -1,0 +1,19 @@
+Create Database Pedidos;
+Use Pedidos;
+
+Create Table Personas (
+	id INT auto_increment Primary Key,
+    usuario VARCHAR(50) Not Null,
+    contrasenia VARCHAR(100) Not Null,
+    nombre VARCHAR(50) Not Null,
+    apellidoP VARCHAR(50) Not Null,
+    email VARCHAR(100) Not Null
+);
+
+Create Table Pedidos (
+	id_pedidos INT auto_increment Primary Key,
+    id_persona INT Not Null,
+    producto VARCHAR(100) Not Null,
+    cantidad INT Not Null,
+    Constraint fk_pedidos_personas Foreign Key (id_persona) References Personas(id)
+);

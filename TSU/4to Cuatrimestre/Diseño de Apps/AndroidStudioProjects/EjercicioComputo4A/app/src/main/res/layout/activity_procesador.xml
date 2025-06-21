@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC107"
+    tools:context=".Procesador">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/procesador" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Procesador"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <RadioGroup
+        android:id="@+id/rgProcesador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+        <RadioButton
+            android:id="@+id/rbProc1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intel Pentium-Celeron / AMD Ryzen 3 / APU" />
+
+        <RadioButton
+            android:id="@+id/rbProc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intel Core i3 / AMD Ryzen 5 de cuatro núcleos" />
+
+        <RadioButton
+            android:id="@+id/rbProc3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Intel Core i5 / Intel Core i7 y AMD Ryzen 7" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnSiguiente2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Siguiente"
+        app:layout_constraintEnd_toEndOf="@+id/rgProcesador"
+        app:layout_constraintStart_toStartOf="@+id/rgProcesador"
+        app:layout_constraintTop_toBottomOf="@+id/rgProcesador" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

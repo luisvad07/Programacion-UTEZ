@@ -1,0 +1,4 @@
+sdk.dir=/Users/alumno/Library/Android/sdk
+sdk.dir=C\:\\Users\\Sala de Internet\\AppData\\Local\\Android\\Sdk
+
+compileSdk 33

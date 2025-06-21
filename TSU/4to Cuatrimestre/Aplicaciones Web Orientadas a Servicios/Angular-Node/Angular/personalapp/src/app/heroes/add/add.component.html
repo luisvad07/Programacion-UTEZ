@@ -1,0 +1,36 @@
+<h5>Add Heroe</h5>
+<form #heroeForm="ngForm" (submit)="saveHeroe()" class="was-validated" novalidate>
+  <div class="form-group form-row mb-3">
+    <label for="name">Name:</label>
+    <input type="text" class="form-control" id="name" name="name" #name="ngModel" [(ngModel)]="heroe.name" [required]="true"
+      minlength="4" pattern="[A-Za-záéíóúÁÉÍÓÚñÑ.üÜ0-9]{4,45}" placeholder="Luis Valladolid" />
+    <div *ngIf="name.invalid" class="text-danger">
+      <span *ngIf="name.errors?.['required']">
+        Campo Obligatorio
+      </span>
+      <span *ngIf="name.errors?.['minlength']">
+        Mínimo 4 caracteres para el nombre
+      </span>
+      <span *ngIf="name.errors?.['pattern']">
+        Solo puede contener letras, números y (.)
+      </span>
+    </div>
+  </div>
+  <div class="form-group form-row mb-3">
+    <label for="power">Power:</label>
+    <input type="text" class="form-control" id="power" name="power" #power="ngModel" [(ngModel)]="heroe.power" [required]="true"/>
+    <div *ngIf="power.invalid" class="text-danger">
+      <span *ngIf="power.errors?.['required']">
+        Campo Obligatorio
+      </span>
+    </div>
+  </div>
+  <div class="form-group form-row mb-3">
+    <label for="abilities">Abilities:</label>
+    <input type="text" class="form-control" id="abilities" name="abilities" [(ngModel)]="heroe.abilities[0]" [required]="true"
+      placeholder="Fuerza, Volar, Etc." />
+  </div>
+  <div class="form-row">
+    <button type="submit" [disabled]="heroeForm.invalid" class="btn btn-outline-success btn-sm">Guardar</button>
+  </div>
+</form>

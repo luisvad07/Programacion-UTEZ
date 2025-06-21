@@ -1,0 +1,51 @@
+<div class="container">
+  <p>LISTA DE VENTAS</p>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Codigo Venta</th>
+        <th scope="col">Producto</th>
+        <th scope="col">Cantidad Vendida</th>
+        <th scope="col">Total</th>
+        <th scope="col">Nombre del Cajero</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of ListarVentas">
+        <th>{{venta.id_venta}}</th>
+        <td>{{venta.codigoVenta}}</td>
+        <td>{{venta.name_product}}</td>
+        <th>{{venta.productosVendidos}}</th>
+        <td>{{venta.total}}</td>
+        <td>{{venta.nomCajero}}</td>
+        <td>
+          <button (click)="modificar(venta.id_venta!)" type="button" class="btn btn-primary">Editar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="open(mymodal)">Eliminar</button>
+          <ng-template #mymodal let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Confirmacion para Eliminar</h4>
+              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                <span aria-hidden="true">X</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              {{letrero}}
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" (click)="modal.close('Save click')" (click)="eliminar(venta.id_venta!)">Eliminar</button>
+              <button type="button" class="btn btn-dark" data-dismiss="modal" (click)="modal.close('Save click')">Cerrar</button>
+            </div>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+

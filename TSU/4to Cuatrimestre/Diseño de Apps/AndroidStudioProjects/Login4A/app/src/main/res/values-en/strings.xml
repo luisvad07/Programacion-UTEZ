@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Login4A</string>
+    <string name="str_iniciar">Login</string>
+    <string name="str_contraseña">Forgot Password?</string>
+    <string name="h_contraseña">Password</string>
+    <string name="h_usuario">User</string>
+    <string name="lb_personaje">Sponge Bob</string>
+    <string name="chk_question">Do you like SpongeBob?</string>
+    <string name="rb_ch1">Squidward Tentacles</string>
+    <string name="rb_ch2">Patrick Star</string>
+    <string name="str_aceptar">Accept</string>
+
+    <string name="str_usu" translatable="false">User</string>
+    <string name="str_pass" translatable="false">Password</string>
+    <string name="str_login" translatable="false">Login</string>
+    <string name="str_forgot" translatable="false">Forgot Password?</string>
+</resources>
