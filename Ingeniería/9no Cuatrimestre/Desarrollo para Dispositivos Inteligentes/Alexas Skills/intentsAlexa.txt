@@ -1,0 +1,100 @@
+HelloWorldIntent
+di hola mundo
+
+RegisterEmployeeIntent
+Registra un nuevo empleado / Agrega a un nuevo empleado
+1. es Luis Eduardo Bahena Castillo
+2. BACL030601R65
+3. 40000 pesos
+4. backend / será de backend (válido)
+
+CreateProjectIntent
+Da vida a un proyecto
+1. Sistema de Capacitación Holística Avanzada en Manejo de Buenas Prácticas y Automatización
+2. externo
+3. CHAMBA
+
+RegisterTechnologyIntent
+Agrega una nueva tecnología
+1. Javascript / la tecnología susu
+
+GetEmployeeRecordsIntent
+muestra los registros de todos los empleados existentes
+
+GetProjectRecordsIntent
+muestra los registros de los proyectos existentes
+
+GetTechnologyRecordsIntent
+muestra los registros de las tecnologías existentes
+
+GetEmployeeRecordsTotalIntent
+muestra todos los empleados
+
+GetProjectRecordsTotalIntent
+muestra todos los proyectos
+
+GetTechnologyRecordsTotalIntent
+muestra todas las tecnologías
+
+GetSingleEmployeeIntent
+1. El empleado luis eduardo bahena castillo
+2. BACL030601R65
+
+QueryEmployeeIntent
+busca empleados asignados a un proyecto
+1. CHAMBA
+
+ProjectReportIntent
+Obtén el status de un proyecto
+1. CHAMBA
+
+EmployeeStatusIntent
+saber en qué proyectos está trabajando un empleado
+1. Del empleado luis eduardo bahena castillo
+2. BACL030601R65
+
+SearchCandidatesIntent
+Encuentra empleados disponibles para un proyecto
+
+GetEmployeeStatusIntent
+en qué proyectos han trabajado todos los empleados
+
+AssignTechnologyIntent
+asigna una tecnología a un proyecto
+1. CHAMBA
+2. Javascript / la tecnología susu
+
+AssignResourceIntent
+Asigna recursos a un proyecto
+1. CHAMBA
+2. tecnológico (válido)
+
+AssignEmployeeIntent
+Asigna un empleado a un nuevo proyecto
+1. Al empleado luis eduardo bahena castillo
+2. BACL030601R65
+3. CHAMBA
+
+StartProjectIntent
+Comienza un proyecto
+1. CHAMBA
+
+CompleteProjectIntent
+Termina un Proyecto
+1. CHAMBA
+
+DeactivateEmployeeIntent
+da de baja a un empleado
+1. a luis eduardo bahena castillo
+2. BACL030601R65
+
+ReactivateEmployeeIntent
+restaura a un empleado
+1. a luis eduardo bahena castillo
+2. BACL030601R65
+
+AssignFutureProjectIntent
+asigna a un empleado a un futuro proyecto
+1. su nombre es luis eduardo bahena castillo
+2. CHAMBA
+3.

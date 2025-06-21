@@ -1,0 +1,448 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  MovierBack
+
+  Sample SAM Template for MovierBack2
+
+Globals:
+  Function:
+    Timeout: 10
+  Api:
+    Cors:
+      AllowOrigin: "'*'"
+      AllowHeaders: "'*'"
+      AllowMethods: "'GET,PUT,POST,PATCH,DELETE,OPTIONS'"
+
+Resources:
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      Policies:
+        - PolicyName: LambdaBasicExecution
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:CreateLogGroup
+                  - logs:CreateLogStream
+                  - logs:PutLogEvents
+                Resource: "*"
+        - PolicyName: CognitoAdminInitiateAuth
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - cognito-idp:AdminInitiateAuth
+                  - cognito-idp:AdminRespondToAuthChallenge
+                  - cognito-idp:AdminSetUserPassword
+                  - cognito-idp:AdminCreateUser
+                  - cognito-idp:AdminDeleteUser
+                  - cognito-idp:AdminUpdateUserAttributes
+                  - cognito-idp:AdminListGroupsForUser
+                  - cognito-idp:AdminAddUserToGroup
+                  - cognito-idp:AdminRemoveUserFromGroup
+                  - cognito-idp:AdminGetUser
+                  - cognito-idp:AdminGetUserAttributeVerificationCode
+                  - cognito-idp:AdminConfirmSignUp
+                  - cognito-idp:AdminForgetDevice
+                  - cognito-idp:AdminConfirmDevice
+                  - cognito-idp:AdminUpdateDeviceStatus
+                  - cognito-idp:AdminEnableUser
+                  - cognito-idp:AdminDisableUser
+                  - cognito-idp:AdminResetUserPassword
+                  - cognito-idp:AdminSetUserSettings
+                  - cognito-idp:AdminUpdateAuthEventFeedback
+                  - cognito-idp:AdminUserGlobalSignOut
+                Resource: "arn:aws:cognito-idp:us-east-1:*:*"
+        - PolicyName: SSMGetParameter
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - secretsmanager:GetSecretValue
+                Resource: "arn:aws:secretsmanager:us-east-1:533267376951:secret:prd/dataBase/appMovier-123456"
+  AuthApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: Prod
+      Name: AuthApi
+
+  MovieApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: MovieApi
+      StageName: Prod
+
+  CommentApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: CommentApi
+      StageName: Prod
+
+  WatchedApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: WatchedApi
+      StageName: Prod
+
+  LoginFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: login/login_users/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Architectures:
+        - x86_64
+      Events:
+        Login:
+          Type: Api
+          Properties:
+            RestApiId: !Ref AuthApi
+            Path: /login
+            Method: post
+
+  SetPasswordFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: login/set_password/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Architectures:
+        - x86_64
+      Events:
+        SetPassword:
+          Type: Api
+          Properties:
+            RestApiId: !Ref AuthApi
+            Path: /set_password
+            Method: post
+
+  CreateUserFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: login/insert_user_pool/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Role: !GetAtt LambdaExecutionRole.Arn
+      Architectures:
+        - x86_64
+      Events:
+        SetPassword:
+          Type: Api
+          Properties:
+            RestApiId: !Ref AuthApi
+            Path: /create_user
+            Method: post
+
+  CreateMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/create_movie/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        CreateMovie:
+          Type: Api
+          Properties:
+            Path: /create
+            RestApiId: !Ref MovieApi
+            Method: post
+
+  GetMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/get_movies/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetMovie:
+          Type: Api
+          Properties:
+            Path: /getAll
+            RestApiId: !Ref MovieApi
+            Method: get
+
+  GetAllMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/get_all_movies/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetMovie:
+          Type: Api
+          Properties:
+            Path: /getAllMovies
+            RestApiId: !Ref MovieApi
+            Method: get
+
+  GetMovieByIdFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/get_movie_by_id/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetMovie:
+          Type: Api
+          Properties:
+            Path: /getMovie/{id}/{user_id}
+            RestApiId: !Ref MovieApi
+            Method: get
+
+  SearchMoviesFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/search_movies/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetMovie:
+          Type: Api
+          Properties:
+            Path: /searchMovies/{name}
+            RestApiId: !Ref MovieApi
+            Method: get
+
+  UpdateMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/update_movie/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        UpdateMovie:
+          Type: Api
+          Properties:
+            Path: /update/{id}
+            RestApiId: !Ref MovieApi
+            Method: put
+
+  ChangeStatusMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: movies/change_status_movie/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetComments:
+          Type: Api
+          Properties:
+            Path: /status/{id}
+            RestApiId: !Ref MovieApi
+            Method: patch
+
+  CreateCommentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: comments/create_comment/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        CreateComment:
+          Type: Api
+          Properties:
+            Path: /create
+            RestApiId: !Ref CommentApi
+            Method: post
+
+  GetCommentsFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: comments/get_comments/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        GetComments:
+          Type: Api
+          Properties:
+            Path: /getComment/{id}
+            RestApiId: !Ref CommentApi
+            Method: get
+
+  DeleteCommentFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: comments/delete_comment/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        DisableMovie:
+          Type: Api
+          Properties:
+            Path: /delete
+            RestApiId: !Ref CommentApi
+            Method: delete
+
+  WatchedMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: watched/watched_movie/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        WatchedMovie:
+          Type: Api
+          Properties:
+            Path: /watched
+            RestApiId: !Ref WatchedApi
+            Method: post
+
+  GetWatchedMovieFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: watched/get_watched_movies_user/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Events:
+        WatchedMovie:
+          Type: Api
+          Properties:
+            Path: /watched/user/{id}
+            RestApiId: !Ref WatchedApi
+            Method: get
+
+Outputs:
+  CreateMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for create movie function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/create"
+  CreateMovieFunction:
+    Description: "Create Movie Lambda Function ARN"
+    Value: !GetAtt CreateMovieFunction.Arn
+
+  GetMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for get movies function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/getAll"
+  GetMovieFunction:
+    Description: "Get Movie Lambda Function ARN"
+    Value: !GetAtt GetMovieFunction.Arn
+
+  GetAllMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for get movies function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/getAllMovies"
+  GetAllMovieFunction:
+    Description: "Get Movie Lambda Function ARN"
+    Value: !GetAtt GetAllMovieFunction.Arn
+
+  GetMovieByIdApi:
+    Description: "API Gateway endpoint URL for Prod stage for get movie by id function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/getMovie/{id}/{user_id}"
+  GetMovieByIdFunction:
+    Description: "Get Movie Lambda Function ARN"
+    Value: !GetAtt GetMovieByIdFunction.Arn
+  SearchMoviesApi:
+    Description: "API Gateway endpoint URL for Prod stage for get movie by id function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/searchMovies/{name}"
+  SearchMoviesFunction:
+    Description: "Get Movie Lambda Function ARN"
+    Value: !GetAtt SearchMoviesFunction.Arn
+  UpdateMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for update movie function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/update/{id}"
+  UpdateMovieFunction:
+    Description: "Update Movie Lambda Function ARN"
+    Value: !GetAtt UpdateMovieFunction.Arn
+
+  StatusMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for update movie function"
+    Value: !Sub "https://${MovieApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/status/{id}"
+  ChangeStatusMovieFunction:
+    Description: "Update Movie Lambda Function ARN"
+    Value: !GetAtt ChangeStatusMovieFunction.Arn
+
+  CreateCommentApi:
+    Description: "API Gateway endpoint URL for Prod stage for create comment function"
+    Value: !Sub "https://${CommentApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/create"
+  CreateCommentFunction:
+    Description: "Create Comment Lambda Function ARN"
+    Value: !GetAtt CreateCommentFunction.Arn
+
+  GetCommentsApi:
+    Description: "API Gateway endpoint URL for Prod stage for get comments function"
+    Value: !Sub "https://${CommentApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/getComment/{id}"
+  GetCommentsFunction:
+    Description: "Get Comments Lambda Function ARN"
+    Value: !GetAtt GetCommentsFunction.Arn
+
+  DeleteCommentApi:
+    Description: "API Gateway endpoint URL for Prod stage for delete comment function"
+    Value: !Sub "https://${CommentApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/delete"
+  DeleteCommentFunction:
+    Description: "Delete Comment Lambda Function ARN"
+    Value: !GetAtt DeleteCommentFunction.Arn
+
+  WatchedMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for watched movie function"
+    Value: !Sub "https://${WatchedApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/watched"
+  WatchedMovieFunction:
+    Description: "Watched Movie Lambda Function ARN"
+    Value: !GetAtt WatchedMovieFunction.Arn
+
+  GetWatchedMovieApi:
+    Description: "API Gateway endpoint URL for Prod stage for watched movie function"
+    Value: !Sub "https://${WatchedApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/watched"
+  GetWatchedMovieFunction:
+    Description: "Watched Movie Lambda Function ARN"
+    Value: !GetAtt GetWatchedMovieFunction.Arn
+
+  LoginApi:
+    Description: "API Gateway endpoint URL for LoginFunction"
+    Value: !Sub "https://${AuthApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/login"
+  LoginFunction:
+    Description: "Login Lambda Function ARN"
+    Value: !GetAtt LoginFunction.Arn
+
+  SetPasswordApi:
+    Description: "API Gateway endpoint URL for SetPasswordFunction"
+    Value: !Sub "https://${AuthApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/set_password"
+  SetPasswordFunction:
+    Description: "Set Password Lambda Function ARN"
+    Value: !GetAtt SetPasswordFunction.Arn
+
+  CreateUserApi:
+    Description: "API Gateway endpoint URL for CreateUserFunction"
+    Value: !Sub "https://${AuthApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/create_user"
+  CreateUserFunction:
+    Description: "Create User Lambda Function ARN"
+    Value: !GetAtt CreateUserFunction.Arn
+
+  LambdaExecutionRole:
+    Description: "Implicit IAM Role created for lambda functions"
+    Value: !GetAtt LambdaExecutionRole.Arn

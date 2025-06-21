@@ -1,0 +1,25 @@
+ID,Nombre,Apellido,Edad,Correo,Grado,Fecha_Ingreso,Notas
+1,Juan Perez,Perez,20,juan.perez@,4to,2019-01-15,85
+2,Ana Morales,Morales,,ana.morales@example.com,3ro,2020-02-20,90
+3,Carlos Smith,,22,carlos.smith@example.com,2do,2018-03-18,87
+4,Sofia Lopez,Lopez,19,sofia.lopez@example,1ro,2019-04-10,75
+5,Maria Gonzalez,Gonzalez,21,maria.gonzalez@example.com,4to,2021-05-12,95
+6,David Martinez,Martinez,23,david.martinez@example.com,,2022-06-30,88
+7,Laura Gomez,Gomez,20,laura.gomez@example.com,3ro,,91
+8,Raul Jimenez,Jimenez,21,raul.jimenez@example.com,2do,2020-08-25,92
+9,Carla Ramirez,Ramirez,19,carla.ramirez@example.com,1ro,2019-09-18,78
+10,Pedro Hernandez,Hernandez,22,pedro.hernandez@example.com,4to,2020-10-22,80
+11,Lucia Fernandez,Fernandez,20,,3ro,2019-11-11,89
+12,Alberto Mendoza,Mendoza,24,alberto.mendoza@example.com,2do,2021-12-01,93
+13,Elena Rios,Rios,21,elena.rios@example.com,1ro,2022-01-25,84
+14,Ricardo Sanchez,Sanchez,22,ricardo.sanchez@,4to,2018-02-14,77
+15,Monica Cruz,Cruz,23,monica.cruz@example.com,3ro,2019-03-12,90
+16,Diego Vargas,Vargas,19,diego.vargas@example.com,2do,2020-04-20,85
+17,Julia Diaz,Diaz,,julia.diaz@example.com,1ro,2018-05-18,88
+18,Andres Ortiz,Ortiz,21,andres.ortiz@example.com,4to,2019-06-30,91
+19,Patricia Nunez,Nunez,20,patricia.nunez@,3ro,2020-07-25,87
+20,Miguel Reyes,Reyes,22,miguel.reyes@example.com,2do,2021-08-15,86
+21,Juan Perez,Perez,20,juan.perez@,4to,2019-01-15,85
+22,Ana Morales,Morales,,ana.morales@example.com,3ro,2020-02-20,90
+23,Lucia Fernandez,Fernandez,20,,3ro,2019-11-11,89
+24,David Martinez,Martinez,23,david.martinez@example.com,,2022-06-30,88

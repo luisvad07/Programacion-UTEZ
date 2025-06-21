@@ -1,0 +1,91 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "moneda",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1027380985045.1283569183860"
+              }
+            }
+          ],
+          "name": "DivisasIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "moneda",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "es de {moneda} pesos",
+                "de {moneda} pesos"
+              ]
+            }
+          ],
+          "name": "DivisasIntent",
+          "samples": [
+            "convierte {moneda} pesos a dólares",
+            "convierte moneda mexicana a moneda americana",
+            "convierte pesos mexicanos a dólares americanos"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "examen divisas"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "cual es la cantidad?"
+          },
+          {
+            "type": "PlainText",
+            "value": "cuantos pesos quieres convertir?"
+          }
+        ],
+        "id": "Elicit.Slot.1027380985045.1283569183860"
+      }
+    ]
+  }
+}

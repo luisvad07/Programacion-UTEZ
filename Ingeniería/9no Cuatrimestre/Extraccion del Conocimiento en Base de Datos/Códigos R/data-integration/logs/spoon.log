@@ -1,0 +1,611 @@
+Graphics2D from BufferedImage lacks BUFFERED_IMAGE hint
+2024/06/04 19:31:19 - Spoon - Save file as...
+2024/06/04 19:37:28 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:37:28 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:37:28 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:37:28 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:37:54 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:37:54 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:37:54 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:37:54 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:38:14 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:38:14 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:38:14 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:38:15 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:39:26 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:39:26 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:39:26 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:39:26 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:40:06 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:40:06 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:40:06 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:40:06 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:40:23 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:40:23 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:40:23 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:40:23 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:41:09 - Spoon - Transformation opened.
+2024/06/04 19:41:09 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 19:41:09 - Spoon - Started the transformation execution.
+2024/06/04 19:41:10 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 19:41:10 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:41:10 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:41:10 - Spoon - The transformation has finished!!
+2024/06/04 19:42:17 - C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024/06/04 19:42:17 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:42:17 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:42:17 - dummy.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:52:05 - Spoon - Transformation opened.
+2024/06/04 19:52:05 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 19:52:05 - Spoon - Started the transformation execution.
+2024/06/04 19:52:05 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 19:52:05 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+2024/06/04 19:52:05 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 3 more
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - 	... 3 more
+2024/06/04 19:52:05 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024/06/04 19:52:05 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:05 - Spoon - The transformation has finished!!
+2024/06/04 19:52:05 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:05 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:05 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 19:52:05 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 19:52:45 - Spoon - Transformation opened.
+2024/06/04 19:52:45 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 19:52:45 - Spoon - Started the transformation execution.
+2024/06/04 19:52:45 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 19:52:45 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+2024/06/04 19:52:45 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 3 more
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - 	... 3 more
+2024/06/04 19:52:45 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024/06/04 19:52:45 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:45 - Spoon - The transformation has finished!!
+2024/06/04 19:52:45 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:45 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 19:52:45 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 19:52:45 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 19:53:37 - Spoon - Transformation opened.
+2024/06/04 19:53:37 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 19:53:37 - Spoon - Started the transformation execution.
+2024/06/04 19:53:37 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 19:53:37 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 19:53:37 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 19:53:37 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 19:53:37 - Spoon - The transformation has finished!!
+2024/06/04 20:04:42 - Spoon - Transformation opened.
+2024/06/04 20:04:42 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:04:42 - Spoon - Started the transformation execution.
+2024/06/04 20:04:42 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:04:42 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:04:42 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:04:42 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:04:42 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:04:42 - Spoon - The transformation has finished!!
+2024/06/04 20:09:25 - Spoon - Transformation opened.
+2024/06/04 20:09:25 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:09:25 - Spoon - Started the transformation execution.
+2024/06/04 20:09:25 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:09:25 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:09:25 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:09:25 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:09:25 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:09:25 - 4_Unir_Edad_Promedio_al_conjunto.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2024/06/04 20:09:25 - Spoon - The transformation has finished!!
+2024/06/04 20:12:13 - Spoon - Transformation opened.
+2024/06/04 20:12:13 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:12:13 - Spoon - Started the transformation execution.
+2024/06/04 20:12:13 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:12:13 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:12:13 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:12:13 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:12:13 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024/06/04 20:12:14 - 4_Unir_Edad_Promedio_al_conjunto.0 - Finished processing (I=0, O=0, R=13, W=0, U=0, E=0)
+2024/06/04 20:12:14 - Spoon - The transformation has finished!!
+2024/06/04 20:12:21 - Spoon - Transformation opened.
+2024/06/04 20:12:21 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:12:21 - Spoon - Started the transformation execution.
+2024/06/04 20:12:21 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:12:21 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:12:21 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:12:21 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:12:21 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024/06/04 20:12:21 - 4_Unir_Edad_Promedio_al_conjunto.0 - Finished processing (I=0, O=0, R=13, W=0, U=0, E=0)
+2024/06/04 20:12:21 - Spoon - The transformation has finished!!
+2024/06/04 20:13:01 - Spoon - Transformation opened.
+2024/06/04 20:13:01 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:13:01 - Spoon - Started the transformation execution.
+2024/06/04 20:13:01 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:13:01 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:13:01 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:13:01 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:13:01 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024/06/04 20:13:02 - 4.0 - Finished processing (I=0, O=0, R=13, W=12, U=0, E=0)
+2024/06/04 20:13:02 - Spoon - The transformation has finished!!
+2024/06/04 20:14:15 - Spoon - Transformation opened.
+2024/06/04 20:14:15 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:14:15 - Spoon - Started the transformation execution.
+2024/06/04 20:14:15 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:14:15 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:14:15 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:14:15 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:14:15 - 3_Obtener_media_edad.0 - Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024/06/04 20:14:15 - 4 Unir Edad Promedio.0 - Finished processing (I=0, O=0, R=13, W=12, U=0, E=0)
+2024/06/04 20:14:15 - Spoon - The transformation has finished!!
+2024/06/04 20:21:32 - Spoon - Transformation opened.
+2024/06/04 20:21:32 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:21:32 - Spoon - Started the transformation execution.
+2024/06/04 20:21:32 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:21:32 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:21:32 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:21:32 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:21:32 - 3.1 Obtener Edad Promedio.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:21:32 - Spoon - The transformation has finished!!
+2024/06/04 20:23:18 - Spoon - Transformation opened.
+2024/06/04 20:23:18 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:23:18 - Spoon - Started the transformation execution.
+2024/06/04 20:23:18 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:489)
+	at org.pentaho.di.trans.TransMeta.getThisStepFields(TransMeta.java:2055)
+	at org.pentaho.di.trans.TransMeta.getStepFields(TransMeta.java:1873)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1952)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1922)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1905)
+	at org.pentaho.di.trans.steps.groupby.GroupBy.processRow(GroupBy.java:114)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:486)
+	... 8 more
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 9 more
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:489)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.TransMeta.getThisStepFields(TransMeta.java:2055)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.TransMeta.getStepFields(TransMeta.java:1873)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1952)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1922)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1905)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.steps.groupby.GroupBy.processRow(GroupBy.java:114)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Caused by: org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:486)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	... 8 more
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Unable to find value metadata with name 'ID', so I can't delete it.
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - 	... 9 more
+2024/06/04 20:23:18 - 3.1 Obtener Edad Promedio.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=1)
+2024/06/04 20:23:18 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:23:18 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:23:18 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:23:18 - Spoon - The transformation has finished!!
+2024/06/04 20:23:18 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:23:18 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:23:30 - org.pentaho.di.trans.steps.groupby.GroupByMeta@5036a286 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unable to get fields from previous steps because of an error
+2024/06/04 20:24:06 - Spoon - Transformation opened.
+2024/06/04 20:24:06 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:24:06 - Spoon - Started the transformation execution.
+2024/06/04 20:24:06 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:24:06 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:24:06 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:24:06 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:24:06 - 3.1 Obtener Edad Promedio.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:24:06 - 3.2 Unir Edad.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:24:06 - Spoon - The transformation has finished!!
+2024/06/04 20:28:32 - Spoon - Transformation opened.
+2024/06/04 20:28:32 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:28:32 - Spoon - Started the transformation execution.
+2024/06/04 20:28:32 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:28:32 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:28:32 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:28:32 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:28:32 - 3.1 Obtener Edad Promedio.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:28:32 - If field value is null.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Error in step : 
+2024/06/04 20:28:32 - If field value is null.0 - Unexpected conversion error while converting value [Edad String(15)<binary-string>] to an Integer
+2024/06/04 20:28:32 - If field value is null.0 - Unable to verify if [Edad String(15)<binary-string>] is null or not because of an error:java.lang.ClassCastException: class java.lang.String cannot be cast to class [B (java.lang.String and [B are in module java.base of loader 'bootstrap')
+org.pentaho.di.core.exception.KettleValueException: 
+Unexpected conversion error while converting value [Edad String(15)<binary-string>] to an Integer
+Unable to verify if [Edad String(15)<binary-string>] is null or not because of an error:java.lang.ClassCastException: class java.lang.String cannot be cast to class [B (java.lang.String and [B are in module java.base of loader 'bootstrap')
+
+	at org.pentaho.di.core.row.value.ValueMetaBase.getInteger(ValueMetaBase.java:2131)
+	at org.pentaho.di.core.row.value.ValueMetaBase.convertData(ValueMetaBase.java:3868)
+	at org.pentaho.di.trans.steps.ifnull.IfNull.replaceNull(IfNull.java:235)
+	at org.pentaho.di.trans.steps.ifnull.IfNull.updateFields(IfNull.java:207)
+	at org.pentaho.di.trans.steps.ifnull.IfNull.processRow(IfNull.java:167)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.lang.RuntimeException: Unable to verify if [Edad String(15)<binary-string>] is null or not because of an error:java.lang.ClassCastException: class java.lang.String cannot be cast to class [B (java.lang.String and [B are in module java.base of loader 'bootstrap')
+	at org.pentaho.di.core.row.value.ValueMetaBase.isNull(ValueMetaBase.java:3621)
+	at org.pentaho.di.core.row.value.ValueMetaBase.isNull(ValueMetaBase.java:3579)
+	at org.pentaho.di.core.row.value.ValueMetaBase.getInteger(ValueMetaBase.java:2051)
+	... 6 more
+Caused by: java.lang.ClassCastException: class java.lang.String cannot be cast to class [B (java.lang.String and [B are in module java.base of loader 'bootstrap')
+	at org.pentaho.di.core.row.value.ValueMetaBase.isNull(ValueMetaBase.java:3591)
+	... 8 more
+2024/06/04 20:28:32 - If field value is null.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=1)
+2024/06/04 20:28:32 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:28:32 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:28:32 - 3.2 Unir Edad.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:28:32 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:28:32 - Spoon - The transformation has finished!!
+2024/06/04 20:28:32 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:28:32 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:37:43 - Spoon - Transformation opened.
+2024/06/04 20:37:43 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:37:43 - Spoon - Started the transformation execution.
+2024/06/04 20:37:43 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:37:43 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:37:43 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:37:44 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:37:44 - Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+
+Got row without keys: 
+
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+	... 3 more
+2024/06/04 20:37:44 - Stream lookup.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 20:37:44 - Stream lookup.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:37:44 - Stream lookup.0 - org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:37:44 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:37:44 - Stream lookup.0 - 
+2024/06/04 20:37:44 - Stream lookup.0 - 
+2024/06/04 20:37:44 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:37:44 - Stream lookup.0 - 
+2024/06/04 20:37:44 - Stream lookup.0 - 
+2024/06/04 20:37:44 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+2024/06/04 20:37:44 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+2024/06/04 20:37:44 - Stream lookup.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 20:37:44 - Stream lookup.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:37:44 - Stream lookup.0 - Caused by: org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:37:44 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:37:44 - Stream lookup.0 - 
+2024/06/04 20:37:44 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+2024/06/04 20:37:44 - Stream lookup.0 - 	... 3 more
+2024/06/04 20:37:44 - Stream lookup.0 - Finished processing (I=0, O=0, R=2, W=0, U=0, E=1)
+2024/06/04 20:37:44 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:37:44 - Spoon - The transformation has finished!!
+2024/06/04 20:37:44 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:37:44 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:37:44 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:37:44 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:38:36 - Spoon - Transformation opened.
+2024/06/04 20:38:36 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:38:36 - Spoon - Started the transformation execution.
+2024/06/04 20:38:36 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:38:36 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:38:36 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:38:36 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:38:36 - Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+
+Got row without keys: 
+
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+	... 3 more
+2024/06/04 20:38:36 - Stream lookup.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 20:38:36 - Stream lookup.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:38:36 - Stream lookup.0 - org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:38:36 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:38:36 - Stream lookup.0 - 
+2024/06/04 20:38:36 - Stream lookup.0 - 
+2024/06/04 20:38:36 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:38:36 - Stream lookup.0 - 
+2024/06/04 20:38:36 - Stream lookup.0 - 
+2024/06/04 20:38:36 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+2024/06/04 20:38:36 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+2024/06/04 20:38:36 - Stream lookup.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 20:38:36 - Stream lookup.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:38:36 - Stream lookup.0 - Caused by: org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:38:36 - Stream lookup.0 - Got row without keys: 
+2024/06/04 20:38:36 - Stream lookup.0 - 
+2024/06/04 20:38:36 - Stream lookup.0 - 	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+2024/06/04 20:38:36 - Stream lookup.0 - 	... 3 more
+2024/06/04 20:38:36 - Stream lookup.0 - Finished processing (I=0, O=0, R=2, W=0, U=0, E=1)
+2024/06/04 20:38:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:38:36 - Spoon - The transformation has finished!!
+2024/06/04 20:38:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:38:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:38:36 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:38:36 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:40:15 - Spoon - Transformation opened.
+2024/06/04 20:40:15 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:40:15 - Spoon - Started the transformation execution.
+2024/06/04 20:40:15 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:40:15 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:40:15 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:40:15 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:40:15 - Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:40:15 - Spoon - The transformation has finished!!
+2024/06/04 20:42:18 - Spoon - Transformation opened.
+2024/06/04 20:42:18 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:42:18 - Spoon - Started the transformation execution.
+2024/06/04 20:42:18 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:42:18 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:42:18 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:42:18 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:42:18 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:42:18 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:42:18 - Spoon - The transformation has finished!!
+2024/06/04 20:43:35 - Spoon - Transformation opened.
+2024/06/04 20:43:35 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:43:35 - Spoon - Started the transformation execution.
+2024/06/04 20:43:35 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:43:35 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:43:35 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:43:35 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:43:35 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : !Calculator.ErrorInStepRunning : 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - !
+org.pentaho.di.core.exception.KettleStepException: 
+Error while running the step 
+
+datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+
+
+	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:183)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+
+	at org.pentaho.di.trans.steps.calculator.Calculator.calcFields(Calculator.java:622)
+	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:164)
+	... 2 more
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : org.pentaho.di.core.exception.KettleStepException: 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - Error while running the step 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:183)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - Caused by: org.pentaho.di.core.exception.KettleValueException: 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.calcFields(Calculator.java:622)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:164)
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - 	... 2 more
+2024/06/04 20:43:35 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024/06/04 20:43:35 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:43:35 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:43:36 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:43:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:43:36 - Spoon - The transformation has finished!!
+2024/06/04 20:43:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:43:36 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:44:33 - Spoon - Transformation opened.
+2024/06/04 20:44:33 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:44:33 - Spoon - Started the transformation execution.
+2024/06/04 20:44:33 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:44:33 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:44:33 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:44:33 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:44:34 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:44:34 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:44:34 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:44:34 - Spoon - The transformation has finished!!
+2024/06/04 20:45:50 - Spoon - Transformation opened.
+2024/06/04 20:45:50 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:45:50 - Spoon - Started the transformation execution.
+2024/06/04 20:45:50 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:45:50 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:45:50 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:45:50 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:45:50 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Field 'Edad' is specified twice (or more) with the same name!
+2024/06/04 20:45:50 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+java.lang.NullPointerException: Cannot read the array length because "rowData" is null
+	at org.pentaho.di.core.row.RowDataUtil.removeItems(RowDataUtil.java:190)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.removeValues(SelectValues.java:234)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:378)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Unexpected error
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : java.lang.NullPointerException: Cannot read the array length because "rowData" is null
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - 	at org.pentaho.di.core.row.RowDataUtil.removeItems(RowDataUtil.java:190)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValues.removeValues(SelectValues.java:234)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - 	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:378)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - 	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024/06/04 20:45:50 - 5 Edad (Fixed).0 - Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024/06/04 20:45:50 - ETL_ALUMNOS - Transformation detected one or more steps with errors.
+2024/06/04 20:45:50 - ETL_ALUMNOS - Transformation is killing the other steps!
+2024/06/04 20:45:50 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:45:51 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:45:51 - Spoon - The transformation has finished!!
+2024/06/04 20:45:51 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:45:51 - ETL_ALUMNOS - ERROR (version 9.4.0.0-343, build 0.0 from 2022-11-08 07.50.27 by buildguy) : Errors detected!
+2024/06/04 20:46:23 - Spoon - Transformation opened.
+2024/06/04 20:46:23 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:46:23 - Spoon - Started the transformation execution.
+2024/06/04 20:46:23 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:46:23 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:46:23 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:46:23 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:46:23 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:46:24 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:46:24 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:46:24 - 5 Edad (Fixed).0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:46:24 - Spoon - The transformation has finished!!
+2024/06/04 20:46:53 - Spoon - Transformation opened.
+2024/06/04 20:46:53 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:46:53 - Spoon - Started the transformation execution.
+2024/06/04 20:46:53 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:46:53 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:46:53 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:46:53 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:46:53 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:46:53 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:46:53 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:46:53 - 5 Edad (Fixed).0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:46:53 - Spoon - The transformation has finished!!
+2024/06/04 20:47:15 - Spoon - Transformation opened.
+2024/06/04 20:47:15 - Spoon - Launching transformation [ETL_ALUMNOS]...
+2024/06/04 20:47:15 - Spoon - Started the transformation execution.
+2024/06/04 20:47:15 - ETL_ALUMNOS - Dispatching started for transformation [ETL_ALUMNOS]
+2024/06/04 20:47:15 - 1_Carga_de_los_datos.0 - Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024/06/04 20:47:15 - 1_Carga_de_los_datos.0 - Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024/06/04 20:47:15 - 2_Seleccionar_Campos.0 - Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024/06/04 20:47:15 - 3.1 Agrupar Edad.0 - Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024/06/04 20:47:15 - 3.2 Unir Edad Promerio.0 - Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024/06/04 20:47:15 - 4 Reemplazar edad nula.0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:47:15 - 5 Edad (Fixed).0 - Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024/06/04 20:47:15 - Spoon - The transformation has finished!!
+2024/06/05 10:01:43 - Spoon - Spoon  has ended.
+stopping

@@ -1,0 +1,1913 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/29/2024 3:07:53 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="CC7-2024-MA-28"
+  DTS:CreatorName="CC7-2024-MA-28\CC7"
+  DTS:DTSID="{EC68EA74-2F72-48F1-8EFD-EB9A8D603D9B}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5397.1"
+  DTS:LocaleID="2058"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="9"
+  DTS:VersionGUID="{E4555B8E-22CD-4FD7-9E22-041D0310E649}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\ETL_Ventas"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{7FA00B8E-3E98-4CCD-BC64-5E88A5BA1F45}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="ETL_Ventas"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\ETL_Ventas\DIM_CAT_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM_CAT_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"CATEGORIAS"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ProductCategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductCategoryID"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductCategoryID]"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductCategoryID]"
+                      dataType="i4"
+                      name="ProductCategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_CAT_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="DIM_CAT_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT C.ProductCategoryID, C.Name
+FROM Production.ProductCategory C
+ORDER BY C.ProductCategoryID ASC;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductCategoryID]"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]"
+                      name="ProductCategoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductCategoryID]"
+                      dataType="i4"
+                      name="ProductCategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductCategoryID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductCategoryID]"
+                      name="ProductCategoryID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_EMP_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM_EMP_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."EMPLEADOS"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[JobTitle]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="JobTitle"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[JobTitle]"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[JobTitle]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[FirstName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="FirstName"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[FirstName]"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[FirstName]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[LastName]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="LastName"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[LastName]"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[LastName]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_EMP_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="DIM_EMP_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT HE.BusinessEntityID, he.JobTitle, PP.FirstName, PP.LastName
+FROM Sales.SalesPerson E
+INNER JOIN HumanResources.Employee HE ON HE.BusinessEntityID =
+E.BusinessEntityID
+INNER JOIN Person.Person PP ON PP.BusinessEntityID = HE.BusinessEntityID
+ORDER BY HE.BusinessEntityID ASC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[JobTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[JobTitle]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[JobTitle]"
+                      name="JobTitle"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[FirstName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[FirstName]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[FirstName]"
+                      name="FirstName"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[LastName]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[LastName]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[LastName]"
+                      name="LastName"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      name="JobTitle" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      name="FirstName" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      name="LastName" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[BusinessEntityID]"
+                      name="BusinessEntityID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[JobTitle]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[JobTitle]"
+                      name="JobTitle" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[FirstName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[FirstName]"
+                      name="FirstName" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[LastName]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[LastName]"
+                      name="LastName" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_PROC_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM_PROC_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."PRODUCTOS"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductID]"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_PROC_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="DIM_PROC_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT P.ProductID, P.Name
+FROM Production.Product P
+ORDER BY P.ProductID ASC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductID]"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_TERR_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM_TERR_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."TERRTORIO"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[TerritoryID]"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Name"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_TERR_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="DIM_TERR_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT T.TerritoryID, T.Name
+FROM Sales.SalesTerritory T
+ORDER BY T.TerritoryID ASC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[TerritoryID]"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[Name]"
+                      name="Name"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Name" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      dataType="wstr"
+                      length="50"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[Name]"
+                      name="Name" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_TMP_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="DIM_TMP_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."TIEMPO"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[MES]"
+                      cachedDataType="i4"
+                      cachedName="MES"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MES]"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ANIO]"
+                      cachedDataType="i4"
+                      cachedName="ANIO"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ANIO]"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MES]"
+                      dataType="i4"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ANIO]"
+                      dataType="i4"
+                      name="ANIO" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\DIM_TMP_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="DIM_TMP_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT MONTH(S.OrderDate) AS MES, YEAR(S.OrderDate) AS ANIO
+FROM Sales.SalesOrderHeader S
+ORDER BY 1 ASC, 2 ASC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MES]"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]"
+                      name="MES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ANIO]"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]"
+                      name="ANIO"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MES]"
+                      dataType="i4"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ANIO]"
+                      dataType="i4"
+                      name="ANIO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MES]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MES]"
+                      name="MES" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ANIO]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ANIO]"
+                      name="ANIO" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\H_VENT_DESTINO"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="H_VENT_DESTINO"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dbo"."VENTAS"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\H_VENT_DESTINO.Connections[IDbConnection]"
+                  connectionManagerID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.BD_Destino_9C.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[BusinessEntityID]"
+                      cachedDataType="i4"
+                      cachedName="BusinessEntityID"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ProductID]"
+                      cachedDataType="i4"
+                      cachedName="ProductID"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ProductCategoryID]"
+                      cachedDataType="i4"
+                      cachedName="ProductCategoryID"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductCategoryID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[TerritoryID]"
+                      cachedDataType="i4"
+                      cachedName="TerritoryID"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[TerritoryID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[MES]"
+                      cachedDataType="i4"
+                      cachedName="MES"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MES]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[ANIO]"
+                      cachedDataType="i4"
+                      cachedName="ANIO"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ANIO]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]" />
+                    <inputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].Columns[MONTO]"
+                      cachedDataType="cy"
+                      cachedName="MONTO"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MONTO]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MONTO]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ProductCategoryID]"
+                      dataType="i4"
+                      name="ProductCategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MES]"
+                      dataType="i4"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[ANIO]"
+                      dataType="i4"
+                      name="ANIO" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET].ExternalColumns[MONTO]"
+                      dataType="numeric"
+                      name="MONTO"
+                      precision="19"
+                      scale="255" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\H_VENT_DESTINO.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_DESTINO.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL_Ventas\H_VENT_ORIGEN"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="H_VENT_ORIGEN"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT SP.BusinessEntityID, P.ProductID, PC.ProductCategoryID, T.TerritoryID,
+MONTH(S.OrderDate) AS MES, YEAR(S.OrderDate) AS ANIO,
+SUM(D.UnitPrice * D.OrderQty) AS MONTO
+FROM Sales.SalesOrderHeader S
+INNER JOIN Sales.SalesOrderDetail D ON S.SalesOrderID = D.SalesOrderID
+INNER JOIN Production.Product P ON P.ProductID = D.ProductID
+INNER JOIN Sales.SalesTerritory T ON T.TerritoryID = S.TerritoryID
+INNER JOIN Sales.SalesPerson SP ON SP.BusinessEntityID = S.SalesPersonID
+
+INNER JOIN Production.ProductCategory PC ON PC.ProductCategoryID =
+P.ProductSubcategoryID
+GROUP BY SP.BusinessEntityID, P.ProductID, PC.ProductCategoryID, T.TerritoryID,
+MONTH(S.OrderDate), YEAR(S.OrderDate)
+ORDER BY YEAR(S.OrderDate) ASC, MONTH(S.OrderDate) ASC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL_Ventas\H_VENT_ORIGEN.Connections[IDbConnection]"
+                  connectionManagerID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[CC7-2024-MA-28.AdventureWorks2022.sa]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[BusinessEntityID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[BusinessEntityID]"
+                      name="BusinessEntityID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductID]"
+                      name="ProductID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductCategoryID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ProductCategoryID]"
+                      name="ProductCategoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[TerritoryID]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[TerritoryID]"
+                      name="TerritoryID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MES]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MES]"
+                      name="MES"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ANIO]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[ANIO]"
+                      name="ANIO"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MONTO]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MONTO]"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].Columns[MONTO]"
+                      name="MONTO"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[BusinessEntityID]"
+                      dataType="i4"
+                      name="BusinessEntityID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductID]"
+                      dataType="i4"
+                      name="ProductID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ProductCategoryID]"
+                      dataType="i4"
+                      name="ProductCategoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[TerritoryID]"
+                      dataType="i4"
+                      name="TerritoryID" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MES]"
+                      dataType="i4"
+                      name="MES" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[ANIO]"
+                      dataType="i4"
+                      name="ANIO" />
+                    <externalMetadataColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET].ExternalColumns[MONTO]"
+                      dataType="cy"
+                      name="MONTO" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[BusinessEntityID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[BusinessEntityID]"
+                      name="BusinessEntityID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductID]"
+                      name="ProductID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductCategoryID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ProductCategoryID]"
+                      name="ProductCategoryID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[TerritoryID]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[TerritoryID]"
+                      name="TerritoryID" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MES]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MES]"
+                      name="MES" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ANIO]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ANIO]"
+                      name="ANIO" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MONTO]"
+                      dataType="cy"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[MONTO]"
+                      name="MONTO" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET]"
+              endId="Package\ETL_Ventas\DIM_CAT_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\DIM_CAT_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET1]"
+              endId="Package\ETL_Ventas\DIM_TERR_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\DIM_TERR_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET2]"
+              endId="Package\ETL_Ventas\DIM_EMP_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\DIM_EMP_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET3]"
+              endId="Package\ETL_Ventas\DIM_PROC_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\DIM_PROC_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET4]"
+              endId="Package\ETL_Ventas\DIM_TMP_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\DIM_TMP_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+            <path
+              refId="Package\ETL_Ventas.Paths[Salida de origen de ADO NET5]"
+              endId="Package\ETL_Ventas\H_VENT_DESTINO.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\ETL_Ventas\H_VENT_ORIGEN.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="134,42"
+          Id="Package\ETL_Ventas"
+          TopLeft="14.3181818181818,45.2272727272727" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\ETL_Ventas">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="169,42"
+          Id="Package\ETL_Ventas\DIM_EMP_ORIGEN"
+          TopLeft="28.3333333333333,231.166666666667" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\ETL_Ventas\DIM_EMP_DESTINO"
+          TopLeft="30.0000000000001,312.833333333333" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\ETL_Ventas\DIM_TMP_DESTINO"
+          TopLeft="30.0000000000001,496.5" />
+        <NodeLayout
+          Size="168,42"
+          Id="Package\ETL_Ventas\H_VENT_DESTINO"
+          TopLeft="293.333333333333,489.333333333333" />
+        <NodeLayout
+          Size="175,42"
+          Id="Package\ETL_Ventas\DIM_PROC_ORIGEN"
+          TopLeft="290.833333333333,225.666666666667" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\ETL_Ventas\DIM_CAT_ORIGEN"
+          TopLeft="28.3333333333333,47.5" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\ETL_Ventas\DIM_TERR_ORIGEN"
+          TopLeft="290,42" />
+        <NodeLayout
+          Size="169,42"
+          Id="Package\ETL_Ventas\DIM_TMP_ORIGEN"
+          TopLeft="28.3333333333333,414.833333333333" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\ETL_Ventas\DIM_PROC_DESTINO"
+          TopLeft="292.5,307.333333333333" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\ETL_Ventas\H_VENT_ORIGEN"
+          TopLeft="291.666666666667,407.666666666667" />
+        <NodeLayout
+          Size="173,42"
+          Id="Package\ETL_Ventas\DIM_CAT_DESTINO"
+          TopLeft="30.0000000000001,129.166666666667" />
+        <NodeLayout
+          Size="180,42"
+          Id="Package\ETL_Ventas\DIM_TERR_DESTINO"
+          TopLeft="291.666666666667,123.666666666667" />
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET5]"
+          TopLeft="375,449.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666666"
+              Start="0,0"
+              End="0,32.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET4]"
+          TopLeft="114.916666666667,456.833333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666666"
+              Start="0,0"
+              End="0,32.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET3]"
+          TopLeft="380.666666666667,267.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666666"
+              Start="0,0"
+              End="0,32.1666666666666">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666666" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET2]"
+          TopLeft="114.916666666667,273.166666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666667"
+              Start="0,0"
+              End="0,32.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET1]"
+          TopLeft="379.333333333333,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666667"
+              Start="0,0"
+              End="0,32.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL_Ventas.Paths[Salida de origen de ADO NET]"
+          TopLeft="114.166666666667,89.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.6666666666667"
+              Start="0,0"
+              End="0,32.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\H_VENT_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\H_VENT_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_TMP_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_PROC_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_TERR_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_PROC_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_TERR_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_TMP_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_EMP_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_CAT_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_EMP_DESTINO">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL_Ventas\DIM_CAT_ORIGEN">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

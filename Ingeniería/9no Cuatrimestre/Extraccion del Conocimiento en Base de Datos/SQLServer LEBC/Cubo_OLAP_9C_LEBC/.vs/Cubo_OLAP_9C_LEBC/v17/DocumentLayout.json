@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{08347261-FABA-4FD2-A17C-5F68E1A175FB}|Cubo_OLAP_9C_LEBC.dwproj|C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Cubo_Ventas.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{08347261-FABA-4FD2-A17C-5F68E1A175FB}|Cubo_OLAP_9C_LEBC.dwproj|solutionrelative:Cubo_Ventas.cube||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{08347261-FABA-4FD2-A17C-5F68E1A175FB}|Cubo_OLAP_9C_LEBC.dwproj|C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Vista_Ventas.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design",
+      "RelativeMoniker": "D:0:0:{08347261-FABA-4FD2-A17C-5F68E1A175FB}|Cubo_OLAP_9C_LEBC.dwproj|solutionrelative:Vista_Ventas.dsv||{B4191D15-2D32-45F2-906F-E91BBAAA6059}|Design"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cubo_Ventas.cube [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Cubo_Ventas.cube",
+              "RelativeDocumentMoniker": "Cubo_Ventas.cube",
+              "ToolTip": "C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Cubo_Ventas.cube [Dise\u00F1o]",
+              "RelativeToolTip": "Cubo_Ventas.cube [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-30T21:17:12.807Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Vista_Ventas.dsv [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Vista_Ventas.dsv",
+              "RelativeDocumentMoniker": "Vista_Ventas.dsv",
+              "ToolTip": "C:\\Users\\CC7\\Documents\\LEBC\\Cubo_OLAP_9C_LEBC\\Vista_Ventas.dsv [Dise\u00F1o]",
+              "RelativeToolTip": "Vista_Ventas.dsv [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-30T20:54:09.82Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

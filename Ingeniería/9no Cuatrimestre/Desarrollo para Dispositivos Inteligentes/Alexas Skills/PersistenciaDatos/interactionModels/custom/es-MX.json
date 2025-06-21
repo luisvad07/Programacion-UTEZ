@@ -1,0 +1,158 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "planeta",
+              "elicitationRequired": true,
+              "type": "LIST_OF_PLANETS",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1716698374143.471737695794"
+              }
+            }
+          ],
+          "name": "PlanetaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "planeta",
+              "type": "LIST_OF_PLANETS",
+              "samples": [
+                "{planeta}",
+                "Sobre {planeta}",
+                "Del planeta {planeta}"
+              ]
+            }
+          ],
+          "name": "PlanetaIntent",
+          "samples": [
+            "dame información de un planeta",
+            "quiero saber sobre un planeta",
+            "dime un dato sobre un planeta"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Neptuno"
+                ],
+                "value": "neptuno"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Urano"
+                ],
+                "value": "urano"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Saturno"
+                ],
+                "value": "saturno"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Júpiter"
+                ],
+                "value": "jupiter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Marte"
+                ],
+                "value": "marte"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Tierra"
+                ],
+                "value": "tierra"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Venus"
+                ],
+                "value": "venus"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Mercurio"
+                ],
+                "value": "mercurio"
+              }
+            }
+          ],
+          "name": "LIST_OF_PLANETS"
+        }
+      ],
+      "invocationName": "persistencia valladolid"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿De qué planeta quieres saber?"
+          }
+        ],
+        "id": "Elicit.Slot.1716698374143.471737695794"
+      }
+    ]
+  }
+}

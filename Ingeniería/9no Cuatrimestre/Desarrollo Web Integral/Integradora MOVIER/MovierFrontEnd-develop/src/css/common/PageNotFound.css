@@ -1,0 +1,42 @@
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+ 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.code-error {
+  font-size: 230px;
+  font-weight: 700;
+  color: var(--secondary);
+  
+  letter-spacing: 10px;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.error-container p {
+  font-size: 24px;
+  color: var(--primary);
+
+  font-family: 'Poppins', sans-serif;
+  margin-top: 20px;
+}
+
+.error-container a {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained{
+  background-color: var(--primary) ;
+  color: white ;
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 10px;
+}

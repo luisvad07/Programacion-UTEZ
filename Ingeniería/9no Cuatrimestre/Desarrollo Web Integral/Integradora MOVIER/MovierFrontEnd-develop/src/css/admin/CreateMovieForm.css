@@ -1,0 +1,70 @@
+@import '../common/MovierColors.css';
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--secondary);
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.forms {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 5px var(--primary-light);
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.save {
+  background-color: var(--primary);
+  color: white;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.save:hover {
+  background-color: var(--primary-dark);
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.cancel {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.MuiButtonBase-root.MuiButton-root.MuiButton-contained.cancel:hover {
+  background-color: var(--secondary-dark);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+  width: 100%;
+}
+
+

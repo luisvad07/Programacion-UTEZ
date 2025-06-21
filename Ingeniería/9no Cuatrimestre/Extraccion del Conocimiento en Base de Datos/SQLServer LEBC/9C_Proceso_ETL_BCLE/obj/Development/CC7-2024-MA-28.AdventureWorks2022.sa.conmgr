@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CC7-2024-MA-28.AdventureWorks2022.sa"
+  DTS:DTSID="{C710AAB0-65BD-41C0-B1C7-938E6854DE02}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=CC7-2024-MA-28;User ID=sa;Initial Catalog=AdventureWorks2022;Persist Security Info=True;Encrypt=False;Application Name=SSIS-9C_Proceso_ETL_BCLE-{C710AAB0-65BD-41C0-B1C7-938E6854DE02}CC7-2024-MA-28.AdventureWorks2022.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdLprf8jmAUOhT5+rg3fxPgAAAAACAAAAAAAQZgAAAAEAACAAAAA4FPll8Ct7rhJtQE0FEo+R3sDgn5NxOAGSS5x0TDdYswAAAAAOgAAAAAIAACAAAAAT8IDpkvbM9xoLz6VTYrS3jZY94yfzuWCEczH8uBNODIAAAABsZ8xued/8om74pxyRu0lZMRRB051xAqkHbgObBrXzMFJ+DLNXJpf3V9+8IfdTe1vPvgGInMY4/K84Im13J9gbfWxcX32NeS+PvbV3hFZ0FgDVndTpNmoyP3gQmAUzLQ2b4+QliRWGfGZKjlMhEo45CPItArxKgALt05DncAod4UAAAAAXvzLv7MCpcT9KNkzz1KiLLsXTHKaNtLN2Dpvexu7VVm04ytbgLGg7rsftIP68HUxMkPMheuq8fuBUl/T8IZzo</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

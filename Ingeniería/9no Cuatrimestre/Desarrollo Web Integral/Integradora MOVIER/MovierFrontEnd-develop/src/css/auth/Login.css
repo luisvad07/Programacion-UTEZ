@@ -1,0 +1,106 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background-image: url('al.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  
+}
+
+.card-login {
+  background-color: var(--background-light);
+  border-radius: 15px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 700px;
+  width: 100%;
+  box-sizing: border-box;
+ 
+}
+
+.login-container {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: var(--danger);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.button-submit {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.create-account {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.subtitle {
+  color: var(--primary);
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movier {
+  font-size: 32px;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.text-account {
+  margin-left: 5px;
+  color: var(--primary);
+}
+
+.text-account a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .card-login {
+    padding: 30px 40px;
+    max-width: 90%;
+   
+  }
+
+  .movier {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-login {
+    padding: 20px 30px;
+    max-width: 100%;
+  }
+
+  .movier {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+  }
+
+  .button-submit {
+    margin-top: 15px;
+  }
+}

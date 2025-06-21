@@ -1,0 +1,483 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "monto",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.426664109870.1278185440650"
+              }
+            }
+          ],
+          "name": "CreateSpendIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "City",
+              "elicitationRequired": true,
+              "type": "AMAZON.City",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.521825281147.36415356047"
+              }
+            },
+            {
+              "name": "Date",
+              "elicitationRequired": false,
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "ClimaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "cantidad",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1341433595340.581048214730"
+              }
+            },
+            {
+              "name": "persona",
+              "elicitationRequired": true,
+              "type": "categoriasVuelo",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1341433595340.1406559804137"
+              }
+            }
+          ],
+          "name": "ReservarVuelosIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "valorx",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "abc",
+                    "xyz",
+                    "qwerty"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.995168392681.4111879866.1371688224133"
+                }
+              ],
+              "type": "AMAZON.AlphaNumeric",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "SendDataIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "saluda",
+            "da bienvenida",
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HoraIntent",
+          "samples": [
+            "Me regalas tu hora",
+            "Qué hora es",
+            "Qué horas son",
+            "Dime la hora",
+            "Cual es la hora"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "monto",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "de {monto} pesos",
+                "fueron {monto} pesos",
+                "fue de {monto} pesos",
+                "es de {monto} pesos"
+              ]
+            }
+          ],
+          "name": "CreateSpendIntent",
+          "samples": [
+            "registra un nuevo gasto",
+            "nuevo gasto",
+            "me gaste {monto} pesos",
+            "agrega un gasto",
+            "gaste {monto} pesos"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "City",
+              "type": "AMAZON.City",
+              "samples": [
+                "la ciudad de {City}",
+                "de la ciudad {City}"
+              ]
+            },
+            {
+              "name": "Date",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "name": "ClimaIntent",
+          "samples": [
+            "necesito saber el clima de la ciudad {City} para el {Date}",
+            "necesito saber el clima ",
+            "me puedes dar el clima",
+            "dame el clima"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "categoria",
+              "type": "categoriaSlot"
+            }
+          ],
+          "name": "RecomendarLibroIntent",
+          "samples": [
+            "quiero leer un libro sobre {categoria}",
+            "recomiendame libros de {categoria}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "cantidad",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{cantidad} boletos",
+                "necesito {cantidad} boletos"
+              ]
+            },
+            {
+              "name": "persona",
+              "type": "categoriasVuelo",
+              "samples": [
+                "para {persona}"
+              ]
+            }
+          ],
+          "name": "ReservarVuelosIntent",
+          "samples": [
+            "reserva {cantidad} boleto",
+            "reserva {cantidad} boletos",
+            "reserva boletos para un vuelo",
+            "reserva {cantidad} boleto para {persona}",
+            "reserva {cantidad} boletos para {persona}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "valorx",
+              "type": "AMAZON.AlphaNumeric"
+            }
+          ],
+          "name": "SendDataIntent",
+          "samples": [
+            "asigna el valor {valorx}",
+            "guarda el valor {valorx}",
+            "colocar el valor {valorx}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "aventura",
+                  "carreras",
+                  "peligro",
+                  "drama"
+                ],
+                "value": "acción"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "risas",
+                  "chistes"
+                ],
+                "value": "comedia"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "caricaturas",
+                  "cuentos"
+                ],
+                "value": "infantil"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "multiverso",
+                  "tiempo",
+                  "espacio",
+                  "futurista"
+                ],
+                "value": "ciencia ficción"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "horror",
+                  "suspenso",
+                  "miedo"
+                ],
+                "value": "terror"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "romanticos",
+                  "amor"
+                ],
+                "value": "romance"
+              }
+            }
+          ],
+          "name": "categoriaSlot"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "especial",
+                  "mudo",
+                  "sordo",
+                  "silla de ruedas"
+                ],
+                "value": "discapacitados"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "joven",
+                  "señorita",
+                  "señoras",
+                  "señores",
+                  "mujeres",
+                  "hombre"
+                ],
+                "value": "adulto"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "morros",
+                  "chamacos",
+                  "peques"
+                ],
+                "value": "niño"
+              }
+            }
+          ],
+          "name": "categoriasVuelo"
+        }
+      ],
+      "invocationName": "mi practica"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "cual es el total de gasto?"
+          },
+          {
+            "type": "PlainText",
+            "value": "de cuanto es el monto?"
+          },
+          {
+            "type": "PlainText",
+            "value": "cuando te gastaste?"
+          },
+          {
+            "type": "PlainText",
+            "value": "cual es el monto?"
+          }
+        ],
+        "id": "Elicit.Slot.426664109870.1278185440650"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Especifica la ciudad"
+          },
+          {
+            "type": "PlainText",
+            "value": "De que ciudad?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Especifica la ubicación"
+          }
+        ],
+        "id": "Elicit.Slot.521825281147.36415356047"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "De que fecha quieres saber"
+          },
+          {
+            "type": "PlainText",
+            "value": "Dime cual es la fecha"
+          },
+          {
+            "type": "PlainText",
+            "value": "Especifica la fecha"
+          }
+        ],
+        "id": "Elicit.Slot.521825281147.1395125341744"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "cuantos boletos requieres?"
+          },
+          {
+            "type": "PlainText",
+            "value": "cuantos boletos necesitas?"
+          }
+        ],
+        "id": "Elicit.Slot.1341433595340.581048214730"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "que tipos de boletos necesitas?"
+          }
+        ],
+        "id": "Elicit.Slot.1341433595340.1406559804137"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Asignare el valor {valorx} , ¿Correcto?"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Quieres guardar el valor {valorx} ?"
+          }
+        ],
+        "id": "Confirm.Intent.995168392681"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Que valor quieres asignar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Disculpa, no escuche el valor, ¿puedes repetirlo?"
+          }
+        ],
+        "id": "Elicit.Slot.995168392681.4111879866"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "El valor no es válido, Proporciona otro"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporcioname un valor válido porfavor"
+          }
+        ],
+        "id": "Slot.Validation.995168392681.4111879866.1371688224133"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es el ID del Pokémon?"
+          }
+        ],
+        "id": "Elicit.Slot.1378095829393.1704848036539"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es el ID del Pokémon?"
+          }
+        ],
+        "id": "Elicit.Slot.1446333271010.114160180916"
+      }
+    ]
+  }
+}

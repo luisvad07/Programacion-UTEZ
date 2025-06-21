@@ -1,0 +1,364 @@
+2024-06-04 19:37:28.523 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:37:28.587 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:37:28.588 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:37:28.612 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:37:54.198 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:37:54.201 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:37:54.202 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:37:54.225 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:38:14.969 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:38:14.972 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:38:14.973 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:38:15.006 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:39:26.246 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:39:26.249 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:39:26.252 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:39:26.278 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:40:06.565 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:40:06.568 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:40:06.569 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:40:06.596 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:40:23.521 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:40:23.525 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:40:23.525 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:40:23.547 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:41:10.263 INFO  <Thread-59> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 19:41:10.272 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:41:10.272 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:42:17.159 INFO  <ModalContext> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Dispatching started for transformation [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS]
+2024-06-04 19:42:17.162 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:42:17.163 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:42:17.186 INFO  <C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS - dummy> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr : ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 19:52:05.138 INFO  <Thread-85> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 19:52:05.156 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:52:05.156 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:52:05.156 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 19:52:05.156 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 3 more
+
+2024-06-04 19:52:05.156 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024-06-04 19:52:05.158 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:05.158 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:05.178 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:05.181 WARN  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 19:52:05.181 WARN  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 19:52:45.518 INFO  <Thread-93> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 19:52:45.522 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:52:45.524 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:52:45.524 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 19:52:45.524 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:366)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 3 more
+
+2024-06-04 19:52:45.524 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024-06-04 19:52:45.525 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:45.525 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:45.538 ERROR <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 19:52:45.545 WARN  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 19:52:45.545 WARN  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 19:53:37.095 INFO  <Thread-102> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 19:53:37.100 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 19:53:37.101 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 19:53:37.117 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:04:42.047 INFO  <Thread-112> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:04:42.064 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:04:42.064 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:04:42.087 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:04:42.118 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:09:25.345 INFO  <Thread-128> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:09:25.360 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:09:25.360 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:09:25.365 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:09:25.368 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:09:25.535 INFO  <ETL_ALUMNOS - 4_Unir_Edad_Promedio_al_conjunto> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2024-06-04 20:12:13.763 INFO  <Thread-146> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:12:13.768 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:12:13.768 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:12:13.773 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:12:13.775 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024-06-04 20:12:14.129 INFO  <ETL_ALUMNOS - 4_Unir_Edad_Promedio_al_conjunto> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=13, W=0, U=0, E=0)
+2024-06-04 20:12:21.061 INFO  <Thread-157> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:12:21.063 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:12:21.065 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:12:21.078 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:12:21.111 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024-06-04 20:12:21.459 INFO  <ETL_ALUMNOS - 4_Unir_Edad_Promedio_al_conjunto> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=13, W=0, U=0, E=0)
+2024-06-04 20:13:01.706 INFO  <Thread-168> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:13:01.711 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:13:01.712 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:13:01.733 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:13:01.760 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024-06-04 20:13:02.107 INFO  <ETL_ALUMNOS - 4> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=13, W=12, U=0, E=0)
+2024-06-04 20:14:15.386 INFO  <Thread-182> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:14:15.392 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:14:15.393 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:14:15.415 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:14:15.439 INFO  <ETL_ALUMNOS - 3_Obtener_media_edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=12, W=1, U=0, E=0)
+2024-06-04 20:14:15.788 INFO  <ETL_ALUMNOS - 4 Unir Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=13, W=12, U=0, E=0)
+2024-06-04 20:21:32.115 INFO  <Thread-212> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:21:32.119 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:21:32.119 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:21:32.130 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:21:32.162 INFO  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:23:18.281 INFO  <Thread-230> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:23:18.290 ERROR <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 20:23:18.290 ERROR <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:489)
+	at org.pentaho.di.trans.TransMeta.getThisStepFields(TransMeta.java:2055)
+	at org.pentaho.di.trans.TransMeta.getStepFields(TransMeta.java:1873)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1952)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1922)
+	at org.pentaho.di.trans.TransMeta.getPrevStepFields(TransMeta.java:1905)
+	at org.pentaho.di.trans.steps.groupby.GroupBy.processRow(GroupBy.java:114)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:380)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getFields(SelectValuesMeta.java:486)
+	... 8 more
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+Unable to find value metadata with name 'ID', so I can't delete it.
+
+	at org.pentaho.di.core.row.RowMeta.removeValueMeta(RowMeta.java:800)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValuesMeta.getDeleteFields(SelectValuesMeta.java:378)
+	... 9 more
+
+2024-06-04 20:23:18.290 INFO  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=0, W=0, U=0, E=1)
+2024-06-04 20:23:18.290 WARN  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:23:18.290 WARN  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:23:18.355 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:23:18.355 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:23:18.363 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:24:06.278 INFO  <Thread-241> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:24:06.282 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:24:06.282 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:24:06.301 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:24:06.333 INFO  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:24:06.716 INFO  <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:28:32.031 INFO  <Thread-260> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:28:32.038 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:28:32.038 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:28:32.043 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:28:32.047 INFO  <ETL_ALUMNOS - 3.1 Obtener Edad Promedio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:28:32.200 ERROR <ETL_ALUMNOS - If field value is null> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Error in step : 
+Unexpected conversion error while converting value [Edad String(15)<binary-string>] to an Integer
+Unable to verify if [Edad String(15)<binary-string>] is null or not because of an error:java.lang.ClassCastException: class java.lang.String cannot be cast to class [B (java.lang.String and [B are in module java.base of loader 'bootstrap')
+
+2024-06-04 20:28:32.201 INFO  <ETL_ALUMNOS - If field value is null> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=2, W=1, U=0, E=1)
+2024-06-04 20:28:32.201 WARN  <ETL_ALUMNOS - If field value is null> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:28:32.201 WARN  <ETL_ALUMNOS - If field value is null> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:28:32.303 INFO  <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:28:32.306 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:28:32.307 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:28:32.315 ERROR <ETL_ALUMNOS - 3.2 Unir Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:37:43.984 INFO  <Thread-304> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:37:43.998 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:37:43.999 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:37:44.001 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:37:44.005 INFO  <ETL_ALUMNOS - Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:37:44.158 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 20:37:44.159 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+
+Got row without keys: 
+
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+	... 3 more
+
+2024-06-04 20:37:44.159 INFO  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=2, W=0, U=0, E=1)
+2024-06-04 20:37:44.159 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:37:44.160 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:37:44.168 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:37:44.177 WARN  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:37:44.177 WARN  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:38:36.070 INFO  <Thread-316> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:38:36.073 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:38:36.074 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:38:36.106 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:38:36.131 INFO  <ETL_ALUMNOS - Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:38:36.324 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 20:38:36.324 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+
+Got row without keys: 
+
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:284)
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.processRow(StreamLookup.java:446)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleStepException: 
+Got row without keys: 
+
+	at org.pentaho.di.trans.steps.streamlookup.StreamLookup.lookupValues(StreamLookup.java:281)
+	... 3 more
+
+2024-06-04 20:38:36.324 INFO  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=2, W=0, U=0, E=1)
+2024-06-04 20:38:36.326 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:38:36.326 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:38:36.335 ERROR <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:38:36.340 WARN  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:38:36.340 WARN  <ETL_ALUMNOS - Stream lookup> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:40:15.298 INFO  <Thread-329> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:40:15.300 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:40:15.301 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:40:15.303 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:40:15.306 INFO  <ETL_ALUMNOS - Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:42:18.451 INFO  <Thread-345> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:42:18.454 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:42:18.455 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:42:18.459 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:42:18.461 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:42:18.818 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:43:35.622 INFO  <Thread-360> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:43:35.636 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:43:35.637 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:43:35.651 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:43:35.683 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:43:35.874 ERROR <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  !Calculator.ErrorInStepRunning : 
+datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+!
+2024-06-04 20:43:35.874 ERROR <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 20:43:35.874 ERROR <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  org.pentaho.di.core.exception.KettleStepException: 
+Error while running the step 
+
+datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+
+
+	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:183)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.pentaho.di.core.exception.KettleValueException: 
+datatype is specified for calculation #1 : Edad(Fixed) = NVL / NVL( A, B )
+
+	at org.pentaho.di.trans.steps.calculator.Calculator.calcFields(Calculator.java:622)
+	at org.pentaho.di.trans.steps.calculator.Calculator.processRow(Calculator.java:164)
+	... 2 more
+
+2024-06-04 20:43:35.874 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024-06-04 20:43:35.874 WARN  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:43:35.874 WARN  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:43:36.003 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:43:36.035 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:43:36.035 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:43:36.042 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:44:33.990 INFO  <Thread-378> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:44:33.993 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:44:33.994 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:44:33.996 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:44:34.001 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:44:34.306 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:44:34.309 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:45:50.689 INFO  <Thread-398> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:45:50.693 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:45:50.693 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:45:50.698 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:45:50.702 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:45:50.857 ERROR <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Field 'Edad' is specified twice (or more) with the same name!
+2024-06-04 20:45:50.858 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2024-06-04 20:45:50.866 ERROR <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Unexpected error
+2024-06-04 20:45:50.866 ERROR <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  java.lang.NullPointerException: Cannot read the array length because "rowData" is null
+	at org.pentaho.di.core.row.RowDataUtil.removeItems(RowDataUtil.java:190)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.removeValues(SelectValues.java:234)
+	at org.pentaho.di.trans.steps.selectvalues.SelectValues.processRow(SelectValues.java:378)
+	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+
+2024-06-04 20:45:50.866 INFO  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=1, W=0, U=0, E=1)
+2024-06-04 20:45:50.866 WARN  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation detected one or more steps with errors.
+2024-06-04 20:45:50.866 WARN  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Transformation is killing the other steps!
+2024-06-04 20:45:50.984 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:45:51.039 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:45:51.039 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:45:51.048 ERROR <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Errors detected!
+2024-06-04 20:46:23.818 INFO  <Thread-414> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:46:23.824 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:46:23.825 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:46:23.844 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:46:23.877 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:46:24.254 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:46:24.256 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:46:24.259 INFO  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:46:53.574 INFO  <Thread-430> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:46:53.577 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:46:53.578 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:46:53.583 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:46:53.587 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:46:53.890 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:46:53.893 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:46:53.896 INFO  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:47:15.056 INFO  <Thread-447> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Dispatching started for transformation [ETL_ALUMNOS]
+2024-06-04 20:47:15.061 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Header row skipped in file 'C:\Users\CarsiMax98\Desktop\Dataset.csv'
+2024-06-04 20:47:15.061 INFO  <ETL_ALUMNOS - 1_Carga_de_los_datos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=25, O=0, R=0, W=24, U=0, E=0)
+2024-06-04 20:47:15.067 INFO  <ETL_ALUMNOS - 2_Seleccionar_Campos> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=48, U=0, E=0)
+2024-06-04 20:47:15.072 INFO  <ETL_ALUMNOS - 3.1 Agrupar Edad> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=1, U=0, E=0)
+2024-06-04 20:47:15.375 INFO  <ETL_ALUMNOS - 3.2 Unir Edad Promerio> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=25, W=24, U=0, E=0)
+2024-06-04 20:47:15.378 INFO  <ETL_ALUMNOS - 4 Reemplazar edad nula> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)
+2024-06-04 20:47:15.379 INFO  <ETL_ALUMNOS - 5 Edad (Fixed)> [C:\Users\CarsiMax98\Desktop\ETL\ETL_ALUMNOS.ktr]  Finished processing (I=0, O=0, R=24, W=24, U=0, E=0)

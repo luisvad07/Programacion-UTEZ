@@ -1,0 +1,372 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "technology",
+              "elicitationRequired": true,
+              "type": "TechnologyType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1438445950223.1133901590695"
+              }
+            }
+          ],
+          "name": "RegisterTechnologyIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "technology",
+              "type": "TechnologyType",
+              "samples": [
+                "{technology}"
+              ]
+            }
+          ],
+          "name": "RegisterTechnologyIntent",
+          "samples": [
+            "quiero registrar una tecnología"
+          ]
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Javascript"
+                ],
+                "value": "javascript"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Python"
+                ],
+                "value": "python"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Java"
+                ],
+                "value": "java"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "C++"
+                ],
+                "value": "c++"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "C#"
+                ],
+                "value": "c#"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Ruby"
+                ],
+                "value": "ruby"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "PHP"
+                ],
+                "value": "php"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Swift"
+                ],
+                "value": "swift"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Kotlin"
+                ],
+                "value": "kotlin"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Go"
+                ],
+                "value": "go"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "R"
+                ],
+                "value": "r"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Typescript"
+                ],
+                "value": "typescript"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Objective C",
+                  "Objective-C",
+                  "objective-C",
+                  "Objective-c"
+                ],
+                "value": "objective-c"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Scala"
+                ],
+                "value": "scala"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Perl"
+                ],
+                "value": "perl"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Haskell"
+                ],
+                "value": "haskell"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Lua"
+                ],
+                "value": "lua"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Rust"
+                ],
+                "value": "rust"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Dart"
+                ],
+                "value": "dart"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Elixir"
+                ],
+                "value": "elixir"
+              }
+            },
+            {
+              "name": {
+                "value": "clojure"
+              }
+            },
+            {
+              "name": {
+                "value": "f#"
+              }
+            },
+            {
+              "name": {
+                "value": "matlab"
+              }
+            },
+            {
+              "name": {
+                "value": "vb.net"
+              }
+            },
+            {
+              "name": {
+                "value": "groovy"
+              }
+            },
+            {
+              "name": {
+                "value": "assembly"
+              }
+            },
+            {
+              "name": {
+                "value": "cobol"
+              }
+            },
+            {
+              "name": {
+                "value": "fortran"
+              }
+            },
+            {
+              "name": {
+                "value": "pascal"
+              }
+            },
+            {
+              "name": {
+                "value": "ada"
+              }
+            },
+            {
+              "name": {
+                "value": "lisp"
+              }
+            },
+            {
+              "name": {
+                "value": "prolog"
+              }
+            },
+            {
+              "name": {
+                "value": "erlang"
+              }
+            },
+            {
+              "name": {
+                "value": "scheme"
+              }
+            },
+            {
+              "name": {
+                "value": "julia"
+              }
+            },
+            {
+              "name": {
+                "value": "sas"
+              }
+            },
+            {
+              "name": {
+                "value": "shell"
+              }
+            },
+            {
+              "name": {
+                "value": "tcl"
+              }
+            },
+            {
+              "name": {
+                "value": "d"
+              }
+            },
+            {
+              "name": {
+                "value": "smalltalk"
+              }
+            },
+            {
+              "name": {
+                "value": "vhdl"
+              }
+            },
+            {
+              "name": {
+                "value": "verilog"
+              }
+            },
+            {
+              "name": {
+                "value": "ocaml"
+              }
+            },
+            {
+              "name": {
+                "value": "nim"
+              }
+            },
+            {
+              "name": {
+                "value": "crystal"
+              }
+            },
+            {
+              "name": {
+                "value": "solidity"
+              }
+            }
+          ],
+          "name": "TechnologyType"
+        }
+      ],
+      "invocationName": "registro tecnología"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Que tecnología quieres agregar?"
+          }
+        ],
+        "id": "Elicit.Slot.1438445950223.1133901590695"
+      }
+    ]
+  }
+}

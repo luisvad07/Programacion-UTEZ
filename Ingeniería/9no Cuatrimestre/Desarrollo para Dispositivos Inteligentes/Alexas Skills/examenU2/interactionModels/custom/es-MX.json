@@ -1,0 +1,359 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "Estudiante",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1478759273084.1029412150826"
+              }
+            },
+            {
+              "name": "Matricula",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1478759273084.313741796655"
+              }
+            }
+          ],
+          "name": "AddStudentsIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1478759273084"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "Matricula",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.862756999971.198492386109"
+              }
+            },
+            {
+              "name": "Actividad",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.862756999971.1340086948233"
+              }
+            },
+            {
+              "name": "Calificacion",
+              "elicitationRequired": true,
+              "type": "CalificacionesType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.862756999971.440135174434"
+              }
+            }
+          ],
+          "name": "AddRatingsIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.862756999971"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "Matricula",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.877305366186.1097106997691"
+              }
+            }
+          ],
+          "name": "GetRatingsStudentsIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "Estudiante",
+              "type": "AMAZON.Person",
+              "samples": [
+                "{Estudiante}",
+                "Se llama {Estudiante}",
+                "Su nombre es {Estudiante}"
+              ]
+            },
+            {
+              "name": "Matricula",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Matricula}",
+                "Será {Matricula}",
+                "La matricula {Matricula}"
+              ]
+            }
+          ],
+          "name": "AddStudentsIntent",
+          "samples": [
+            "Da de Alta a un Estudiante",
+            "Añade un Estudiante",
+            "Agrega un Estudiante"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "Matricula",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Matricula}",
+                "Su matricula es {Matricula}"
+              ]
+            },
+            {
+              "name": "Actividad",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Actividad}",
+                "La actividad {Actividad}"
+              ]
+            },
+            {
+              "name": "Calificacion",
+              "type": "CalificacionesType",
+              "samples": [
+                "{Calificacion}",
+                "Es {Calificacion}"
+              ]
+            }
+          ],
+          "name": "AddRatingsIntent",
+          "samples": [
+            "Añade una calificacion a un Estudiante",
+            "Agrega una calificacion a un Estudiante"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "Matricula",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Matricula}",
+                "Su matricula es {Matricula}"
+              ]
+            }
+          ],
+          "name": "GetRatingsStudentsIntent",
+          "samples": [
+            "muestra los calificaciones de un estudiante",
+            "calificaciones de un estudiante en el sistema",
+            "muestra las calificaciones de un estudiante en el sistema"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetTotalStudentsIntent",
+          "samples": [
+            "muestra los estudiantes",
+            "registros de todos los estudiantes en el sistema",
+            "muestra los registros de todos los estudiantes en el sistema"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "nA",
+                  "Na",
+                  "NA",
+                  "7",
+                  "6",
+                  "5"
+                ],
+                "value": "na"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "dE",
+                  "De",
+                  "9",
+                  "DE"
+                ],
+                "value": "de"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "aU",
+                  "Au",
+                  "10",
+                  "AU"
+                ],
+                "value": "au"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "sA",
+                  "Sa",
+                  "SA",
+                  "8"
+                ],
+                "value": "sa"
+              }
+            }
+          ],
+          "name": "CalificacionesType"
+        }
+      ],
+      "invocationName": "sistema calificaciones"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es el nombre del Estudiante que quieres registrar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporciona el nombre del Estudiante"
+          }
+        ],
+        "id": "Elicit.Slot.1478759273084.1029412150826"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la Matricula del Estudiante {Estudiante} que quieres registrar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporciona la matricula del Estudiante {Estudiante}"
+          }
+        ],
+        "id": "Elicit.Slot.1478759273084.313741796655"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Estas seguro de registrar al Estudiante {Estudiante} con su Matricula {Matricula} ?"
+          }
+        ],
+        "id": "Confirm.Intent.1478759273084"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la matricula del Estudiante?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporciona la matricula del Estudiante"
+          }
+        ],
+        "id": "Elicit.Slot.862756999971.198492386109"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Proporciona el nombre de la actividad en la que se va a calificar"
+          },
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la Actividad que vas a calificar?"
+          }
+        ],
+        "id": "Elicit.Slot.862756999971.1340086948233"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es su calificación?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporciona la calificación de la actividad"
+          }
+        ],
+        "id": "Elicit.Slot.862756999971.440135174434"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Estas seguro de registrar la calificación del estudiante con Matricula {Matricula} ?"
+          }
+        ],
+        "id": "Confirm.Intent.862756999971"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la matricula del estudiante que quieres buscar?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Proporciona la matricula del estudiante que quieres buscar"
+          }
+        ],
+        "id": "Elicit.Slot.877305366186.1097106997691"
+      }
+    ]
+  }
+}

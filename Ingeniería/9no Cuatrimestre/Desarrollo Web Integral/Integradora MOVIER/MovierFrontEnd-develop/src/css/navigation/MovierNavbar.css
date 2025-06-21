@@ -1,0 +1,92 @@
+@import '../common/MovierColors.css';
+
+.brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.1em;
+  color: white;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-decoration: none;
+  margin: 0 20px;
+  margin-top: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  height: 60px;
+  padding: 0 20px;
+}
+
+.MuiSvgIcon-root {
+  color: white;
+}
+
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 1.7em;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .brand {
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    font-size: 1.8em;
+  }
+
+  .user {
+    margin-top: 10px;
+  }
+
+  .MuiSvgIcon-fontSizeLarge {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 10px;
+  }
+
+  .brand {
+    margin-bottom: 0;
+  }
+
+  .logo {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    margin: 0;
+  }
+
+  .user {
+    flex-direction: row;
+    margin-right: 0;
+    gap: 10px;
+  }
+
+  .MuiSvgIcon-fontSizeLarge {
+    font-size: 1.3em;
+  }
+}

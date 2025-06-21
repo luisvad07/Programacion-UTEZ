@@ -1,0 +1,271 @@
+# Examen E301: Aplicación de Algoritmos de Aprendizaje Automático
+# Hecho por Luis Eduardo Bahena Castillo del 9°CIDGS
+
+#Instrucciones del examen
+
+# Cargar las librerías necesarias
+library(dplyr)    # Para manipulación y transformación de datos.
+
+# Establecer la semilla para la reproducibilidad
+set.seed(123)
+
+# Generar el dataset
+n <- 200
+
+# Horas de estudio por semana
+HorasEstudio <- rnorm(n, mean = 10, sd = 3)
+
+# Nivel de participación en clase (0 a 100)
+ParticipacionClase <- runif(n, min = 0, max = 100)
+
+# Porcentaje de asistencia a clase (0 a 100)
+Asistencia <- rnorm(n, mean = 80, sd = 10)
+
+# Género del estudiante (M/F)
+Genero <- sample(c("M", "F"), n, replace = TRUE)
+
+# Participación en actividades extracurriculares (Sí/No)
+ActividadesExtracurriculares <- sample(c("Sí", "No"), n, replace = TRUE)
+
+# Nota obtenida en el examen final (0 a 100)
+NotaExamen <- 0.4 * HorasEstudio + 0.3 * ParticipacionClase + 0.3 * Asistencia + rnorm(n, mean = 0, sd = 5)
+
+# Función para determinar el rendimiento académico general
+Rendimiento <- cut(NotaExamen, breaks = quantile(NotaExamen, probs = seq(0, 1, by = 0.33)), 
+                   labels = c("Bajo", "Medio", "Alto"), include.lowest = TRUE)
+
+# Crear el data frame
+dataset <- data.frame(HorasEstudio, ParticipacionClase, Asistencia, Genero, ActividadesExtracurriculares, NotaExamen, Rendimiento)
+
+# Mostrar las primeras filas del dataset
+head(dataset)
+
+
+
+# Aquí comienza el Examen U3
+
+# Cargar las librerías necesarias
+library(ggplot2)  # Para crear gráficos y visualizaciones de datos.
+library(class)    # Para implementar el algoritmo K-Nearest Neighbors (KNN).
+library(e1071)    # Para implementar el clasificador Naive Bayes y otros métodos de aprendizaje automático.
+library(rpart)    # Para construir y visualizar árboles de decisión.
+
+# Aquí 'dataset' ya debería de estar cargado
+
+# Regresión Simple
+regresión_modelo_simple <- lm(NotaExamen ~ HorasEstudio, data = dataset)
+
+# Resumen del modelo
+summary(regresión_modelo_simple)
+
+# Evaluación del modelo
+predicciones_modelo_simple <- predict(regresión_modelo_simple, dataset)
+mse_simple <- mean((dataset$NotaExamen - predicciones_modelo_simple)^2)
+r2_simple <- summary(regresión_modelo_simple)$r.squared
+cat("MSE para el modelo de regresión simple:", mse_simple, "\n")
+cat("R² (Regresión Simple):", r2_simple, "\n")
+
+
+# Visualización del ajuste del modelo de regresión simple
+ggplot(dataset, aes(x = HorasEstudio, y = NotaExamen)) +
+  geom_point(color = "blue") + # Añade puntos azules para cada observación en el gráfico
+  geom_smooth(method = "lm", se = FALSE, color = "red") + # Añade una línea de ajuste (modelo lineal)
+  labs(title = "Modelo de Regresión Simple: Horas de Estudio vs Nota del Examen", x = "Horas de Estudio", y = "Nota del Examen")
+
+
+
+# Regresión Múltiple
+regresión_modelo_multiple <- lm(NotaExamen ~ HorasEstudio + ParticipacionClase + Asistencia, data = dataset)
+
+# Resumen del modelo
+summary(regresión_modelo_multiple)
+
+# Evaluación del modelo
+predicciones_modelo_multiple <- predict(regresión_modelo_multiple, dataset)
+mse_multiple <- mean((dataset$NotaExamen - predicciones_modelo_multiple)^2)
+r2_multiple <- summary(regresión_modelo_multiple)$r.squared
+cat("MSE para el modelo de regresión múltiple:", mse_multiple, "\n")
+cat("R² (Regresión Múltiple):", r2_multiple, "\n")
+
+# Visualizar el ajuste del modelo de regresión múltiple con respecto a HorasEstudio
+ggplot(dataset, aes(x = HorasEstudio, y = NotaExamen)) +
+  geom_point(color = "blue") + # Añade puntos azules para cada observación en el gráfico
+  geom_smooth(aes(y = predicciones_modelo_multiple), method = "lm", formula = y ~ x, se = FALSE, color = "red") + # Añade una línea de ajuste (modelo lineal)
+  labs(title = "Regresión Múltiple: Horas de Estudio vs Nota del Examen",
+       x = "Horas de Estudio",
+       y = "Nota del Examen") +
+  theme_minimal()
+
+# Visualizar el ajuste del modelo de regresión múltiple con respecto a ParticipacionClase
+ggplot(dataset, aes(x = ParticipacionClase, y = NotaExamen)) +
+  geom_point(color = "blue") + # Añade puntos azules para cada observación en el gráfico
+  geom_smooth(aes(y = predicciones_modelo_multiple), method = "lm", formula = y ~ x, se = FALSE, color = "red") + # Añade una línea de ajuste (modelo lineal)
+  labs(title = "Regresión Múltiple: Participación en Clase vs Nota del Examen",
+       x = "Participación en Clase",
+       y = "Nota del Examen") +
+  theme_minimal()
+
+# Visualizar el ajuste del modelo de regresión múltiple con respecto a Asistencia
+ggplot(dataset, aes(x = Asistencia, y = NotaExamen)) +
+  geom_point(color = "blue") + # Añade puntos azules para cada observación en el gráfico
+  geom_smooth(aes(y = predicciones_modelo_multiple), method = "lm", formula = y ~ x, se = FALSE, color = "red") + # Añade una línea de ajuste (modelo lineal)
+  labs(title = "Regresión Múltiple: Asistencia vs Nota del Examen",
+       x = "Asistencia",
+       y = "Nota del Examen") +
+  theme_minimal()
+
+
+
+
+# Regresión Polinomial
+regresión_modelo_polinomial <- lm(NotaExamen ~ poly(HorasEstudio, 2), data = dataset)
+
+# Resumen del modelo
+summary(regresión_modelo_polinomial)
+
+# Evaluación del modelo
+predicciones_modelo_polinomial <- predict(regresión_modelo_polinomial, dataset)
+mse_polinomial <- mean((dataset$NotaExamen - predicciones_modelo_polinomial)^2)
+r2_polinomial <- summary(regresión_modelo_polinomial)$r.squared
+cat("MSE para el modelo de regresión polinomial:", mse_polinomial, "\n")
+cat("R² (Regresión Polinomial):", r2_polinomial, "\n")
+
+# Crear un gráfico de dispersión con una línea de ajuste polinomial
+ggplot(dataset, aes(x = HorasEstudio, y = NotaExamen)) +
+  geom_point(color = "blue") + # Añade puntos azules para cada observación en el gráfico
+  geom_smooth(aes(y = predicciones_modelo_polinomial), method = "lm", formula = y ~ poly(x, 2), se = FALSE, color = "red") + # Ajusta y traza una curva polinómica de segundo grado
+  labs(title = "Regresión Polinomial: Horas de Estudio vs Nota del Examen", 
+       x = "Horas de Estudio",
+       y = "Nota del Examen")
+
+
+
+#Modelo KNN
+# Establecer la semilla para la reproducibilidad
+set.seed(123)
+
+# Generar el dataset
+n <- 200
+
+# Horas de estudio por semana
+HorasEstudio <- rnorm(n, mean = 10, sd = 3)
+
+# Nivel de participación en clase (0 a 100)
+ParticipacionClase <- runif(n, min = 0, max = 100)
+
+# Porcentaje de asistencia a clase (0 a 100)
+Asistencia <- rnorm(n, mean = 80, sd = 10)
+
+# Género del estudiante (M/F)
+Genero <- sample(c("M", "F"), n, replace = TRUE)
+
+# Participación en actividades extracurriculares (Sí/No)
+ActividadesExtracurriculares <- sample(c("Sí", "No"), n, replace = TRUE)
+
+# Nota obtenida en el examen final (0 a 100)
+NotaExamen <- 0.4 * HorasEstudio + 0.3 * ParticipacionClase + 0.3 * Asistencia + rnorm(n, mean = 0, sd = 5)
+
+# Función para determinar el rendimiento académico general
+Rendimiento <- cut(NotaExamen, breaks = quantile(NotaExamen, probs = seq(0, 1, by = 0.33)), 
+                   labels = c("Bajo", "Medio", "Alto"), include.lowest = TRUE)
+
+# Crear el data frame
+dataset <- data.frame(HorasEstudio, ParticipacionClase, Asistencia, Genero, ActividadesExtracurriculares, NotaExamen, Rendimiento)
+
+# Transformar las variables categóricas en numéricas
+dataset$Genero <- as.numeric(factor(dataset$Genero))
+dataset$ActividadesExtracurriculares <- as.numeric(factor(dataset$ActividadesExtracurriculares))
+
+# Verificar y eliminar filas con valores NA
+dataset <- na.omit(dataset)
+
+# Dividir el dataset en datos de entrenamiento y prueba
+set.seed(123)
+train_indices <- sample(1:nrow(dataset), size = 0.7 * nrow(dataset))
+train_data <- dataset[train_indices, ]
+test_data <- dataset[-train_indices, ]
+
+# Definir las variables predictoras y la variable de resultado
+train_x <- train_data %>% select(HorasEstudio, ParticipacionClase, Asistencia, Genero, ActividadesExtracurriculares)
+train_y <- train_data$Rendimiento
+
+test_x <- test_data %>% select(HorasEstudio, ParticipacionClase, Asistencia, Genero, ActividadesExtracurriculares)
+test_y <- test_data$Rendimiento
+
+# Asegurarse de que no haya valores NA en los datos de entrenamiento y prueba
+stopifnot(!anyNA(train_x))
+stopifnot(!anyNA(test_x))
+
+# Aplicar el modelo KNN
+k <- 3
+predicciones <- knn(train = train_x, test = test_x, cl = train_y, k = k)
+
+# Crear un data frame con las predicciones y los datos reales
+resultado <- data.frame(test_x, Real = test_y, Predicho = predicciones)
+
+# Visualización de los datos de entrenamiento
+plot(train_data$HorasEstudio, train_data$ParticipacionClase, 
+     col = ifelse(train_y == "Bajo", "red", ifelse(train_y == "Medio", "blue", "green")),
+     pch = 16, 
+     xlab = "Horas de Estudio por Semana", 
+     ylab = "Participación en Clase",
+     main = "Clasificación de Rendimiento Académico")
+
+# Añadir los datos de prueba con etiquetas
+points(test_data$HorasEstudio, test_data$ParticipacionClase, 
+       col = ifelse(predicciones == "Bajo", "red", ifelse(predicciones == "Medio", "blue", "green")),
+       pch = 8, cex = 1.5)
+
+# Añadir la leyenda
+legend("topright", 
+       legend = c("Bajo (Train)", "Medio (Train)", "Alto (Train)", "Bajo (Test)", "Medio (Test)", "Alto (Test)"),
+       col = c("red", "blue", "green", "red", "blue", "green"),
+       pch = c(16, 16, 16, 8, 8, 8))
+
+
+
+#Modelo Naive Bayes
+# Dividir el dataset en conjunto de entrenamiento y prueba
+set.seed(123)  # Para reproducibilidad
+train_indices <- sample(seq_len(nrow(dataset)), size = 0.7 * nrow(dataset))
+train_data <- dataset[train_indices, ]
+test_data <- dataset[-train_indices, ]
+
+# Entrenar el modelo Naive Bayes
+nb_model <- naiveBayes(Rendimiento ~ ., data = train_data)
+
+# Hacer predicciones con el conjunto de prueba
+predicciones <- predict(nb_model, test_data)
+
+# Evaluar el modelo
+confusion_matrix <- table(Predicted = predicciones, Actual = test_data$Rendimiento)
+accuracy <- sum(diag(confusion_matrix)) / sum(confusion_matrix)
+
+# Mostrar la matriz de confusión y la precisión
+print(confusion_matrix)
+cat("Precisión del modelo: ", accuracy, "\n")
+
+# Opcional: Mostrar la distribución de la predicción vs. realidad
+ggplot(test_data, aes(x = Rendimiento, fill = as.factor(predicciones))) +
+  geom_bar(position = "dodge") + #Crea una gráfica comparativa de barras
+  labs(title = "Distribución de Predicciones vs. Realidad",
+       x = "Rendimiento Real",
+       y = "Conteo",
+       fill = "Predicción") +
+  theme_minimal()
+
+
+
+# Modelo Árbol de Decisión
+# Convertir variables categóricas a factores
+dataset$Genero <- as.factor(dataset$Genero)
+dataset$ActividadesExtracurriculares <- as.factor(dataset$ActividadesExtracurriculares)
+dataset$Rendimiento <- as.factor(dataset$Rendimiento)
+
+# Crear el modelo de árbol de decisión
+modelo_arbol <- rpart(Rendimiento ~ HorasEstudio + ParticipacionClase + Asistencia + Genero + ActividadesExtracurriculares, 
+                      data = dataset, method = "class")
+
+# Visualizar el árbol de decisión con plot y text
+plot(modelo_arbol, main = "Árbol de Decisión para el Rendimiento Académico")
+text(modelo_arbol, use.n = TRUE)

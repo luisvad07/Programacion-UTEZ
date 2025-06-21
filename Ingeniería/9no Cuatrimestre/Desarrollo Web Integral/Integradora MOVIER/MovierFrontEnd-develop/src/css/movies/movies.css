@@ -1,0 +1,105 @@
+/* Contenedor de las tarjetas */
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--background-light);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card-header {
+  padding: 1rem;
+}
+
+.card-body {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.title-text {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.no-peliculas{
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin: 0;
+  padding: 1rem;
+  
+}
+
+@media (max-width: 480px) {
+  .movies-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .title-text {
+    font-size: 1.3rem;
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .movies-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .title-text {
+    font-size: 1.4rem;
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .movies-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .title-text {
+    font-size: 1.5rem;
+  }
+
+  .description-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movies-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.386943056130.710581117186"
+              }
+            },
+            {
+              "name": "ingredientes",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.386943056130.1627787349641"
+              }
+            },
+            {
+              "name": "instrucciones",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.386943056130.933508416806"
+              }
+            }
+          ],
+          "name": "CrearRecetaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.262031146330.1036599243634"
+              }
+            },
+            {
+              "name": "ingredientes",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.262031146330.780814364536"
+              }
+            },
+            {
+              "name": "instrucciones",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.262031146330.364499273297"
+              }
+            }
+          ],
+          "name": "ActualizarRecetaIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{nombreReceta}"
+              ]
+            },
+            {
+              "name": "ingredientes",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{ingredientes}"
+              ]
+            },
+            {
+              "name": "instrucciones",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{instrucciones}"
+              ]
+            }
+          ],
+          "name": "CrearRecetaIntent",
+          "samples": [
+            "Crear una receta"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "LeerRecetaIntent",
+          "samples": [
+            "Muestrame la receta de {nombreReceta}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{nombreReceta}"
+              ]
+            },
+            {
+              "name": "ingredientes",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{ingredientes} "
+              ]
+            },
+            {
+              "name": "instrucciones",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{instrucciones}"
+              ]
+            }
+          ],
+          "name": "ActualizarRecetaIntent",
+          "samples": [
+            "Actualizar una receta"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombreReceta",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "name": "EliminarRecetaIntent",
+          "samples": [
+            "Eliminar la receta de {nombreReceta}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllRecipesIntent",
+          "samples": [
+            "Elimina todas la recetas"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "VisualizarTodasLasRecetasIntent",
+          "samples": [
+            "muestra todas las recetas"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "recetario comida"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Que nombre de receta será?"
+          }
+        ],
+        "id": "Elicit.Slot.386943056130.710581117186"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuáles seran los ingredientes?"
+          }
+        ],
+        "id": "Elicit.Slot.386943056130.1627787349641"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Cuál es la instrucción?"
+          }
+        ],
+        "id": "Elicit.Slot.386943056130.933508416806"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime el nuevo nombre de la receta"
+          }
+        ],
+        "id": "Elicit.Slot.262031146330.1036599243634"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime los ingredientes"
+          }
+        ],
+        "id": "Elicit.Slot.262031146330.780814364536"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime las instrucciones"
+          }
+        ],
+        "id": "Elicit.Slot.262031146330.364499273297"
+      }
+    ]
+  }
+}

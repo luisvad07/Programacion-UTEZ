@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(5, 320px);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.movie:hover {
+  scale: 1.025;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.vertical-line {
+  width: 1px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #aaa;
+}

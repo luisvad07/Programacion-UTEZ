@@ -1,0 +1,156 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "movie",
+              "elicitationRequired": true,
+              "type": "AMAZON.Movie",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1652891313308.427268728842"
+              }
+            }
+          ],
+          "name": "SaveMoviesIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "movieD",
+              "elicitationRequired": true,
+              "type": "AMAZON.Movie",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.313013844674.1351191432964"
+              }
+            }
+          ],
+          "name": "DeleteMoviesIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "movie",
+              "type": "AMAZON.Movie",
+              "samples": [
+                "es la de {movie}",
+                "{movie}",
+                "la de {movie}",
+                "es {movie}"
+              ]
+            }
+          ],
+          "name": "SaveMoviesIntent",
+          "samples": [
+            "best pelicula {movie}",
+            "agrega la pelicula {movie}",
+            "otra pelicula buena es {movie}",
+            "Mi pelicula favorita es {movie}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ShowMoviesIntent",
+          "samples": [
+            "peliculas guardadas",
+            "muestrame las peliculas que tengo guardadas",
+            "que peliculas tengo guardadas"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "movieD",
+              "type": "AMAZON.Movie",
+              "samples": [
+                "la pelicula {movieD}",
+                "{movieD}",
+                "la de {movieD}"
+              ]
+            }
+          ],
+          "name": "DeleteMoviesIntent",
+          "samples": [
+            "borra una pelicula",
+            "borra la de {movieD}",
+            "borra la pelicula de {movieD}",
+            "Borra la pelicula {movieD}"
+          ]
+        }
+      ],
+      "types": [],
+      "invocationName": "my dynamo"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Dime el nombre de la pelicula"
+          },
+          {
+            "type": "PlainText",
+            "value": "Cual es el nombre de la pelicula"
+          }
+        ],
+        "id": "Elicit.Slot.1652891313308.427268728842"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "dame el nombre de la pelicula que vas a borrar"
+          },
+          {
+            "type": "PlainText",
+            "value": "nombre de la peliculla a borrar"
+          },
+          {
+            "type": "PlainText",
+            "value": "que pelicula vas a borrar"
+          }
+        ],
+        "id": "Elicit.Slot.313013844674.1351191432964"
+      }
+    ]
+  }
+}

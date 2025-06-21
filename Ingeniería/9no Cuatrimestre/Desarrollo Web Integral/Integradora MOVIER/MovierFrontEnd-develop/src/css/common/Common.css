@@ -1,0 +1,10 @@
+.MuiSvgIcon-root.back-icon {
+  color: var(--primary);
+  font-weight: 900;
+}
+
+.MuiButtonBase-root.MuiButton-root.back-button {
+  color: var(--primary);
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+}

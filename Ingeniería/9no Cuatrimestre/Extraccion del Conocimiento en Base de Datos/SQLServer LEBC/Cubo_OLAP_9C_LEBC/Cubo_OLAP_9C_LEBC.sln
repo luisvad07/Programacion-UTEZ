@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "Cubo_OLAP_9C_LEBC", "Cubo_OLAP_9C_LEBC.dwproj", "{08347261-FABA-4FD2-A17C-5F68E1A175FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08347261-FABA-4FD2-A17C-5F68E1A175FB}.Development|Default.ActiveCfg = Development
+		{08347261-FABA-4FD2-A17C-5F68E1A175FB}.Development|Default.Build.0 = Development
+		{08347261-FABA-4FD2-A17C-5F68E1A175FB}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EC34AD6-70BD-4C7D-8A4B-058AB27DA6FE}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="CC7-2024-MA-28.BD_Destino_9C.sa"
+  DTS:DTSID="{81323503-AF05-47DF-84D2-AAE9AAE640AE}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=CC7-2024-MA-28;User ID=sa;Initial Catalog=BD_Destino_9C;Persist Security Info=True;Encrypt=False;Application Name=SSIS-9C_Proceso_ETL_BCLE-{81323503-AF05-47DF-84D2-AAE9AAE640AE}CC7-2024-MA-28.BD_Destino_9C.sa;">
+      <DTS:Password
+        DTS:Name="Password"
+        Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdLprf8jmAUOhT5+rg3fxPgAAAAACAAAAAAAQZgAAAAEAACAAAADncEZqKsRweOJEYLTbxu/aA/SNnGiyBz4wxxC3qGVrCAAAAAAOgAAAAAIAACAAAAAgVU5f0Qx2ZiRTHnUcylizIPUzOX2hFM0Dh00+PY2RDIAAAACTm6ThLe1q/2YoKnRf2he9r4DrDcrT2CZwyuPYRFot+ldEC6dmMXVeIoBjia3Z2l8AhCmiwXX/vYQMNdDmuIzMtd1MTBy5f+AfIkd0F4WCI0u1uO8XUkujfWdGyTsIzF+f0DVP2/MeOWMwulisCkzk7KsLFiD2HKQHHiB42LSUdEAAAAB5BZOma2E7nrudnAbzOGjwzdH8bGiWpnO1M4MEoHKVC3ZGAnEtWP1TomaGqSLE+5tPj3yScJ5jOK5FA7VUtYhM</DTS:Password>
+    </DTS:ConnectionManager>
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

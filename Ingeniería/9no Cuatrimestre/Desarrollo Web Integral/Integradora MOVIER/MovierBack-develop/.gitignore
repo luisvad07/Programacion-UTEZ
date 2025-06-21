@@ -1,0 +1,8 @@
+/.aws-sam/
+/venv/
+.venv/
+.idea/
+.aws-sam/git
+.idea/MovierBack.iml
+.idea/sonarlint
+

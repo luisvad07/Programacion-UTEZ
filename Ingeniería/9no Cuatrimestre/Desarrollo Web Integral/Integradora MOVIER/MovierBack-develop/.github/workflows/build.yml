@@ -1,0 +1,95 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - diego
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  deploy:
+    name: Deploy to AWS
+    runs-on: ubuntu-latest
+    needs: sonarcloud
+    if: ${{ github.event_name == 'push' || github.event_name == 'pull_request' }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.12'
+      - name: Install dependencies for create_comment
+        run: |
+          cd comments/create_comment
+          pip install -r requirements.txt
+      - name: Install dependencies for get_movies
+        run: |
+          cd movies/get_movies
+          pip install -r requirements.txt
+      - name: Install dependencies for delete_comment
+        run: |
+          cd comments/delete_comment
+          pip install -r requirements.txt
+      - name: Install dependencies for get_comments
+        run: |
+          cd comments/get_comments
+          pip install -r requirements.txt
+
+      - name: Install dependencies for change_status_movie
+        run: |
+          cd movies/change_status_movie
+          pip install -r requirements.txt
+
+      - name: Install dependencies for create_movie
+        run: |
+          cd movies/create_movie
+          pip install -r requirements.txt
+
+      - name: Install dependencies for update_movie
+        run: |
+          cd movies/update_movie
+          pip install -r requirements.txt
+
+      - name: Install dependencies for get_watched_movies_user
+        run: |
+          cd watched/get_watched_movies_user
+          pip install -r requirements.txt
+
+      - name: Install dependencies for watched_movie
+        run: |
+          cd watched/watched_movie
+          pip install -r requirements.txt
+          
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+      - name: Install SAM CLI
+        run: |
+          pip install aws-sam-cli
+      - name: Build SAM application
+        run: sam build
+      - name: Deploy SAM application
+        run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name Movier --capabilities CAPABILITY_IAM
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: us-east-1

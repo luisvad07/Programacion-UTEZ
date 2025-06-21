@@ -1,0 +1,2006 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.534792246428.1498368924045"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.534792246428.224372885825"
+              }
+            },
+            {
+              "name": "sueldo",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.534792246428.1615969516144"
+              }
+            },
+            {
+              "name": "puesto",
+              "elicitationRequired": true,
+              "type": "JobPositionType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.534792246428.589353933622"
+              }
+            }
+          ],
+          "name": "RegisterEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.629344437868.1028755567526"
+              }
+            }
+          ],
+          "name": "QueryEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "Empleado",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.886980485192.1600589324275"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.383702284175.470601176997"
+              }
+            },
+            {
+              "name": "acronimoProyecto",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.886980485192.1156029397708"
+              }
+            }
+          ],
+          "name": "AssignEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.442591673141.812137633485"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.26718493399.921365074143"
+              }
+            }
+          ],
+          "name": "DeactivateEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.126516860544.1715939154823"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.204399556446.1677789243840"
+              }
+            }
+          ],
+          "name": "ReactivateEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "Proyecto",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.269500798590.824430689889"
+              }
+            },
+            {
+              "name": "Tipo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.269500798590.1435569102432"
+              }
+            },
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.33903853871.767254598574"
+              }
+            }
+          ],
+          "name": "CreateProjectIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimoProyecto",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.89425563673.650801422004"
+              }
+            },
+            {
+              "name": "Recurso",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.580135841109.1616726768980"
+              }
+            }
+          ],
+          "name": "AssignResourceIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1268448491876.870096602402"
+              }
+            }
+          ],
+          "name": "ProjectReportIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1163075278033.949332690206"
+              }
+            }
+          ],
+          "name": "CompleteProjectIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "technology",
+              "elicitationRequired": true,
+              "type": "TechnologyType",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1426923069331.1484201967570",
+                "confirmation": "Confirm.Slot.83811157950.807533927388"
+              }
+            }
+          ],
+          "name": "RegisterTechnologyIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1476770808115.779014639783"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.569906829340.371837953570"
+              }
+            }
+          ],
+          "name": "EmployeeStatusIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.233031067321.685451478555"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.233031067321.801782817362"
+              }
+            }
+          ],
+          "name": "GetSingleEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.243020893357.468519350280"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.243020893357.949921171319"
+              }
+            }
+          ],
+          "name": "DeleteEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.100416617922.1498397098448"
+              }
+            },
+            {
+              "name": "RFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.100416617922.1072607534534"
+              }
+            },
+            {
+              "name": "newNombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1568656072105.748016302117",
+                "confirmation": "Confirm.Slot.1568656072105.748016302117"
+              }
+            },
+            {
+              "name": "newRFC",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": true,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1568656072105.60410676408",
+                "confirmation": "Confirm.Slot.1568656072105.60410676408"
+              }
+            },
+            {
+              "name": "newSueldo",
+              "elicitationRequired": true,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.100416617922.1580699473909"
+              }
+            },
+            {
+              "name": "newPuesto",
+              "elicitationRequired": true,
+              "type": "JobPositionType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.100416617922.669174899350"
+              }
+            }
+          ],
+          "name": "UpdateEmployeeIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllTechnologiesIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.401850512960"
+          }
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllEmployeesIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.943871769216"
+          }
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllProjectsIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.216965555196"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "TechnologyId",
+              "elicitationRequired": false,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DeleteTechnologyIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1495222160101"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.483460415067.1387637468483"
+              }
+            }
+          ],
+          "name": "StartProjectIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.483460415067"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.25551911534.1376066293455"
+              }
+            },
+            {
+              "name": "technology",
+              "elicitationRequired": true,
+              "type": "TechnologyType",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.25551911534.1281682247338"
+              }
+            }
+          ],
+          "name": "AssignTechnologyIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1270478073672.751692856467"
+              }
+            },
+            {
+              "name": "acronimo",
+              "elicitationRequired": true,
+              "type": "AMAZON.SearchQuery",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1270478073672.1023149981863"
+              }
+            }
+          ],
+          "name": "AssignFutureProjectIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [],
+          "name": "ConfirmDeleteAllIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1387428928030"
+          }
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hello",
+            "how are you",
+            "say hello world",
+            "say hello",
+            "hello world"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "The name is {nombre}",
+                "{nombre}",
+                "It\u0027s called {nombre}",
+                "is  {nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            },
+            {
+              "name": "sueldo",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{sueldo} pesos",
+                "{sueldo}"
+              ]
+            },
+            {
+              "name": "puesto",
+              "type": "JobPositionType",
+              "samples": [
+                "It will be {puesto}",
+                "{puesto}"
+              ]
+            }
+          ],
+          "name": "RegisterEmployeeIntent",
+          "samples": [
+            "Register a new employee",
+            "Add a new employee"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "From the Project {acronimo}",
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "QueryEmployeeIntent",
+          "samples": [
+            "Search for employees assigned to a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "Empleado",
+              "type": "AMAZON.Person",
+              "samples": [
+                "To the employee  {Empleado}",
+                "{Empleado}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            },
+            {
+              "name": "acronimoProyecto",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "To the Project {acronimoProyecto}",
+                " {acronimoProyecto}"
+              ]
+            }
+          ],
+          "name": "AssignEmployeeIntent",
+          "samples": [
+            "Assign an employee to a new project",
+            "Add an employee to a new project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "to {nombre}",
+                "To the employee  {nombre}",
+                "{nombre} "
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            }
+          ],
+          "name": "DeactivateEmployeeIntent",
+          "samples": [
+            "Deactivate an employee from work",
+            "Terminate an employee"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "to {nombre}",
+                "To the employee {nombre}",
+                "{nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            }
+          ],
+          "name": "ReactivateEmployeeIntent",
+          "samples": [
+            "Restores an employee",
+            "Reactivate work for an employee"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "Proyecto",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Proyecto}"
+              ]
+            },
+            {
+              "name": "Tipo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Tipo}"
+              ]
+            },
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "CreateProjectIntent",
+          "samples": [
+            "Bring a project to life",
+            "I want a project",
+            "Create a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimoProyecto",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimoProyecto}"
+              ]
+            },
+            {
+              "name": "Recurso",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{Recurso}",
+                "The resource {Recurso}"
+              ]
+            }
+          ],
+          "name": "AssignResourceIntent",
+          "samples": [
+            "Assign resources to a project",
+            "Add resources to a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "ProjectReportIntent",
+          "samples": [
+            "Get the status of a project",
+            "Generate a project report"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "CompleteProjectIntent",
+          "samples": [
+            "End a Project",
+            "Finish a Project"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "SearchCandidatesIntent",
+          "samples": [
+            "Find available employees for a project",
+            "Search candidates for a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "technology",
+              "type": "TechnologyType",
+              "samples": [
+                "The technology {technology}",
+                "{technology}"
+              ]
+            }
+          ],
+          "name": "RegisterTechnologyIntent",
+          "samples": [
+            "Register a new technology",
+            "Add new technology"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "From employee {nombre}",
+                "{nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            }
+          ],
+          "name": "EmployeeStatusIntent",
+          "samples": [
+            "Know what projects an employee is working on",
+            "Check the status of an employee"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetEmployeeRecordsIntent",
+          "samples": [
+            "shows records of all existing employees",
+            "obtain records of all existing employees"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetProjectRecordsIntent",
+          "samples": [
+            "shows records of existing projects",
+            "obtain records of existing projects"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetTechnologyRecordsIntent",
+          "samples": [
+            "shows records of existing technologies",
+            "obtain records of existing technologies"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "The employee {nombre}",
+                "{nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            }
+          ],
+          "name": "GetSingleEmployeeIntent",
+          "samples": [
+            "Shows the details of an employee",
+            "Get employee details"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "{nombre}",
+                "The employee {nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            }
+          ],
+          "name": "DeleteEmployeeIntent",
+          "samples": [
+            "Eliminate an employee"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "{nombre}",
+                "The employee {nombre}"
+              ]
+            },
+            {
+              "name": "RFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{RFC}"
+              ]
+            },
+            {
+              "name": "newNombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "The new name is {newNombre}",
+                "{newNombre}"
+              ]
+            },
+            {
+              "name": "newRFC",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{newRFC}"
+              ]
+            },
+            {
+              "name": "newSueldo",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{newSueldo} pesos"
+              ]
+            },
+            {
+              "name": "newPuesto",
+              "type": "JobPositionType",
+              "samples": [
+                "{newPuesto}"
+              ]
+            }
+          ],
+          "name": "UpdateEmployeeIntent",
+          "samples": [
+            "Modify employee",
+            "Update employee",
+            "Change employee information"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetEmployeeRecordsTotalIntent",
+          "samples": [
+            "shows all employees"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "TechnologyId",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "name": "DeleteTechnologyIntent",
+          "samples": [
+            "Remove technology with identifier {TechnologyId}",
+            "Delete technology {TechnologyId}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllTechnologiesIntent",
+          "samples": [
+            "Delete all technology records"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllEmployeesIntent",
+          "samples": [
+            "Delete all employees from the system"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "DeleteAllProjectsIntent",
+          "samples": [
+            "Delete all projects"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetProjectRecordsTotalIntent",
+          "samples": [
+            "show all projects"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetTechnologyRecordsTotalIntent",
+          "samples": [
+            "shows all technologies"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "StartProjectIntent",
+          "samples": [
+            "Start a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            },
+            {
+              "name": "technology",
+              "type": "TechnologyType",
+              "samples": [
+                "La tecnología {technology}",
+                "{technology}"
+              ]
+            }
+          ],
+          "name": "AssignTechnologyIntent",
+          "samples": [
+            "assign a technology to a project"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "nombre",
+              "type": "AMAZON.Person",
+              "samples": [
+                "Su nombre es {nombre}",
+                "{nombre}"
+              ]
+            },
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{acronimo}"
+              ]
+            }
+          ],
+          "name": "AssignFutureProjectIntent",
+          "samples": [
+            "assigns an employee to a future project"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "GetEmployeeStatusIntent",
+          "samples": [
+            "What projects have all employees worked on",
+            "Show me the status of all employees and the projects they have been on"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "acronimo",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "dateType",
+              "type": "dateType"
+            }
+          ],
+          "name": "ModifyFutureDateIntentHandler",
+          "samples": [
+            "updates project start date {acronimo}",
+            "modifies the project end date {acronimo}",
+            "change the start date for the project {acronimo}"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "InterestingFactIntentHandler",
+          "samples": [
+            "What interesting information do you have about the employees",
+            "tell me something interesting about an employee"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ConfirmDeleteAllIntent",
+          "samples": [
+            "delete all records"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Postegresql",
+                  "PostgreSQL"
+                ],
+                "value": "postgresql"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Phpmyadmin",
+                  "PHPMyAdmin"
+                ],
+                "value": "phpmyadmin"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "mongo-db",
+                  "mongo db",
+                  "MongoDB",
+                  "Mongo DB"
+                ],
+                "value": "mongodb"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "No-SQL",
+                  "Nosql",
+                  "NoSQL"
+                ],
+                "value": "nosql"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Mysql",
+                  "MySQL",
+                  "MYSQL"
+                ],
+                "value": "mysql"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Laravel"
+                ],
+                "value": "laravel"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Flutter"
+                ],
+                "value": "flutter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Vue.js",
+                  "Vue-JS",
+                  "Vue JS",
+                  "Vue js"
+                ],
+                "value": "vue js"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "React JS",
+                  "React-JS",
+                  "React.js",
+                  "React js"
+                ],
+                "value": "react js"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Node js",
+                  "Node-JS",
+                  "Node JS",
+                  "Node.js"
+                ],
+                "value": "node js"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Javascript"
+                ],
+                "value": "javascript"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Python"
+                ],
+                "value": "python"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Java"
+                ],
+                "value": "java"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "C++"
+                ],
+                "value": "c++"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "C#"
+                ],
+                "value": "c#"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Ruby"
+                ],
+                "value": "ruby"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "PHP"
+                ],
+                "value": "php"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Swift"
+                ],
+                "value": "swift"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Kotlin"
+                ],
+                "value": "kotlin"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Go"
+                ],
+                "value": "go"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "R"
+                ],
+                "value": "r"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Typescript"
+                ],
+                "value": "typescript"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Objective C",
+                  "Objective-C",
+                  "objective-C",
+                  "Objective-c"
+                ],
+                "value": "objective-c"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Scala"
+                ],
+                "value": "scala"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Perl"
+                ],
+                "value": "perl"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Haskell"
+                ],
+                "value": "haskell"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Lua"
+                ],
+                "value": "lua"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Rust"
+                ],
+                "value": "rust"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Dart"
+                ],
+                "value": "dart"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Elixir"
+                ],
+                "value": "elixir"
+              }
+            },
+            {
+              "name": {
+                "value": "clojure"
+              }
+            },
+            {
+              "name": {
+                "value": "f#"
+              }
+            },
+            {
+              "name": {
+                "value": "matlab"
+              }
+            },
+            {
+              "name": {
+                "value": "vb.net"
+              }
+            },
+            {
+              "name": {
+                "value": "groovy"
+              }
+            },
+            {
+              "name": {
+                "value": "assembly"
+              }
+            },
+            {
+              "name": {
+                "value": "cobol"
+              }
+            },
+            {
+              "name": {
+                "value": "fortran"
+              }
+            },
+            {
+              "name": {
+                "value": "pascal"
+              }
+            },
+            {
+              "name": {
+                "value": "ada"
+              }
+            },
+            {
+              "name": {
+                "value": "lisp"
+              }
+            },
+            {
+              "name": {
+                "value": "prolog"
+              }
+            },
+            {
+              "name": {
+                "value": "erlang"
+              }
+            },
+            {
+              "name": {
+                "value": "scheme"
+              }
+            },
+            {
+              "name": {
+                "value": "julia"
+              }
+            },
+            {
+              "name": {
+                "value": "sas"
+              }
+            },
+            {
+              "name": {
+                "value": "shell"
+              }
+            },
+            {
+              "name": {
+                "value": "tcl"
+              }
+            },
+            {
+              "name": {
+                "value": "d"
+              }
+            },
+            {
+              "name": {
+                "value": "smalltalk"
+              }
+            },
+            {
+              "name": {
+                "value": "vhdl"
+              }
+            },
+            {
+              "name": {
+                "value": "verilog"
+              }
+            },
+            {
+              "name": {
+                "value": "ocaml"
+              }
+            },
+            {
+              "name": {
+                "value": "nim"
+              }
+            },
+            {
+              "name": {
+                "value": "crystal"
+              }
+            },
+            {
+              "name": {
+                "value": "solidity"
+              }
+            }
+          ],
+          "name": "TechnologyType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "Documenter"
+                ],
+                "value": "documenter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Full-stack",
+                  "Fullstack",
+                  "Full Stack"
+                ],
+                "value": "fullstack"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Ux",
+                  "ux",
+                  "UX",
+                  "Designer UX",
+                  "UX Designer"
+                ],
+                "value": "designer ux"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "Quality Assurance",
+                  "QA",
+                  "tester"
+                ],
+                "value": "qa"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "back end",
+                  "back-end",
+                  "Backend",
+                  "BackEnd"
+                ],
+                "value": "backend"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "front end",
+                  "front-end",
+                  "Frontend",
+                  "FrontEnd"
+                ],
+                "value": "frontend"
+              }
+            }
+          ],
+          "name": "JobPositionType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "end"
+                ],
+                "value": "finalización"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "start"
+                ],
+                "value": "inicio"
+              }
+            }
+          ],
+          "name": "dateType"
+        }
+      ],
+      "invocationName": "project system"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the Employee\u0027s name?"
+          }
+        ],
+        "id": "Elicit.Slot.534792246428.1498368924045"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.534792246428.224372885825"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will be your salary in Mexican pesos?"
+          }
+        ],
+        "id": "Elicit.Slot.534792246428.1615969516144"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will be your position in the Project?"
+          }
+        ],
+        "id": "Elicit.Slot.534792246428.589353933622"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me the acronym of the project you want to know the employees are working on"
+          }
+        ],
+        "id": "Elicit.Slot.629344437868.1028755567526"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which employee do you want to assign?"
+          }
+        ],
+        "id": "Elicit.Slot.886980485192.1600589324275"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What Project do you want to assign it to?"
+          }
+        ],
+        "id": "Elicit.Slot.886980485192.1156029397708"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which employee do you want to terminate?"
+          }
+        ],
+        "id": "Elicit.Slot.442591673141.812137633485"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which employee do you want to reactivate?"
+          }
+        ],
+        "id": "Elicit.Slot.126516860544.1715939154823"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will be the name of the Project?"
+          }
+        ],
+        "id": "Elicit.Slot.269500798590.824430689889"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will the type of Project be?"
+          }
+        ],
+        "id": "Elicit.Slot.269500798590.1435569102432"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Tell me the acronym of the project you want to add resources to"
+          }
+        ],
+        "id": "Elicit.Slot.89425563673.650801422004"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which project do you want to know the status of?"
+          }
+        ],
+        "id": "Elicit.Slot.1268448491876.870096602402"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What project do you want to finish?"
+          }
+        ],
+        "id": "Elicit.Slot.1163075278033.949332690206"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which employee do you want to know the status of?"
+          }
+        ],
+        "id": "Elicit.Slot.1476770808115.779014639783"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the employee you want to search for?"
+          }
+        ],
+        "id": "Elicit.Slot.233031067321.685451478555"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.233031067321.801782817362"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What Resource do you want to assign to the Project {acronimoProyecto} ?"
+          }
+        ],
+        "id": "Elicit.Slot.580135841109.1616726768980"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the employee you want to remove?"
+          }
+        ],
+        "id": "Elicit.Slot.243020893357.468519350280"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.243020893357.949921171319"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What acronym do you want to give to the name of the project?"
+          }
+        ],
+        "id": "Elicit.Slot.33903853871.767254598574"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the name of the employee you want to modify?"
+          }
+        ],
+        "id": "Elicit.Slot.100416617922.1498397098448"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee{nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.100416617922.1072607534534"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will be your new salary in pesos?"
+          }
+        ],
+        "id": "Elicit.Slot.100416617922.1580699473909"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What will your new position be?"
+          }
+        ],
+        "id": "Elicit.Slot.100416617922.669174899350"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the employee\u0027s new name?"
+          }
+        ],
+        "id": "Elicit.Slot.1568656072105.748016302117"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The employee\u0027s new name is {newNombre}. It\u0027s right?"
+          }
+        ],
+        "id": "Confirm.Slot.1568656072105.748016302117"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the new RFC for the employee {newNombre} that you want to update?"
+          }
+        ],
+        "id": "Elicit.Slot.1568656072105.60410676408"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The new RFC of employee{newNombre} is {newRFC}. It\u0027s right?"
+          }
+        ],
+        "id": "Confirm.Slot.1568656072105.60410676408"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of the employee {Empleado} ?"
+          }
+        ],
+        "id": "Elicit.Slot.383702284175.470601176997"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to eliminate all technologies?"
+          }
+        ],
+        "id": "Confirm.Intent.401850512960"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to delete all employees?"
+          }
+        ],
+        "id": "Confirm.Intent.943871769216"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to delete all projects?"
+          }
+        ],
+        "id": "Confirm.Intent.216965555196"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What technology do you want to add to the Employee System?"
+          }
+        ],
+        "id": "Elicit.Slot.1426923069331.1484201967570"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "La tecnología que quieres agregar es {technology} . ¿Es correcto?"
+          }
+        ],
+        "id": "Confirm.Slot.83811157950.807533927388"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to remove the technology {TechnologyId}?"
+          }
+        ],
+        "id": "Confirm.Intent.1495222160101"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.26718493399.921365074143"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.204399556446.1677789243840"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the RFC of employee {nombre} ?"
+          }
+        ],
+        "id": "Elicit.Slot.569906829340.371837953570"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Proporciona el acronimo del proyecto del cual quieres empezar"
+          }
+        ],
+        "id": "Elicit.Slot.483460415067.1387637468483"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "¿Estas seguro de que quieres iniciar este proyecto?"
+          }
+        ],
+        "id": "Confirm.Intent.483460415067"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the project you want to assign technologies to?"
+          }
+        ],
+        "id": "Elicit.Slot.25551911534.1376066293455"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the technology you want to assign to the project {acronimo} ?"
+          }
+        ],
+        "id": "Elicit.Slot.25551911534.1281682247338"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the employee\u0027s name?"
+          }
+        ],
+        "id": "Elicit.Slot.1270478073672.751692856467"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the acronym of the project?"
+          }
+        ],
+        "id": "Elicit.Slot.1270478073672.1023149981863"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Are you sure you want to delete all records?"
+          }
+        ],
+        "id": "Confirm.Intent.1387428928030"
+      }
+    ]
+  }
+}

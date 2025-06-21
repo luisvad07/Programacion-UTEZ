@@ -1,0 +1,4 @@
+flutter_bloc: ^8.0.1
+bloc: ^8.0.1
+http: ^0.13.4
+equatable: ^2.0.3
