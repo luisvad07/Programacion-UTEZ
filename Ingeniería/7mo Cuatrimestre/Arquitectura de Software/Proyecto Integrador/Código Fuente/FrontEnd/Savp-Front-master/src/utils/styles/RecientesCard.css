@@ -1,0 +1,75 @@
+@media (max-width: 789px) {
+    /* Estilos para pantallas más pequeñas */
+    .RecientesDesc {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+    .RecientesTitulo {
+        font-size: medium;
+        font-weight: 500;
+    }
+    
+    .RecientesFecha {
+        font-size: small;
+        font-weight: 500;
+    }
+  }
+  
+  @media (min-width: 790px) {
+    /* Estilos para pantallas más grandes */
+    .RecientesDesc {
+        font-size: small;
+        font-weight: 500;
+    }
+    .RecientesTitulo {
+        font-size: larger;
+        font-weight: 500;
+    }
+    
+    .RecientesFecha {}
+  }
+  
+.RecientesCard {
+    padding: 1rem;
+    background-color: #f3f3f3;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.RecientesButton {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.RecientesCard:hover {
+    transform: scale(1.01);
+}
+
+
+
+
+
+.RecientesEdit {
+    cursor: pointer;
+    width: 15%;
+    margin-right: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.RecientesDownload {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    width: 15%;
+}
+
+.RecientesEdit:hover {
+    transform: scale(1.25);
+}
+
+.RecientesDownload:hover {
+    transform: scale(1.25);
+}

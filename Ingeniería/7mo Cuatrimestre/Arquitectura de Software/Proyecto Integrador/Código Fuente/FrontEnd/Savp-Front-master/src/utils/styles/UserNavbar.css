@@ -1,0 +1,47 @@
+.UserNav{
+    padding-right: 1.5rem;
+    padding-left: 3rem;
+    width: 100%;
+    height: 8vh;
+    background: linear-gradient(45deg, #344881, #9E43EF, #EF43BB);
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    position: absolute;
+    z-index: 0;
+}
+
+.UserIcon{
+    width: 10%;
+    object-fit: cover;
+    height: 100%;
+    color: #ffffff;
+}
+
+.UserIcon img{
+    width: auto;
+    height: 100%;
+}
+
+.UserData{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 90%;
+}
+.UserData button{
+    background-color: none;
+    border: none;
+    color: #f2f2f2;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.UserData > *{
+    margin-left: 1rem;
+}

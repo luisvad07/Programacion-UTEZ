@@ -1,0 +1,53 @@
+.UserMainContainer {
+    height: 92vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.UserMainContainer.dark-mode {
+    background-color: #030713;
+    /* Otros estilos para el tema oscuro */
+    height: 92vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .UserMainContainer.light-mode {
+    background-color: white;
+    /* Otros estilos para el tema claro */
+    height: 92vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+.UserJuegos {
+    width: 100%;
+    height: 30%;
+    margin-top: 1rem;
+}
+
+.UserJuegos>div:first-child {
+    color: #f2f2f2;
+    height: 15%;
+}
+
+.UserCarrusel {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow-x: scroll;
+    margin-left: 1rem;
+    padding-top: 0.5rem;
+}
+
+.item {
+    flex: 0 0 20%;
+    object-fit: cover;
+}
+
+.item img {
+    width: 80%;
+    height: auto;
+    border-radius: 1rem;
+}

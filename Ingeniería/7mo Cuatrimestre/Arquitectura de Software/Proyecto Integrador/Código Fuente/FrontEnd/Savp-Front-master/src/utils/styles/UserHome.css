@@ -1,0 +1,93 @@
+.UserHome {
+    height: 92vh;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.marBot {
+    margin-bottom: 1rem;
+}
+
+.TrabajosRecientes {
+    padding: 1rem;
+    width: 100%;
+    height: 45%;
+    border-radius: 1rem;
+    background-color: #f7f7f7;
+}
+
+.RecientesVacio{
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.RecientesVacio:hover {
+    transform: scale(1.01);
+}
+
+.RecientesLleno{
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    padding: 1rem;
+}
+
+.RecientesLleno:hover {
+    transform: scale(1.00);
+}
+
+.RecientesVacioContainer{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.RecientesLlenoContainer{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+
+
+.RVCTextUp{
+height: 10%;
+margin: 0;
+}
+
+.RVCTextDown{
+height: 10%;
+display: flex;
+justify-content: end;
+align-items: start;
+margin: 0;
+padding: 0;
+}
+
+.addTrabajo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+}
+
+.addTrabajo:hover{
+    transform: scale(1.01);
+}

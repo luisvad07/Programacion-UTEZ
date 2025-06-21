@@ -1,0 +1,35 @@
+.DataIcon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.DataIcon:hover {
+    transform: scale(1.2);
+}
+
+
+.App {
+    background-color: #f6f6f6;
+    width: 90vw;
+    border-radius: 1rem;
+    height: 86vh;
+    padding: 1rem;
+}
+
+.rdt_TableHeader {
+    border-radius: 1rem;
+    background-color: #f6f6f6 !important;
+}
+
+/* th */
+.rdt_TableHeadRow{
+    background-color: #f6f6f6 !important;
+}
+
+.rdt_TableRow{
+    background-color: #f6f6f6 !important;
+}
+
+.rdt_Pagination{
+    background-color: #f6f6f6 !important;
+}

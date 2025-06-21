@@ -1,0 +1,101 @@
+.UserTrabajos {
+    padding: 1rem;
+    width: 100%;
+    height: 92vh;
+    background-color: transparent;
+}
+
+.UserBuscador {
+    padding: 0.5rem;
+    width: 100%;
+    height: 10vh;
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.TrabajosContainer {
+    padding: 1rem;
+    width: 100%;
+    height: 74.2vh;
+    background-color: #f6f6f6;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 4 columnas con ancho flexible */
+    grid-gap: 10px;
+    overflow-y: scroll;
+}
+
+.TrabajosBuscador {
+    padding: 0.5rem;
+    height: 100%;
+    width: 90%;
+    background-color: #f3f3f3;
+    border: none;
+    font-size: larger;
+    border-radius: 0.7rem;
+}
+
+.TrabajosBuscador:focus {
+    border: none;
+    outline: none;
+}
+
+.TrabajosDate {
+    border: none;
+    width: 4%;
+    margin-left: 1rem;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+
+}
+
+.TrabajosDate:focus {
+    border: none;
+    outline: none;
+}
+
+.TrabajosDate:hover{
+    transform: scale(1.07);
+}
+
+.TrabajosDate::-webkit-datetime-edit{
+    display: none;
+}
+
+.TrabajosDate::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+}
+
+.ButtonNuevoTrabajo{
+    border: none;
+    width: 4%;
+    margin-left: 1rem;
+    background-color: transparent;
+    height: 100%;
+    border-radius: 0.7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.ButtonNuevoTrabajo:hover{
+    transform: scale(1.07);
+    color: black;
+}

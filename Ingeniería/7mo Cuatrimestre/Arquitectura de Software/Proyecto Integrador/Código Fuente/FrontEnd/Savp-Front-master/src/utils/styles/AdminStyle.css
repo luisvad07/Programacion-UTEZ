@@ -1,0 +1,12 @@
+.CrudContainer {
+    justify-content: center;
+    align-items: center;
+    height: 92vh;
+    padding: 20;
+}
+.CrudContainer.dark-mode {
+    background-color: #030713;
+}
+.CrudContainer.light-mode {
+    background-color: white;
+}

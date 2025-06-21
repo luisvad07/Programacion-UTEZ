@@ -1,0 +1,82 @@
+/* ProfileStyle.css */
+
+.profile-container {
+  background-color: #030713;
+  color: white; /* Color de texto en modo oscuro */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container.dark-mode {
+  background-color: #030713;
+  color: white; /* Color de texto en modo oscuro */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-container.light-mode {
+  background-color: white;
+  color: black; /* Color de texto en modo claro */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+.cover-photo {
+  height: auto;
+  width: 100%;
+  background-image: url('../../utils/img/coverPhoto.jpg');
+  background-position: center;
+  background-size: auto;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.user-games {
+  margin-top: 20px;
+  color: white;
+}
+
+.UserCarrusel {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow-x: scroll;
+  margin-left: 1rem;
+  padding-top: 0.5rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  align-items: center;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+  background-color: aliceblue;
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}

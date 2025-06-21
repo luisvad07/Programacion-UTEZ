@@ -1,0 +1,563 @@
+ /* Aquí van los estilos específicos para móviles */
+@media screen and (max-width: 767px) {
+    .loginMainFrame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #030713;
+        overflow: hidden;
+    }
+
+    .loginContainer{
+        background-color: #f2f2f2;
+        width: 90vw;
+        height: 70vh;
+        border-radius: 1rem;
+        box-shadow: 4px 2px 2px 4px rgb(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: row;
+        transition: all 0.5s;
+    }
+
+    .loginLeftContainer{
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .loginRightContainer{
+        display: none;
+        transition: all 0.5s;
+    }
+
+    .loginMpgiaLogo{
+        width: 20%;
+        margin-top: 2rem;
+    }
+
+    .formContainer{
+        padding: 0.5rem;
+        width: 95%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginSelect{
+        width: 100%;
+    }
+
+    .loginImgText{
+        margin-top: 1rem;
+        text-align: center;
+        width: 60%;
+        color: #f2f2f2;
+        font-weight: 650;
+        font-size: 1.2rem;
+    }
+    
+    .expandedR{
+        width: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+    }
+
+    .expandedL{
+        width: 0%;
+        display: none;
+    }
+
+    .expandedContainer{
+        width: 80vw;
+        border-radius: 1rem;
+    }
+
+    .circuloCheck{
+        background-color: #25B22B;
+        width: 35%;
+        height: 60%;
+        border-radius: 50%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    .wrapper{width:8rem;height:8rem;display:flex;justify-content:center;align-items:center;background-color:transparent}
+    
+    .checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 2;stroke-miterlimit: 10;stroke: #7ac142;fill: #7ac142;animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+
+    .checkmark{height: 100%;border-radius: 50%;display: block;stroke-width: 2;stroke: #fff;stroke-miterlimit: 10;margin: 10% auto;box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}
+    
+    .checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}@keyframes stroke{100%{stroke-dashoffset: 0}}@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+
+    .checkmarkX {
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #a32424;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      
+      .checkmark_circleX {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #a32424;
+        fill: #a32424;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      
+      .checkmark_checkX {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+
+      .progress-bar {
+        margin-top: 1rem;
+        width: 200px;
+        height: 20px;
+        background-color: #185E82;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .progress {
+        width: 0;
+        height: 100%;
+        background-color: #7ac142;
+        animation: progressAnimation 3s ease-in-out infinite;
+      }
+      
+      @keyframes progressAnimation {
+        0% {
+          width: 0;
+          background-color: #2377A2;
+        }
+        50% {
+          width: 100%;
+          background-color: #185E82;
+        }
+        100% {
+          width: 0;
+          background-color: #2377A2;
+        }
+      }
+}
+  
+  /* Estilos para tabletas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .loginMainFrame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #185E82;
+        overflow: hidden;
+    }
+
+    .loginContainer{
+        background-color: #f2f2f2;
+        width: 90vw;
+        height: 70vh;
+        border-radius: 1rem;
+        box-shadow: 4px 2px 2px 4px rgb(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: row;
+    }
+
+    .loginLeftContainer{
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .loginRightContainer{
+        display: none;
+    }
+
+    .loginMpgiaLogo{
+        width: 20%;
+        margin-top: 2rem;
+    }
+
+    .formContainer{
+        padding: 0.5rem;
+        width: 95%;
+        height: 75%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .loginSelect{
+        width: 100%;
+    }
+
+    .loginImgText{
+        margin-top: 1rem;
+        text-align: center;
+        width: 60%;
+        color: #f2f2f2;
+        font-weight: 650;
+        font-size: 1.2rem;
+    }
+    
+    .expandedR{
+        width: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+        border-radius: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .expandedL{
+        width: 0%;
+        display: none;
+    }
+
+    .expandedContainer{
+        width: 80vw;
+        border-radius: 1rem;
+    }
+
+    .circuloCheck{
+        background-color: #25B22B;
+        width: 35%;
+        height: 60%;
+        border-radius: 50%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    .wrapper{width:8rem;height:8rem;display:flex;justify-content:center;align-items:center;background-color:transparent}
+    
+    .checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 2;stroke-miterlimit: 10;stroke: #7ac142;fill: #7ac142;animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+
+    .checkmark{height: 100%;border-radius: 50%;display: block;stroke-width: 2;stroke: #fff;stroke-miterlimit: 10;margin: 10% auto;box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}
+    
+    .checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}@keyframes stroke{100%{stroke-dashoffset: 0}}@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+
+    .checkmarkX {
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #a32424;
+        animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+      }
+      
+      .checkmark_circleX {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #a32424;
+        fill: #a32424;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      
+      .checkmark_checkX {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+
+      .progress-bar {
+        margin-top: 1rem;
+        width: 200px;
+        height: 20px;
+        background-color: #185E82;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .progress {
+        width: 0;
+        height: 100%;
+        background-color: #7ac142;
+        animation: progressAnimation 3s ease-in-out infinite;
+      }
+      
+      @keyframes progressAnimation {
+        0% {
+          width: 0;
+          background-color: #2377A2;
+        }
+        50% {
+          width: 100%;
+          background-color: #185E82;
+        }
+        100% {
+          width: 0;
+          background-color: #2377A2;
+        }
+      }
+}
+@media screen and (min-width: 1024px) {
+   .loginMainFrame{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        background-color: #070707;
+        color: #f2f2f2;
+        overflow: hidden;
+    }
+
+    .loginContainer{
+        background-color: #070707;
+        width: 35vw;
+        height: 95vh;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: row;
+        transition: all 0.5s;
+        /* align-items: end; */
+        justify-content: end;
+    }
+
+    .loginLeftContainer{
+        height: 100%;
+        width: 100%;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 1rem;
+    }
+
+    .loginRightContainer{
+        height: 100%;
+        width: 55%;
+        border-radius: 1rem;
+        background-color: #c1c1c1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: all 1s;
+        display: none;
+    }
+
+    .loginMpgiaLogo{
+        width: 30%;
+    }
+
+    .loginImg{
+        width: 60%;
+    }
+
+    .loginLogoBackground{
+        display: flex;
+        justify-content: center;
+        border-radius: 1rem;
+        background-color: #f2f2f2;
+        height: 50%;
+        padding: 1rem;
+    }
+
+    .loginImgText{
+        margin-top: 1rem;
+        text-align: center;
+        width: 60%;
+        color: #333;
+        font-weight: 650;
+        font-size: 1.2rem;
+    }
+
+    .loginTextSmall{
+        margin-top: 0.5rem;
+        text-align: center;
+        width: 60%;
+        color: #333;
+        font-weight: 200;
+        font-size: 0.8rem;
+    }
+
+    .formTitle{
+      font-size: 35px;
+      font-weight: bolder;
+    }
+
+    .formBien{
+      font-size: 20px;
+    }
+
+    .formContainer{
+        padding: 0.5rem;
+        width: 70%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formBoton{
+      width: 100%;
+    }
+
+    .formContainer input{
+      background-color: rgb(51, 49, 49);
+      border: #030713;
+      height: 7vh;
+      color: #a19c9c !important;
+    }
+    .formContainer span{
+      
+    }
+
+    .formCuenta{
+      cursor: pointer;
+    }
+
+
+    .formContainer input:focus{
+      background-color: rgb(51, 49, 49);
+      border: #030713;
+      height: 7vh;
+      border: black 1px solid;
+    }
+
+    .formContainer label{
+      font-size: 13px;
+    }
+
+    .loginSelect{
+        width: 100%;
+    }
+
+    .expandedR{
+        width: 100%;
+        background-color: #f1f1f1;
+        display: flex;
+    }
+
+    .expandedL{
+        width: 0%;
+        display: none;
+    }
+
+    .expandedContainer{
+        width: 50vw;
+    }
+
+    .circuloCheck{
+        background-color: #25B22B;
+        width: 35%;
+        height: 60%;
+        border-radius: 50%;
+    }
+
+    .logo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    
+    .wrapper{width:8rem;height:8rem;display:flex;justify-content:center;align-items:center;background-color:transparent}
+    
+    .checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 97.6%;stroke-miterlimit: 10;stroke: #7ac142;fill: none;animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}
+
+    .checkmark{height: 100%;border-radius: 50%;display: block;stroke-width: 2;stroke: #fff;stroke-miterlimit: 10;margin: 10% auto;box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}
+    
+    .checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards}@keyframes stroke{100%{stroke-dashoffset: 0}}@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+
+    .checkmarkX {
+        height: 100%;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        box-shadow: inset 0px 0px 0px #a32424;
+        animation: fill .4s ease-in-out 1s forwards, scale .3s ease-in-out .9s both;
+      }
+      
+      .checkmark_circleX {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 97.6%;
+        stroke-miterlimit: 10;
+        stroke: #a32424;
+        fill: transparent;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+      
+      .checkmark_checkX {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.5s forwards;
+      }
+
+      .progress-bar {
+        margin-top: 1rem;
+        width: 200px;
+        height: 20px;
+        background-color: #185E82;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      
+      .progress {
+        width: 0;
+        height: 100%;
+        background-color: #7ac142;
+        animation: progressAnimation 3s ease-in-out infinite;
+      }
+      
+      @keyframes progressAnimation {
+        0% {
+          width: 0;
+          background-color: #2377A2;
+        }
+        50% {
+          width: 100%;
+          background-color: #185E82;
+        }
+        100% {
+          width: 0;
+          background-color: #2377A2;
+        }
+      }
+}

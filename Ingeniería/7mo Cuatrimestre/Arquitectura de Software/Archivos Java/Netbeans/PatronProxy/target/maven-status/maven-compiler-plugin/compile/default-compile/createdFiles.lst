@@ -1,0 +1,5 @@
+com\mycompany\patronproxy\UserServiceLogger.class
+com\mycompany\patronproxy\UserService.class
+com\mycompany\patronproxy\BaseUserService.class
+com\mycompany\patronproxy\PatronProxy.class
+com\mycompany\patronproxy\ProxyClient.class

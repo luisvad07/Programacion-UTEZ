@@ -1,0 +1,5 @@
+com\mycompany\ejerpatronproxy\ArchivoDownloaderProxy.class
+com\mycompany\ejerpatronproxy\ArchivoDownloaderImpl.class
+com\mycompany\ejerpatronproxy\EjerPatronProxy.class
+com\mycompany\ejerpatronproxy\PaisUtil.class
+com\mycompany\ejerpatronproxy\ArchivoDownloader.class
