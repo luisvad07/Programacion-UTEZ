@@ -1,0 +1,164 @@
+- PERSON -
+GetAll
+GET - http://localhost:8080/api-airbnb/person/
+
+GetOne
+GET - http://localhost:8080/api-airbnb/person/1
+
+Insert
+POST - http://localhost:8080/api-airbnb/person/
+Ejemplo 1
+{
+    "fullname":null,
+    "birthday":null,
+    "user":{
+        "email":"jose@gmail.com",
+        "uid":"123pruebauid"
+    }
+}
+Ejemplo 2:
+{
+    "fullname":"Rodrigo",
+    "birthday":"2000-03-30",
+    "user":{
+        "email":"rock@gmail.com",
+        "uid":"123pruebauid2"
+    }
+}
+Ejemplo 3:
+{
+    "user":{
+        "email":"prueba@gmail.com",
+        "uid":"123pruebauid3"
+    }
+}
+
+Update
+PUT - http://localhost:8080/api-airbnb/person/
+{
+    "id":2,
+    "fullname":"Jose Luis",
+    "birthday":"2002-05-10",
+    "user":{
+		//Nota: Ignora los campos que haya aquí, incluyendo el id.
+		//Pero es necesario poner el objeto
+     }
+}
+
+Delete
+DELETE - http://localhost:8080/api-airbnb/person/1
+
+
+
+
+
+
+- USER -
+GetAll
+GET - http://localhost:8080/api-airbnb/user/
+
+GetOne
+GET - http://localhost:8080/api-airbnb/user/1
+
+Insert
+POST - http://localhost:8080/api-airbnb/user/
+//Nota: El usuario solo se inserta con persona
+
+Update
+PUT - http://localhost:8080/api-airbnb/user/
+{
+    "id":1,
+    "email":"pablo@gmail.com",
+    "uid":"123uidpruebaupdate",
+    "person":{
+        "id":1
+	   //Nota: Ignora los campos que haya aquí, pero el id y poner el objeto son obligatorio
+    }
+}
+
+Delete
+DELETE - http://localhost:8080/api-airbnb/user/1
+
+
+
+
+
+- DEPARTMENT - 
+GetAll
+GET - http://localhost:8080/api-airbnb/department/
+
+GetOne
+GET - http://localhost:8080/api-airbnb/department/1
+
+Insert
+POST - http://localhost:8080/api-airbnb/department/
+{
+    "name":"Casa bonita",
+    "location":"{\"lat\":\"0879233\"}",
+    "images":"{\"url\":\"http://fotocasa\"}",
+    "description":"casa de vacaciones",
+    "rating":6.4,
+    "quantity_rating":2,
+    "price":10050.50
+}
+
+Update
+PUT - http://localhost:8080/api-airbnb/department/
+{
+    "id":1,
+    "name":"Casa bonita",
+    "location":"{\"lat\":\"1089273\"}",
+    "images":"{\"url\":\"http://foto-update\"}",
+    "description":"Casa bonita con puertas rojas y paredes amarillas",
+    "rating":9.6,
+    "quantity_rating":7,
+    "price":5000.50
+}
+
+Delete
+DELETE - http://localhost:8080/api-airbnb/department/1
+
+
+
+
+
+- RENT -
+GetAll
+GET - http://localhost:8080/api-airbnb/rent/
+
+GetOne
+GET - http://localhost:8080/api-airbnb/rent/1
+
+Insert
+POST - http://localhost:8080/api-airbnb/rent/
+{
+    "description":"Vacaciones familiares.",
+    "initial_date":"2023-02-25",
+    "final_date":"2023-03-01",
+    "department":{
+        "id":1
+    },
+    "user":{
+        "id":1
+    }
+}
+
+Update
+PUT - http://localhost:8080/api-airbnb/rent/
+{
+    "id":1,
+    "description":"Vacaciones con amigos.",
+    "initial_date":"2023-02-25",
+    "final_date":"2023-03-01",
+    "department":{
+        "id":1
+    },
+    "user":{
+        "id":1
+    }
+}
+
+Delete
+DELETE - http://localhost:8080/api-airbnb/rent/1
+
+

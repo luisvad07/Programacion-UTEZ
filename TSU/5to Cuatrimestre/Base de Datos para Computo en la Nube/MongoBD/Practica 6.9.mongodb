@@ -1,0 +1,70 @@
+db.createCollection('students');
+
+db.students.insertMany([ 
+    { "_id": 1, "name": "Ana", "age": 20, "grades": [7, 8, 9], "major": "Math" },
+    { "_id": 2, "name": "Beto", "age": 18, "grades": [5, 6, 6], "major": "History" },
+    { "_id": 3, "name": "Carlos", "age": 22, "grades": [8, 7, 9], "major": "Math" },
+    { "_id": 4, "name": "Diana", "age": 19, "grades": [7, 8, 7], "major": "Chemistry" },
+    { "_id": 5, "name": "Eva", "age": 21, "grades": [9, 10, 8], "major": "Math" }
+])
+
+db.students.find()
+
+/*Buscar los estudiantes cuya edad sea mayor a 20.*/
+db.students.find(
+  {
+    age: {$gt:20}
+  }
+)
+
+/*Buscar los estudiantes cuya edad sea mayor o igual a 20.*/
+db.students.find(
+  {
+    $or:[
+      {age: {$gte: 20}}
+    ]
+  }
+)
+
+/*Buscar los estudiantes cuya edad sea menor a 20.*/
+db.students.find(
+  {
+    age: {$lt : 20}
+  }
+)
+
+/*Buscar los estudiantes cuya edad sea menor o igual a 20.*/
+db.students.find(
+  {
+    age: {$lte: 20}
+  }
+)
+
+/*Buscar los estudiantes cuyo nombre sea "Ana".*/
+db.students.find(
+  {
+    name: {$eq:"Ana"}
+  }
+)
+
+/*Buscar los estudiantes cuya carrera sea "Math" o "History".*/
+db.students.find(
+  {
+    major:{$in: ["Math", "History"]}
+  }
+)
+
+/*Buscar los estudiantes cuyo nombre no sea "Carlos".*/
+db.students.find(
+  {
+    name: {$eq:"Carlos"}
+  }
+)
+
+/*Buscar los estudiantes cuya carrera no sea "Math" ni "Chemistry".*/
+db.students.find(
+  {
+    major: {$ne: ["Math", "History"]}
+  }
+)
+

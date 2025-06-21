@@ -1,0 +1,98 @@
+
+.background-image {
+    background-image: url('../assets/fondo.png'); 
+    width: 100%; 
+    height: 100vh; 
+    background-size: cover; 
+    background-attachment: fixed; 
+}
+
+header { /*Etiqueta Header*/
+    background-color: aqua !important;
+    color: black !important;
+    width: 100% !important;
+    padding: 5px !important;
+}
+
+.header{ /*Clase Header*/
+    background-color: green;
+    width: 100%;
+    padding: 5px;
+}
+
+#header { /*Identificador Header*/
+    background-color: brown !important;
+    width: 100%;
+    padding: 5px;
+}
+
+.border-danger-img{
+    background-color: #f834348c !important;
+}
+
+.text-pink{
+    color: #d63384;
+}
+
+.text-brown{
+    color: #9E4C12;
+}
+
+.text-siu{
+    color: black;
+}
+
+.dark{
+    background-color: black;
+}
+
+.text-green{
+    color: green;
+}
+
+.text-you{
+    color: white;
+}
+
+.imgnormalizada img {
+    width: auto;
+    height: 350px;
+    max-height: 350px;
+}
+
+.imgcards img {
+    width: auto;
+    height: 50px;
+}
+
+.abs-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.form-control {
+    border-radius: 5rem;
+}
+
+.title {
+    color: white;
+}
+
+.hrlinea{
+    height: 2px;
+    border: 3px solid #3D9982;
+    color: #3D9982;
+    background-color: #3D9982;
+    opacity: 100;
+}
+
+.bordered { 
+    border: solid #ccc 1px; 
+    -moz-border-radius: 20px; 
+    -webkit-border-radius: 20px; 
+    border-radius: 20px; 
+    -webkit-box-shadow: 0 3px #ccc; 
+    -moz-box-shadow: 0 3px #ccc; 
+    box-shadow: 0 3px #ccc; 
+}
+        

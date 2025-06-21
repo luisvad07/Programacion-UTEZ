@@ -1,0 +1,3 @@
+puerto de enlace: practicabase06.ctxgdjepitle.us-east-1.rds.amazonaws.com
+usuario: adminchiquito
+contraseña: cr8siuuu

@@ -1,0 +1,34 @@
+db.createCollection('products');
+
+db.products.insertMany([ 
+    { "_id": 1, "name": "Laptop", "price": 800, "in_stock": true },
+    { "_id": 2, "name": "Mouse", "price": 20, "in_stock": true },
+    { "_id": 3, "name": "Keyboard", "price": 50, "in_stock": false },
+    { "_id": 4, "name": "Headphones", "price": 30, "in_stock": false }
+])
+
+db.products.find()
+
+/*$and: buscar los productos que estén en stock y cuyo precio sea mayor a 25.*/
+db.products.find({
+  $and: [
+    {in_stock: true},
+    {price: {$gt: 25}}
+  ]
+})
+
+/*$or: buscar los productos que estén en stock o cuyo precio sea menor o igual a 30.*/
+db.products.find({
+  $or: [
+    {in_stock: true},
+    {price: {$lte: 30}}
+  ]
+})
+
+/*$not: buscar los productos que no estén en stock.*/
+db.products.find({
+  in_stock:{ 
+    $not: { $eq: true}
+    }
+})
+

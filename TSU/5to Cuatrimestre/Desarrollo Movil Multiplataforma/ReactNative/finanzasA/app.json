@@ -1,0 +1,61 @@
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location.",
+          "isAndroidBackgroundLocationEnabled": "Allow $(PRODUCT_NAME) to use your location."
+        }
+      ]
+    ],
+    "name": "finanzasA",
+    "slug": "finanzasA",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "mx.edu.utez.finanzasA"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "mx.edu.utez.finanzasA",
+      "googleServicesFile":"./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAXJpc5wghT5eBeSwAWENr34tOYH204158"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "bfb53514-634b-4ff3-bb6d-8cb690a0af45"
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+db.usuarios.insertMany([
+    {nombre: "Juan", edad: 25, correo: "juan@example.com"},
+    {nombre: "Ana", edad: 30, correo: "ana@example.com"},
+    {nombre: "Pedro", edad: 28, correo: "pedro@example.com"},
+    {nombre: "Maria", edad: 22, correo: "maria@example.com"},
+    {nombre: "Luis", edad: 35, correo: "luis@example.com"},
+    {nombre: "Sofia", edad: 27, correo: "sofia@example.com"},
+    {nombre: "Carlos", edad: 31, correo: "carlos@example.com"},
+    {nombre: "Laura", edad: 29, correo: "laura@example.com"},
+    {nombre: "Diego", edad: 26, correo: "diego@example.com"},
+    {nombre: "Marta", edad: 33, correo: "marta@example.com"}
+])
+
+db.usuarios.find()
+
+db.usuarios.createIndex({nombre:1})
+db.usuarios.createIndex({nombre:1, edad:1})
+
+db.usuarios.find({
+    nombre: "Diego", correo: "diego@example.com"
+}).explain()
+
+db.usuarios.aggregate([
+    {
+    $match: {
+      nombre: "Diego"
+    }}
+]).explain()
+
+db.usuarios.insertOne({
+    nombre: "Luis", correo: "luisvalladolid@example.com"
+})
+
+db.usuarios.getIndexes()
+

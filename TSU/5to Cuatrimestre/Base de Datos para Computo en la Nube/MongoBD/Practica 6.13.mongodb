@@ -1,0 +1,36 @@
+db.createCollection('books');
+
+db.books.insertMany([
+  { "_id": 1, "title": "El Aleph", "author": "Jorge Luis Borges", "genre": "Fantasía", "year":1949, "rating": 4.2 },
+  { "_id": 2, "title": "Rayuela", "author": "Julio Cortázar", "genre": "Novela", "year": 1963,"rating": 4.1 },
+  { "_id": 3, "title": "Cien años de soledad", "author": "Gabriel García Márquez", "genre": "Novela", "year": 1967, "rating": 4.5 },
+  { "_id": 4, "title": "El Quijote de la Mancha", "author": "Miguel de Cervantes", "genre":"Novela", "year": 1605, "rating": 4.8 },
+  { "_id": 5, "title": "La Odisea", "author": "Homero", "genre": "Epopeya", "year": -800,"rating": 4.7 }
+])
+
+db.books.find()
+
+/*$and: buscar las películas que sean de género "Drama" y hayan sido estrenadas entre 1990 y 2000.*/
+db.books.find({
+  $and:[
+    {genre: "Novela"},
+    {year: {$gt: 1950}}
+  ]
+})
+
+/*$or: buscar las películas que sean de género "Action" o "Adventure" y tengan una calificación mayor o igual a 8.5.*/
+db.books.find({
+  $or:[
+    {author: "Jorge Luis Borges"},
+    {author: "Gabriel García Márquez"}
+  ], rating: {$gte: 4.3}
+})
+
+/*$not: buscar las películas que no sean de género "Fantasy" y tengan una calificación menor a 8.0.*/
+db.books.find({
+  $and:[
+    {genre: {$ne: "Epopeya"}},
+    {year: {$lt: 4.5}}
+  ]
+})
+

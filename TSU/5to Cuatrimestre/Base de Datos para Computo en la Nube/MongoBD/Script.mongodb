@@ -1,0 +1,123 @@
+use base1
+db.libros.drop()
+
+db.libros.insertOne(
+  {
+    _id: 1,  
+    titulo: 'El aleph',
+    autor: 'Borges',
+    editorial: ['Siglo XXI','Planeta'],
+    precio: 20,
+    cantidad: 50 
+  }
+)
+db.libros.insertOne(
+  {
+    _id: 2,  
+    titulo: 'Martin Fierro',
+    autor: 'Jose Hernandez',
+    editorial: ['Siglo XXI'],
+    precio: 50,
+    cantidad: 12
+  }
+)
+db.libros.insertOne(
+  {
+    _id: 3,  
+    titulo: 'Aprenda PHP',
+    autor: 'Mario Molina',
+    editorial: ['Siglo XXI','Planeta'],
+    precio: 50,
+    cantidad: 20
+  }
+)
+db.libros.insertOne(
+  {
+    _id: 4,  
+    titulo: 'Java en 10 minutos',
+    editorial: ['Siglo XXI'],
+    precio: 45,
+    cantidad: 1 
+  }
+)
+
+db.libros.find({
+    cantidad: {}
+})
+
+db.libros.find({
+    editorial:{}
+})
+
+db.libros.find({
+    precio: {$}
+})
+
+db.libros.find()
+
+db.libros.find({
+    _id: {$eq: 1}
+})
+
+//Actualizar
+db.libros.updateOne(
+  //Documento a buscar
+  {_id: {$eq: 1}},
+  //Valores que se van a actualizar
+  { $set: {cantidad: 5, precio: 50}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  { $set: {sbn: ''}}
+)
+
+db.libros.updateMany(
+  
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  { $set: {SBN: 'SBN123'}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  { $unset: {sbn: ''}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  {$push: {editorial:'Siglo XXI'}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  {$push: {editorial:['Planeta', 'Otra']}}
+)
+
+//Pop Eliminar de Principio al Final y Pull Eliminar de Final al Principio
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  {$pull: {editorial:['Planeta', 'Otra']}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  {$pull: {editorial:'Planeta'}}
+)
+
+db.libros.updateOne(
+  {_id: {$eq: 1}},
+  {$pop:pull: {editorial:1}}
+)
+
+db.createCollection('numeros');
+for (i=1; i<=10; i++) {
+  aux = 0;
+  db.numeros.insertOne({
+    valor: i,
+    auxiliar: aux
+  })
+}
+db.numeros.find()

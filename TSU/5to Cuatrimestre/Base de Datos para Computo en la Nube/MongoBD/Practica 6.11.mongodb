@@ -1,0 +1,35 @@
+db.createCollection('employees');
+
+db.employees.insertMany([ 
+    { "_id": 1, "name": "John", "age": 25, "department": "IT", "salary": 5000 },
+    { "_id": 2, "name": "Jane", "age": 30, "department": "Marketing", "salary": 6000 },
+    { "_id": 3, "name": "Bob", "age": 35, "department": "IT", "salary": 7000 },
+    { "_id": 4, "name": "Alice", "age": 40, "department": "HR", "salary": 8000 }
+])
+
+db.employees.find()
+
+/*$and: $and: buscar los empleados cuyo salario sea mayor a 6000 y pertenezcan al departamento de IT.*/
+db.employees.find({
+  $and:[
+    {department: "IT"},
+    {salary: {$gt: 6000}}
+  ]
+})
+
+/*$or: buscar los empleados que sean mayores de 35 años o cuyo salario sea mayor a 7000.*/
+db.employees.find({
+  $or:[
+    {age: {$gt: 35}},
+    {salary: {$gt: 7000}}
+  ]
+})
+
+/*$not: buscar los empleados que no pertenezcan al departamento de HR.*/
+db.employees.find({
+  department:{
+    $not : {
+      $eq: "HR"
+    }
+  }
+})

@@ -1,0 +1,53 @@
+GETS
+Departamento: http://localhost:8080/redre/departamento/
+Responsable: http://localhost:8080/redre/responsable/
+Asesor: http://localhost:8080/redre/asesor/
+Estudiante: http://localhost:8080/redre/estudiante/
+Archivos Subidos al Servidor: http://localhost:8080/redre/files/all
+Mensajes Responsable: http://localhost:8080/redre/mensajesDepartamento/{nombreResponsable}
+Mensajes Asesor: http://localhost:8080/redre/mensajesResponsables/{nombreAsesor}
+Mensajes Estudiante: http://localhost:8080/redre/mensajesAsesor/{nombreEstudiante}
+Consultas: http://localhost:8080/redre/consultas/    
+
+GETS por id
+Departamento: http://localhost:8080/redre/departamento/id
+Responsable: http://localhost:8080/redre/responsable/id
+Asesor: http://localhost:8080/redre/asesor/id
+Estudiante: http://localhost:8080/redre/estudiante/id
+Todos los Archivos Subidos al Servidor: http://localhost:8080/redre/files/upload
+Archivos Subidos al Servidor: http://localhost:8080/redre/files/nombre.pdf
+Movil: http://localhost:8080/redremovil/archivos/{carrera}
+
+POST
+Departamento: http://localhost:8080/redre/departamento/
+Responsable: http://localhost:8080/redre/responsable/
+Asesor: http://localhost:8080/redre/asesor/
+Estudiante: http://localhost:8080/redre/estudiante/
+Archivos Subidos al Servidor: http://localhost:8080/redre/files/upload
+Mensajes Departamento: http://localhost:8080/redre/mensajesDepartamento/Dp/
+Mensajes Responsable: http://localhost:8080/redre/mensajesResponsables/Rs
+Mensajes Asesor: http://localhost:8080/redre/mensajesAsesor/As/
+Consultas: http://localhost:8080/redre/consultas/
+Movil: http://localhost:8080/redremovil/archivos/    
+
+
+PUT por id
+Departamento: http://localhost:8080/redre/departamento/id
+Responsable: http://localhost:8080/redre/responsable/id
+Asesor: http://localhost:8080/redre/asesor/id
+Estudiante: http://localhost:8080/redre/estudiante/id
+
+
+PATCH por id
+Departamento: http://localhost:8080/redre/departamento/id
+Responsable: http://localhost:8080/redre/responsable/id
+Asesor: http://localhost:8080/redre/asesor/id
+Estudiante: http://localhost:8080/redre/estudiante/id
+
+Otros Metodos
+http://localhost:8080/redre/mensajesAsesor/Andrea?nombre=Andrea
+http://localhost:8080/messages?name=Mi mensaje completo
+http://localhost:8080/redremovil/archivos/Gestion%20y%20Desarrollo (para buscarlos completo)
+
+Login
+http://localhost:8080/redre/auth/login

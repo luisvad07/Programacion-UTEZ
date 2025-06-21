@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repaso HTML</title>
+    <link rel="shortcut icon" href="./assets/img/veterinary.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/img/veterinary.png" width="30" height="30" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#home">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Acerca de Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#redes">Redes Sociales</a>
+                        </li>
+                    </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+        </nav>
+    </header> 
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-10">
+                    <section id="home" class="shadow-sm p-3 mb-5 bg-body rounded">
+                        <h4 class="text-primary text-center">
+                            <i data-feather="github"></i> Bienvenido, conoce nuestros servicios
+                        </h4>
+                        <div class="container">
+                            <div class="row my-3">
+                                <div class="col-12 col-md-4 text-center">
+                                    <img width="300" height="200" alt="VETERINARIA-MORELOS, CUIDADO, PERROS" class="img-thumbnail  text-center" src="./assets/img/VT1.jpg">
+                                    <h5 class="my-2">Estética Canina</h5>
+                                    <small class="text-start">Ven y conoce a tu mascota, lo bañamos, lo cuidamos y lo tratamos</small>
+                                </div>
+                                <div class="col-12 col-md-4 text-center">
+                                    <img width="300" height="200" class="img-thumbnail" src="./assets/img/VT2.jpg">
+                                    <h5 class="my-2">Consulta de Mascotas</h5>
+                                    <small class="text-start">¿Tú mascota se encuentra enferma? No lo pienses más y ven a nuestra surcursal</small>
+                                </div>
+                                <div class="col-12 col-md-4 text-center">
+                                    <img width="300" height="200" class="img-thumbnail" src="./assets/img/VT3.jpg">
+                                    <h5 class="my-2">Vacunas </h5>
+                                    <small class="text-start">¿Tú mascota cuenta con todas sus vacunas?</small>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="about" class="shadow-sm p-3 mb-5 bg-body rounded">
+                        <h4 class="text-primary text-center">
+                            <i data-feather="help-circle"></i> Acerca de Nosotros 
+                        </h4>
+                        <div class="container">
+                            <p>Somos una empresa enfocada al cuidado de mascotas, nuestro objetivo de brindar un servicio comodo adecuado para que sus mascotas esten saludables y tengan una vida feliz.</p>
+                            <div class="row">
+                                <div class="col-12 col-md-6 text-center">
+                                    <div class="row d-flex">
+                                        <div class="col-12">
+                                            <img src="./assets/img/like.png" width="100" height="100" alt="">
+                                            <p class="text-pink">Amor por las mascotas</p>
+                                        </div>
+                                        <div class="col-12">
+                                            <img src="./assets/img/gato.png" width="100" height="100" alt="">
+                                            <p class="text-brown">Dedicación a las mascotas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7547.515119165977!2d-99.22019273053134!3d18.94212235180997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cddfc411160fd3%3A0x89f6deebfcec0a32!2sClinica%20Veterinaria%20Vista%20Hermosa!5e0!3m2!1ses!2smx!4v1673538388356!5m2!1ses!2smx" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="contact" class="shadow-sm p-3 mb-5 bg-body rounded">
+                        <h4 class="text-primary text-center">
+                            <i data-feather="mail"></i> Contáctanos
+                        </h4>
+                        <div class="container">
+                            <form>
+                                <div class="row">
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Correo Electrónico</label>
+                                            <input type="email" class="form-control" id="email" placeholder="luis@gmail.com" aria-describedby="emailHelp" required>                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-6">
+                                        <div class="mb-3">
+                                            <label for="phone" class="form-label">Número de teléfono</label>
+                                            <input type="tel" class="form-control" id="phone" required>                                
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="mb-3">
+                                            <label for="description" class="form-label">Mensaje</label>
+                                            <textarea rows="3" class="form-control" id="description" required></textarea>                        
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-end">
+                                        <button class="btn btn-success px-3" type="submit">Enviar</button>
+                                    </div>
+                                </div>
+                            </form>  
+                        </div>
+                    </section>
+                </div>
+                <div class="col-12 col-md-2">
+                    <aside>
+                        <div class="card">
+                            <img src="./assets/img/Vacunas.jpg" class="card-img-top img-thumbnail border-danger-img" alt="VACUNAS-GRATIS, VETERINARIA-MORELOS">
+                            <div class="card-body">
+                              <h5 class="card-title text-danger">Campaña de vacuna antirrábica</h5>
+                              <p class="card-text">Ven a vacunar a tu mascota contra la rabia, aprovecha que del <b>1 al 30 de Enero la vacuna, ¡es gratis!</b></p>
+                            </div>
+                          </div>
+                    </aside>
+                </div>
+            </div>
+            <footer class="text-center text-lg-start bg-light text-muted">
+                <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom" id="redes">
+                    <div>
+                        <a target="_blank" href="https://es-la.facebook.com" class="me-4 text-reset">
+                            <i data-feather="facebook" class="text-primary"></i>
+                        </a>
+                        <a target="_blank" href="https://twitter.com/?lang=es" class="me-4 text-reset">
+                            <i data-feather="twitter" class="text-primary"></i>                        
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com" class="me-4 text-reset">
+                            <i data-feather="instagram" class="text-pink"></i>
+                        </a>
+                    </div>
+                </section>
+                <section class="">
+                    <div class="container text-center text-md-start mt-5">
+                        <div class="row mt-3">
+                            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    <i data-feather="github"></i> Clínica Veterinaria Vista Hermosa
+                                </h6>
+                                <p>
+                                Ven y conocenos. siguenos en todas las redes sociales para más contenido
+                                </p>
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    <i data-feather="activity" class="text-siu"></i> Servicios
+                                </h6>
+                                <p>
+                                    <a href="#!" class="text-reset">Estética Canina</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Atención Medica</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Vacunas</a>
+                                </p>
+                                <p>
+                                    <a href="#!" class="text-reset">Accesorios para mascotas</a>
+                                </p>
+                            </div>
+                            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4">
+                                    <i data-feather="watch" class="text-siu"></i> Horarios de Atención
+                                </h6>
+                                <p>
+                                    <a class="text-reset">8:00 AM - 7:30 PM Lunes - Viernes</a>
+                                </p>
+                                <p>
+                                    <a class="text-reset">8:00 AM - 6:30 PM  Sábado</a>
+                                </p>
+                                <p>
+                                    <a class="text-reset">9:30 AM - 2:30 PM Domingo</a>
+                                </p>
+                            </div>
+                            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                                <h6 class="text-uppercase fw-bold mb-4"><i data-feather="package" class="text-siu"></i> Contacto</h6>
+                                <p>
+                                    <i class="text-primary" data-feather="home"></i> Av. San Diego 206, zona 1, Vista Hermosa, 62290 Cuernavaca, Mor.</p>
+                                <p>
+                                    <i class="text-danger" data-feather="mail"></i> vet_vistahermosa@hotmail.com
+                                </p>
+                                <p>
+                                    <i data-feather="phone" class="text-siu"></i> 777 315 7802
+                                </p>
+                                <p>
+                                    <i data-feather="phone" class="text-siu"></i> 316 3515
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                    © 2023 Copyright:
+                    <a class="text-reset fw-bold" href="https://www.clinicaveterinariavistahermosa.com/" target="_blank">Clínica Veterinaria Vista Hermosa</a>
+                </div>
+            </footer>
+        </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>
+
+<!--
+    <header class="header" id="header" style="background-color: black; color:white;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8">
+                    <p class="bg-danger">Hola Mundo!</p>
+                </div>
+                <div class="col-4">
+                    <div class="bg-primary">.</div>
+                </div>
+                
+            </div>
+        </div>
+    </header>
+    <nav>
+        <li class="text-danger">
+            <a href="#home">Inicio</a>
+            <a href="#about">Acerca de Nosotros</a>
+            <a href="#contact">Contacto</a>
+        </li>
+    </nav>
+    <section id="home">
+        <h4>Inicio</h4>
+        <figure>
+            <img alt="VETERINARIA-CUIDA MASCOTAS-MASCOTAS" src="./assets/img/veterinaria.jpg" width="200" height="250"/>
+        </figure>
+        <small>
+            La limpieza y desinfección de las clínicas veterinarias ayuda a garantizar la seguridad y el bienestar de los animales y los profesionales.
+        </small>
+    </section>
+    <section id="about">
+        <h4>Acerca de Nosotros</h4>
+        <p>
+            Somos una empresa dedicada al cuidado de mascotas, con el objetivo de brindar un servicio comodo adecuado para que sus mascotas esten saludables
+        </p>
+    </section>
+    <section id="contact">
+        <h4>Contacto</h4>
+        <form action="">
+            <label>Correo Electronico</label>
+            <input type="email" id="email" required/>
+
+            <label>Telefono</label>
+            <input type="phone" id="phone" required minlength="10"/>
+
+            <label>Mensaje</label>
+            <textarea rows="3"></textarea>
+
+            <button type="submit">Enviar</button>
+
+            <input type="color" />
+        </form>
+    </section>
+    <section>
+        <div class="container-fluid">
+            <div class="row">
+              <div class="bg-primary col-12 col-md-6 col-xl-4">
+                
+              </div>
+            </div>
+          </div>
+    </section>
+    <aside>
+
+    </aside>
+    <footer>
+        <p>Create by @soyluisvalladolid</p>
+    </footer>
+
+-->

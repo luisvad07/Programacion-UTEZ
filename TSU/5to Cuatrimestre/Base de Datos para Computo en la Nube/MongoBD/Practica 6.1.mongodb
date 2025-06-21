@@ -1,0 +1,71 @@
+db.createCollection('employees');
+
+db.employees.insertMany([
+    {"name": "John", "age": 28, "gender": "M", "salary": 5000, "department": "Sales"},
+    {"name": "Sarah", "age": 32, "gender": "F", "salary": 6000, "department": "Marketing"},
+    {"name": "David", "age": 26, "gender": "M", "salary": 4500, "department": "Sales"},
+    {"name": "Maria", "age": 35, "gender": "F", "salary": 7000, "department": "Marketing"},
+    {"name": "Robert", "age": 29, "gender": "M", "salary": 5500, "department": "Sales"},
+    {"name": "Samantha", "age": 27, "gender": "F", "salary": 6500, "department": "Marketing"}
+])
+
+db.employees.find()
+
+/*$group: agrupar los documentos por departamento y calcular el salario promedio de cada departamento.*/
+db.employees.aggregate([
+  {
+    $group: {
+      _id: "$department",
+      avgSalary: {$avg: "$salary"}
+    }
+  }
+])
+
+/*$match: buscar los empleados con salario mayor o igual a 6000.*/
+db.employees.aggregate([
+  {
+    $match: {
+      salary: {$gte:6000}
+    }
+  }
+])
+
+/*$sample: obtener una muestra aleatoria de 3 documentos de la colección.*/
+db.employees.aggregate([
+  {
+    $sample: {
+      size: 3
+    }
+  }
+])
+
+/*$project: mostrar solo los campos name, age y department de los documentos.*/
+db.employees.aggregate([
+  {
+    $project: {
+      name:1,
+      age:1,
+      department:1,
+      _id:0
+    }
+  }
+])
+
+/*$addFields: agregar un campo bonus a cada documento con un valor igual al 10% del salario.*/
+db.employees.aggregate([
+  {
+    $addFields: {
+      bonus:{$multiply:["$salary", 0.1]}
+    }
+  }
+])
+
+/*$sort: ordenar los documentos por edad de manera descendente.*/
+db.employees.aggregate([
+  {
+    $sort: {
+      age: -1
+    }
+  }
+])
+

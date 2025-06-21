@@ -1,0 +1,184 @@
+use test
+show collections;
+
+/*Crear o usar una BD */
+use base1
+
+/*Comando para las colecciones*/
+db.getCollectionNames()
+/*Ver la base de datos actual*/
+db.getName()
+/*Crear coleccion*/
+db.createCollection('base1')
+db.createCollection('libros')
+db.createCollection('autores')
+
+/*Ayuda*/
+db.help()
+
+db.autores.insertOne(
+    {
+        id: 'A20231',
+        nombre: 'Luis',
+        apellido: 'Valladolid',
+        edad: 25
+    }
+);
+
+db.autores.insertMany(
+    [
+        {
+            nombre: 'Messi',
+            edad: 38
+        },
+        {
+            nombre: 'Ronaldo',
+        },
+        {
+            nombre: 'Tio Paco',
+            telefono: 7771234567
+        },
+    ]
+);
+
+db.libros.insertMany(
+    [
+        {
+            codigo: 3,
+            nombre: 'Aprenda PHP',
+            autor: 'Mario Molina',
+            editoriales: ['planeta']
+        },
+        {
+            codigo: 4,
+            nombre: 'Java en 10 minutos',
+            autor: 'Barros Sergio',
+            editoriales: ['planeta', 'Siglo XXI']
+        }
+    ]
+);
+
+db.libros.insertOne(
+    {
+        codigo: 3,
+        nombre: 'El Principito',
+        autor: 'Pablito',
+        editoriales: [{
+            nombre: "Editorial Tia Paola",
+            direccion: 'Temixco',
+            telefono: '7771234567'
+        },
+        {
+           nombre: "Editorial El Carnal",
+            direccion: 'Cuernavaca',
+            telefono: '7777654321' 
+        }]
+    }
+);
+
+
+db.autores.find()
+db.libros.find()
+
+
+db.createCollection('Alumnos');
+
+/* Registro con ID generado */
+db.Alumnos.insertOne(
+    {
+        _id: new Date(),
+        nombre: 'Luis Valladolid',
+        carrera: 'DSM',
+        grado: 5,
+        grupo: 'A'
+    }
+);
+
+db.Alumnos.insertOne(
+    {
+        _id: 'aaaa003',
+        nombre: 'El Risas',
+        carrera: 'DSM',
+        grado: 5,
+        grupo: 'B'
+    }
+);
+
+db.Alumnos.find()
+
+db.Alumnos.deleteMany(
+    {
+        grado: 5,
+        grupo: 'B'
+    }
+);
+
+db.createCollection('checador');
+
+db.checador.insertOne(
+    {
+        _id: 'aaaa003',
+        nombre: 'Luis Valladolid',
+        carrera: 'DSM',
+        grado: 5,
+        grupo: 'B'
+    }
+);
+
+/*********************************************************** */
+
+db.discos.aggregate([
+  {
+    $project: {
+      _id: 0,
+      // Concatenar el nombre del artista y el título del álbum separados por " - "
+      album: {
+        $concat: ["$artista", " - ", "$titulo"]
+      },
+      // Dividir la cadena "a/<3/<3/<3" en un array usando "/" como delimitador
+      album_split: {
+        $split: ["a/<3/<3/<3", "/"]
+      },
+    //comparar cadena
+    //0 -> iguales | 1 -> cadena1 > cadena2 | -1 -> cadena1 < cadena2
+    //ignora mayusculas y minusculas
+    //compara el codigo ascii de los caracteres de las cadenas
+    comparacion: {
+      $strcasecmp: ["cris", "acris"]
+    },
+    //encontrar el indice donde se encuenta una subcadena | si no se encuentra devuelve -1
+    indice: {
+      $indexOfBytes: ["cristophersotoventura@gmail.com", "@"]
+    },
+    //convertir a mayusculas
+    MAYUS: {
+      $toUpper: "Cristopher Soto Ventura"
+    },
+    //convertir a minusculas
+    MINUS: {
+      $toLower: "Cristopher Soto Ventura"
+    },
+    //obtener el numero de caracteres
+    numDeCaracteres: {
+      $strLenBytes: "Cristopher Soto Ventura"
+    },
+    //Obtener de que index a que index se encuentra la palabra Soto
+    Resultado: {
+  $concat: [
+    "La palabra Soto se encuentra en el index ",
+    { $toString: { $indexOfBytes: ["Cristopher Soto Ventura", "Soto"] } },
+    " y termina en el index ",
+    { $toString: { $add: [ { $indexOfBytes: ["Cristopher Soto Ventura", "Soto"] }, { $strLenBytes: "Soto" } ] } }
+    ]
+    },
+    }
+  }
+])
+
+db.estudiantes.aggregate([
+  {
+    $match: {
+      nombre: {$regex:/C/, $options:'i'}
+    }
+  }
+])

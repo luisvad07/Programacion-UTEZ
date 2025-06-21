@@ -1,0 +1,64 @@
+db.createCollection('movies');
+
+db.movies.insertMany([
+    { "title": "The Shawshank Redemption", "year": 1994, "genre": ["Drama"], "director": "Frank Darabont", "box_office": 283.4 },
+    { "title": "The Godfather", "year": 1972, "genre": ["Crime", "Drama"], "director": "Francis Ford Coppola", "box_office": 246.9 },
+    { "title": "The Dark Knight", "year": 2008, "genre": ["Action", "Crime", "Drama"], "director": "Christopher Nolan", "box_office": 1004.9 },
+    { "title": "The Lord of the Rings: The Return of the King", "year": 2003, "genre": ["Action", "Adventure", "Drama"], "director": "Peter Jackson", "box_office": 1144.2 },
+    { "title": "Forrest Gump", "year": 1994, "genre": ["Drama", "Romance"], "director": "Robert Zemeckis", "box_office": 677.9 },
+    { "title": "The Matrix", "year": 1999, "genre": ["Action", "Sci-Fi"], "director": "Lana Wachowski", "box_office": 463.5 }
+])
+
+db.movies.find()
+
+/*$group: agrupar las películas por género y calcular la cantidad de películas y la recaudación (box_office) total de cada género.*/
+db.movies.aggregate([
+  {
+    $group: {
+      _id: "$genre",
+      count: {$sum: 1},
+      totalBox_office: {$sum: "$box_office"}
+    }
+  }
+])
+
+/*$match: buscar las películas estrenadas después del año 2000.*/
+db.movies.aggregate([
+  {
+    $match: {
+      year:{$gt:2000}
+    }
+  }
+])
+
+/*$sample: obtener una muestra aleatoria de 3 películas de la colección.*/
+db.movies.aggregate([
+    {
+      $sample:{
+        size:3
+      }
+    }
+])
+
+/*$project: mostrar solo los campos title, year y director de los documentos.*/
+db.movies.aggregate([
+    {
+        $project: {
+            title: 1,
+            year: 1,
+            director: 1,
+            _id: 0
+        }
+    }
+])
+
+/*$sort: ordenar las películas por recaudación total de manera descendente.*/
+db.movies.aggregate([
+  {
+    $sort: {
+      box_office: -1
+    }
+  }
+])
+
+

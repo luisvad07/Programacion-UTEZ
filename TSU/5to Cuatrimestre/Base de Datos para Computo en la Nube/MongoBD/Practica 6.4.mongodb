@@ -1,0 +1,64 @@
+db.createCollection('books');
+
+db.books.insertMany([ 
+    { "title": "1984", "author": "George Orwell", "year": 1949, "genre": ["Dystopian", "Political fiction"], "sales": 25.0 },
+    { "title": "To Kill a Mockingbird", "author": "Harper Lee", "year": 1960, "genre": ["Southern Gothic", "Coming-of-age"], "sales": 40.0 },
+    { "title": "The Great Gatsby", "author": "F. Scott Fitzgerald", "year": 1925, "genre": ["Historical fiction", "Tragedy"], "sales": 30.0 },
+    { "title": "Pride and Prejudice", "author": "Jane Austen", "year": 1813, "genre": ["Romantic novel", "Comedy of manners"], "sales": 20.0 },
+    { "title": "One Hundred Years of Solitude", "author": "Gabriel García Márquez", "year": 1967, "genre": ["Magical realism", "Historical fiction"], "sales": 15.0 },
+    { "title": "The Catcher in the Rye", "author": "J.D. Salinger", "year": 1951, "genre": ["Coming-of-age", "Literary realism"], "sales": 18.0 }
+])
+
+db.books.find()
+
+/*$group: agrupar los libros por autor y calcular la cantidad de libros y las ventas totales de cada autor.*/
+db.books.aggregate([
+  {
+    $group: {
+      _id: "$author",
+      total_books: {$sum: 1},
+      total_sales:{ $sum: "$sales"}
+    }
+  }
+])
+
+/*$match: buscar los libros con ventas totales mayores o iguales a 25.*/
+db.books.aggregate([
+  {
+    $match: {
+      sales:{$gte:25}
+    }
+  }
+])
+
+/*$sample: obtener una muestra aleatoria de 2 libros de la colección.*/
+db.books.aggregate([
+    {
+      $sample:{
+        size:2
+      }
+    }
+])
+
+/*$project: mostrar solo los campos title, year y author de los documentos.*/
+db.books.aggregate([
+    {
+    $project: {
+      _id: 0,
+      title: 1,
+      year: 1,
+      author: 1
+    }
+  }
+])
+
+/*$sort: ordenar los libros por ventas totales de manera descendente.*/
+db.books.aggregate([
+  {
+    $sort: {
+      sales: -1
+    }
+  }
+])
+
+

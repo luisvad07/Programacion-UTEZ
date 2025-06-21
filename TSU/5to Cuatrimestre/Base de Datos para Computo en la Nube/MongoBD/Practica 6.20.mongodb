@@ -1,0 +1,66 @@
+db.products.insertMany([
+    { "name": "iPhone 12", "price": 999, "category": "Electronics", "stock": 100 },
+    { "name": "Samsung Galaxy S21", "price": 899, "category": "Electronics", "stock": 50 },
+    { "name": "Macbook Pro", "price": 1999, "category": "Electronics", "stock": 20 },
+    { "name": "iPad Air", "price": 599, "category": "Electronics", "stock": 75 },
+    { "name": "Nike Air Max 270", "price": 150, "category": "Shoes", "stock": 200 },
+    { "name": "Adidas Superstar", "price": 80, "category": "Shoes", "stock": 300 }
+])
+
+
+db.products.find()
+
+//1. Obtener la cantidad total de unidades vendidas
+db.products.aggregate([
+  //agrupamiento 
+  { $group: { _id: "$category",
+  precioProm: {$avg:"$price"},
+  cantidadT: {$sum:"$stock"},
+  }}
+])
+
+//2. Obtener la cantidad total de dinero obtenido por las ventas
+db.products.aggregate([
+  { $match: { price: { $lte: 100 } } }
+]);
+
+//3. Obtener el producto más vendido
+db.products.aggregate([
+  { $sample: { size: 2 } } 
+]);
+
+
+//4. Obtener todas las ventas realizadas en el mes de enero de 2022
+db.products.aggregate([
+{
+    $project: {
+      name: 1,
+      category: 1,
+      stock: 1,
+      _id: 0,
+    }
+  }
+])
+
+//5. Obtener todas las ventas realizadas cuyo precio unitario sea mayor a 100 y que tengan una cantidad vendida mayor que 10
+db.products.aggregate([
+  {
+    $addFields:{
+      discountedPrice:{$multiply:["$price",.10]}
+    }
+  }
+])
+
+//6. Obtener todas las ventas que correspondan a un producto que incluya la palabra "procesador" en su nombre
+db.products.aggregate([
+  {
+    $sort: {
+      amount: -1
+    }
+  }
+])
+
+/*
+    7.	Obtener todas las ventas realizadas en un cierto rango de fecha (Del 1 de enero del 2022 al 1 de febrero del 2022)
+    8.	Obtener todas las ventas realizadas con un precio entre 100 y 200
+ */

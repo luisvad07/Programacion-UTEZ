@@ -1,0 +1,32 @@
+db.createCollection('students');
+
+db.students.insertMany([
+  { "_id": 1, "name": "Juan", "age": 20, "gender": "M", "grades": [8, 9, 7, 10] },
+  { "_id": 2, "name": "María", "age": 19, "gender": "F", "grades": [9, 8, 8, 9] },
+  { "_id": 3, "name": "Pedro", "age": 22, "gender": "M", "grades": [7, 6, 8, 9] },
+  { "_id": 4, "name": "Ana", "age": 21, "gender": "F", "grades": [10, 9, 8, 7] },
+  { "_id": 5, "name": "Luis", "age": 19, "gender": "M", "grades": [7, 8, 6, 8] }
+])
+
+db.students.find()
+
+/*$and: buscar los estudiantes que sean hombres y tengan más de 20 años.*/
+db.students.find({
+  $and:[
+    {gender: "M"},
+    {age: {$gt: 20}}
+  ]
+})
+
+/*$or: buscar los estudiantes que sean mujeres y hayan sacado al menos una calificación de 10.*/
+db.students.find({
+  $and:[
+    {gender: "F"},
+    {grades: {$elemMatch: {$eq: 10}}}
+  ]
+})
+
+/*$not: buscar los estudiantes que no hayan sacado ninguna calificación de 6.*/
+db.students.find({
+  grades: {$not : { $elemMatch: {$eq: 6}}}
+})

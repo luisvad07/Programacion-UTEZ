@@ -1,0 +1,123 @@
+﻿//GET
+{
+    "obj": [
+        {
+            "id": 1,
+            "nombre": "Miguel",
+            "apellidos": "Dominguez Ortiz",
+            "correo": "migueldominguez@utez.edu.mx",
+            "password": "mike1234",
+            "divisionAcademica": "DATID",
+            "status": true,
+            "responsables": [
+                {
+                    "id": 1,
+                    "nombre": "Arturo",
+                    "apellidos": "Villareal Santoalla",
+                    "correo": "arturovillareal@utez.edu.mx",
+                    "password": "arturo1234",
+                    "status": true,
+                    "divisionAcademica": "DATID",
+                    "asesores": [
+                        {
+                            "id": 1,
+                            "nombre": "Jose Alberto",
+                            "apellidos": "García Muñoz",
+                            "correo": "albertogarcia@utez.edu.mx",
+                            "password": "pepe1234",
+                            "status": true,
+                            "divisionAcademica": "DATID",
+                            "estudiantes": [
+                                {
+                                    "id": 1,
+                                    "matricula": "20213TN011",
+                                    "nombre": "Andrea Michelle",
+                                    "apellidos": "Estrada Hernandez",
+                                    "correo": "20213tn011@utez.edu.mx",
+                                    "password": "mich1234",
+                                    "divisionAcademica": "DATID",
+                                    "carrera": "Desarrollo de Software",
+                                    "grado": 6,
+                                    "grupo": "A",
+                                    "status": true,
+                                    "urlReporte": "file:///C:/Users/SDI-PC02-2023/Downloads/reportemich.pdf",
+                                    "asesor": {
+                                        "id": 1,
+                                        "nombre": "Jose Alberto",
+                                        "apellidos": "García Muñoz",
+                                        "correo": "albertogarcia@utez.edu.mx",
+                                        "password": "pepe1234",
+                                        "status": true,
+                                        "divisionAcademica": "DATID",
+                                        "estudiantes": [
+                                            1
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "status": false,
+    "statusCode": 200,
+    "message": "OK"
+}
+
+//GET Reportes Subidos
+[
+    {
+        "name": "reporteluis.pdf",
+        "url": "http://localhost:8080/redre/files/reporteluis.pdf"
+    },
+    {
+        "name": "reportemich.pdf",
+        "url": "http://localhost:8080/redre/files/reportemich.pdf"
+    }
+]
+
+//GET Mensajes para cualquiera (Departamento, Asesor, Responsable)
+[
+    {
+        "id": 1,
+        "mensaje": "Falta Justificación",
+        "fechaEnvio": "2023-04-13T16:49:37.000Z",
+        "status": false,
+        "nombre": "Arturo",
+        "nombreD": "Miguel"
+    }
+],
+[
+    {
+        "id": 1,
+        "mensaje": "Sin comentarios",
+        "fechaEnvio": "2023-04-13T16:49:37.000Z",
+        "status": true,
+        "nombre": "Jose",
+        "nombreR": "Arturo"
+    }
+],
+[
+    {
+        "id": 1,
+        "mensaje": "Falta Justificación",
+        "fechaEnvio": "2023-04-13T16:49:37.000Z",
+        "status": false,
+        "nombre": "Andrea",
+        "nombreA": "Jose Alberto"
+    }
+]
+
+//GET Consulta
+[
+    {
+        "id": 1,
+        "nombreArchivo": "Miguel",
+        "tipo": "Reporte TSU",
+        "carrera": "Desarrollo",
+        "url": "http://localhost:8080/redre/files/Captura.PNG"
+    }
+]
+

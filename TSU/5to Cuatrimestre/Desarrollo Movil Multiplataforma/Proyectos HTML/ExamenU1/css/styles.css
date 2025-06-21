@@ -1,0 +1,62 @@
+header { /*Etiqueta Header*/
+    background-color: aqua !important;
+    color: black !important;
+    width: 100% !important;
+    padding: 5px !important;
+}
+
+.header{ /*Clase Header*/
+    background-color: green;
+    width: 100%;
+    padding: 5px;
+}
+
+#header { /*Identificador Header*/
+    background-color: brown !important;
+    width: 100%;
+    padding: 5px;
+}
+
+.border-danger-img{
+    background-color: #f834348c !important;
+}
+
+.text-pink{
+    color: #d63384;
+}
+
+.text-brown{
+    color: #9E4C12;
+}
+
+.text-siu{
+    color: black;
+}
+
+.dark{
+    background-color: black;
+}
+
+.text-green{
+    color: green;
+}
+
+.text-you{
+    color: white;
+}
+
+.imgnormalizada img {
+    width: auto;
+    height: 350px;
+    max-height: 350px;
+}
+
+.imgcards img {
+    width: auto;
+    height: 50px;
+}
+
+.abs-center {
+    align-items: center;
+    justify-content: center;
+}

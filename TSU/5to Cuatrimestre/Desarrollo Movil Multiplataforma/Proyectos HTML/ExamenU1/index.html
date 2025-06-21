@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify</title>
+    <link rel="shortcut icon" href="./assets/logos/spotify.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body>
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-10">
+                <section id="carrusel" class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <h4 class="text-primary text-center">
+                        <i data-feather="music"></i> NOTICIAS DE LA MÚSICA
+                    </h4>
+                    <div class="container">
+                        <div class="row justify-content-center" style="width: 100%;">
+                            <div class="col-sm-8">
+                                <div id="carouselExampleCaptions" class="carousel slide center" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+                                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                      <div class="carousel-item imgnormalizada active">
+                                        <img src="./assets/img/no me conoce.jfif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                          <h5 class="dark">No Me Conoce de Jhayco</h5>
+                                          <p class="dark">La mejor canción del 2019 aún se sigue escuchando en el mundo</p>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item imgnormalizada">
+                                        <img src="./assets/img/theweeknd.jfif" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                          <h5 class="dark">The Weeknd</h5>
+                                          <p class="dark">Planea hacer una canción en conmemoración al Gallo de Oro</p>
+                                        </div>
+                                      </div>
+                                      <div class="carousel-item imgnormalizada">
+                                        <img src="./assets/img/faraon.jpg" class="d-block w-100" alt="...">
+                                        <div class="carousel-caption d-none d-md-block">
+                                          <h5 class="dark">J Balvin y Faraón Love Shady</h5>
+                                          <p class="dark">Planean hacer una colaboración para sepultar a Residente</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Anterior</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                      <span class="visually-hidden">Siguiente</span>
+                                    </button>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-12 col-md-2" style="padding-top: 5px;">
+                <div class="card" style="width: 13rem;">
+                    <div class="card-header">
+                        Menú
+                    </div>
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item"><a data-bs-toggle="collapse" href="#lomasescuchado">Los más escuchados</a></li>
+                      <li class="list-group-item"><a data-bs-toggle="collapse" href="#electronica">Música Electrónica</a></li>
+                      <li class="list-group-item"><a data-bs-toggle="collapse" href="#reggaton">Música Reggaeton</a></li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+
+        <div class="row collapse" id="lomasescuchado">
+            <div class="col-12 col-md-10">
+                <section class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/shakira.jfif" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">Shakira: Bzrp Music Sessions, Vol. 53 - Bizarrap, Shakira.</span>
+                                          <p class="card-text">Ocupa la Posición #1</p>
+                                          <a href="./html/lomasescuchado/cancion1.html" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/rosalia.jfif" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">DESPECHÁ - ROSALÍA</span>
+                                          <p class="card-text">Ocupa la Posición #2</p>
+                                          <a href="./html/lomasescuchado/cancion2.html" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/stromae.jpg" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span  class="card-title h6">Alors on danse - Stromae</span>
+                                          <p class="card-text">Ocupa la Posición #3</p>
+                                          <a href="./html/lomasescuchado/cancion3.html" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row collapse" id="electronica">
+            <div class="col-12 col-md-10">
+                <section class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/stereolove.jfif" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">Stereo Love - Edward Maya y Vika Jigulina </span>
+                                          <p class="card-text">Ocupa la Posición #1</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/faded.jpg" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">Faded - Alan Walker</span>
+                                          <p class="card-text">Ocupa la Posición #2</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/ibiza.png" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">I Took a Pill in Ibiza (Seeb Remix) - Mike Posner</span>
+                                          <p class="card-text">Ocupa la Posición #3</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="row collapse" id="reggaton">
+            <div class="col-12 col-md-10">
+                <section class="shadow-sm p-3 mb-5 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/no me conoce.jfif" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">No Me Conoce (Remix) - Jhayco, J Balvin, Bad Bunny</span>
+                                          <p class="card-text">Ocupa la Posición #1</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/hawai.jpg" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">Hawai (Remix) - Maluma, The Weeknd</span>
+                                          <p class="card-text">Ocupa la Posición #2</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+
+                            <div class="col-12 col-md-4 text-center">
+                                <aside>
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="./assets/img/volví.jpg" class="card-img imgcards" alt="...">
+                                        <div class="card-body">
+                                          <span class="card-title h6">Volví - Aventura, Bad Bunny</span>
+                                          <p class="card-text">Ocupa la Posición #3</p>
+                                          <a href="#" class="btn btn-primary">Detalles</a>
+                                        </div>
+                                      </div>
+                                </aside>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+      </div>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+        feather.replace()
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+db.createCollection('ventas')
+
+db.ventas.insertOne({
+    "fecha": ISODate("2022-01-02T00:00:00Z"),
+    "producto": "A",
+    "cantidad": 10,
+    "precio": 15.99
+    })
+    db.ventas.insertOne({
+    "fecha": ISODate("2022-02-01T00:00:00Z"),
+    "producto": "B",
+    "cantidad": 20,
+    "precio": 10.99
+    })
+    db.ventas.insertOne({
+    "fecha": ISODate("2022-03-15T00:00:00Z"),
+    "producto": "C",
+    "cantidad": 5,
+    "precio": 7.99
+    })
+    db.ventas.insertOne({
+    "fecha": ISODate("2022-04-30T00:00:00Z"),
+    "producto": "D",
+    "cantidad": 15,
+    "precio": 25.99
+    })
+    db.ventas.insertOne({
+    "fecha": ISODate("2022-05-04T00:00:00Z"),
+    "producto": "E",
+    "cantidad": 12,
+    "precio": 18.99
+})
+
+db.ventas.find()
+
+//1. Obtener la cantidad total de productos vendidos en el día 32 del año (1 de febrero)
+db.ventas.aggregate([
+  {$addFields:{DiaAno:{$dayOfYear:"$fecha"}}},
+  {$match:{
+    DiaAño:{$eq:32}
+  }}
+])
+
+//2. Obtener la cantidad total de productos vendidos en el día 15 de cualquier mes.
+db.ventas.aggregate([
+  {$addFields:{DiaMes:{$dayOfMonth:"$fecha"}}},
+  {$match:{
+    DiaMes:{$eq:15}
+  }}
+])
+
+//3. Obtener la cantidad total de productos vendidos en un día de la semana en particular (por ejemplo, el martes).
+db.ventas.aggregate([
+  {$addFields:{DiaSem:{$dayOfWeek:"$fecha"}}},
+  {$match:{
+    DiaSem:{$eq:4}
+  }}
+])

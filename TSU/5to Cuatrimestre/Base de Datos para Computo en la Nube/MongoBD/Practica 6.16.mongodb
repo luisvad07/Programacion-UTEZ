@@ -1,0 +1,72 @@
+db.createCollection('ventas');
+
+db.ventas.insertMany([
+    {
+        "_id": 1,
+        "producto": "Camiseta",
+        "precio": 20,
+        "cantidad": 5
+    },
+    {
+        "_id": 2,
+        "producto": "Pantalón",
+        "precio": 40,
+        "cantidad": 3
+    },
+    {
+        "_id": 3,
+        "producto": "Zapatos",
+        "precio": 60,
+        "cantidad": 2
+    }
+])
+
+db.ventas.find()
+
+db.ventas.aggregate([
+    /*1. Usa el operador $add para sumar 5 al precio de todos los productos. */
+    { $addFields: { precio_5: { $add: [ "$precio", 5 ] } } },
+    /*2. Usa el operador $multiply para multiplicar la cantidad de cada producto por 2. */
+    { $addFields: { cantidad_2: { $multiply: [ "$cantidad", 2 ] } } },         
+])
+
+/*3. Usa el operador $subtract para restar 10 al precio de los productos con un precio mayor a 30. */
+db.ventas.aggregate([
+    { $match : { precio :{ $gt:30 } } },
+    { $addFields: { precio_resta_10: { $subtract: [ "$precio", 10 ] } } }
+])
+
+/*4. Usa el operador $divide para dividir el precio de los productos con un precio menor a 30 entre 2. */
+db.ventas.aggregate([
+    { $match : { precio :{ $lt:30 } } },
+    { $addFields: { divprod: { $divide: [ "$precio", 2 ] } } }
+])  
+
+/*5. Usa el operador $mod para obtener el resto de la división del precio de los productos por 3. */
+db.ventas.aggregate([
+    { $addFields: { restoDiv: { $mod: [ "$precio", 3 ] } } },
+])  
+
+db.ventas.aggregate([
+    /*6. Usa el operador $pow para elevar al cuadrado la cantidad de cada producto. */
+    { $addFields: { cantidad_cuadrado: { $pow: [ "$cantidad", 2 ] } } },  
+    /*7. Usa el operador $sqrt para obtener la raíz cuadrada del precio de los productos. */
+    { $addFields: { precio_raiz_cuadrada: { $sqrt: [ "$precio" ] } } },     
+    /*8. Usa el operador $exp para obtener el valor de e elevado a la cantidad de cada producto. */
+    { $addFields: { precio_exponencial: { $exp: [ "$cantifdad" ] } } },      
+    /*9. Usa el operador $ln para obtener el logaritmo natural del precio de los productos. */
+    { $addFields: { precio_logaritmo_natural: { $ln: [ "$precio" ] } } },                
+    /*10. Usa el operador $log para obtener el logaritmo en base 2 del precio de los productos. */
+    { $addFields: { precio_logaritmo_base_2: { $log: [ "$precio", 2 ] } } }           
+])
+
+db.ventas.aggregate([
+    /*11. Usa el operador $ceil para obtener el valor entero mayor o igual al precio de los productos. */
+    { $addFields: { precio_redondeado_arriba: { $ceil: [ "$precio" ] } } },  
+    /*12. Usa el operador $floor para obtener el valor entero menor o igual al precio de los productos. */
+    { $addFields: { precio_redondeado_abajo: { $floor: [ "$precio" ] } } }, 
+    /*13. Usa el operador $trunc para obtener la parte entera del precio de los productos. */
+    { $addFields: { precio_sin_decimales: { $trunc: [ "$precio" ] } } }, 
+    /*14. Usa el operador $abs para obtener el valor absoluto de la cantidad de cada product. */
+    { $addFields: { precio_absoluto: { $abs: [ "$cantidad" ] } } }      
+])

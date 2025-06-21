@@ -1,0 +1,35 @@
+
+/*Activar la base de datos "local" y luego imprimir las colecciones existentes*/
+use local
+show collections
+
+/*Activar la base de datos "test" y luego imprimir las colecciones existentes*/
+use test
+show collections
+
+/*Activar la base de datos "base1"*/
+use base1
+
+/*Mostrar las colecciones existentes en la base de datos "base1"*/
+show collections
+
+/*Crear otra colección llamada usuarios donde almacenar dos documentos con los campos nombre y clave.*/
+
+db.usuarios.insertOne(
+  {
+    nombre: 'Zé da Silva',
+    clave: 'BRA123'
+  }
+)
+
+db.usuarios.insertOne(
+  {
+    nombre: 'Matheus Cuhna',
+    clave: 'BRA456'
+  }
+)
+
+db.usuarios.find()
+
+/*Mostrar nuevamente las colecciones existentes en la base de datos "base1"*/
+show collections

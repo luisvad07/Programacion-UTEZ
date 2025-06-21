@@ -1,0 +1,49 @@
+db.createCollection('usuarios')
+
+db.usuarios.insertMany([
+    { "_id": 1, "nombre": "Juan", "apellido": "Pérez", "correo": "juan.perez@example.com",
+    "telefono": "555-1234" },
+    { "_id": 2, "nombre": "María", "apellido": "García", "correo": "maria.garcia@example.com",
+    "telefono": "555-5678" },
+    { "_id": 3, "nombre": "Pedro", "apellido": "González", "correo": "pedro.gonzalez@example.com",
+    "telefono": "555-9012" }
+])
+
+db.usuarios.find()
+
+//1. Utiliza el operador $concat para agregar un campo "nombre_completo" que contenga la concatenación de los campos "nombre" y "apellido".
+db.usuarios.aggregate(
+   [
+      { $addFields: { nombre_completo: { $concat: [ "$nombre", " - ",
+       "$apellido" ] } } }
+   ]
+)
+
+//2. Utiliza el operador $split para dividir el campo "nombre_completo" en un arreglo de dos elementos: "nombre" y "apellido".
+db.usuarios.aggregate(
+   [
+      { $addFields: { nombre_completo: { $concat: [ "$nombre", " - ",
+       "$apellido" ] } } },
+       {$addFields: {
+        nombre_split:{ $split: ["$nombre_completo"," "] }
+
+       }}
+   ]
+)
+
+//3. Utiliza el operador $indexOfBytes para encontrar la posición de la letra "a" en el campo "nombre_completo".
+//4. Utiliza el operador $strcasecmp para encontrar los documentos cuyo campo "correo" sea igual a "PEDRO.GONZALEZ@EXAMPLE.COM" sin importar la capitalización de las letras.
+//5. Utiliza los operadores $toLower y $toUpper para convertir el campo "nombre_completo" a minúsculas y mayúsculas, respectivamente.
+//6. Utiliza el operador $strLenCP para encontrar la longitud del campo "telefono"
+db.usuarios.aggregate(
+   [
+      { $addFields: { nombre_completo: { $concat: [ "$nombre", " - ","$apellido" ] } } },
+       {$addFields: {nombre_split:{ $split: ["$nombre_completo"," "] }}},
+       {$addFields: {posicion:{$indexOfBytes:["$nombre_completo","a"]}}},
+       {$addFields: {busqueda:{$strcasecmp:["$correo", "pedro.gonzalez@example.com"]}}},
+       {$addFields:{minus:{$toUpper: ["$nombre_completo"]}}},
+       {$addFields:{mayus:{$toLower: ["$nombre_completo"]}}},
+       {$addFields: {longi:{$strLenCP: ["telefono"]}}}
+   ]
+)
+

@@ -1,0 +1,42 @@
+
+/*Ayuda de MongoDB*/
+db.help()
+
+/*Crear coleccion llamada clientes*/
+db.createCollection('clientes')
+
+/*Insertar 2 documentos en la colección clientes con '_id' no repetidos*/
+db.clientes.insertMany(
+    [
+        {
+            _id: 'SONG001',
+            cancion: 'Harley Quinn',
+            artista: 'Faraon Love Shady',
+            pais: 'Perú',
+            cliente: 'Salem Alvarado'
+        },
+        {
+            _id: 'SONG002',
+            cancion: 'Loco',
+            artista: 'Enrique Iglesias, Romeo Santos',
+            pais: 'España/Estados Unidos',
+            cliente: 'Pedro Parques'
+        }
+    ]
+);
+
+
+/*Intentar insertar otro documento con clave repetida. */
+db.clientes.insertOne(
+    {
+        _id: 'SONG001',
+        cancion: 'Starboy',
+        artista: 'The Weeknd, Daft Punk',
+        pais: 'Estados Unidos/Francia',
+        cliente: 'Alicia Gomez'
+    }
+);
+db.clientes.find()
+
+/*Mostrar todos los documentos de la colección libros. */
+db.libros.find()

@@ -1,0 +1,176 @@
+{
+    "obj": [
+        {
+            "id": 1,
+            "nombre": "Miguel",
+            "apellidos": "Dominguez Ortiz",
+            "correo": "migueldominguez@utez.edu.mx",
+            "password": "mike1234",
+            "divisionAcademica": "DATID",
+            "status": true,
+            "responsables": [
+                {
+                    "id": 1,
+                    "nombre": "Arturo",
+                    "apellidos": "Villareal Santoalla",
+                    "correo": "arturovillareal@utez.edu.mx",
+                    "password": "arturo1234",
+                    "status": true,
+                    "divisionAcademica": "DATID",
+                    "asesores": [
+                        {
+                            "id": 1,
+                            "nombre": "Jose Alberto",
+                            "apellidos": "Garc�a Mu�oz",
+                            "correo": "albertogarcia@utez.edu.mx",
+                            "password": "pepe1234",
+                            "status": true,
+                            "divisionAcademica": "DATID",
+                            "estudiantes": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "nombre": "Ximena",
+            "apellidos": "Solis Garcia",
+            "correo": "ximenasolis@utez.edu.mx",
+            "password": "ximena1234",
+            "divisionAcademica": "DACEA",
+            "status": true,
+            "responsables": [
+                {
+                    "id": 3,
+                    "nombre": "Eder",
+                    "apellidos": "Sanchez Castro",
+                    "correo": "edersanchez@utez.edu.mx",
+                    "password": "eder1234",
+                    "status": true,
+                    "divisionAcademica": "DACEA",
+                    "asesores": [
+                        {
+                            "id": 2,
+                            "nombre": "Roc�o",
+                            "apellidos": "Sanchez Azuara",
+                            "correo": "rociosanchez@utez.edu.mx",
+                            "password": "rocio1234",
+                            "status": true,
+                            "divisionAcademica": "DACEA",
+                            "estudiantes": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "nombre": "Jose Arturo",
+            "apellidos": "Salinas Perez",
+            "correo": "josesalinas@utez.edu.mx",
+            "password": "jose1234",
+            "divisionAcademica": "DAMI",
+            "status": true,
+            "responsables": [
+                {
+                    "id": 2,
+                    "nombre": "Francisco ",
+                    "apellidos": "Castillo",
+                    "correo": "franciscocastillo@utez.edu.mx",
+                    "password": "francisco1234",
+                    "status": true,
+                    "divisionAcademica": "DAMI",
+                    "asesores": [
+                        {
+                            "id": 3,
+                            "nombre": "Benjam�n",
+                            "apellidos": "Mora Mend�vil",
+                            "correo": "benjaminmora@utez.edu.mx",
+                            "password": "benja1234",
+                            "status": true,
+                            "divisionAcademica": "DAMI",
+                            "estudiantes": []
+                        },
+                        {
+                            "id": 5,
+                            "nombre": "Marco Antonio",
+                            "apellidos": "Ruiz Garcia",
+                            "correo": "marcoruiz@utez.edu.mx",
+                            "password": "marco1234",
+                            "status": false,
+                            "divisionAcademica": "GET",
+                            "estudiantes": []
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "nombre": "H�ctor",
+                    "apellidos": "Gomez Salvatierra",
+                    "correo": "hectorgomez@utez.edu.mx",
+                    "password": "hector1234",
+                    "status": false,
+                    "divisionAcademica": "DAMI",
+                    "asesores": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "nombre": "Sara",
+            "apellidos": "Martinez Pedroza",
+            "correo": "saramatinez@utez.edu.mx",
+            "password": "sara1234",
+            "divisionAcademica": "DATEFI",
+            "status": true,
+            "responsables": [
+                {
+                    "id": 4,
+                    "nombre": "Marilyn",
+                    "apellidos": "Torres",
+                    "correo": "marilyntorres@utez.edu.mx",
+                    "password": "marilyn1234",
+                    "status": true,
+                    "divisionAcademica": "DATEFI",
+                    "asesores": [
+                        {
+                            "id": 4,
+                            "nombre": "Aurora",
+                            "apellidos": "Flores Campos",
+                            "correo": "auroraflores@utez.edu.mx",
+                            "password": "aurora1234",
+                            "status": true,
+                            "divisionAcademica": "DATEFI",
+                            "estudiantes": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "nombre": "Bianca",
+            "apellidos": "Sierra",
+            "correo": "biancasierra@utez.edu.mx",
+            "password": "bianca1234",
+            "divisionAcademica": "DACEA",
+            "status": true,
+            "responsables": []
+        },
+        {
+            "id": 7,
+            "nombre": "Leopoldo",
+            "apellidos": "Ortiz Solano",
+            "correo": "leopoldoortiz@utez.edu.mx",
+            "password": "leopoldo1234",
+            "divisionAcademica": "DAMI",
+            "status": true,
+            "responsables": []
+        }
+    ],
+    "status": false,
+    "statusCode": 200,
+    "message": "OK"
+}
+

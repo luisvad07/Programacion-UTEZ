@@ -1,0 +1,62 @@
+db.createCollection('sales');
+
+db.sales.insertMany([
+    { "date": ISODate("2022-01-01T00:00:00.000Z"), "product": "Product A", "quantity": 100, "price": 10 },
+    { "date": ISODate("2022-01-01T00:00:00.000Z"), "product": "Product B", "quantity": 150, "price": 20 },
+    { "date": ISODate("2022-01-02T00:00:00.000Z"), "product": "Product A", "quantity": 80, "price": 15 },
+    { "date": ISODate("2022-01-02T00:00:00.000Z"), "product": "Product B", "quantity": 100, "price": 25 },
+    { "date": ISODate("2022-01-03T00:00:00.000Z"), "product": "Product A", "quantity": 120, "price": 12 },
+    { "date": ISODate("2022-01-03T00:00:00.000Z"), "product": "Product B", "quantity": 200, "price": 30 },
+    { "date": ISODate("2022-01-04T00:00:00.000Z"), "product": "Product A", "quantity": 60, "price": 20 },
+    { "date": ISODate("2022-01-04T00:00:00.000Z"), "product": "Product B", "quantity": 80, "price": 35 },
+    { "date": ISODate("2022-01-05T00:00:00.000Z"), "product": "Product A", "quantity": 150, "price": 8 },
+    { "date": ISODate("2022-01-05T00:00:00.000Z"), "product": "Product B", "quantity": 100, "price": 28 }
+])
+
+db.sales.find()
+
+/*$group: agrupar las ventas por producto y calcular el total de ventas y el promedio de precio de cada producto*/
+db.sales.aggregate([
+    {
+    $group: {
+      _id: "$product",
+      totalSales: {$sum: { $multiply: ["$quantity", "$price"] }},
+      avgPrice:{ $sum: "$price"}
+    }
+  }
+])
+
+/*$match: buscar las ventas del producto A con fecha posterior al 2022-01-03*/
+db.sales.aggregate([
+   {
+    $match: {
+      product:"Product A",
+      date: { $gt: ISODate("2022-01-03T00:00:00.000Z")}
+    }
+  }
+])
+
+/*$sample: obtener una muestra aleatoria de 3 ventas de la colección*/
+db.sales.aggregate([
+    {
+      $sample:{
+        size:3
+      }
+    }
+])
+
+/*$project: mostrar solo los campos product, quantity y price de los documentos*/
+db.sales.aggregate([
+    {
+    $project: {
+      _id: 0,
+      product: 1,
+      quantity: 1,
+      price: 1
+    }
+  }
+])
+
+
+
+

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Class-Path: libs/db4o-tests-nq.jar libs/ant.jar libs/bloat-1.0.jar libs/db4o-7.2.44.10827-nqopt.jar libs/db4o-7.2.44.10827-db4ounit.jar libs/db4o-7.2.44.10827-tools.jar
+Bundle-Name: db4o OSGi test
+Created-By: 1.5.0-beta2 (Sun Microsystems Inc.)
+Bundle-Activator: com.db4o.osgi.test.Db4oWorkspaceActivator
+Import-Package: org.osgi.framework
+Bundle-Vendor: db4objects, Inc.
+Bundle-Category: db
+Bundle-Version: 7.2.44.10827
+Bundle-SymbolicName: db4o_osgi_test
+Require-Bundle: db4o_osgi
+Bundle-ClassPath: .,
+ lib/db4o-7.2.44.10827-db4ounit.jar,
+ lib/db4o-tests.jar,
+ lib/db4o-tests-nq.jar
+Bundle-ActivationPolicy: lazy 
+Provide-Package: com.db4o.osgi.test

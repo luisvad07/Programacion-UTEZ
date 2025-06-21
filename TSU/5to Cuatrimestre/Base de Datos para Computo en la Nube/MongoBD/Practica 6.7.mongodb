@@ -1,0 +1,71 @@
+db.createCollection('products');
+
+db.products.insertMany([ 
+    { "name": "Camiseta", "category": "Ropa", "price": 10.00, "stock":100 }, 
+    { "name": "Zapatos deportivos", "category": "Calzado", "price": 50.00, "stock": 50 },
+    { "name": "Bolsa de mano", "category": "Accesorios", "price": 25.00, "stock": 30 }, 
+    { "name": "Pantalón de mezclilla", "category": "Ropa", "price": 30.00, "stock": 80 }, 
+    { "name": "Tenis de correr", "category": "Calzado", "price": 75.00, "stock": 20 }, 
+    { "name": "Sombrero de paja", "category": "Accesorios", "price": 15.00, "stock": 60 }, 
+    { "name": "Vestido de noche", "category": "Ropa", "price": 80.00, "stock": 10 }, 
+    { "name": "Botas de cuero", "category": "Calzado", "price": 100.00, "stock": 15 }, 
+    { "name": "Pañuelo de seda", "category": "Accesorios", "price": 20.00, "stock": 40 }, 
+    { "name": "Short de playa", "category": "Ropa", "price": 15.00, "stock": 50 }
+])
+
+db.products.find()
+
+/*$gt: buscar los productos cuyo precio es mayor a 50.*/
+db.products.find(
+  {
+    price: {$gt:50}
+  }
+)
+
+/*$gte: buscar los productos cuyo stock es mayor o igual a 50 o cuyo precio sea mayor o igual a 75.*/
+db.products.find(
+  {
+    $or:[
+      {stock: {$gte: 50}}, 
+      {price: {$gte: 75}}
+    ]
+  }
+)
+
+/*$lt: buscar los productos cuyo precio es menor a 20 y cuya categoría sea "Accesorios".*/
+db.products.find(
+  {
+    price: {$lt:20},
+    category: "Accesorios"
+  }
+)
+
+/*$lte: buscar los productos cuyo stock sea menor o igual a 15 y cuya categoría sea "Calzado".*/
+db.products.find(
+  {
+    stock: {$lte: 15},
+    category: "Calzado"
+  }
+)
+
+/*$eq: buscar los productos cuyo precio sea igual a 30.*/
+db.products.find(
+  {
+    price: {$eq:30}
+  }
+)
+
+/*$in: buscar los productos cuya categoría sea "Ropa" o "Accesorios".*/
+db.products.find(
+  {
+    category:{$in: ["Ropa", "Accesorios"]}
+  }
+)
+
+/*$ne: buscar los productos cuyo precio no sea igual a 25.*/
+db.products.find(
+  {
+    price: {$ne: 25}
+  }
+)
+

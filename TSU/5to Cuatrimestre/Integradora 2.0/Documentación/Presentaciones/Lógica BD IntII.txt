@@ -1,0 +1,269 @@
+++++++++++++++++++++
+El alumno tiene un sólo asesor
+El alumno sólo puede subir un reporte a la vez  
+El alumno sólo tienen una división académica
+
+El asesor puede tener varios alumnos 
+El asesor puede consultar varios reportes 
+El asesor sólo tiene una división académica
+El asesor sólo tiene un responsable
+
+El responsable puede tener varios asesores
+El responsable puede consultar varios reportes 
+El responsable sólo tiene una división académica
+
+El departamento de estadía puede tener varios responsables
+El departamento de estadía puede consultar varios reportes 
+El departamento de estadía puede tener varias divisiones académicas
+
+++++++++++++
+
+---------------------------------------------
+Alumos 
+---------------------------------------------
+Nombre
+Correo institucional 
+División Académica
+Carrera
+Grado y grupo
+Reporte 
+
+---------------------------------------------
+Asesores 
+---------------------------------------------
+correo
+Nombre
+apellidos
+División Académica
+Reporte
+
+---------------------------------------------
+Responsable
+---------------------------------------------
+correo
+Nombre
+apellidos
+División Académica
+Reporte
+
+---------------------------------------------
+Departamento (Admi por cada DA)
+---------------------------------------------
+correo 
+Nombre
+apellidos
+Reporte 
+
+---------------------------------------------
+usuarios (todos)
+---------------------------------------------
+correo 
+password
+
+
+
+
+
+---------------------------------------------
+MóvilConsulta
+---------------------------------------------
+Nombre
+correo inst
+Fecha 
+Hora
+Grado y grupo
+Carrera
+
+--------------------------------------------
+Dep E
+--------------------------------------------
+- Crud Respon
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+
+- Curd Admi
+	correo
+	Nombre
+	apellidos
+	contraseña 
+
+- Curd Reporte
+	nombrealum
+	apelidosalum
+	correo
+	div academica
+	reporte
+
+++++++++++Tablas
+
+Responsables{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}
+
+admin{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}
+
+--------------------------------------------
+Responsables por DA 
+--------------------------------------------
+- Crud asesor
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+
+- crud reporte
+	nombrealum
+	apelidosalum
+	correo
+	div academica
+	reporte
+
+asesores{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}
+
+
+--------------------------------------------
+Asesores
+--------------------------------------------
+- Crud Alumnos
+	correo
+	Nombre
+	apellidos
+	División Académica	
+	grado grupo
+	carrera
+	contraseña 
+
+- crud de reporte
+	nombrealum
+	apelidosalum
+	correo
+	div academica
+	reporte
+
+alumnos{
+	correo
+	Nombre
+	apellidos
+	División Académica	
+	grado grupo
+	carrera
+	contraseña 
+}
+
+
+--------------------------------------------
+Alumnos
+--------------------------------------------
+- consulta datos
+
+- carga reporte
+
+usuarios{
+	pass
+	correo
+}
+
+reporte{
+	status
+	reporte
+	Nombre
+	apellidos
+	División Académica	
+	grado grupo
+	carrera
+	mensaje
+}
+
+reportefinal {
+	status
+	reporte
+}
+
+consultas{
+fecha
+hora 
+reporte 
+}
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+usuarios{
+	pass
+	correo
+}
+
+reporte{
+	status
+	reporte
+	Nombre
+	apellidos
+	División Académica	
+	grado grupo
+	carrera
+	mensaje
+}
+
+reportefinal {
+	status
+	reporte
+}
+
+consultas {
+	fecha
+	hora 
+	reporte 
+}
+
+alumnos{
+	correo
+	Nombre
+	apellidos
+	División Académica	
+	grado grupo
+	carrera
+	contraseña 
+}
+
+asesores{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}
+
+Responsables{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}
+
+admin{
+	correo
+	Nombre
+	apellidos
+	División Académica
+	contraseña 
+}

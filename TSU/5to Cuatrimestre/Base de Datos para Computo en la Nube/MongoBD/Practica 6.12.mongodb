@@ -1,0 +1,35 @@
+db.createCollection('movies');
+
+db.movies.insertMany([
+  { "_id": 1, "title": "The Shawshank Redemption", "genre": "Drama", "year": 1994, "rating": 9.3},
+  { "_id": 2, "title": "The Godfather", "genre": "Crime", "year": 1972, "rating": 9.2 },
+  { "_id": 3, "title": "The Dark Knight", "genre": "Action", "year": 2008, "rating": 9.0 },
+  { "_id": 4, "title": "12 Angry Men", "genre": "Drama", "year": 1957, "rating": 8.9 },
+  { "_id": 5, "title": "The Lord of the Rings: The Return of the King", "genre": "Fantasy", "year": 2003, "rating": 8.9 }
+])
+
+db.movies.find()
+
+/*$and: buscar las películas que sean de género "Drama" y hayan sido estrenadas entre 1990 y 2000.*/
+db.movies.find({
+  $and:[
+    {genre: "Drama"},
+    {year: {$gte: 1990, $lte: 2000}}
+  ]
+})
+
+/*$or: buscar las películas que sean de género "Action" o "Adventure" y tengan una calificación mayor o igual a 8.5.*/
+db.movies.find({
+  $or:[
+    {genre: "Action"},
+    {genre: "Adventure"}
+  ]
+})
+
+/*$not: buscar las películas que no sean de género "Fantasy" y tengan una calificación menor a 8.0.*/
+db.movies.find({
+  $and:[
+    {genre: {$ne: "Drama"}},
+    {year: {$lt: 8.0}}
+  ]
+})

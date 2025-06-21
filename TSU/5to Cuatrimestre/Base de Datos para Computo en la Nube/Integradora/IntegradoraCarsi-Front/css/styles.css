@@ -1,0 +1,25 @@
+.feather {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+}
+
+.dropdown-item:active {
+    color: black;
+    background-color: lightgrey;
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 5px;              
+    border: 5px solid lightgrey;
+    border-radius: 50px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 50px;
+}

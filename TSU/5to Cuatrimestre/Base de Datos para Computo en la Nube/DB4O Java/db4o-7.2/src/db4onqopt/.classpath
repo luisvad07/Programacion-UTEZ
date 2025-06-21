@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="core/src"/>
+	<classpathentry kind="src" path="test/src"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/bloat"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db4ojdk1.2"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db4ounit"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db4ounit.extensions"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db4oj.tests"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/db4o.instrumentation"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

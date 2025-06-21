@@ -1,0 +1,72 @@
+db.createCollection('products');
+
+db.products.insertMany([
+    { "name": "iPhone 12", "price": 999, "category": "Electronics", "stock": 100 },
+    { "name": "Samsung Galaxy S21", "price": 899, "category": "Electronics", "stock": 50 },
+    { "name": "Macbook Pro", "price": 1999, "category": "Electronics", "stock": 20 },
+    { "name": "iPad Air", "price": 599, "category": "Electronics", "stock": 75 },
+    { "name": "Nike Air Max 270", "price": 150, "category": "Shoes", "stock": 200 },
+    { "name": "Adidas Superstar", "price": 80, "category": "Shoes", "stock": 300 }
+])
+
+db.products.find()
+
+/*$group: agrupar los productos por categoría y calcular el precio promedio y la cantidad total de stock de cada categoría.*/
+db.products.aggregate([
+  {
+    $group: {
+      _id: "$category",
+      avgPrice: {$avg: "$price"},
+      totalStock: {$sum: "$stock"}
+    }
+  }
+])
+
+/*$match: buscar los productos con precio menor o igual a 100.*/
+db.products.aggregate([
+  {
+    $match: {
+      price: {$lte:100}
+    }
+  }
+])
+
+/*$sample: obtener una muestra aleatoria de 2 documentos de la colección.*/
+db.products.aggregate([
+  {
+    $sample: {
+      size: 2
+    }
+  }
+])
+
+/*$project: mostrar solo los campos name, category y stock de los documentos.*/
+db.products.aggregate([
+  {
+    $project: {
+      name:1,
+      category:1,
+      stock:1,
+      _id:0
+    }
+  }
+])
+
+/*$addFields: agregar un campo discountedPrice a cada documento con un valor igual al 10% de descuento sobre el precio*/
+db.products.aggregate([
+  {
+    $addFields: {
+      discountedPrice:{$multiply:["$price", 0.1]}
+    }
+  }
+])
+
+/*$sort: ordenar los productos por precio de manera ascendente.*/
+db.products.aggregate([
+  {
+    $sort: {
+      price: 1
+    }
+  }
+])
+

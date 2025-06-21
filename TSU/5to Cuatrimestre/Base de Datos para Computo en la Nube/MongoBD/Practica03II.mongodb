@@ -1,0 +1,25 @@
+
+/*Crear una base de datos llamada "blog"*/
+use blog
+
+/*Agregar una colección llamada "posts" e insertar 1 documento con una estructura a su elección*/
+db.posts.insertOne(
+  {
+    nombre_jugador: 'Luis Valladolid',
+    nacionalidad: 'Mexicano',
+    equipos: ['Chivas', 'LOSC Lille', 'Real Valladolid', 'Liverpool'],
+    posicion: 'Delantero',
+    numero: 7
+  }
+)
+db.posts.find()
+
+/*Mostrar todas las bases de datos actuales*/
+show dbs
+
+/*Eliminar la colección "posts"*/
+db.posts.drop()
+
+/*Eliminar la base de datos "blog" y mostrar las bases de datos existentes*/
+db.dropDatabase()
+show dbs

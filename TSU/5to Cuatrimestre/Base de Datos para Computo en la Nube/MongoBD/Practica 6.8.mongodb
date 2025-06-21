@@ -1,0 +1,71 @@
+db.createCollection('employees');
+
+db.employees.insertMany([ 
+    { "name": "Juan Pérez", "position": "Gerente", "age": 40, "salary": 80000 }, 
+    { "name": "María Gómez", "position": "Analista", "age": 30, "salary": 50000 }, 
+    { "name": "Pedro Hernández", "position": "Desarrollador", "age": 25, "salary": 40000 }, 
+    { "name": "Laura Martínez", "position": "Analista", "age": 35, "salary": 55000 }, 
+    { "name": "Miguel Álvarez", "position": "Gerente", "age": 45, "salary": 90000 }, 
+    { "name": "Ana Castro", "position": "Desarrollador", "age": 28, "salary": 42000 }, 
+    { "name": "Javier Díaz", "position": "Desarrollador", "age": 27, "salary": 41000 }, 
+    { "name": "Cristina Torres", "position": "Analista", "age": 32, "salary": 60000 }, 
+    { "name": "Jorge Sánchez", "position": "Desarrollador", "age": 30, "salary": 45000 }, 
+    { "name": "Sara García", "position": "Analista", "age": 35, "salary": 55000 }
+])
+
+db.employees.find()
+
+/*$gt: buscar los empleados cuyo salario es mayor a 50000.*/
+db.employees.find(
+  {
+    salary: {$gt:50000}
+  }
+)
+
+/*$gte: buscar los empleados cuya edad es mayor o igual a 35 o cuyo salario sea mayor o igual a 60000.*/
+db.employees.find(
+  {
+    $or:[
+      {age: {$gte: 35}}, 
+      {salary: {$gte: 60000}}
+    ]
+  }
+)
+
+/*$lt: buscar los empleados cuyo salario es menor a 45000 y cuyo cargo sea "Desarrollador".*/
+db.employees.find(
+  {
+    position: "Desarrollador",
+    salary: {$lt : 45000}
+  }
+)
+
+/*$lte: buscar los empleados cuya edad sea menor o igual a 30 y cuyo salario sea menor o igual a 42000.*/
+db.employees.find(
+  {
+    age: {$lte: 30},
+    salary: {$lte: 42000}
+  }
+)
+
+/*$eq: buscar los empleados cuyo salario sea igual a 50000.*/
+db.employees.find(
+  {
+    salary: {$eq:50000}
+  }
+)
+
+/*$in: buscar los empleados cuyo cargo sea "Gerente" o "Analista"*/
+db.employees.find(
+  {
+    position:{$in: ["Gerente", "Analista"]}
+  }
+)
+
+/*$ne: buscar los empleados cuyo salario no sea igual a 55000.*/
+db.employees.find(
+  {
+    salary: {$ne: 55000}
+  }
+)
+

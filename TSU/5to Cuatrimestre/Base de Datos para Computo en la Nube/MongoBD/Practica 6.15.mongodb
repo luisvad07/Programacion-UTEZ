@@ -1,0 +1,43 @@
+db.createCollection('productos');
+
+db.productos.insertMany([
+    { "_id": 1, "nombre": "Leche", "precio": 20, "cantidad": 10 },
+    { "_id": 2, "nombre": "Huevo", "precio": 2.5, "cantidad": 20 },
+    { "_id": 3, "nombre": "Pan", "precio": 4.5, "cantidad": 15 },
+    { "_id": 4, "nombre": "Queso", "precio": 40, "cantidad": 5 },
+    { "_id": 5, "nombre": "Cerveza", "precio": 25, "cantidad": 8 }
+])
+
+db.productos.find()
+
+db.productos.aggregate([
+    /*1. Utiliza el operador $add para agregar un campo total que represente el precio total de cada producto (precio * cantidad)*/
+    { $addFields: { total: { $add: [ "$precio", "$cantidad" ] } } },
+    /*2. Utiliza el operador $multiply para agregar un campo descuento que represente el 10% del precio total (total * 0.1)*/
+    { $addFields: { desc: { $multiply: [ "$total",.10 ] } } },
+    /*3. Utiliza el operador $subtract para agregar un campo precio_final que represente el precio total menos el descuento (total - descuento) */
+    { $addFields: { precio_final: { $subtract: [ "$total", "$desc" ] } } },
+    /*4. Utiliza el operador $divide para agregar un campo precio_por_unidad que represente el precio final dividido por la cantidad (precio_final / cantidad)*/
+    { $addFields: { precio_por_unidad: { $divide: [ "$precio_final", "$cantidad" ] } } },
+    /*5. Utiliza el operador $mod para agregar un campo resto que represente el resto de la división de la cantidad entre 3 (cantidad % 3)*/
+    { $addFields: { restoDiv: { $mod: [ "$cantidad", 3 ] } } },
+    /*6. Utiliza el operador $pow para agregar un campo precio_cuadrado que represente el precio final elevado al cuadrado (precio_final ^ 2)*/
+    { $addFields: { precio_cuadrado: { $pow: [ "$precio_final", 2 ] } } },  
+    /*7. Utiliza el operador $sqrt para agregar un campo precio_raiz_cuadrada que represente la raíz cuadrada del precio final (sqrt(precio_final))*/
+    { $addFields: { precio_raiz_cuadrada: { $sqrt: [ "$precio_final" ] } } },     
+    /*8. Utiliza el operador $exp para agregar un campo precio_exponencial que represente el precio final elevado a la constante matemática e (exp(precio_final))*/
+    { $addFields: { precio_exponencial: { $exp: [ "$precio_final" ] } } },      
+    /*9. Utiliza el operador $ln para agregar un campo precio_logaritmo_natural que represente el logaritmo natural del precio final (ln(precio_final))*/
+    { $addFields: { precio_logaritmo_natural: { $ln: [ "$precio_final" ] } } },                
+    /*10. Utiliza el operador $log para agregar un campo precio_logaritmo_base_2 que represente el logaritmo en base 2 del precio final (log2(precio_final))*/
+    { $addFields: { precio_logaritmo_base_2: { $log: [ "$precio_final", 2 ] } } },  
+    /*11. Utiliza el operador $ceil para agregar un campo precio_redondeado_arriba que represente el precio final redondeado hacia arriba (ceil(precio_final))*/
+    { $addFields: { precio_redondeado_arriba: { $ceil: [ "$precio_final" ] } } },  
+    /*12. Utiliza el operador $floor para agregar un campo precio_redondeado_abajo que represente el precio final redondeado hacia abajo (floor(precio_final))*/
+    { $addFields: { precio_redondeado_abajo: { $floor: [ "$precio_final" ] } } }, 
+    /*13. Utiliza el operador $trunc para agregar un campo precio_sin_decimales que represente el precio final sin decimales (trunc(precio_final))*/
+    { $addFields: { precio_sin_decimales: { $trunc: [ "$precio_final" ] } } }, 
+    /*14. Utiliza el operador $abs para agregar un campo precio_absoluto que represente el valor absoluto del precio final (abs(precio_final))*/
+    { $addFields: { precio_absoluto: { $abs: [ "$precio_final" ] } } }               
+])
+

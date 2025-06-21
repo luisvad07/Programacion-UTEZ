@@ -1,0 +1,127 @@
+﻿//Departamento
+{
+    "nombre": "Miguel",
+    "apellidos": "Dominguez Ortiz",
+    "correo": "migueldominguez@utez.edu.mx",
+    "password": "mike1234",
+    "divisionAcademica": "DATID",
+    "status": true
+}
+
+//Responsable
+{
+    "nombre": "Arturo",
+    "apellidos": "Villareal Santoalla",
+    "correo": "arturovillareal@utez.edu.mx",
+    "password": "arturo1234",
+    "status": true,
+    "divisionAcademica": "DATID",
+    "departamento": {
+            "id": 1,
+            "nombre": "Miguel",
+            "apellidos": "Dominguez Ortiz",
+            "correo": "migueldominguez@utez.edu.mx",
+            "password": "mike1234",
+            "divisionAcademica": "DATID",
+            "status": true,
+            "responsables": []
+        }
+}
+
+//Asesor
+{
+    "nombre": "Jose Alberto",
+    "apellidos": "García Muñoz",
+    "correo": "albertogarcia@utez.edu.mx",
+    "password": "pepe1234",
+    "status": true,
+    "divisionAcademica": "DATID",
+    "responsable": {
+            "id": 1,
+            "nombre": "Arturo",
+            "apellidos": "Villareal Santoalla",
+            "correo": "arturovillareal@utez.edu.mx",
+            "password": "arturo1234",
+            "status": true,
+            "divisionAcademica": "DATID"
+        }
+}
+
+//Estudiante
+{
+    "matricula": "20213TN011",
+    "nombre": "Andrea Michelle",
+    "apellidos": "Estrada Hernandez",
+    "correo": "20213tn011@utez.edu.mx",
+    "password": "mich1234",
+    "divisionAcademica": "DATID",
+    "carrera": "Desarrollo de Software",
+    "grado": 6,
+    "grupo": "A",
+    "status": true,
+    "url": "file:///C:/Users/Sala%20de%20internet/Downloads/reportemich.pdf",
+    "asesor": {
+            "id": 1,
+            "nombre": "Jose Alberto",
+            "apellidos": "García Muñoz",
+            "correo": "albertogarcia@utez.edu.mx",
+            "password": "pepe1234",
+            "status": true,
+            "divisionAcademica": "DATID"
+        }
+}
+
+/*
+Para inserciones de fecha
+    pm.variables.set("fechaActual", new Date().toISOString());
+*/
+
+//Mensajes para cualquiera (Departamento, Asesor, Responsable)
+{
+    "mensaje": "Falta Justificación",
+    "fechaEnvio": "{{fechaActual}}",
+    "status": false,
+    "nombre": "Arturo",
+    "nombreD": "Miguel"
+},
+{
+    "mensaje": "Sin comentarios",
+    "fechaEnvio": "{{fechaActual}}",
+    "status": true,
+    "nombre": "Jose",
+    "nombreR": "Arturo"
+},
+{
+    "mensaje": "Falta Justificación",
+    "fechaEnvio": "{{fechaActual}}",
+    "status": false,
+    "nombre": "Andrea",
+    "nombreA": "Jose Alberto"
+}
+
+//Consulta
+{
+    "fechaConsulta": "{{fechaActual}}",
+    "usuario": "Andrea"
+}
+
+//Movil
+{
+    "nombreArchivo": "reportemich.pdf",
+    "tipo": "Reporte TSU",
+    "carrera": "Desarrollo",
+    "url": "http://localhost:8080/redre/files/reportemich.pdf"
+}
+//PUT cambiar status
+{
+    "id": 2,
+    "correo": "oswabahena@utez.edu.mx",
+    "status": false
+}
+//Login
+{
+    "correo": "migueldominguez@utez.edu.mx",
+    "password": "mike1234",
+    "rol": "DEPARTAMENTO"
+}
+

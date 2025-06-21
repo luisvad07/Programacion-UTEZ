@@ -1,0 +1,71 @@
+db.createCollection('books');
+
+db.books.insertMany([ 
+    { "title": "El Quijote", "author": "Miguel de Cervantes", "pages": 863, "year": 1605, "price": 20.50 }, 
+    { "title": "La Iliada", "author": "Homero", "pages": 477, "year": -750, "price": 15.75 }, 
+    { "title": "Cien años de soledad", "author": "Gabriel García Márquez", "pages": 448, "year": 1967, "price": 25.00 }, 
+    { "title": "Moby Dick", "author": "Herman Melville", "pages": 720, "year": 1851, "price": 18.25 }, 
+    { "title": "La Odisea", "author": "Homero", "pages": 374, "year": -725, "price": 12.50 }, 
+    { "title": "1984", "author": "George Orwell", "pages": 328, "year": 1949, "price": 21.00 }, 
+    { "title": "Rayuela", "author": "Julio Cortázar", "pages": 735, "year": 1963, "price": 19.50 }, 
+    { "title": "La divina comedia", "author": "Dante Alighieri", "pages": 798, "year": 1320, "price": 22.75 }, 
+    { "title": "El viejo y el mar", "author": "Ernest Hemingway", "pages": 112, "year": 1952, "price": 14.25 }, 
+    { "title": "La metamorfosis", "author": "Franz Kafka", "pages": 112, "year": 1915, "price": 9.99 }
+])
+
+db.books.find()
+
+/*$gt: buscar los libros que tengan más de 500 páginas.*/
+db.books.find(
+  {
+    "pages": {"$gt": 500}
+  }
+)
+
+/*$gte: buscar los libros que tengan al menos 700 páginas o que su precio sea mayor o igual a 20.00.*/
+db.books.find({
+  "$or":[
+    {"pages": {"$gte": 700}},
+    {"price": {"$gte": 20.00}},
+  ]
+})
+
+/*$lt: buscar los libros que tengan menos de 400 páginas y que su autor sea "Homero".*/
+db.books.find({
+  "pages": {"$lt": 400},
+  "author": "Homero"
+})
+
+/*$lte: buscar los libros que tengan un precio menor o igual a 15.00 y que su año sea menor o igual a 1950.*/
+db.books.find({
+  "price": {"$lte": 15.00},
+  "year": {"$lte": 1950},
+})
+
+/*$eq: buscar los libros que tengan el año 1967.*/
+db.books.find(
+  {
+    "year":{
+      "$eq": 1967
+    }
+  }
+)
+
+/*$in: buscar los libros cuyo autor sea "Homero" o "Ernest Hemingway".*/
+db.books.find(
+  {
+    "author":{
+      "$in":["Homero", "Ernest Hemingway"]
+    }
+  }
+)
+
+/*$ne: buscar los libros cuyo precio no sea igual a 20.50.*/
+db.books.find(
+  {
+    "price":{
+      "$ne": 20.50
+    }
+  }
+)
+
