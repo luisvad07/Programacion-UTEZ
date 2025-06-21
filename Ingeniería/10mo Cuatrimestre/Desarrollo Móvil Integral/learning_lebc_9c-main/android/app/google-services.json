@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "571319577284",
+    "project_id": "restaurantes-db5a5",
+    "storage_bucket": "restaurantes-db5a5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:571319577284:android:ab53c80c0b800d5455f791",
+        "android_client_info": {
+          "package_name": "com.example.learning_lebc_9c"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBotkGs11Zl5rYaSP_mW5hB31r14pR8wBU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

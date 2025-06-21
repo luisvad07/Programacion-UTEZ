@@ -1,0 +1,19 @@
+{
+  "name": "actividad2_pwa_luisbahena",
+  "version": "1.0.0",
+  "description": "Actividad 2 de PWA",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "pouchdb": "^9.0.0",
+    "workbox-webpack-plugin": "^7.1.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.1.4"
+  }
+}

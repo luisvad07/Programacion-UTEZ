@@ -1,0 +1,34 @@
+{
+    "peliculas": [
+        {
+            "id": 1,
+            "nombre": "Culiacán vs Mazatlán",
+            "director": "Óscar López",
+            "clasificacion": "Ciencia/Ficción"
+        },
+        {
+            "id": 2,
+            "nombre": "Narco vs Depredator",
+            "director": "Sergio Goyri",
+            "clasificacion": "Drama"
+        },
+        {
+            "id": 3,
+            "nombre": "Apocalipto",
+            "director": "Mel Gibson",
+            "clasificacion": "Suspenso"
+        },
+        {
+            "id": 4,
+            "nombre": "Karate Kid",
+            "director": "Will Smith",
+            "clasificacion": "Acción"
+        },
+        {
+            "id": 5,
+            "nombre": "Tron, El Legado",
+            "director": "Joseph Kosinski",
+            "clasificacion": "Ciencia/Ficción"
+        }
+    ]
+}

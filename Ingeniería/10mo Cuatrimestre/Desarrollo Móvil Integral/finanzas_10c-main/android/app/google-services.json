@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "483546832464",
+    "project_id": "finanzas10c",
+    "storage_bucket": "finanzas10c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483546832464:android:f425f10b48bec4caddbb55",
+        "android_client_info": {
+          "package_name": "com.example.finanzas10c"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7aZQtOTtTHQjZbn4Nk_OCYRdZXhxo1oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:483546832464:android:3a78b2959437d47addbb55",
+        "android_client_info": {
+          "package_name": "com.example.finanzas_10c"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7aZQtOTtTHQjZbn4Nk_OCYRdZXhxo1oo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

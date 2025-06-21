@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "891067480882",
+    "project_id": "examenu2-6ba25",
+    "storage_bucket": "examenu2-6ba25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:891067480882:android:f7f33ffd0d6dc203c2b52b",
+        "android_client_info": {
+          "package_name": "com.example.examen_u2_dmi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBN2eUIaHVB15fw6SUzS8g9LHmxZKRgcVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

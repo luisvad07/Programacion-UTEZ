@@ -1,0 +1,101 @@
+//Examen U1 Bahena Castillo Luis Eduardo  10CIDGS
+
+class Tarea {
+  String titulo;
+  String descripcion;
+  bool completada;
+
+  Tarea(this.titulo, this.descripcion, {this.completada = false});
+
+  @override
+  String toString() {
+    return 'Título: $titulo, Descripción: $descripcion, Completada: ${completada ? "Sí" : "No"}';
+  }
+}
+
+List<Tarea> listaTareas = [];
+
+void agregarTarea(String titulo, String descripcion) {
+  listaTareas.add(Tarea(titulo, descripcion));
+  print('Tarea "$titulo" agregada exitosamente.');
+}
+
+void marcarTarea(String titulo) {
+  for (Tarea tarea in listaTareas) {
+    if (tarea.titulo == titulo) {
+      tarea.completada = true;
+      print('Tarea "$titulo" marcada como completada.');
+      return;
+    }
+  }
+  print('Tarea "$titulo" no encontrada.');
+}
+
+void eliminarTarea(String titulo) {
+  listaTareas.removeWhere((tarea) => tarea.titulo == titulo);
+  print('Tarea "$titulo" eliminada.');
+}
+
+void mostrarTareasRegistradas() {
+  if (listaTareas.isEmpty) {
+    print('No hay tareas en la lista.');
+  } else {
+    for (Tarea tarea in listaTareas) {
+      print(tarea);
+    }
+  }
+}
+
+void mostrarTareasCompletadas() {
+  List<Tarea> tareasCompletadas =
+      listaTareas.where((tarea) => tarea.completada).toList();
+
+  if (tareasCompletadas.isEmpty) {
+    print('No hay tareas completadas en la lista.');
+  } else {
+    for (Tarea tarea in tareasCompletadas) {
+      print(tarea);
+    }
+  }
+}
+
+void mostrarMenu() {
+  print(
+      "--------------------------------------------------------------------------------");
+  print("---------------------- MENU DE TAREAS ----------------------------");
+  print("1. Agregar una tarea");
+  print("2. Marcar una tarea como completada");
+  print("3. Eliminar una tarea por el título");
+  print("4. Mostrar todas las tareas registradas");
+  print("5. Mostrar todas las tareas completadas");
+  print("6. Salir");
+  for (var i = 0; i <= 7; i++) {
+    if (i == 1) {
+      print("El usuario tecleó la opción número $i");
+      agregarTarea(
+          'Hacer la tarea de Física', 'Calcular la masa de un volumen');
+      agregarTarea('Lavar mi ropa a las 8 pm', 'Enjugar mi ropa de trabajo');
+      agregarTarea('Cocinar a las 9 am', 'Hacer el desayuno para mi mamá');
+    } else if (i == 2) {
+      print("El usuario tecleó la opción número $i");
+      marcarTarea('Hacer la tarea de Física');
+    } else if (i == 3) {
+      print("El usuario tecleó la opción número $i");
+      eliminarTarea('Lavar mi ropa a las 8 pm');
+    } else if (i == 4) {
+      print("El usuario tecleó la opción número $i");
+      mostrarTareasRegistradas();
+    } else if (i == 5) {
+      print("El usuario tecleó la opción número $i");
+      mostrarTareasCompletadas();
+    } else if (i == 6) {
+      print("Saliendo del Sistema......");
+    } else {
+      print("¡Opción No Válida!");
+    }
+  }
+}
+
+void main() {
+  mostrarMenu();
+}
